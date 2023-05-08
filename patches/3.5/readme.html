@@ -1,0 +1,241 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <title>
+      GlobalOps 3.5 (unofficial) patch set
+    </title>
+<style type="text/css">
+<!--
+body {
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 50px;
+	background-color: #384832;
+	font-family: georgia, verdana, arial, sans-serif;
+	color: a3b09e;
+}
+
+h1 {
+	text-align: center;
+	color: black;
+	border-bottom: 2px dashed black;
+}
+
+h2 {
+	color: black;
+	margin-left: 10px;
+}
+
+h3 {
+	color: black;
+	margin-left: 60px;
+}
+
+ul {
+	margin-left: 50px;
+	background-color: #435337;
+}
+
+a:link {
+	text-decoration: none;
+	color: black;
+}
+
+a:visited {
+	text-decoration: none;
+	color: black;
+}
+
+a:active {
+	text-decoration: none;
+	color: black;
+}
+
+a:hover {	
+	text-decoration: none;
+	color: gray;
+}
+
+div.install {
+	font-size: small;
+	color: #181e18;
+	margin-left: 20px;
+}
+-->
+</style>
+</head><body>
+<h1>GlobalOps 3.5</h1>
+<h2>Features</h2>
+<div>
+This page contains a patch set for GlobalOps. This release is called 3.5 and can be used to replace the previous versions.
+For more information, mail admin@thelostparadise.com or post on the <a href="http://tlp.proboards7.com/">TLP forum</a> or the 
+<a href="http://www.globalops.eu/modules.php?name=Forums">GlobalOps.EU forum</a>.
+
+This patch set contains fixes for the following issues:
+</div>
+
+
+<h3>Linux server:</h3>
+<ul>
+<li>Remote admin password hack</li>
+<li>Moneycheat bug</li>
+<li>Time sync problems</li>
+<li>Map objective removal problem</li>
+<li>Added missing sounds/textures</li>
+<li>Fixed attributes script</li>
+</ul>
+
+<h3>Windows server:</h3>
+<ul>
+<li>Remote admin password hack</li>
+<li>Moneycheat bug</li>
+<li>Map objective removal problem</li>
+<li>Added missing sounds/textures</li>
+<li>Fixed attributes script</li>
+<li>Fixed a crash/remote code execution bug</li>
+<li>Allow running Windows server and client simultaneously</li>
+</ul>
+
+<h3>Windows client:</h3>
+<ul>
+<li>Fixed a crash/remote code execution bug</li>
+<li>Added anti-cheat voodoo</li>
+<li>Allow running Windows server and client simultaneously</li>
+</ul>
+
+<h2>Explanation</h2>
+Some of these fixes may not ring a bell with anyone, so we'll explain a bit
+more. 
+
+The 'remote admin password hack' was a bug in the server, which made the
+server send all the server configuration, including the admin password, to
+the client.
+
+The moneycheat bug was caused by unsufficient checks in the server when
+someone would buy and sell weapons and armour.
+
+The map objective removal problem means that sometimes the objective
+(canister, cross, that kinda stuff) would disappear. This was because the
+server didn't check if the dropped object was a gun/grenade/whatever or an
+objective. The fix is to add such checks.
+
+The Linux server was also adapted to be able to configure the timesync
+kicks. Previously, people were kicked too soon when there were timesync
+problems. Now, this is configurable: the option 'timesynccheck' is now a
+counter. If it's set to 4, people will be kicked after 4 time desyncs.
+
+This version also contains some anticheat-stuff which makes popular
+GlobalOps bots ineffective.
+
+The following bug fixes to the animations and maps have been made:
+<br><br>
+General bugfixes
+<ul>
+<li>Added favorite_servers.txt</li>
+<li>Added missing world sound file in Chechnya
+(levelspec_caveindebris03.wav)</li>
+<li>Added missing world sound file in Chechnya
+(levelspec_machinerunning.wav)</li>
+<li>Added missing texture file in Mexico (detailgrey_detail_01a.dtx)</li>
+<li>Added missing mission briefing texture in Tunnel (tunnel.dtx)</li>
+<li>Added missing missionbriefing texture in Uganda (uganda.dtx)</li>
+<li>Several fixes in the scripts</li>
+</ul>
+
+Fixes in animation.txt
+<ul>
+<li>Added missing seperators [ , ] at death crouch animation values</li>
+<li>Added missing seperators [ , ] at player and hostage walk strafe left
+animation</li>
+<li>Corrected type errors in death animation</li>
+<li>Changed hostage strafe animation so it should follow beter</li>
+<li>Changed player jump animation against floating/bunny hopping
+players</li>
+</ul>
+   
+Fixes in animspecialty.txt
+<ul>
+<li>Added missing separators [ , ] at player and vip walk strafe left
+animation</li>
+<li>Changed the bm_run animation for all classes to a fixed animation</li>
+<li>Changed jump animation against floating/bunny hopping players</li>
+</ul>
+  
+Fixes in animequip.txt
+<ul>
+<li>Added "drop" value for the objectives of Antartica and Argentina</li>
+</ul>
+
+Quebec
+<ul>
+<li>VIP (Goran Kurcic) can not be killed anymore by both teams</li>
+</ul>
+
+Colombia
+<ul>
+<li>VIP (Jesus Ortiz) can not be killed anymore by own team</li>
+<li>VIP (Jesus Ortiz) corrected MaxHealth to the same value as
+StartHealth</li>
+</ul>
+
+Chechnya
+<ul>
+<li>VIP (Commander Gredano) can not be killed anymore by own team</li>
+</ul>
+
+SouthChinaSea
+<ul>
+<li>Corrected deathzones at pirates spawnside</li>
+<li>Added invisible walls which block access to exploitable area's</li>
+</ul>
+
+SriLanka
+<ul>
+<li>Changed TransportSight to 3000 (helicopter should not kill people
+behind wall anymore, hopefully)</li>
+<li>Removed ground under rocks</li>
+<li>Added invisible walls which block access to exploitable area's</li>
+</ul>
+
+<h4>Known Issues:</h4> <ul> <li>Installer does not work due to an old
+windows installer: update windows installer at 
+<a href="http://www.microsoft.com/downloads/details.aspx?FamilyID=889482fc-5f56-4a38-b838-de776fd4138c&amp;DisplayLang=en">http://www.microsoft.com</a> </li> <li>Virusscanner warns
+about a virus/trojan: this is a <b>false positive *</b>. We recommend creating
+an exemption for the Global Operations folder, so your virus scanner does
+not scan it. Deleting specific files, such as DLLs, can crash Global Ops, so
+don't do that. <b>(* AVG Antivirus and McAfee are known for giving those problems)</b>
+</li> <li>There may be issues with using certain GlobalOps
+enhancement tools, that hook into GlobalOps. Try without such tools first.
+If that works, watch if GlobalOps starts crashing when you're using such
+tools and if so, stop using them.</li> </ul>
+  
+<h2>Downloads</h2>
+<h4>The Windows version is currently 3.5.1. This version was tested on
+Windows 2000 SP4, Windows XP SP2 and Windows Vista Ultimate.</h4>
+<div>
+Windows (client/server): <a href="http://thelostparadise.com/GlobalOps/3.5/globalops-351.exe">GlobalOps-351.exe </a>
+<div class="install">
+Make a backup of your "C:\Program Files\Crave\Global Operations"-folder
+first, then run this installer. GlobalOps 3.5.1 will be installed
+automatically.
+</div>
+</div>
+<div>
+Linux (server only): <a href="http://thelostparadise.com/GlobalOps/3.5/globalops-35.tar.gz">GlobalOps-35.tar.gz</a>
+<div class="install">
+Make a backup of your installation directory first, then go to the
+installation directory of GlobalOps and untar this tarball using  'tar -xzf
+globalops-3.5.tar.gz'. To finish the installation, copy the goserver.elf
+binary from bin/linux_release/goserver.elf over your old copy of goserver.
+
+This Linux version does not need the libltengine.so, libltobject.so and
+libgcdkey.so files anymore.
+</div>
+</div>
+
+
+
+
+
+</body></html>
