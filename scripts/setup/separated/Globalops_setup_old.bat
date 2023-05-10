@@ -78,9 +78,7 @@ echo %rivapath% > %batchdir%\rivapath.txt
 :Download RTSS
 if "%rivainstalled%"=="0" (
 	echo Attemping to download RTSS
-    Powershell.exe -executionpolicy bypass -Command "Invoke-WebRequest -Uri https://ftp.nluug.nl/pub/games/PC/guru3d/afterburner/[Guru3D.com]-RTSS.zip -OutFile %batchdir%\RTSS.zip"
-    Powershell.exe -executionpolicy bypass -Command "Expand-Archive -Force -LiteralPath '%batchdir%\RTSS.zip' -DestinationPath $globalopspath\"
-
+    Powershell.exe -executionpolicy bypass -Command "%batchdir%\download-RTSS.ps1"
 )
 
 pause
@@ -100,10 +98,9 @@ if "%filehash%"=="%hash%" (
     echo Patch 3.5 is already installed. Do you want to override what is currently installed?
     set /p "installpatch=Type 1 if you want to install the patch anyways: "
 ) else (
-    Powershell.exe -executionpolicy bypass -Command "Set-MpPreference -DisableRealtimeMonitoring $true"
-    Powershell.exe -executionpolicy bypass -Command "Invoke-WebRequest -Uri 'https://github.com/Boby360/Globalops_resources/raw/main/patches/3.5/globalops-35-manual-installer.zip' -OutFile %batchdir%\globalops-35-manual-installer.zip"
-    Powershell.exe -executionpolicy bypass -Command "Expand-Archive -Force -LiteralPath '%batchdir%\globalops-35-manual-installer.zip' -DestinationPath $globalopspath"
-    Powershell.exe -executionpolicy bypass -Command "Set-MpPreference -DisableRealtimeMonitoring $false"
+    Powershell.exe -executionpolicy bypass -File  "%batchdir%\disable-real-time.ps1"
+    Powershell.exe -executionpolicy bypass -File  "%batchdir%\download-3.5.ps1"
+    Powershell.exe -executionpolicy bypass -File  "%batchdir%\enable-real-time.ps1"
     echo Downloaded, installed 3.5, and disabled and enabled windows defender.
 )
 
@@ -121,10 +118,9 @@ REM set GAMEVERSION=%GAMEVERSION:~0,-1%
 REM echo %GAMEVERSION%
 
 if "%installpatch%"=="1" (
-    Powershell.exe -executionpolicy bypass -Command "Set-MpPreference -DisableRealtimeMonitoring $true"
-    Powershell.exe -executionpolicy bypass -Command "Invoke-WebRequest -Uri 'https://github.com/Boby360/Globalops_resources/raw/main/patches/3.5/globalops-35-manual-installer.zip' -OutFile globalops-35-manual-installer.zip"
-    Powershell.exe -executionpolicy bypass -Command "Expand-Archive -Force -LiteralPath '.\globalops-35-manual-installer.zip' -DestinationPath $globalopspath"
-    Powershell.exe -executionpolicy bypass -Command "Set-MpPreference -DisableRealtimeMonitoring $false"
+	Powershell.exe -executionpolicy bypass -File  "%batchdir%\disable-real-time.ps1"
+	Powershell.exe -executionpolicy bypass -File  "%batchdir%\download-3.5.ps1"
+	Powershell.exe -executionpolicy bypass -File  "%batchdir%\enable-real-time.ps1"
 )
 
 pause
@@ -136,47 +132,16 @@ reg query "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Defender\Exclusions\Pat
 if %errorlevel% equ 0 (
    echo The folder is excluded from Windows Defender.
 ) else (
-	echo The folder is not excluded from Windows Defender.
-	Powershell.exe -executionpolicy bypass -Command "Add-MpPreference -ExclusionPath %globalopspath%"
-
-	echo It has now been added
+   echo The folder is not excluded from Windows Defender.
+   Powershell.exe -executionpolicy bypass -File  "%batchdir%\exclusion.ps1"
+   echo It has now been added
 )
 echo Checked for Windows Defender Exclusion
 pause
 
 :Global Ops game profile performance tweaks
 
-
-setlocal enabledelayedexpansion
-
-set "search=ConcUpdates updaterate inputrate backbuffercount"
-set "replace=ConcUpdates "100" updaterate "20" inputrate "100.000000" backbuffercount "4""
-
-for %%f in (*.cfg) do (
-  echo Processing %%f...
-  for /f "usebackq delims=" %%l in ("%%f") do (
-    set "line=%%l"
-    set "match="
-    for %%s in (%search%) do (
-      echo !line! | findstr /c:"%%s" >nul
-      if not errorlevel 1 set "match=1"
-    )
-    if defined match (
-      set "line=!line:%search%=%replace%!"
-    )
-    echo !line!>>"%%~dpnf_modified%%~xf"
-  )
-  move /y "%%~dpnf_modified%%~xf" "%%~f"
-)
-
-echo Done.
-pause
-
-
-
-
-
-
+Powershell.exe -executionpolicy bypass -File "%batchdir%\profile-update.ps1"
 echo Attempted globalops profile optimizations
 REM If exists, then don't download
 REM Put this in the globalops folder for simplicity? 
@@ -189,8 +154,7 @@ if not exist "%globalopspath%\Tools" (
 
 if not exist "%globalopspath%\Tools\TimerTool.exe" (
 	echo file does not exist.
-    Powershell.exe -executionpolicy bypass -Command "Invoke-WebRequest -Uri 'https://vvvv.org/sites/all/modules/general/pubdlcnt/pubdlcnt.php?file=https://vvvv.org/sites/default/files/uploads/TimerToolV3.zip' -OutFile $globalopspath\Tools\TimerToolV3.zip"
-	Powershell.exe -executionpolicy bypass -Command 'Expand-Archive -Force -LiteralPath "$globalopspath\Tools\TimerToolV3.zip" -DestinationPath "$globalopspath\Tools\"'
+    Powershell.exe -executionpolicy bypass -File "%batchdir%\download-timertool.ps1"
 )
 
 echo high res timer done
@@ -198,7 +162,7 @@ pause
 :Riva Profile for Global Ops
 if not exist "%rivapath%\Profiles\Globalops.exe.cfg" (
 	echo downloading riva profile from github repo
-	Powershell.exe -executionpolicy bypass -Command "Invoke-WebRequest -Uri https://github.com/Boby360/Globalops_resources/raw/main/profiles/rivatuner-limit100-Globalops.exe.cfg -OutFile .\Globalops.exe.cfg"
+    Powershell.exe -executionpolicy bypass -File "%batchdir%\download-rivaprofile.ps1"
 	REM rename .\rivatuner-limit100-Globalops.exe.cfg Globalops.exe.cfg
 	copy ".\Globalops.exe.cfg" "%rivapath%\Profiles\"
 )
