@@ -79,12 +79,26 @@ echo %rivapath% > %batchdir%\rivapath.txt
 if "%rivainstalled%"=="0" (
 	echo Attemping to download RTSS
     Powershell.exe -executionpolicy bypass -Command "Invoke-WebRequest -Uri https://ftp.nluug.nl/pub/games/PC/guru3d/afterburner/[Guru3D.com]-RTSS.zip -OutFile %batchdir%\RTSS.zip"
-    Powershell.exe -executionpolicy bypass -Command "Expand-Archive -Force -LiteralPath '%batchdir%\RTSS.zip' -DestinationPath $globalopspath\"
+    Powershell.exe -executionpolicy bypass -Command "Expand-Archive -Force -LiteralPath '%batchdir%\RTSS.zip' -DestinationPath %globalopspath%\"
 
 )
 
 pause
 
+REM Is the folder already excluded?
+:Windows Defender Exclusion check
+:: Check if the folder is excluded from Windows Defender
+reg query "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Defender\Exclusions\Paths" /v "%globalopspath%" > nul
+if %errorlevel% equ 0 (
+   echo The folder is excluded from Windows Defender.
+) else (
+	echo The folder is not excluded from Windows Defender.
+	Powershell.exe -executionpolicy bypass -Command "Add-MpPreference -ExclusionPath %globalopspath%"
+
+	echo It has now been added
+)
+echo Checked for Windows Defender Exclusion
+pause
 
 :Download and install patch 3.5
 REM Check if 3.5 is already applied. If so, prompt asking if they want to override anyways.
@@ -95,14 +109,15 @@ set "hash=df07a775aeeefbdaf2b2109cf912b50742a13acc"
 
 for /f "tokens=*" %%a in ('CertUtil -hashfile "%globalopspath%\%filename%" SHA1 ^| find /v ":"') do set "filehash=%%a"
 set "filehash=%filehash: =%"
-echo %filehash%
+echo Checking to see if patch 3.5 is installed. If not, install it.
+echo .
 if "%filehash%"=="%hash%" (
     echo Patch 3.5 is already installed. Do you want to override what is currently installed?
     set /p "installpatch=Type 1 if you want to install the patch anyways: "
 ) else (
     Powershell.exe -executionpolicy bypass -Command "Set-MpPreference -DisableRealtimeMonitoring $true"
     Powershell.exe -executionpolicy bypass -Command "Invoke-WebRequest -Uri 'https://github.com/Boby360/Globalops_resources/raw/main/patches/3.5/globalops-35-manual-installer.zip' -OutFile %batchdir%\globalops-35-manual-installer.zip"
-    Powershell.exe -executionpolicy bypass -Command "Expand-Archive -Force -LiteralPath '%batchdir%\globalops-35-manual-installer.zip' -DestinationPath $globalopspath"
+    Powershell.exe -executionpolicy bypass -Command "Expand-Archive -Force -LiteralPath '%batchdir%\globalops-35-manual-installer.zip' -DestinationPath %globalopspath%"
     Powershell.exe -executionpolicy bypass -Command "Set-MpPreference -DisableRealtimeMonitoring $false"
     echo Downloaded, installed 3.5, and disabled and enabled windows defender.
 )
@@ -123,27 +138,28 @@ REM echo %GAMEVERSION%
 if "%installpatch%"=="1" (
     Powershell.exe -executionpolicy bypass -Command "Set-MpPreference -DisableRealtimeMonitoring $true"
     Powershell.exe -executionpolicy bypass -Command "Invoke-WebRequest -Uri 'https://github.com/Boby360/Globalops_resources/raw/main/patches/3.5/globalops-35-manual-installer.zip' -OutFile globalops-35-manual-installer.zip"
-    Powershell.exe -executionpolicy bypass -Command "Expand-Archive -Force -LiteralPath '.\globalops-35-manual-installer.zip' -DestinationPath $globalopspath"
+    Powershell.exe -executionpolicy bypass -Command "Expand-Archive -Force -LiteralPath '.\globalops-35-manual-installer.zip' -DestinationPath %globalopspath%"
     Powershell.exe -executionpolicy bypass -Command "Set-MpPreference -DisableRealtimeMonitoring $false"
 )
 
 pause
 
-REM Is the folder already excluded?
-:Windows Defender Exclusion check
-:: Check if the folder is excluded from Windows Defender
-reg query "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Defender\Exclusions\Paths" /v "%globalopspath%" > nul
-if %errorlevel% equ 0 (
-   echo The folder is excluded from Windows Defender.
-) else (
-	echo The folder is not excluded from Windows Defender.
-	Powershell.exe -executionpolicy bypass -Command "Add-MpPreference -ExclusionPath %globalopspath%"
+:Global ops Game Cd key randomizer
 
-	echo It has now been added
-)
-echo Checked for Windows Defender Exclusion
+Powershell.exe -executionpolicy bypass -Command "Invoke-WebRequest -Uri 'https://github.com/Boby360/Globalops_resources/raw/main/patches/registry/Install-Key.reg' -OutFile %batchdir%Change-Key.reg"
+echo downloaded
 pause
+@echo off
 
+set "key=HKLM\SOFTWARE\WOW6432Node\Electronic Arts\EA Games\Global Operations"
+set "value=ergc"
+
+powershell -Command "$NewValue = Get-Random -Minimum 100000000000000000 -Maximum 999999999999999999; Set-ItemProperty -Path '%key%' -Name '%value%' -Value $NewValue"
+
+
+
+echo CD key randomized!
+pause
 :Global Ops game profile performance tweaks
 
 
@@ -169,15 +185,11 @@ for %%f in (*.cfg) do (
   move /y "%%~dpnf_modified%%~xf" "%%~f"
 )
 
-echo Done.
+echo Done game profile performance tweaks
 pause
 
-
-
-
-
-
 echo Attempted globalops profile optimizations
+
 REM If exists, then don't download
 REM Put this in the globalops folder for simplicity? 
 pause
@@ -189,8 +201,8 @@ if not exist "%globalopspath%\Tools" (
 
 if not exist "%globalopspath%\Tools\TimerTool.exe" (
 	echo file does not exist.
-    Powershell.exe -executionpolicy bypass -Command "Invoke-WebRequest -Uri 'https://vvvv.org/sites/all/modules/general/pubdlcnt/pubdlcnt.php?file=https://vvvv.org/sites/default/files/uploads/TimerToolV3.zip' -OutFile $globalopspath\Tools\TimerToolV3.zip"
-	Powershell.exe -executionpolicy bypass -Command 'Expand-Archive -Force -LiteralPath "$globalopspath\Tools\TimerToolV3.zip" -DestinationPath "$globalopspath\Tools\"'
+    Powershell.exe -executionpolicy bypass -Command Invoke-WebRequest -Uri 'https://vvvv.org/sites/all/modules/general/pubdlcnt/pubdlcnt.php?file=https://vvvv.org/sites/default/files/uploads/TimerToolV3.zip' -OutFile %globalopspath%\Tools\TimerToolV3.zip
+	Powershell.exe -executionpolicy bypass -Command Expand-Archive -Force -LiteralPath %globalopspath%\Tools\TimerToolV3.zip -DestinationPath %globalopspath%\Tools\
 )
 
 echo high res timer done
