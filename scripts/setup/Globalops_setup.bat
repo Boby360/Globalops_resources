@@ -1,11 +1,19 @@
 @echo off
 
-REM TODO:
-REM Assume this is going to be placed in the global ops folder and get rid of all the globalops path stuff??
-REM Add the registry cd key randomizer to the script.
 
 
-
+:check_Permissions
+REM checking if script ran as Administrator    
+    net session >nul 2>&1
+    if %errorLevel% == 0 (
+	echo 
+    ) else (
+        echo You did not run this script as an Administrator.
+		echo This is required for this script to run properly.
+		echo Right click the script, and select "Run as administrator"
+		pause
+		exit
+    )
 
 REM Get the full path of the batch file
 set "batchfile=%~f0"
@@ -89,17 +97,15 @@ pause
 
 REM Is the folder already excluded?
 :Windows Defender Exclusion check
-:: Check if the folder is excluded from Windows Defender
-reg query "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Defender\Exclusions\Paths" /v "%globalopspath%" > nul
+REM Check if the folder is excluded from Windows Defender
+reg query "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Defender\Exclusions\Paths" /v "%globalopspath%" > nul 2>nul
 if %errorlevel% equ 0 (
    echo The folder is excluded from Windows Defender.
 ) else (
 	echo The folder is not excluded from Windows Defender.
 	Powershell.exe -executionpolicy bypass -Command "Add-MpPreference -ExclusionPath %globalopspath%"
-
 	echo It has now been added
 )
-echo Checked for Windows Defender Exclusion
 pause
 
 :Download and install patch 3.5
@@ -112,7 +118,6 @@ set "hash=df07a775aeeefbdaf2b2109cf912b50742a13acc"
 for /f "tokens=*" %%a in ('CertUtil -hashfile "%globalopspath%\%filename%" SHA1 ^| find /v ":"') do set "filehash=%%a"
 set "filehash=%filehash: =%"
 echo Checking to see if patch 3.5 is installed. If not, install it.
-echo .
 if "%filehash%"=="%hash%" (
     echo Patch 3.5 is already installed. Do you want to override what is currently installed?
     set /p "installpatch=Type 1 if you want to install the patch anyways: "
@@ -124,18 +129,6 @@ if "%filehash%"=="%hash%" (
     echo Downloaded, installed 3.5, and disabled and enabled windows defender.
 )
 
-
-:: Set the path to the file you want to check the version of
-REM set FILEPATH="%globalopspath%""\globalops.exe"
-
-:: Use WMIC to get the file version information
-REM for /f "tokens=2 delims==" %%v in ('wmic datafile where name^="%FILEPATH:\=\\%" get version /value') do set "GAMEVERSION=%%v"
-
-:: Remove any unwanted characters from the version string
-REM set GAMEVERSION=%GAMEVERSION:~0,-1%
-
-:: Print the file version
-REM echo %GAMEVERSION%
 
 if "%installpatch%"=="1" (
     Powershell.exe -executionpolicy bypass -Command "Set-MpPreference -DisableRealtimeMonitoring $true"
@@ -149,9 +142,6 @@ pause
 
 :Global ops Game Cd key randomizer
 
-Powershell.exe -executionpolicy bypass -Command "Invoke-WebRequest -Uri 'https://github.com/Boby360/Globalops_resources/raw/main/patches/registry/Install-Key.reg' -OutFile %batchdir%Change-Key.reg"
-echo downloaded
-
 set "key=HKLM:SOFTWARE\WOW6432Node\Electronic Arts\EA Games\Global Operations\ergc"
 set "value=(default)"
 
@@ -161,39 +151,7 @@ powershell -Command "$NewValue = Get-Random -Minimum 5000000000000000000000 -Max
 
 echo CD key randomized!
 pause
-:Global Ops game profile performance tweaks
 
-
-setlocal enabledelayedexpansion
-
-set "search=ConcUpdates updaterate inputrate backbuffercount"
-set "replace=ConcUpdates "100" updaterate "20" inputrate "100.000000" backbuffercount "4""
-
-for %%f in (*.cfg) do (
-  echo Processing %%f...
-  for /f "usebackq delims=" %%l in ("%%f") do (
-    set "line=%%l"
-    set "match="
-    for %%s in (%search%) do (
-      echo !line! | findstr /c:"%%s" >nul
-      if not errorlevel 1 set "match=1"
-    )
-    if defined match (
-      set "line=!line:%search%=%replace%!"
-    )
-    echo !line!>>"%%~dpnf_modified%%~xf"
-  )
-  move /y "%%~dpnf_modified%%~xf" "%%~f"
-)
-
-echo Done game profile performance tweaks
-pause
-
-echo Attempted globalops profile optimizations
-
-REM If exists, then don't download
-REM Put this in the globalops folder for simplicity? 
-pause
 :High Res Timer Download
 if not exist "%globalopspath%\Tools" (
     echo made Tools folder
@@ -206,17 +164,16 @@ if not exist "%globalopspath%\Tools\TimerTool.exe" (
 	Powershell.exe -executionpolicy bypass -Command Expand-Archive -Force -LiteralPath %globalopspath%\Tools\TimerToolV3.zip -DestinationPath %globalopspath%\Tools\
 )
 
-echo high res timer done
+echo High Res Timer install complete
 pause
 :Riva Profile for Global Ops
 if not exist "%rivapath%\Profiles\Globalops.exe.cfg" (
-	echo downloading riva profile from github repo
-	Powershell.exe -executionpolicy bypass -Command "Invoke-WebRequest -Uri https://github.com/Boby360/Globalops_resources/raw/main/profiles/rivatuner-limit100-Globalops.exe.cfg -OutFile .\Globalops.exe.cfg"
-	REM rename .\rivatuner-limit100-Globalops.exe.cfg Globalops.exe.cfg
-	copy ".\Globalops.exe.cfg" "%rivapath%\Profiles\"
+	echo Downloading Globalops Riva Profile from Github repo
+	Powershell.exe -executionpolicy bypass -Command "Invoke-WebRequest -Uri https://github.com/Boby360/Globalops_resources/raw/main/profiles/rivatuner-limit100-Globalops.exe.cfg -OutFile %batchdir%\Globalops.exe.cfg"
+	copy "%batchdir%\Globalops.exe.cfg" "%rivapath%\Profiles\"
 )
 
-echo riva profile from github complete
+echo Globalops Riva Profile install complete
 pause
 
 
@@ -232,7 +189,6 @@ set "desiredHostname=master.gamespy.com"
 echo This script will attempt to add the OpenSpy (Gamespy alternative) to your Windows Hosts file.
 echo .
 pause
-echo .
 
 REM Check if the hosts file is read-only and remove the attribute if necessary
 set "hostsReadOnly="
@@ -287,7 +243,6 @@ for /f "usebackq tokens=1,2,*" %%A in ("%hostsPath%") do (
 
 REM Set the hosts file back to read-only if it was read-only to begin with
 if defined hostsReadOnly (
-    echo Setting read-only attribute back on hosts file...
     attrib +r "%hostsPath%" >nul
 )
 
