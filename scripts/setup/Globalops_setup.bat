@@ -79,8 +79,10 @@ echo %rivapath% > %batchdir%\rivapath.txt
 if "%rivainstalled%"=="0" (
 	echo Attemping to download RTSS
     Powershell.exe -executionpolicy bypass -Command "Invoke-WebRequest -Uri https://ftp.nluug.nl/pub/games/PC/guru3d/afterburner/[Guru3D.com]-RTSS.zip -OutFile %batchdir%\RTSS.zip"
-    Powershell.exe -executionpolicy bypass -Command "Expand-Archive -Force -LiteralPath '%batchdir%\RTSS.zip' -DestinationPath %globalopspath%\"
-
+    Powershell.exe -executionpolicy bypass -Command Expand-Archive -Force -LiteralPath %batchdir%\RTSS.zip -DestinationPath %batchdir%\
+	echo This limits game FPS and is critical to smooth gameplay.
+	echo The run script will use it. please install it:
+	start "" "%batchdir%\[Guru3D.com]-RTSSSetup734.exe"
 )
 
 pause
@@ -140,6 +142,7 @@ if "%installpatch%"=="1" (
     Powershell.exe -executionpolicy bypass -Command "Invoke-WebRequest -Uri 'https://github.com/Boby360/Globalops_resources/raw/main/patches/3.5/globalops-35-manual-installer.zip' -OutFile globalops-35-manual-installer.zip"
     Powershell.exe -executionpolicy bypass -Command "Expand-Archive -Force -LiteralPath '.\globalops-35-manual-installer.zip' -DestinationPath %globalopspath%"
     Powershell.exe -executionpolicy bypass -Command "Set-MpPreference -DisableRealtimeMonitoring $false"
+	echo Installed 3.5, despite theoretically being installed due to your request.
 )
 
 pause
@@ -148,13 +151,11 @@ pause
 
 Powershell.exe -executionpolicy bypass -Command "Invoke-WebRequest -Uri 'https://github.com/Boby360/Globalops_resources/raw/main/patches/registry/Install-Key.reg' -OutFile %batchdir%Change-Key.reg"
 echo downloaded
-pause
-@echo off
 
-set "key=HKLM\SOFTWARE\WOW6432Node\Electronic Arts\EA Games\Global Operations"
-set "value=ergc"
+set "key=HKLM:SOFTWARE\WOW6432Node\Electronic Arts\EA Games\Global Operations\ergc"
+set "value=(default)"
 
-powershell -Command "$NewValue = Get-Random -Minimum 100000000000000000 -Maximum 999999999999999999; Set-ItemProperty -Path '%key%' -Name '%value%' -Value $NewValue"
+powershell -Command "$NewValue = Get-Random -Minimum 5000000000000000000000 -Maximum 6000000000000000000000; Set-ItemProperty -Path '%key%' -Name '%value%' -Value $NewValue"
 
 
 
