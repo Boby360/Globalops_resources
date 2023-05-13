@@ -1,0 +1,62 @@
+
+
+
+
+
+/*
+     FILE ARCHIVED ON 11:40:07 Mai 14, 2010 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 10:17:25 Okt 28, 2012.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+
+/* replace background color */
+html, body {
+	background-color:#579EC7;
+	background-image:url(http://web.archive.org/web/20100514114007/http://lithfaq.com/forums/styles/melankolia/theme/web/images/body.png);
+	background-repeat:repeat;
+	color:#5F6476;
+}
+
+.top-left, .top-right, .bottom-left, .bottom-right {
+	background-image: url("http://web.archive.org/web/20100514114007/http://lithfaq.com/forums/styles/melankolia/theme/web/images/rounded.gif");
+	height: 53px;       /* CHANGE: replace by the height of one of your corners (= 1/2 height of the image) */
+	font-size: 2px;    /* DNC: correction IE for height of the <div>'s */
+}
+.top-left, .bottom-left {
+	margin-right: 53px; /* CHANGE: replace by the width of one of your corners */
+}
+.top-right, .bottom-right {
+	margin-left: 53px;  /* CHANGE: replace by the width of one of your corners */
+	margin-top: -53px;  /* CHANGE: replace by the height of one of your corners */
+}
+
+.top-right {
+	background-position: 100% 0;    /* DNC: position right corner at right side, no vertical changes */
+}
+.bottom-left  {
+	background-position: 0 -53px;    /* CHANGE: replace second number by negative height of one of your corners */
+}
+.bottom-right {
+	background-position: 100% -53px; /* CHANGE: replace second number by negative height of one of your corners */
+}
+.inside {
+	align: right;
+	background-image: url("http://web.archive.org/web/20100514114007/http://lithfaq.com/forums/styles/melankolia/theme/web/images/bg.gif");            /* YCC: background-color of the inside */
+	background-repeat: repeat-y;
+	background-position: 100%
+	color: #000000;                 /* YCC: default text-color of the inside */
+	padding-left: 0px;             /* YCC: all texts at some distance of the left border */
+	padding-right: 0px;
+	padding-top: 1px;             /* YCC: all texts at some distance of the right border */
+}
+.notopgap    { margin-top: 0; }    /* DNC: to avoid splitting of the box */
+.nobottomgap { margin-bottom: 0; } /* DNC: to avoid splitting of the box */
+
+.outside {
+	margin: 0 auto;
+	width : 978px;
+	padding: 0;
+}

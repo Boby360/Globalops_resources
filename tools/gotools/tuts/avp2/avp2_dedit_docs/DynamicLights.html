@@ -1,0 +1,436 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=utf-8">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="LibreOffice 3.5  (Linux)">
+	<META NAME="CREATED" CONTENT="0;0">
+	<META NAME="CHANGED" CONTENT="0;0">
+	<META NAME="Info 1" CONTENT="">
+	<META NAME="Info 2" CONTENT="">
+	<META NAME="Info 3" CONTENT="">
+	<META NAME="Info 4" CONTENT="">
+	<STYLE TYPE="text/css">
+	<!--
+		@page { margin: 0.79in }
+		P { margin-bottom: 0.08in; direction: ltr; color: #000000 }
+		P.western { font-family: "Times New Roman", serif; font-size: 10pt; so-language: en-US }
+		P.cjk { font-family: "Times New Roman", serif; font-size: 10pt }
+		P.ctl { font-family: "Times New Roman", serif; font-size: 10pt }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="en-US" TEXT="#000000" DIR="LTR">
+<P CLASS="western" STYLE="margin-bottom: 0in">Dynamic Lights:  An
+Advanced Dedit tutorial.</P>
+<P CLASS="western" STYLE="margin-bottom: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">Introduction</P>
+<P CLASS="western" STYLE="margin-bottom: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">This document contains
+four separate advanced tutorials, which will teach you the basics of
+useing KeyFramerLights,  and LightGroups to do dynamic lighting
+effects.  This document will also touch on Doors, 
+RotatingWorldModels, Switches, and TranslucentWorldModels.  If you do
+not already know the basics of Dedit this document might be a little
+bit confusing.  You can learn the basics of Dedit by loading
+AvP2Dedit.html.</P>
+<P CLASS="western" STYLE="margin-bottom: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">Contents</P>
+<P CLASS="western" STYLE="margin-bottom: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">Tutorial 1: Light
+spilling out of a doorway as the door opens.</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">01	Creating the Door
+worldmodel object.</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">a.	State Flags</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">b.	OpenWaitTime</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">c.	Move Direction</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">d.	Move Speed</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">e.	Block Light</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">f.	ShadowLights</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">g.	LightFrames</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">02	Creating the
+KeyFramerLight object.</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">a.	UseShadowMaps</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">b.	Light Radius</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">c.	Light Color</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">03	Processor Settings.</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">a.	Light Animations</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">04	Limitations</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">Tutorial 2: Fan casting
+shadow as it rotates.</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">01	Creating the
+RotatingWorldModel for the fan.</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">a.	Start On</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">b.	BlockLight</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">c.	RotationAxis</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">d.	ShadowLights</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">e.	LightFrames</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">f.	ShadowAxis</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">02	Creating the
+KeyFramerLight object.</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">a.	UseShadowMaps</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">b.	Light Radius</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">c.	Light Color</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">03	Processor Settings.</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">a.	Light Animations</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">04	Limitations</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">Tutorial 3: Lights that
+can be turned on and off.</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">01	Creating the
+LightGroups.</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">a.	StartOn</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">02	Adding lights to
+LightGroups.</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">a.	Light Objects</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">b.	Light Radius</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">c.	Light Color</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">d.	Light BrightScale</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">03	Create the Switch</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">a.	OnTrigger Target</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">b.	OnTrigger Message</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">c.	OffTrigger Target</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">d.	OffTrigger Message</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">04	Processor Settings</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">a.	Light Animations</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">05	Limitations</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">Tutorial 4: Setting up
+a Destructible Light.</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">01	Creating the
+TranslucentWorldModel for the light fixture.</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">a.	Damage Properties</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">02	Creating the
+LightGroups.</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">a.	StartOn</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">03	Adding lights to the
+LightGroups.</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">a.	Light Objects</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">b.	Light Radius</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">c.	Light Color</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">d.	Light BrightScale</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">04	Processor Settings</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">a.	Light Animations</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">05	Limitations</P>
+<P CLASS="western" STYLE="margin-bottom: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">Tutorial 1: Light
+spilling out of a doorway as the door opens.</P>
+<P CLASS="western" STYLE="margin-bottom: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">01	Creating the Door
+worldmodel object.</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">Create a brush to
+become the door.  Make sure it’s selected and right click.  Select
+“Bind to Object” and choose “Door” from the list of objects.
+From the properties tab adjust the properties of the door.  Make sure
+the object is selected and go to the properties tab.</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">a.	State Flags</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">The StateFlags control
+how the door behaves.  You can get a description of what each
+stateflag does by hold the mouse over the stateflag name for a few
+seconds.   We want our door to close automatically so we will set the
+RemainOpen stateflag to False.  The TriggerClose flag must be set to
+False if you want the door to close automatically, setting this flag
+to true requires the door to receive another trigger message before
+closeting.</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">b.	OpenWaitTime</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">This field defines the
+number of seconds after the door is triggered open that it will wait
+before it automatically is triggered close.</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">c.	Move Direction</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">The MoveDirection field
+is an X Y Z vector.  A 1 will make the door move positive in that
+vector and a -1 will make it move negative in that vector.   Example:
+ Up would equal “0 1 0” without the quotes.  East would equal “1
+0 0”.   North would equal “0 0 1”</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">d.	Move Speed</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">The movespeed is the
+speed you want the door to move in Dedit units per second.  If your
+door is 256 tall and you want the door to finish it’s moving in one
+second, make this value 256.</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">e.	Block Light</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">By default this value
+is set to False, to have any effect on the lighting we will need this
+value set to True.</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">f.	ShadowLights</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">This field is the name
+of the KeyFramerLight object that the door will use.  Since we
+haven’t created the KeyFramerLight yet, you should leave this blank
+for now, but don’t forget to come back after we create the
+KeyFramerLight object and put its name here.</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">g.	LightFrames</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">This is the number of
+frames of lightmap animations that the processor should generate for
+this door while it is traveling.  The processor will also generate an
+additional two frames, one for fully open and one for fully closed. 
+The faster your door is moving the less frames of lightmap animations
+you will need to make the animation look convincing.</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">02	Creating the
+KeyFramerLight object.</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">Make sure the door is
+now deselected by hitting “U” which will unselect all objects. 
+Move the crosshair to where you want to place your KeyFramerLight by
+holding down “X”.  Right click and select “Add Object”.  Find
+and select “KeyFramerLight”.  Remember to take the name of this
+object and place in the ShadowLights field on the Door.</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">a.	UseShadowMaps.</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">This value defaults to
+True, it lowers the quality of the lightmap animations to make the
+.DAT file smaller.   There is a performance penalty and the quality
+of the lightmap frames is poor.  It’s recommended that you leave
+this at True and change it to False later if you don’t like the way
+the light is looking.</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">b.	Light Radius</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">This value controls how
+big the radius is on the light.</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">c.	Light Color</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">This allows you to
+select the color of your light.   
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">03	Processor Settings.</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">a.	Light Animations</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">Make sure to set the
+Light Animations checkbox on the processor.  Without this box checked
+all light animations will not function.</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">01	Limitations</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">There are a few
+limitations to this effect.  It doesn’t work well with Lambertian
+Lightmapping, which is used to give lights a more natural falloff. It
+is also can be a performance hog, depending on the number of lightmap
+frames and the number of polys being effected by the light.  
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">Tutorial 2: Fan Casting
+Shadow as it rotates.</P>
+<P CLASS="western" STYLE="margin-bottom: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">Tutorial 2: Fan casting
+shadow as it rotates.</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">05	Creating the
+RotatingWorldModel for the fan.</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">Build your fan brushes,
+then select all of them and right click. Select “Bind to Object”
+from the menu.   Choose “RotatingWorldModel” from the list of
+objects.  Make sure the object is selected and go to the properties
+tab.</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">a.	Start On</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">Setting this to True
+will cause the Fan to be rotating by default.  Setting this to False
+will require you to send the RotatingWorldModel an ON message before
+it will start rotating.</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">b.	BlockLight</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">You must set BlockLight
+to True, or the object will not block lighting.</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">c.	RotationAxis</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">For a floor or ceiling
+fan you will want the fan to rotate on the Y-axis, set the
+YaxisRevTime to 1, so that it takes one second to revolve a full
+revolution around the Y-axis.</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">d.	ShadowLights</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">This field is the name
+of the KeyFramerLight object that the door will use.  Since we
+haven’t created the KeyFramerLight yet, you should leave this blank
+for now, but don’t forget to come back after we create the
+KeyFramerLight object and put its name here.</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">e.	LightFrames</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">This is the number of
+frames of lightmap animations that the processor should generate for
+this door while it is traveling.  The processor will also generate an
+additional two frames.  The faster your RotatingWorldModel is moving
+the less frames of lightmap animations you will need to make the
+animation look convincing.  Fourteen is enough for a one second
+revolution time.</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">f.	ShadowAxis</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">This tells the
+processor which axis the shadow will be generated on, for our floor
+or ceiling fan example the default will do.  If you change the
+rotation axis of the RotatingWorldModel you will also need to change
+the ShadowAxis.  
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">06	Creating the
+KeyFramerLight object.</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">Make sure the door is
+now deselected by hitting “U” which will unselect all objects. 
+Move the crosshair to where you want to place your KeyFramerLight by
+holding down “X”.  Right click and select “Add Object”.  Find
+and select “KeyFramerLight”.  Remember to take the name of this
+object and place in the ShadowLights field on the Door.  Make sure
+the object is selected and go to the properties tab.</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">a.	UseShadowMaps</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">This value defaults to
+True, it must be set to False for this effect to function.</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">b.	Light Radius</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">This value controls how
+big the radius is on the light.</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">c.	Light Color</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">This allows you to
+select the color of your light</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">07	Processor Settings.</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">a.	Light Animations</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">Make sure to set the
+Light Animations checkbox on the processor.  Without this box checked
+all light animations will not function.</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">08	Limitations</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">a.	The number of frames
+required to make this effect look convincing completely depends on
+it’s use.   This can make it difficult to get the effect to look
+proper, also this effect doesn’t work well with Lambertian
+Lightmapping if the light from the fan effects nearby walls.  You
+should probably not use more than fourteen frames, and then not have
+very many per level.</P>
+<P CLASS="western" STYLE="margin-bottom: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">Tutorial 3: Lights that
+can be turned on and off.</P>
+<P CLASS="western" STYLE="margin-bottom: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">01	Create the
+LightGroups</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">Place the crosshair
+near where the light will be.  Right click and choose “Add Object”.
+ Select the LightGroup object.  Set its color to the color of light
+you want to affect the models in the level.   It’s very important
+that you place it near where the light source will be or the model
+lighting might look strange.  Make sure the object is selected and go
+to the properties tab.</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">a.	StartOn</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">Setting this to True
+will make the light start on by default, Setting this to False will
+make the light start off by default. We want this set to True for
+this tutorial.</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">02	Adding lights to
+LightGroups.</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">Select the LightGroup
+object in the node tree and hit F3.  This makes this node the active
+parent node. Any new objects or brushes will be created under this
+node.   Make your lights as you normally would, when you are done be
+sure to set the active parent back to the main node or you might
+accidentally place objects other than lights into the LightGroup. 
+It’s important to know that the ONLY thing that can be in a
+LightGroup node is Lights and DirLights.</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">a.	Light Objects</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">Be sure to set
+LightObjects to False on all light objects placed in a LightGroup
+leaving this as True will cause performance problems.</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">b.	Light Radius</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">This value sets the
+radius of the light in world units.</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">c.	Light Color</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">The value sets the
+color of the light.</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">d.	Light BrightScale</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">The brightness of the
+light, any value can be used but values between 0.25 and 1.0 are the
+most commonly used.</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">03	Creating the switch.</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">Create a brush, which
+will become your switch.  Make sure it’s selected and right click
+and choose “Bind to Object”.  Select “Switch” from the object
+list. There are several values, which control the function of the
+switch, but the following are the ones that you will need to adjust
+to get it working.   
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">a.	OnTrigger Target.</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">Set this field to the
+name of your LightGroup object.</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">b.	OnTrigger Message.</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">LightGroups respond to
+the ON and OFF messages.  If the LightGroup is to set to start on,
+then set this string to OFF.</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">c.	OffTrigger Target.</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">Set this field once
+again to the name of the LightGroup object.</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">d.	OffTrigger Message.</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">Again, the valid
+messages are ON and OFF.  Set this value to ON if the lightgroup is
+setup to start on.</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">04	Processor Settings.</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">a.	Light Animations</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">Make sure to set the
+Light Animations checkbox on the processor.  Without this box checked
+all light animations will not function.</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">05	Limitations.</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">You have to make sure
+the radius of the lights in the LightGroup aren’t affecting too
+many polys, otherwise you will experience performance problems.</P>
+<P CLASS="western" STYLE="margin-bottom: 0in; page-break-before: always">
+Tutorial 4: Setting up a Destructible Light.</P>
+<P CLASS="western" STYLE="margin-bottom: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">02	Creating the
+TranslucentWorldModel for the Light Fixture.</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">Build a brush for your
+light fixture.  Right click and select “Bind to Object”.  Choose
+TranslucentWorldModel from the list of object. Make sure the object
+is selected and go to the properties tab.</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">a.	Damage Properties</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">Set all the health and
+armor values to one. Set the DeathTrigger Target to the name of the
+LightGroup.  Set the DeathTrigger Message to OFF. Set NeverDestroy to
+False.</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">b.	DebrisType</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">Select the DebrisType
+pull down and select Glass.</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">03	Creating the
+LightGroup.</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">Place the crosshair
+near where the light will be.  Right click and choose “Add Object”.
+ Select the LightGroup object.  Set its color to the color of light
+you want to affect the models in the level.   It’s very important
+that you place it near where the light source will be or the model
+lighting might look strange.</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">a.	StartOn</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">Since this is a
+destructible light we are making, this should be set to True.</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">04	Adding lights to the
+LightGroup.</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">a.	LightObjects</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">Be sure to set
+LightObjects to False on all light objects placed in a LightGroup
+leaving this as True will cause performance problems.</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">b.	Light Radius</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">This value sets the
+radius of the light in world units.</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">c.	Light Color</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">The value sets the
+color of the light.</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">d.	Light BrightScale</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">The brightness of the
+light, any value can be used but values between 0.25 and 1.0 are the
+most commonly used</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">05	Processor Settings</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">a.	Light Animations</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">Make sure to set the
+Light Animations checkbox on the processor.  Without this box checked
+all light animations will not function.</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">06	Limitations</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">You have to make sure
+the radius of the lights in the LightGroup aren’t affecting too
+many polys, otherwise you will experience performance problems.   You
+can make a broken light fixture just behind the unbroken one or you
+can have it hidden and unhide it when the light fixture is broken. 
+In the sample level I simply placed the broken light one world unit
+behind the unbroken one.  
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0in"><BR>
+</P>
+</BODY>
+</HTML>

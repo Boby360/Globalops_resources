@@ -1,0 +1,3 @@
+Ok my goeditor did crash all the time OR did not load object.lto replace mss32.dll in your tools folder with this one and it should work!
+
+Downloaded from http://www.dll-files.com/dllindex/dll-files.shtml?mss32

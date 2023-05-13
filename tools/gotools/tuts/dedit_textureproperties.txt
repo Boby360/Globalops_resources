@@ -1,0 +1,5 @@
+
+Texture format:
+				Format 		Bits 	Bytes/px 	Colors levels 	Transparency levels 	Description
+Use 4444 in 16-bit mode =	RGBA4444 	16 	2 		16 		16 			4096 color format with soft transparency
+Use 5551 in 16-bit mode =	RGBA5551 	16 	2 		32 		1 			32768 color format with "hard" transparency

@@ -1,0 +1,84 @@
+________________________________________
+Dedit for KISS: Psycho Circus
+Starter documentation
+________________________________________
+
+This document is meant as a starting point and is far from comprehensive.  
+Email TOOLS@thirdlaw.com with specific questions and we will try and respond.
+
+
+
+-----
+Getting Dedit up and running
+-----
+- You should have the FULL game installed
+- UnZip kpctools.zip into your PSYCHO directory
+	This will place the tools in ...\psycho\bin\ 
+	and psycho.dep in ...\psycho\
+	and some sample .ed files in ...\psycho\worlds\samples
+
+- Use LithRez to unrez psycho.rez in your PSYCHO directory
+
+- Run Dedit and file->open project ...\psycho\psycho.dep
+
+- You must set "developer" to "1" ... you can do this by bringing down the console during a game and typing "developer 1" or by manually editing your .cfg file
+To check what "developer" is set to you can type "developer" at any time in the console.
+
+
+
+-----
+Dedit basic commands
+-----
+Most shogo editing information remains valid for KPC.
+http://www.planetshogo.com/editing/    <-- Shogo editing information... keep in mind that some of the information will be different especially entity information
+
+Changes are mostly in brush creation and moving around the editing windows.  The following are some of the changes from regular Dedit
+
+Getting around ... Basics
+- Moving around in the 2d windows is done by moving the mouse and holding down the <right mouse button>
+- Zooming in the 2d windows is done by holding down <shift> and moving the mouse back and forth while holding down the <right mouse button>
+- Moving around the 3d window is done by  moving the mouse while holding down the <right mouse button> and using either <shift> or <control> as a modifier
+- Cycling through the different modes(brush,poly/vertex, and object) can be done by pressing 1, 2, or 3
+- Pressing <TAB> will toggle and center between the three 2d views for all 2d windows that have that set (can be set by using the drop down menu explained in Adding objects)
+- Holding down <control> and clicking <middle mouse button> in any 2d views will center the 3d camera on that placement
+- From the menu you can set some movement options ... Edit->Options 
+
+Texture manipulation additions
+- Selecting a texture off of an existing brush can be done by clicking <middle mouse button> while pointing at the desired texture in the 3d window
+- Holding down <control> and clicking <middle mouse button> will apply the selected texture onto any selected brushes
+- In poly/vertex mode you can hold down <control> + <shift> and click <middle mouse button> to grab a surfaces texture and attributes and then apply these 
+  by doing as above... i.e. Holding down <control> and clicking <middle mouse button>
+
+Adding brushes
+- Brushes can still be added by pressing <space bar> to lay down 2d vertices
+- You will not be prompted for a depth/size like shogo Dedit but it will instead use the size of the last selected brush or a default size.
+
+Adding objects
+- You can click <right mouse button> in any 2d window to get a drop down menu that has, among other options, an option to add objects ...  you can also get this menu by clicking <`> in the 2d or 3d windows
+
+Selecting objects and brushes
+- Selecting single objects or brushes can be done by holding down <shift> and clicking <left mouse button> on the object in any 2d or 3d window
+- Selecting multiple objects or brushes can be done by holding down <control> and clicking <left mouse button> on the objects in any 2d or 3d window
+- Pressing <ESC> will unselect all objects and brushes
+
+Moving objects and brushes
+- An object can be moved by holding down <right mouse button> and dragging the object around the 2d view(s)
+- A brush can be moved by the above way but only if the mouse is somewhere within the boundaries of the selected brush(es) when the mouse is clicked... the brush(es) will be scaled otherwise.
+
+Compiling .ed files
+- Processing .ed files can be done through the menu from World->Process World
+- After processing an .ed file the resulting .dat file of the same name will be located in that worlds directory
+
+
+
+-----
+Misc. Information and Warnings
+-----
+- We do not use direct 3d(available from drop down menu) for our 2d views because there are some drawing problems we've noticed
+- We do sometimes use the direct 3d option for the 3d view... it helps for large maps
+- Sample .ed files are included in the zip and should be in Worlds\samples
+
+ 
+
+
+ 

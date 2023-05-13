@@ -1,0 +1,642 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" xml:lang="en-gb" lang="en-gb"><head>
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="content-language" content="en-gb">
+<meta http-equiv="content-style-type" content="text/css">
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="copyright" content="2002-2006 phpBB Group">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<title>LithFAQ • View topic - SpriteFX ID`s</title>
+
+<link rel="stylesheet" href="%20SpriteFX%20ID-Dateien/stylesheet.css" type="text/css">
+<script type="text/javascript">
+// <![CDATA[
+
+function popup(url, width, height, name)
+{
+	if (!name)
+	{
+		name = '_popup';
+	}
+
+	window.open(url.replace(/&amp;/g, '&'), name, 'height=' + height + ',resizable=yes,scrollbars=yes,width=' + width);
+	return false;
+}
+
+function jumpto()
+{
+	var page = prompt('Enter the page number you wish to go to.:', '1');
+	var perpage = '';
+	var base_url = '';
+
+	if (page !== null && !isNaN(page) && page > 0)
+	{
+		document.location.href = base_url.replace(/&amp;/g, '&') + '&start=' + ((page - 1) * perpage);
+	}
+}
+
+/**
+* Find a member
+*/
+function find_username(url)
+{
+	popup(url, 760, 570, '_usersearch');
+	return false;
+}
+
+/**
+* Mark/unmark checklist
+* id = ID of parent container, name = name prefix, state = state [true/false]
+*/
+function marklist(id, name, state)
+{
+	var parent = document.getElementById(id);
+	if (!parent)
+	{
+		eval('parent = document.' + id);
+	}
+
+	if (!parent)
+	{
+		return;
+	}
+
+	var rb = parent.getElementsByTagName('input');
+	
+	for (var r = 0; r < rb.length; r++)
+	{
+		if (rb[r].name.substr(0, name.length) == name)
+		{
+			rb[r].checked = state;
+		}
+	}
+}
+
+
+// ]]>
+</script>
+<link href="%20SpriteFX%20ID-Dateien/style.css" rel="stylesheet" type="text/css" media="screen, projection">
+</head>
+<body class="ltr"><div id="wm-ipp" style="display: block; position: relative; padding: 0px 5px; min-height: 70px; min-width: 800px; z-index: 9000;">
+<div id="wm-ipp-inside" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(http://staticweb.archive.org/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="http://wayback.archive.org/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="%20SpriteFX%20ID-Dateien/wayback-toolbar-logo.png" alt="Wayback Machine" border="0" height="39" width="110"></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="http://wayback.archive.org/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input name="url" id="wmtbURL" value="http://lithfaq.com/forums/viewtopic.php?f=110&amp;p=1341" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" type="text"><input name="type" value="replay" type="hidden"><input name="date" value="20081018205838" type="hidden"><input value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;" type="submit"><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="http://web.archive.org/web/20080624085057/http://lithfaq.com/forums/viewtopic.php?f=110&amp;p=1341" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="24 Jun 2008"><strong>JUN</strong></a>
+		                
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 20:58:38 Okt 18, 2008">OKT</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       Nov
+                       
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="http://web.archive.org/web/20080624085057/http://lithfaq.com/forums/viewtopic.php?f=110&amp;p=1341" title="8:50:57 Jun 24, 2008" style="background-color:transparent;border:none;"><img src="%20SpriteFX%20ID-Dateien/wm_tb_prv_on.png" alt="Previous capture" border="0" height="16" width="14"></a>
+		                
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 20:58:38 Okt 18, 2008">18</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+                       <img src="%20SpriteFX%20ID-Dateien/wm_tb_nxt_off.png" alt="Next capture" border="0" height="16" width="14">
+                       
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       2007
+                       
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 20:58:38 Okt 18, 2008">2008</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       2009
+                       
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="http://wayback.archive.org/web/20081018205838*/http://lithfaq.com/forums/viewtopic.php?f=110&amp;p=1341" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>2 captures</strong></a>
+           <div style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">24 Jun 08 - 18 Okt 08</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:450px;height:27px;" href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:450px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;" onmouseover="showTrackers('inline');" onmouseout="showTrackers('none');" onmousemove="trackMouseMove(event,this)" alt="sparklines" src="%20SpriteFX%20ID-Dateien/graph.png" border="0" height="27" width="450">
+			<img id="wbMouseTrackYearImg" style="display:none; position:absolute; z-index:9010;" src="%20SpriteFX%20ID-Dateien/transp-yellow-pixel.png" border="0" height="27" width="25">
+			<img id="wbMouseTrackMonthImg" style="display:none; position:absolute; z-index:9011; " src="%20SpriteFX%20ID-Dateien/transp-red-pixel.png" border="0" height="27" width="2">
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(http://staticweb.archive.org/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(http://staticweb.archive.org/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+
+<script type="text/javascript" src="%20SpriteFX%20ID-Dateien/disclaim-element.js"></script>
+<script type="text/javascript" src="%20SpriteFX%20ID-Dateien/graph-calc.js"></script>
+<script type="text/javascript" src="%20SpriteFX%20ID-Dateien/jquery.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1356998399999;
+var wbPrefix = "http://web.archive.org/web/";
+var wbCurrentUrl = "http:\/\/lithfaq.com\/forums\/viewtopic.php?f=110&p=1341";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth=450;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "18";
+var displayMonth = "Okt";
+var displayYear = "2008";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+<div class="outside">
+<div class="top-left"></div><div class="top-center"></div><div class="top-right"></div>
+<div class="inside">
+<div class="notopgap">
+<a name="top"></a>
+
+<div id="wrapheader">
+<div id="logodesc">
+	<div id="logo">
+			<a class="logo" href="http://web.archive.org/web/20081018205838/http://lithfaq.com/forums/index.php"><h1><font color="#FFFFFF">LithFAQ</font></h1><span class="gen"><font color="#FFFFFF">All Lithtech games under one roof. and then some.</font></span></a>
+	</div>
+</div>
+<br>
+
+
+
+	<table class="tablebg" cellspacing="1" width="100%">
+<tbody><tr>
+<td class="row1" height="60px" width="73%">
+			<p class="breadcrumbs"><a href="http://web.archive.org/web/20081018205838/http://lithfaq.com/forums/portal.php"><strong><img src="%20SpriteFX%20ID-Dateien/folder.html">Home</strong></a><strong> - <a href="http://web.archive.org/web/20081018205838/http://lithfaq.com/forums/index.php"><strong>Forums</strong></a>
+ » <strong><strong></strong>&nbsp;<a href="http://web.archive.org/web/20081018205838/http://lithfaq.com/forums/viewforum.php?f=109">Global Operations</a> » <strong><strong></strong>&nbsp;<a href="http://web.archive.org/web/20081018205838/http://lithfaq.com/forums/viewforum.php?f=110">General</a><br><img src="%20SpriteFX%20ID-Dateien/folder2.html"><a class="topictitle" href="http://web.archive.org/web/20081018205838/http://lithfaq.com/forums/viewtopic.php?f=110&amp;t=205&amp;start=0&amp;st=0&amp;sk=t&amp;sd=a">SpriteFX ID`s</a></strong></strong></strong></p><strong><strong>
+<div align="center"> <p></p></div>
+			</strong></strong></td>
+<td class="row2" height="60px" width="27%"><table cellspacing="0" width="100%">
+<tbody><tr>
+<td class="genmed">
+</td></tr></tbody></table>
+</td></tr>
+</tbody></table>
+	<div id="menubar" colspan="2">
+		<table cellspacing="0" width="100%">
+		<tbody><tr>
+			<td align="center">
+				  
+	 <a href="http://web.archive.org/web/20081018205838/http://lithfaq.com/forums/ucp.php" class="menubar"><strong>User Control Panel</strong></a>
+     <a href="http://web.archive.org/web/20081018205838/http://lithfaq.com/forums/search.php" class="menubar"><strong>Search</strong></a>
+	 <a href="http://web.archive.org/web/20081018205838/http://lithfaq.com/forums/faq.php" class="menubar"><strong>FAQ</strong></a>
+	 <a href="http://web.archive.org/web/20081018205838/http://lithfaq.com/forums/search.php?search_id=newposts" class="menubar"><strong>View new posts</strong></a>
+	 <a href="http://web.archive.org/web/20081018205838/http://lithfaq.com/forums/search.php?search_id=egosearch" class="menubar"><strong>View your posts</strong></a>
+	 <a href="http://web.archive.org/web/20081018205838/http://lithfaq.com/forums/search.php?search_id=unanswered" class="menubar"><strong>View unanswered posts</strong></a>
+	 <a href="http://web.archive.org/web/20081018205838/http://lithfaq.com/forums/search.php?search_id=active_topics" class="menubar"><strong>View active topics</strong></a>
+  
+
+
+
+
+            </td>
+		</tr>
+		</tbody></table>
+		
+	</div>
+</div>
+
+
+
+<div id="wrapcentre">
+		<br style="clear: both;">
+<div id="pageheader">
+	<h2><a class="titles" href="http://web.archive.org/web/20081018205838/http://lithfaq.com/forums/viewtopic.php?f=110&amp;t=205&amp;start=0&amp;st=0&amp;sk=t&amp;sd=a">SpriteFX ID`s</a></h2>
+
+</div>
+
+<br clear="all"><br>
+
+<div id="pagecontent">
+
+	<table cellspacing="1" width="100%">
+	<tbody><tr>
+		<td align="left" nowrap="nowrap" valign="middle">
+				</td>
+					<td class="nav" nowrap="nowrap" valign="middle">&nbsp;Page <strong>1</strong> of <strong>1</strong><br></td>
+			<td class="gensmall" nowrap="nowrap">&nbsp;[ 1 post ]&nbsp;</td>
+			<td class="gensmall" align="right" nowrap="nowrap" width="100%"></td>
+			</tr>
+	</tbody></table>
+
+	<table class="tablebg" cellspacing="1" width="100%">
+	<tbody><tr>
+		<td class="cat">
+			<table cellspacing="0" width="100%">
+			<tbody><tr>
+				<td class="nav" nowrap="nowrap">&nbsp;
+								</td>
+				<td class="nav" align="right" nowrap="nowrap"><a class="kat" href="http://web.archive.org/web/20081018205838/http://lithfaq.com/forums/viewtopic.php?f=110&amp;t=205&amp;view=previous">Previous topic</a> | <a class="kat" href="http://web.archive.org/web/20081018205838/http://lithfaq.com/forums/viewtopic.php?f=110&amp;t=205&amp;view=next">Next topic</a>&nbsp;</td>
+			</tr>
+			</tbody></table>
+		</td>
+	</tr>
+	</tbody></table>
+
+	<table class="tablebg" cellspacing="1" width="100%">
+			<tbody><tr>
+			<th>Author</th>
+			<th>Message</th>
+		</tr>
+	<tr class="row1">
+			<td class="row2" align="center" valign="middle">
+				<a name="p1341"></a>
+				<b class="postauthor">Spookstah</b>
+			</td>
+			<td class="row1" height="25" width="100%">
+				<table cellspacing="0" width="100%">
+				<tbody><tr>
+									<td class="gensmall" width="100%"><div style="float: left;">&nbsp;<b>Post subject:</b> SpriteFX ID`s</div><div style="float: right;"><img src="%20SpriteFX%20ID-Dateien/icon_post_target.html" alt="Post" title="Post" height="9" width="12"><b>Posted:</b> Fri Mar 28, 2008 8:31 am&nbsp;</div></td>
+				</tr>
+				</tbody></table>
+			</td>
+		</tr>
+		
+		<tr class="row1">
+			<td class="row2" valign="top">
+				<table align="center" cellspacing="4" width="180">
+							<tbody><tr>
+					<td align="left">Nooblet</td>
+				</tr>
+							</tbody></table>
+
+				<span>
+					<div class="postdetails"><b>Joined:</b> Fri Feb 29, 2008 7:44 pm</div><div class="postdetails"><b>Posts:</b> 2</div>				</span>
+
+			</td>
+			<td valign="top">
+				<table cellspacing="5" width="100%">
+				<tbody><tr>
+					<td>
+					
+						<div class="postbody">Here is my list of SpriteFX ID`s.<br>The list is not complete, but i`ll try to get it up to date.<br><br>2 - Three rusty metal bars flying through air<br>28 - Halo<br>44 - Halo (used on red lights)<br>53 - Halo (blinking red light, with bleeping sound)<br>55 - Spotlight<br>57 - Blowing Snow<br>84 - Sparks (with sound effect, emits every 15 seconds)<br>85 - Sparks (with sound effect, emits every 23 seconds)<br>87 - Constant Light (reddish-orange dynamic light, used at fires)<br>158 - Fire (with blacksmoke, sparks and constant light effect)<br>165 - Water Cooler Bubbles<br>170 - Flashlight<br>202 - Waterfall Mist (large)<br>254 - Fire (without smoke and sparks)<br>258 - Smoke White<br>283 - Waterfall Mist (medium)<br>284 - Waterfall Mist (small)<br>285 - Waterfall Mist (Jumbo)<br>290 - Waterfall Mist (Used in USA)<br>307 - Smoke Black<br>340 - Smoke (used on Chemneys)<br>326 - Halo<br>351 - Halo<br>373 - Halo<br>380 - Frosty Steam (used on vents)<br>386 - Streetlight (with a halo and a beam)<br>387 - Bright Light (small)<br>388 - Black Smoke (Very Small)<br>391 - Streetlight (Large)<br>392 - Streetlight (Large)<br>393 - Black Smoke (Very Small)<br>395 - Fire (Large)<br>396 - Fire (Medium)<br>398 - Blood Drops<br>399 - Box + Papers (Blown paper box)<br>400 - Paper (Newspaper)<br>401 - Paper (Box)<br>402 - Paper (Office papers)<br>403 - Security Control System (Blown up)<br>404 - Rockwall (wall sides from blown walls in SriLanka)<br>405 - Rockwall pieces (SriLanka)<br>406 - Rockwall pieces (SriLanka)<br>407 - Paper (Small pieces)<br>408 - Paper Box (Part of box)<br>409 - Water Bubbles<br>410 - Water Bubbles<br>411 - Blood (Large spot)<br>412 - Smoke White/Grey (Small)<br>413 - Sparks ?<br>414 - Sparks ?<br>416 - Lightning (Like in those \"magic\" balls)<br>417 - Flame (Candle)<br>418 - Broken Vase<br>419 - Broken Vase (Falling piece)<br>420 - Broken Vase (Falling piece)<br>421 - Broken Vase (Falling piece)<br>422 - Paper Box pieces<br>423 - Paper Box pieces<br>424 - Legs blown of (feet/shoes remaining)<br>425 - Head blown of<br>426 - Wood (Large pieces)<br>426 - Wood (Large pieces)<br>427 - Wood (Small pieces)<br>428 - Wood (Small pieces)<br>429 - Wood (Small pieces)<br>430 -Steam White/Grey (Large)<br>433 - Smoke Black + Black Pieces<br>434 -Smoke Black<br>435 - Pieces Black<br>436 - Explosion (Short Light) +Black Smoke (Short)<br>437 - Explosion (Short Light) +Black Smoke (Short)<br>438 - Leaves<br>439 - Leaves<br>440 - Leaves<br>441 - Pieces Brown (Small)<br>444 - Pieces (Glass or Marble?)<br>445 - Smoke Black (Short)<br>446 - Pieces of ? (Small)</div>
+
+					<br clear="all"><br>
+						<table cellspacing="0" width="100%">
+						<tbody><tr valign="middle">
+							<td class="gensmall" align="right">
+														</td>
+						</tr>
+						</tbody></table>
+					</td>
+				</tr>
+				</tbody></table>
+			</td>
+		</tr>
+
+		<tr class="row1">
+			<td class="row2"><a href="http://web.archive.org/web/20081018205838/http://lithfaq.com/forums/memberlist.php?mode=viewprofile&amp;u=348"><img src="%20SpriteFX%20ID-Dateien/icon_user_profile.html" alt="Profile" title="Profile"></a> &nbsp;<img src="%20SpriteFX%20ID-Dateien/icon_user_offline.html" alt="Offline" title="Offline"></td>
+			<td><div class="gensmall" style="float: right;">&nbsp;</div></td>
+		</tr>
+
+		
+	<tr>
+		<td class="spacer" colspan="2" height="1"><img src="%20SpriteFX%20ID-Dateien/spacer.html" alt="" height="1" width="1"></td>
+	</tr>
+	</tbody></table>
+
+	<table class="tablebg" cellspacing="1" width="100%">
+	<tbody><tr align="center">
+		<td class="cat"><form name="viewtopic" method="post" action="http://web.archive.org/web/20081018205838/http://lithfaq.com/forums/viewtopic.php?f=110&amp;t=205&amp;start=0"><p gensmall="" style="color: #40BFE7;"><span class="gensmall">Display posts from previous:</span> <select name="st"><option value="0" selected="selected">All posts</option><option value="1">1 day</option><option value="7">7 days</option><option value="14">2 weeks</option><option value="30">1 month</option><option value="90">3 months</option><option value="180">6 months</option><option value="365">1 year</option></select>&nbsp;<span class="gensmall">Sort by</span> <select name="sk"><option value="a">Author</option><option value="t" selected="selected">Post time</option><option value="s">Subject</option></select> <select name="sd"><option value="a" selected="selected">Ascending</option><option value="d">Descending</option></select>&nbsp;<input class="btnlite" value="Go" name="sort" type="submit"></p></form></td>
+	</tr>
+	</tbody></table>
+
+	<table cellspacing="1" width="100%">
+	<tbody><tr>
+		<td align="left" nowrap="nowrap" valign="middle">
+				</td>
+					<td class="nav" nowrap="nowrap" valign="middle">&nbsp;Page <strong>1</strong> of <strong>1</strong><br></td>
+			<td class="gensmall" nowrap="nowrap">&nbsp;[ 1 post ]&nbsp;</td>
+			<td class="gensmall" align="right" nowrap="nowrap" width="100%"></td>
+			</tr>
+	</tbody></table>
+
+</div>
+
+<div id="pagefooter"></div>
+
+<br clear="all">
+
+	<br clear="all">
+
+	<table class="tablebg" cellspacing="1" width="100%">
+	<tbody><tr>
+	<td colspan="2" class="cat"><h4 style="color: rgb(29, 169, 216);"> Who is online</h4></td>
+	</tr>
+		<tr><td colspan="2" class="row1"><p class="gensmall">Users browsing this forum: <span style="color: #9E8DA7;" class="username-coloured">Alexa [Bot]</span> and 0 guests</p></td>
+		</tr>
+	<tr>
+	<td colspan="2" class="cat"><h4 style="color: rgb(29, 169, 216);"> Panel</h4></td>
+	</tr>
+<tr class="row1">
+	<td class="row1" align="left" nowrap="nowrap" valign="top" width="40%"><span class="gensmall"><a href="http://web.archive.org/web/20081018205838/http://lithfaq.com/forums/viewtopic.php?f=110&amp;p=1341#wrapcentre"><strong>Top</strong></a></span></td>
+	<td class="row1" align="right" nowrap="nowrap" valign="top"><span class="gensmall">You <strong>cannot</strong> post new topics in this forum<br>You <strong>cannot</strong> reply to topics in this forum<br>You <strong>cannot</strong> edit your posts in this forum<br>You <strong>cannot</strong> delete your posts in this forum<br>You <strong>cannot</strong> post attachments in this forum<br></span></td>
+</tr>
+<tr class="row1">
+	<td class="row1"></td>
+	<td class="row1" align="right">	<form method="post" name="jumpbox" action="http://web.archive.org/web/20081018205838/http://lithfaq.com/forums/viewforum.php" onsubmit="if(document.jumpbox.f.value == -1){return false;}">
+
+	<table border="0" cellpadding="0" cellspacing="0">
+	<tbody><tr>
+		<td nowrap="nowrap"><span class="gensmall">Jump to:</span>&nbsp;<select name="f" onchange="if(this.options[this.selectedIndex].value != -1){ document.forms['jumpbox'].submit() }">
+
+					<option value="-1">Select a forum</option>
+		<option value="-1">------------------</option>			<option value="1">General</option>
+					<option value="118">&nbsp; &nbsp;News</option>
+					<option value="2">&nbsp; &nbsp;General</option>
+					<option value="3">&nbsp; &nbsp;Clans</option>
+					<option value="4">&nbsp; &nbsp;Fan Creations</option>
+					<option value="108">&nbsp; &nbsp;SPAM-A-TOREUM</option>
+					<option value="25">Tutorials</option>
+					<option value="26">&nbsp; &nbsp;Aliens Vs. Predator 2</option>
+					<option value="36">&nbsp; &nbsp;&nbsp; &nbsp;Tutorial Submission</option>
+					<option value="27">&nbsp; &nbsp;Blood 2: The Chosen</option>
+					<option value="37">&nbsp; &nbsp;&nbsp; &nbsp;Tutorial Submission</option>
+					<option value="28">&nbsp; &nbsp;Condemned: Criminal Origins/Condemned 2: Bloodshot</option>
+					<option value="38">&nbsp; &nbsp;&nbsp; &nbsp;Tutorial Submission</option>
+					<option value="29">&nbsp; &nbsp;F.E.A.R.</option>
+					<option value="39">&nbsp; &nbsp;&nbsp; &nbsp;Tutorial Submission</option>
+					<option value="30">&nbsp; &nbsp;No One Lives Forever</option>
+					<option value="40">&nbsp; &nbsp;&nbsp; &nbsp;Tutorial Submission</option>
+					<option value="31">&nbsp; &nbsp;No One Lives Forever 2 / Contract Jack</option>
+					<option value="41">&nbsp; &nbsp;&nbsp; &nbsp;Tutorial Submission</option>
+					<option value="35">&nbsp; &nbsp;Project Origin</option>
+					<option value="42">&nbsp; &nbsp;&nbsp; &nbsp;Tutorial Submission</option>
+					<option value="32">&nbsp; &nbsp;Rubies Of Eventide</option>
+					<option value="43">&nbsp; &nbsp;&nbsp; &nbsp;Tutorial Submission</option>
+					<option value="33">&nbsp; &nbsp;Shogo: Mobile Armor Division</option>
+					<option value="44">&nbsp; &nbsp;&nbsp; &nbsp;Tutorial Submission</option>
+					<option value="34">&nbsp; &nbsp;Tron 2.0</option>
+					<option value="45">&nbsp; &nbsp;&nbsp; &nbsp;Tutorial Submission</option>
+					<option value="112">Coding</option>
+					<option value="113">&nbsp; &nbsp;C++/C</option>
+					<option value="114">&nbsp; &nbsp;Delphi</option>
+					<option value="115">&nbsp; &nbsp;HTML</option>
+					<option value="116">&nbsp; &nbsp;PHP</option>
+					<option value="117">&nbsp; &nbsp;Other</option>
+					<option value="6">Blood 2: The Chosen</option>
+					<option value="18">&nbsp; &nbsp;General</option>
+					<option value="19">&nbsp; &nbsp;Questions and Answers</option>
+					<option value="21">&nbsp; &nbsp;Releases</option>
+					<option value="5">Aliens Vs. Predator 2</option>
+					<option value="17">&nbsp; &nbsp;General</option>
+					<option value="12">&nbsp; &nbsp;Questions and Answers</option>
+					<option value="13">&nbsp; &nbsp;Releases</option>
+					<option value="16">&nbsp; &nbsp;Upcoming Ideas</option>
+					<option value="66">Tron 2.0</option>
+					<option value="73">&nbsp; &nbsp;General</option>
+					<option value="74">&nbsp; &nbsp;Questions and Answers</option>
+					<option value="75">&nbsp; &nbsp;Releases</option>
+					<option value="76">&nbsp; &nbsp;Upcoming Ideas</option>
+					<option value="7">Condemned: Criminal Origins/Condemned 2: Bloodshot</option>
+					<option value="23">&nbsp; &nbsp;General</option>
+					<option value="46">&nbsp; &nbsp;Questions and Answers</option>
+					<option value="47">&nbsp; &nbsp;Releases</option>
+					<option value="9">F.E.A.R.</option>
+					<option value="48">&nbsp; &nbsp;General</option>
+					<option value="24">&nbsp; &nbsp;Questions and Answers</option>
+					<option value="49">&nbsp; &nbsp;Releases</option>
+					<option value="50">&nbsp; &nbsp;Upcoming Ideas</option>
+					<option value="84">F.E.A.R./Extraction Point/Perseus Mandate</option>
+					<option value="85">&nbsp; &nbsp;General</option>
+					<option value="86">&nbsp; &nbsp;Questions and Answers</option>
+					<option value="87">&nbsp; &nbsp;Releases</option>
+					<option value="109">Global Operations</option>
+					<option value="110" selected="selected">&nbsp; &nbsp;General</option>
+					<option value="59">Project Origin</option>
+					<option value="60">&nbsp; &nbsp;General</option>
+					<option value="61">&nbsp; &nbsp;Questions and Answers</option>
+					<option value="62">&nbsp; &nbsp;Releases</option>
+					<option value="63">&nbsp; &nbsp;Upcoming Ideas</option>
+					<option value="10">No One Lives Forever</option>
+					<option value="51">&nbsp; &nbsp;General</option>
+					<option value="52">&nbsp; &nbsp;Questions and Answers</option>
+					<option value="53">&nbsp; &nbsp;Releases</option>
+					<option value="54">&nbsp; &nbsp;Upcoming Ideas</option>
+					<option value="11">No One Lives Forever 2 / Contract Jack</option>
+					<option value="55">&nbsp; &nbsp;General</option>
+					<option value="56">&nbsp; &nbsp;Questions and Answers</option>
+					<option value="57">&nbsp; &nbsp;Releases</option>
+					<option value="58">&nbsp; &nbsp;Upcoming Ideas</option>
+					<option value="64">Rubies Of Eventide</option>
+					<option value="67">&nbsp; &nbsp;General</option>
+					<option value="68">&nbsp; &nbsp;Questions and Answers</option>
+					<option value="69">&nbsp; &nbsp;Releases</option>
+					<option value="70">&nbsp; &nbsp;Upcoming Ideas</option>
+					<option value="65">Shogo: Mobile Armor Division</option>
+					<option value="71">&nbsp; &nbsp;General</option>
+					<option value="72">&nbsp; &nbsp;Releases</option>
+					<option value="88">Purge</option>
+					<option value="89">&nbsp; &nbsp;General</option>
+					<option value="90">&nbsp; &nbsp;Questions and Answers</option>
+					<option value="92">Other Non Lith Powered Games</option>
+					<option value="93">&nbsp; &nbsp;Quake 1</option>
+					<option value="94">&nbsp; &nbsp;Quake 2 and Quake 3</option>
+					<option value="96">&nbsp; &nbsp;Quake 4 and Enemy Territory</option>
+					<option value="97">&nbsp; &nbsp;Half-Life 2</option>
+					<option value="98">&nbsp; &nbsp;Doom</option>
+					<option value="99">&nbsp; &nbsp;Unreal</option>
+					<option value="100">&nbsp; &nbsp;Rune</option>
+					<option value="102">&nbsp; &nbsp;Halo</option>
+					<option value="103">&nbsp; &nbsp;Call of Duty</option>
+					<option value="104">&nbsp; &nbsp;Team Fortress 2</option>
+					<option value="105">&nbsp; &nbsp;Crysis</option>
+					<option value="106">&nbsp; &nbsp;BattleField</option>
+					<option value="107">&nbsp; &nbsp;WAR ROCK</option>
+		
+		</select>&nbsp;<input class="btnlite" value="Go" type="submit"></td>
+	</tr>
+	</tbody></table>
+
+	</form>
+</td>
+</tr>
+
+</tbody></table>
+
+</div>
+
+<!--
+	We request you retain the full copyright notice below including the link to www.phpbb.com.
+	This not only gives respect to the large amount of time given freely by the developers
+	but also helps build interest, traffic and use of phpBB3. If you (honestly) cannot retain
+	the full copyright we ask you at least leave in place the "Powered by phpBB" line, with
+	"phpBB" linked to www.phpbb.com. If you refuse to include even this then support on our
+	forums may be affected.
+
+	The phpBB Group : 2006
+//-->
+
+<!--
+	Stil imzam� silmezseniz sevinirim. Silersenizde can�n�z sa�olsun. :)
+//-->
+
+<div id="wrapfooter">
+		<span class="copyright">Powered by <a href="http://web.archive.org/web/20081018205838/http://www.phpbb.com/">phpBB</a> © 2000, 2002, 2005, 2007 phpBB Group
+		<br><span class="gensmall">Dizayn <a href="http://web.archive.org/web/20081018205838/http://www.ta-frm.com/"><strong>Ercan K.</strong></a></span>
+	</span>
+</div>
+</div>
+<div class="nobottomgap"></div>
+</div>
+<div class="bottom-left"></div><div class="bottom-center"></div><div class="bottom-right">
+</div>
+
+
+
+
+
+
+
+</div></body></html>
+<!--
+     FILE ARCHIVED ON 20:58:38 Okt 18, 2008 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 10:17:49 Okt 28, 2012.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

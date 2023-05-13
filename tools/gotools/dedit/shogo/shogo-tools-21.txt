@@ -1,0 +1,12 @@
+	lt-tools.zip
+
+The Monolith LithTech engine tools released over the Internet today are:
+
+    DEdit, the LithTech world editor (also contains texture and sprite utilities).
+    LITHREZ, a command-line program for packing and unpacking .REZ (Resource) files.
+    ModelEdit, the tool to tweak LithTech .ABC models and animations.
+    A 3DS to ABC converter that takes a series of .3DS files and turns them into a mesh-deformed LithTech .ABC file.
+    A 3DSMAX exporter, to export .ABC files from in MAX.
+    A 3DSMAX texture plug-in, to allow the use of LithTech .DTX texture files as textures in 3DSMAX.
+    A Photoshop plugin that allows you to load/save .DTX files.
+    Documentation (list of all placeable Shogo objects and how to use them, LithTech documentation, etc.)

@@ -1,0 +1,145 @@
+Psycho Circus Editing Tips
+
+Welcome to the unsupported and incomplete documentation notes for the modified beta of Lithtech 1.5's  DEdit. Much as we'd like to Third Law has at this stage no opportunity to improve on the somewhat coarse condition of the tools and their documentation. We do regret this incompleteness but these tools must be released as is or not at all. Should you have the patience to learn to control this editor you will find it a deep and extremely powerful tool, but it does require buckets of patience to get there.
+
+This isn't Lithtech 2.0! The tools for Lithtech have evolved since we started modifying the 1.5's editor to our own needs. We did of course use these tools to build Psycho Circus, but we had the backup of Lithtech's well-oiled support machine and started with a team of four mappers that each had years of experience with other editors. Still not intimidated?
+
+Your best chance of learning how to take advantage of DEdit is by having some previous editing experience and by looking at the example ed-files provided. The first two maps of the game (R1M1a and R1M1b) have been included for your dissection. Bear in mind, all information in these maps weren't necessarily built with the public eye in mind. You might find redundant objects with no apparent function, offensive entity tags and/or experience repeated crashes to your desktop. You have been warned!
+
+
+Construction
+
+- All clipping should be logical. I.e. no floating monsters or obvious invisible walls.
+- Generally don't exceed 750 world polies in a combat-heavy area
+- Generally don't exceed 1250 world polies in a panoramic area
+- Have at least one secret per map. Scourge-grapplers are an easy way of achieving this. Since you know exactly where the player is going, grappling points are also good for setting up triggered events (place the trigger over the grappler).
+- When you start working on item-placement and balancing of the map, it can help to throw all the items you know you're gonna use in a big pile, near the starting area. This will save you time and assist in controlling the map's balance.
+- Ambient SFX should be present throughout.
+- All three levels of the map's dynamic song should be used.
+- Activatable decos. Any deco or breakable that has a pure color that is themed with an element (i.e. purple stained glass for water, twisted branch with green flame for earth, burning barrel for fire) may be set to spawn ammo for that element. Other decos, like skulls or crates, may be used to spawn in Black Diamonds or any other items.
+- Realm continuity. Make sure decos and textures are particular to the realm wherever possible. When you use barrels, make sure the correct realm-texture is used. When you place crates, makes sure that it is obvious by texture-choice which are breakable and which are permanent.
+- Burning barrels (or other open flames the player can get in or on top of) should do low damage to the player.
+- A straight path from start to exit is the bare minimum you will need. However, along the way there should be a few checkpoints (switches, breakables, puzzles, doors, etc.). 
+- Non-linear progression is an important element, even in simple forms. Make some multiple paths between locations, even if its just two corridors to a room, etc. Try building some areas where the monsters can flow freely around and have an optional area or two in each sub-map.
+- Looping paths. Make the start-exit path loop back through areas the players have already seen, but haven't been able to reach (i.e. a river-bed with a bridge crossing above). Interconnectivity is always good.
+- Put bonuses in most architecture dead-ends. Black Diamonds, ammo, something breakable, etc.
+- Texture alignment. Textures fit trims, alpha-textures don't have overlapping seams, specific textures (doors, hints, signs, etc.) are in place and the sky should be seamless (no flat stars or abruptly ending clouds, etc.).  If you're making new textures, make sure they have been flagged as the correct material (for footstep SFX).
+- All doors and lifts are fully functional
+- It is impossible to put yourself in a position that makes the map unsolvable
+- Locked doors that may be opened later should provoke a "locked" response from player activation.
+- Exits are marked. Exit mirror is only used as the portal to the tally-screen and must be in place on the final sub-map. Connections between sub-maps must also be marked, with an "exit" sign or another object that makes it clear to the player that he's about to switch maps.
+- When running through your map: Take notes! When a map is architecturally complete it helps to keep a pad of paper handy while you run around in it, to catch all the small things that you might forget by the time you're back into the editor.
+- Back up the last working full-compile of your map, for example by adding a '_full' extension to the file name. This makes it easy to check out the latest working version of your map.
+- Processor.exe:
+- For the quickest possible full-compile:
+- Set BSP slider all the way left
+- Set large split weight (256-512)
+- For slow, best full-compile (gold master):
+- Set BSP slider in center
+- Set split weight as low as you can get it (0-32)
+
+Framerate
+- Scrolling sky-textures should not be reduced in size below 128*128, as this seems to cause a massive frame rate loss anomaly.
+- Texture memory must be optimized. Make sure your map doesn't contain any textures you don't want loaded into memory. Don't use too many large textures (256*256).
+- Use SHOWPOLYCOUNTS 1, DRAWFLAT 1 and SHOWSPLITS 1 to monitor/control your face counts/BSP splits. Use shift+` and ctrl+` to better view this information while running around.
+- All clip, trigger, node, sky and portal brushes should have all light-information (gouradshade, lightmaps and subdivide) toggled to FALSE. This can shave multiple megabytes off a map.
+- Use the SHOWCLASSTICKS 1 command to check for decos, monsters and other entities stuck in the world (decos and monsters). Stuck items can potentially ruin the frame-rate of a map!
+- Keep the framerate as even as possible throughout the map.
+
+
+Monsters
+- Node volumes cover entire level, enabling creatures to track the player down.
+- No points where monsters may become permanently stuck.
+- No ledges where intelligent monsters pour off mindlessly.
+- Monsters and items have been tagged according to their difficulty levels.
+- Try not to have more than 30 monsters placed in world on start-up, as docile monsters add up to eat up processor time. Excessive monsters not found in the first few areas of the map can be replaced with triggered CMonsterSpawners.
+- All general-purpose doorways and node-connections in which you want a monster to flow freely are recommended to be at least 128*128 wide, usually twice that if you want a pack of monsters moving through it.
+- In large battles you might want to give the player some help by placing barrels, crushers, lava and other objects that can be used against the monsters.
+- If a monster is stuck you may use the console command MODELBOXES 1 to see the monsters' bounding boxes clearly.
+- If your map has looping map flow/interconnected areas, throw in a new surprise for when the player comes back around to familiar territory.
+- When you activate multiple CMonsterSpawners, take care not to trigger all exactly at the same time, as this can make an otherwise awesome encounter look a little stiff/fake. Throw off individual triggers by a few tenths of a second to remedy.
+- No monsters should be seen to pop out of thin air, without explanation of its origin! At the very least activate the spawn effect by toggling the settings on the CmonsterSpawner (DoSpawnEffect = TRUE).
+
+
+In-Game Cinematics
+- The player should be able to exit IGCs by pressing the space-bar, bar armor power-ups.
+- The following types of IGCs were those required to be present in a Psycho Circus map.
+- Stage intro (ca 20-60 seconds). Just so its clear, every map doesn't need an intro, but every stage does.
+- Any armor pick-up (ca 12 seconds)
+- New monster introduced (ca 10-20 seconds).
+- Optimally, IGCs start from a player action  (I.e. activated on something, jumped, fell down, etc.).
+- Camera control. Here are some quick tips:
+- Keep camera steady. Generally don't alter the rotation of the camera between every camera point. Try giving each "shot" at least two cinematic points. I.e. the camera moves, but the alignment of the cinematic point's rotation are parallel.
+- Change FOV to zoom with camera (default is 90).
+
+
+Map Nodes
+The following section is a look at one of DEdit's more distinguished features, the map nodes. This is one of the most important folders in the project window. They will allow you to select and modify multi-entity objects that you've grouped and organizes your map information. It also allows you to hide any specific object with ease, which can be invaluable: Different map objects may overlap or completely cover each other, so having them grouped in map nodes will make it easier to work on a small scale.
+
+You can organize your nodes at any time, don't feel that you have to group a new object every time you make one. I usually set up the basics early and do finalized grouping when the map's architecture is nearing completion. Once you're play-testing your map you'll want to put everything in its final place. These are some recommended map node-groups. I usually pre-fix these with 'AA', 'AB' or 'AC', to put them ranked at the top of the node-list, for easy access:
+
+- AA_AI Node Links. Handy to have visible, these provide an insightful illustration to the map's flow, once the AI node network has been fully implemented. If you do AI scripts, node links are great as ready-made points to send monsters to.
+- AA_AI Nodes. This node-group is an absolute must if you want to give the monsters the capability to follow the player around a level. After you've laid down the AI nodes, you'll most likely want to keep this group hidden or you will obscure your 3D-pane's vision and slow down the editor.
+- AA_Clip Brushes. Brushes placed to keep players where they should be, funnel monsters, prevent player getting stuck on complex geometry, etc. To make a working clip-brush:
+- Mark with invisible texture
+- Turn off all the brushes' lighting flags
+- Set "detail" to  "3" (if you forget this step, you will experience visual junk if standing inside a clip brush). 
+- Your clip brush must not touch your world brushes or you will carve a hole in the world, creating HOMs, and possibly leaks. This is a pain in the butt, as you will sometimes have to do some major precision work to get the results you want.
+- AA_Essentials. This is where you put the bare necessities. I.e. World Properties, Player Start, Outside Def and a Scriptmgr (if you're doing any scripts).
+- AA_Lighting. Store your lights, lightflares, dirlights and dynalights here.
+- AA_Monsters. The bulky monster-entities can get in the way of your editing, so keeping them in a separate node-group is handy.
+- AA_Pick Ups. Handy place to keep all your weapons, armor and items. 
+- AA_Triggers. An integral brush-group that I usually mark with a bright texture (lava) to make them highly visible when toggled on in the 3D map-view. You must turn off all lighting on the trigger brushes or waste lightmap data (memory) and compile times.
+- AB_Audio. Ambient sound effects, jukeboxes, etc.
+- AB_Breakables. Good place to put windows, crates and other destructible features.
+- AB_Decos. Decorative models.
+- AB_Sky Portals.
+- Remove lighting information from all sky brushes.
+- Remember to toggle "sky portal" to true on all brushes.
+- If you mark these brushes with the same texture you use for the map's sky/clouds it can help representing the map in the 3D view (closer to WYSIWYG).
+- AB_Switches. Knobs, gears, levers, wheels and other things for the player to activate.
+- AB_Translucency. For grilles, branches or any other texture with an alpha channel (transluceny). With most translucent brushes you'll want to do the following:
+- Toggle the brush's "translucent" property flag to "true"
+- Mark all sides with the "invisible" texture.
+- Apply a texture with an alpha-mask to one of the brush's sides. 
+- AB_ Volumes. Damage zones, ladders and liquids.
+- AB_Zones. These brushes are must-haves for large maps, as they make map sizes and shapes possible that you couldn't do otherwise. Use a custom texture to easily tell these apart in the 3D view, and keep their node hidden as a default.
+- AC_SomethingNiceIBuilt. When you've created a complex map object it pays big time to group it all in one place, as you'll most likely need to manipulate the object in some way later on (copying, deleting, moving, etc.). Candidates for this category include a working jukebox, an armor cinematic sequence, a cool door, a beveled wall, a lamp or any other multi-part object. 
+- Deathmatch Map Nodes. Organising nodes for a deathmatch map is slightly different. For starters, you do no longer need the following groups: AI nodes & node links, monsters, triggers, breakables, etc. A deathmatch map should also be severely sparse on ping-killing effects like midtextures, torches and lightflares. Volumes (ladders and liquids) are pretty much a total taboo for multiplayer.
+- AA_Items. As the pick-ups in Psycho Circus do not have hard-coded respawn times, it pays to group the different pickups with equal respawn times together.
+- AA_Essentials. You should include 16 deathmatch player starts in this group.
+- AA_Armor.
+- AA_Weapons.
+
+
+Play Testing
+- A player MUST be able to beat the level without cheating!
+- Health-to-monster ratio that allows for damage to be taken in every combat situation.
+- All skill levels have been tested and are functional and balanced. Monsters and items have been tagged properly.
+- How to judge skill levels
+o Skill 0, "Lullaby". Combat should only be challenging to newcomers of the genre.
+o Skill 1, "Daydream". Mastery of strafing should not be a requisite in being able to complete this setting.
+o Skill 2, "Sleepless". A player with accurate aim should have enough ammo to resolve combat without heavy use of melee.
+o Skill 3, "Cold Sweat". Here's where it get tough and you have to count your bullets, watch your weapon-selections and expect to have to deal with quite a few monsters up close. Players unable to strafe will likely not be able to complete this skill level.
+o Skill 4, "Nightmare". Only for those who have already beaten the game and feel like taking on an unfair challenge.
+
+
+Warnings
+- Never have the node window open when you use the undo/redo function or close a map down, or you may experience a temporary system slow-down of some magnitude. The larger the map, the longer the lock and you will not be able to multitask efficiently while DEdit does whatever it is it does during this stage. If this happens to you, which it most likely will at some point, you can look at the node-window's slider-bar for an indicator of how long your system will sit there (once the bar has stretched the length of the window you'll be back in business). You may have any other project window active without experiencing this problem, so make it a habit to check before you undo/close. I usually switch directly to the properties window the moment I'm done working with map nodes.
+- Never try to group a map node into itself. This mistake is easily done when you're selecting things for grouping. DEdit will cause an illegal operation and crash to desktop if you do this.
+- Never attempt to draw a brush if not in brush mode, or you will create a problem brush. Process your map with the -SELECTPROBLEMBRUSH parameter if you get this problem. Next time you load the map DEdit will have automatically selected the problem brush, which may otherwise be impossible to track down. Delete it!
+- DEdit will at times add "ghost vertices" to your brushes. You can see a brush has been warped when you select a single brush, and the selection outline is bigger than your brush outline. Although these brushes don't cause problems with any game mechanics they do make the map view messy and complicate dragging brush-sides. To correct the problem, observe where the selection outline extends its logical boundaries, go to vertex mode and drag a selection box over the extruded area. Once selected the mutant vertex will show up and be ready for deletion.
+- There is no brush scaling tool available. I.e. make sure you're working on the desired scale before locking down detailed structures.
+- Entities don't snap to grid. This includes lights, monsters, equipment, etc.
+- There is no toggle for the visibility of common archetypes. I.e. you can't automatically toggle the visibility of a certain class of entities (detail brushes, lights, monsters, etc.), only what map nodes you have manually grouped.
+- Multi-part map-effects usually can't be copied and pasted without losing the functionality of the object. The settings of mirrors, doors, breakables, etc. all require resetting surface flags, target names and other information to work properly.
+- 3D window has inaccurate entity selection. When you go to highlight an entity in the 3D window always make sure that you got the intended object selected. DEdit will frequently pick objects directly behind the one you intended to grab, it seems as if the selection trace starts at the far end of the map and works its way towards your viewpoint.
+- When selecting multiple entities, the properties window does not update with the latest object's information. You'll see the first selected object's info until it has been deselected.
+- When moving a brush, or a selection of brushes, DEdit is sensitive to grid sizes that are larger than the selected object. If the grid is sufficiently disproportionate you will be unable to move your selection, no matter where you click. DEdit will instead deform the selection when you drag. Press CTRL+Z to undo such a mishap, reduce the grid size and try again.
+- When copying and pasting information between maps, you must have both maps open in the editor during the paste operation. If you don't, DEdit will most likely perform an illegal operation and crash.
+
+
+You can try to direct questions about the Psycho Circus tools to the forums on kisspsychocircus.com. The tools are as stated unsupported, but you might just find someone that has the answer you're looking for.
+
+Good luck!
+Sverre Kvernmo

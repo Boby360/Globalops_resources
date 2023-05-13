@@ -1,0 +1,62 @@
+PROCESSOR SETTINGS ADDENDUM
+===========================
+
+Project Directory:
+
+    If AVP2 is installed in a folder with long file names, you will
+    need to use the 8-character DOS shortcut for the name. For
+    instance, if you installed the game to the default directory,
+    you would want to put the following in this field:
+
+    c:\progra~1\fox\aliens~1.pre\avp2
+
+    You can get the 8-character DOS shortcut for the path names
+    with the "dir" command in the Windows Command Prompt window.
+
+
+Options/Extra Parameters:
+
+	-leakfile <name>.lek
+
+	This writes a leak file to:		\AVP2\DEDIT\*.lek
+	One is for the physics shell: 		<name>.lek
+	The other is for the visual shell:	<name>_Vis.lek
+
+		TIPS:
+		Hide all Detail Brushes (Selection/Select Detail Brushes)
+		Hide all TranslucentWorldObjects (Selection/Advanced Select/Node of Class)
+		Hide all Doors (Selection/Advanced Select/Node of Class)
+		Make sure *NO* NOSNAP=TRUE geometry is touching the outer shell of your level!
+
+	-nosnapnocsg
+
+	Use this flag when processing levels that have single-sided geometry that is not
+	bound to any object. You will need to use it with the included Sample_Marine and
+	Sample_Alien levels, for instance, to avoid getting leaks.
+
+
+Options/Slider Reference:
+
+	If you have a leak, try sliding the processor bar to LESS POLIES or to BALANCED TREE.
+
+
+
+PROCESSOR EXAMPLE
+=================
+
+Sample_Evac_Events.ed uses the following settings:
+
+
+[ ] Replace Textures		[x] Apply Lighting		[x] Full Optimization
+[x] Import Geometry		[x] Light Animations		[ ] Fast Approximation
+[x] Import Texture Flags	[x] Shadows
+[x] Ignore Hidden		[ ] Vertex Lighting Only
+[ ] Fix T Junctions		[x] Lambertian Lightmaps
+[x] Import AI and Music Vol.
+
+EXTRA PARAMETERS: -leakfile broken.lek -nosnapnocsg
+SLIDER REFERENCE: 200
+
+
+
+

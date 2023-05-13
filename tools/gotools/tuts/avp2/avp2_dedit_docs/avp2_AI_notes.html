@@ -1,0 +1,1458 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=utf-8">
+	<TITLE>To place an AI:</TITLE>
+	<META NAME="GENERATOR" CONTENT="LibreOffice 3.5  (Linux)">
+	<META NAME="AUTHOR" CONTENT="Peter Higley">
+	<META NAME="CREATED" CONTENT="20020114;23570000">
+	<META NAME="CHANGEDBY" CONTENT="Ben Chamberlain">
+	<META NAME="CHANGED" CONTENT="20020116;21370000">
+	<META NAME="Info 1" CONTENT="">
+	<META NAME="Info 2" CONTENT="">
+	<META NAME="Info 3" CONTENT="">
+	<META NAME="Info 4" CONTENT="">
+	<STYLE TYPE="text/css">
+	<!--
+		@page { size: 8.5in 11in; margin-right: 1.25in; margin-top: 1in; margin-bottom: 1in }
+		P { margin-bottom: 0in; direction: ltr; color: #000000; widows: 2; orphans: 2 }
+		P.western { font-family: "Times New Roman", serif; font-size: 10pt; so-language: en-US; font-weight: bold }
+		P.cjk { font-family: "Times New Roman", serif; font-size: 10pt; font-weight: bold }
+		P.ctl { font-family: "Times New Roman", serif; font-size: 10pt; so-language: ar-SA; font-weight: bold }
+		H1 { margin-bottom: 0.04in; direction: ltr; color: #000000; widows: 2; orphans: 2 }
+		H1.western { font-family: "Arial", sans-serif; font-size: 14pt; so-language: en-US }
+		H1.cjk { font-family: "Times New Roman", serif; font-size: 14pt }
+		H1.ctl { font-family: "Arial", sans-serif; font-size: 10pt; so-language: ar-SA; font-weight: normal }
+		H2 { margin-bottom: 0.04in; direction: ltr; color: #000000; widows: 2; orphans: 2 }
+		H2.western { font-family: "Arial", sans-serif; font-size: 12pt; so-language: en-US; font-style: italic }
+		H2.cjk { font-family: "Times New Roman", serif; font-size: 12pt; font-style: italic }
+		H2.ctl { font-family: "Arial", sans-serif; font-size: 10pt; so-language: ar-SA; font-weight: normal }
+		H3 { margin-bottom: 0.04in; direction: ltr; color: #000000; widows: 2; orphans: 2 }
+		H3.western { font-family: "Arial", sans-serif; font-size: 12pt; so-language: en-US; font-weight: normal }
+		H3.cjk { font-family: "Times New Roman", serif; font-size: 12pt; font-weight: normal }
+		H3.ctl { font-family: "Arial", sans-serif; font-size: 10pt; so-language: ar-SA; font-weight: normal }
+		H4 { margin-bottom: 0.04in; direction: ltr; color: #000000; widows: 2; orphans: 2 }
+		H4.western { font-family: "Arial", sans-serif; so-language: en-US }
+		H4.cjk { font-family: "Times New Roman", serif }
+		H4.ctl { font-family: "Arial", sans-serif; font-size: 10pt; so-language: ar-SA; font-weight: normal }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="en-US" TEXT="#000000" DIR="LTR">
+<P CLASS="western"><FONT SIZE=3><B>To place an AI:</B></FONT></P>
+<UL>
+	<LI><P CLASS="western" STYLE="font-weight: normal">Lay out volumes
+	(make a brush and attach it to an AIVolume).  Put them on the floor.
+	 Make them tall enough to contain the AI.  Don’t let any world
+	models or world geometry be inside of them.</P>
+	<LI><P CLASS="western" STYLE="font-weight: normal">Put an AI in the
+	level.  Be certain the AI is in an AIVolume, they will not leave
+	volumes.</P>
+	<LI><P CLASS="western" STYLE="font-weight: normal">Select the AI’s
+	CharacterType and AttributeTemplate.  There is only one
+	AttributeTemplate at the moment, but they’ll be more, you just
+	wait and see.</P>
+	<LI><P CLASS="western" STYLE="font-weight: normal">Give the AI a
+	goal or two.  For starters you need only name the goal type and give
+	it any needed parameters.  The default goals are Attack and
+	Investigate.  For Attack you need only to choose that goal type. 
+	For the patrol you will need to create patrol nodes and set Link to
+	point to one of them.</P>
+	<LI><P CLASS="western" STYLE="font-weight: normal">If you want an AI
+	to patrol, set up some AIPatrolNodes.  Each node should point to the
+	next node to go to.  Make the chain a circuit if you want to. 
+	Otherwise the AI goes back and forth along the route.<BR><BR><BR>
+	</P>
+</UL>
+<H1 CLASS="western">1AI Classes</H1>
+<P STYLE="margin-left: 0.3in; font-weight: normal">There are
+different classes for each race (ie. AIAlien, AIPredator, etc.)</P>
+<P STYLE="margin-left: 0.3in; font-weight: normal">  
+</P>
+<H2 CLASS="western" STYLE="margin-left: 0.7in; text-indent: -0.4in">1.1Properties</H2>
+<H3 CLASS="western" STYLE="margin-left: 1in; text-indent: -0.5in"><B>1.1.1AllowInGameTyp</B></H3>
+<P STYLE="margin-left: 1in; font-weight: normal">Selects type of game
+(ie. Death Match, Single Player, etc.).  Same as Prop object.</P>
+<H3 CLASS="western" STYLE="margin-left: 1in; text-indent: -0.5in">1.1.2<B>ActivateConditions</B>
+</H3>
+<P STYLE="margin-left: 1in; font-weight: normal"> unused</P>
+<H3 CLASS="western" STYLE="margin-left: 1in; text-indent: -0.5in">1.1.3<B>DamageProperties</B>
+</H3>
+<P STYLE="margin-left: 1in; font-weight: normal"> Handles damage
+properties of AI, just like Prop object.</P>
+<H3 CLASS="western" STYLE="margin-left: 1in; text-indent: -0.5in"><B>1.1.4Attachments</B></H3>
+<P CLASS="western" STYLE="margin-left: 1in; font-weight: normal">unused</P>
+<H3 CLASS="western" STYLE="margin-left: 1in; text-indent: -0.5in"><B>1.1.5CharacterType</B></H3>
+<P STYLE="margin-left: 1in; font-weight: normal">Selects the model
+and general character properties to use.  This is a list generated
+from AVP2\Attributes\CharacterButes.txt.</P>
+<H3 CLASS="western" STYLE="margin-left: 1in; text-indent: -0.5in"><B>1.1.6MoveToFloor</B></H3>
+<P STYLE="margin-left: 1in; font-weight: normal">Moves object to
+floor when level is loaded, just like Prop object.</P>
+<H3 CLASS="western" STYLE="margin-left: 1in; text-indent: -0.5in"><B>1.1.7ShowDeadBody</B></H3>
+<P STYLE="margin-left: 1in; font-weight: normal">When killed, a dead
+body will be generated if set to TRUE.</P>
+<H3 CLASS="western" STYLE="margin-left: 1in; text-indent: -0.5in"><A NAME="_Ref486928099"></A>
+<B>1.1.8Goals</B></H3>
+<P STYLE="margin-left: 1in; font-weight: normal">The AI’s have
+multiple goals.  Each goal has a bid, which is basically a priority. 
+Higher bids will be acted upon first.  The AI’s also have goals
+defined in their attribute template.</P>
+<P STYLE="margin-left: 1in; font-weight: normal">See Error: Reference source not foundGoals
+section for more information on goals.</P>
+<H4 CLASS="western" STYLE="margin-left: 1.6in; text-indent: -0.6in">1.1.8.1GoalName_#</H4>
+<P CLASS="western" STYLE="margin-left: 1.5in; font-weight: normal">Unique
+name for goal (so that triggers can modify the bid for the goal).</P>
+<H4 CLASS="western" STYLE="margin-left: 1.6in; text-indent: -0.6in">1.1.8.2BidValue_#
+</H4>
+<P CLASS="western" STYLE="margin-left: 1.5in; font-weight: normal">No
+longer accessible in dEdit.</P>
+<H4 CLASS="western" STYLE="margin-left: 1.6in; text-indent: -0.6in">1.1.8.3Link_#</H4>
+<P CLASS="western" STYLE="margin-left: 1.5in; font-weight: normal">If
+goal requires an object (such as Patrol), this specifies it.</P>
+<H4 CLASS="western" STYLE="margin-left: 1.6in; text-indent: -0.6in">1.1.8.4Parameters_#</H4>
+<P CLASS="western" STYLE="margin-left: 1.5in; font-weight: normal">Other
+parameters the goal may take.<BR><BR>
+</P>
+<H3 CLASS="western" STYLE="margin-left: 1in; text-indent: -0.5in"><B>1.1.9AttributeOverride</B></H3>
+<P STYLE="margin-left: 1in; font-weight: normal">Overrides some
+attribute template defaults.</P>
+<H4 CLASS="western" STYLE="margin-left: 1.6in; text-indent: -0.6in">1.1.9.1SoundRadius</H4>
+<P CLASS="western" STYLE="margin-left: 1.5in; font-weight: normal">Unused.</P>
+<H4 CLASS="western" STYLE="margin-left: 1.6in; text-indent: -0.6in">1.1.9.2Weapon</H4>
+<P CLASS="western" STYLE="margin-left: 1.5in; font-weight: normal">Selects
+a weapon for the AI to use.  Weapons are drawn from
+AVP2\Attributes\Weapon.txt.</P>
+<H3 CLASS="western" STYLE="margin-left: 1in; text-indent: -0.5in"><B>1.1.10AttributeTemplate</B></H3>
+<P STYLE="margin-left: 1in; font-weight: normal">Selects the AI
+attributes.  These control the AI specific properties such as Weapon
+type, aggressiveness, etc.  Found in AVP2\Attributes\AIButes.txt.</P>
+<P STYLE="margin-left: 1in; font-weight: normal"><BR>
+</P>
+<H3 CLASS="western" STYLE="margin-left: 1in; text-indent: -0.5in"><B>1.1.11Commands</B></H3>
+<H4 CLASS="western" STYLE="margin-left: 1.6in; text-indent: -0.6in">1.1.11.1Initial</H4>
+<P CLASS="western" STYLE="margin-left: 1.5in; font-weight: normal">This
+string is sent to the AI as a trigger when the level is loaded.</P>
+<H4 CLASS="western" STYLE="margin-left: 1.6in; text-indent: -0.6in">1.1.11.2ActivateOn</H4>
+<P CLASS="western" STYLE="margin-left: 1.5in; font-weight: normal">This
+string is sent to the AI as a trigger when the player activates the
+AI.</P>
+<H4 CLASS="western" STYLE="margin-left: 1.6in; text-indent: -0.6in">1.1.11.3ActivateOff</H4>
+<P CLASS="western" STYLE="margin-left: 1.5in; font-weight: normal">This
+string is sent to the AI as a trigger when the player de-activates
+the AI.</P>
+<H4 CLASS="western">1.1.11.4UseCover</H4>
+<P CLASS="western" STYLE="font-weight: normal">Currently defaults to
+FALSE.  Set to TRUE if you want the AI to use AINodeCover points that
+you have placed in the level.  This results in a more cautious AI. 
+They will use these nodes when advancing and dodging.<BR><BR>
+</P>
+<H4 CLASS="western">1.1.11.5NeverLoseTarget</H4>
+<P CLASS="western" STYLE="font-weight: normal">If true, acts as if
+you sent “nvrlstrgt on” to the AI.  Basically, the AI will keep
+chasing and attacking their target whether the target is visible or
+not.  Aliens always have this true.<BR><BR>
+</P>
+<H2 CLASS="western">1.2 SimpleAI</H2>
+<P CLASS="western" STYLE="font-weight: normal">SimpleAI are actually
+a subset of Character.  They have lower tickcounts than AI, but at a
+cost of functionality.</P>
+<P CLASS="western">What they can do:<BR><SPAN STYLE="font-weight: normal">SimpleAI
+are intended for melee attacking creatures.  Currently, only the
+SimpleAIAlien is implemented.  They activate when the player gets
+within range, and try to chase him until they are killed.  The
+SimpleAIAliens have wallwalking turned on at all times.  They will
+also attack someone who damages them.</SPAN></P>
+<P CLASS="western">What they can’t do:<SPAN STYLE="font-weight: normal"><BR>Unlike
+normal AI, these guys will not use pathfinding.  They also do not
+have any support for script commands, goals, or senses.</SPAN></P>
+<P CLASS="western">Supported Trigger Commands:<BR><SPAN STYLE="font-weight: normal">TRG<BR>REMOVE</SPAN></P>
+<P CLASS="western">DEdit Properties:<BR><I>DetectionRadius: </I><SPAN STYLE="font-weight: normal">attacks
+when player enters this radius.<BR></SPAN><I>AlertRadius:</I><SPAN STYLE="font-weight: normal">
+when this SimpleAI has a target, other SimpleAIs in this radius will
+acquire the target if they do not have one already.<BR></SPAN><I>Leash
+Length / Point:</I><SPAN STYLE="font-weight: normal"> works same as
+normal AIs.</SPAN></P>
+<P CLASS="western">SimpleAIs are now supported in the Multispawner
+object.<BR><BR>
+</P>
+<H2 CLASS="western">1.3 Egg</H2>
+<P CLASS="western" STYLE="font-weight: normal">Eggs are actually
+specialized spawners, but they have some attributes that warranted
+documenting here.</P>
+<P CLASS="western" STYLE="font-weight: normal">Eggs may spawn either
+a Facehugger or a SimpleAIFacehugger.  They play a warning sound when
+the player gets too close.  If the player does not leave the radius
+within a specified time, the egg will hatch.  The warning sound will
+stop if the player gets to a safe distance.</P>
+<P CLASS="western" STYLE="font-weight: normal"><B>DEdit
+Properties:</B><BR><I><B>UseSimpleAI:</B></I> if set to TRUE, the egg
+will spawn a SimpleAIFacehugger.<BR><I><B>IgnoreAI: </B></I>TRUE
+means this egg can only be caused to spawn by
+players.<BR><I><B>DetectionRadius:</B></I> egg will warn and then
+hatch if someone is inside this radius.<BR><I><B>WarningTime:</B></I>
+time delay between the warning sound, and the actual hatching.<B><BR><BR></B><BR>
+</P>
+<H1 CLASS="western">2AI Volumes</H1>
+<P STYLE="margin-left: 0.3in; font-weight: normal">AIVolumes are made
+by attaching an AIVolume object to a brush.  Only one brush should be
+associated with a volume. There is an “AI” texture under
+WorldTextures.  It is only a convenience.  The brushes will be
+removed when the level is loaded, so their properties don’t matter
+(but the AIVolume properties do matter!).<BR><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.3in; font-weight: normal">The
+brushes can be any convex shape but cannot overlap. Neighbor volumes
+are determined by checking faces that fully touch (are co-planar). 
+So if you want an AI to know that she can go from volume to volume,
+be certain the two volumes share a face!  The overlapping region has
+to be a rectangle.  The AI will assume it can move anywhere within
+the volume, so big blocky volumes are best. <BR><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.3in; font-weight: normal">The
+volumes mark clear areas for the AI.  Clear means no world geometry
+or world objects are inside the volume.  The AI-s will only go around
+Props, Players, and other AI-s within the volume.<BR> 
+</P>
+<P CLASS="western" STYLE="margin-left: 0.3in; font-weight: normal">At
+minimum, the volumes should be able to contain the AI.  So, for
+ground based volumes, the volume should be on the floor and as tall
+as the tallest AI that will use it. <BR><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.3in; font-weight: normal">The
+AI Volumes no longer have wall walking properties.  If an AI is
+“using” a volume to move to a point, the AI will stand-up and
+walk or run there.  An AI “uses” a volume if the destination is
+just a point in space enclosed by the volume, or if it is a node
+which connects to the volume (VolumeConnect true).</P>
+<P CLASS="western" STYLE="margin-left: 0.3in; font-weight: normal"><BR>
+</P>
+<P STYLE="margin-left: 0.3in; font-weight: normal">The AI-s will
+almost never leave the volumes at this time.  Likewise, the node
+system is not used for “pathing” (only for marking patrol
+waypoints).  So if you want the AI to get to a node, be sure to put
+the node inside a volume.<BR><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.3in; font-weight: normal">The
+door volumes are in place.  You have to explicitly set the
+“DoorVolume” property on the AIVolume object.  A door volume
+should encompass (including height) the door, and not much more.  At
+the moment, AITriggerable is not checked.  In the future, the volume
+will check if the door has AITriggerable set.  If AITriggerable is
+not set, the AI will only try to go through that volume if the door
+is open.<BR><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.3in; font-weight: normal">The
+Stair flag can be set to true if this volume encompasses a staircase
+or ramp.  When set to true, AIs who die inside this volume will play
+their falling-down-stairs death animation.  You <B>must</B> set the
+rotation of this AIVolume to point in the direction that you want the
+AIs to fall.<BR><BR>
+</P>
+<H1 CLASS="western">3AINode<BR><BR><BR>
+</H1>
+<P CLASS="western" STYLE="font-weight: normal">Ground based nodes
+should be marked as MoveToFloor, so that ground based AI-s can reach
+them.  <BR><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal">All nodes can be wall
+walk only nodes.  The restrictions for AINodeWallWalk (like having to
+touch a face) apply to any node marked as wall walk only.<BR><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal">ConnectToVolume
+indicates whether a volume containing that node should consider that
+node reachable.  It is intended to keep wall walkers in the wall walk
+nodes rather than short cutting through a volume.<BR><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal">The Neighbor fields
+are intended for wall walk nodes.  Non-wall walk nodes may do
+something intelligent with the neighbor field, but there is no
+guarantee.  It is best to only use the neighbor stuff for wall walk
+nodes.<BR><BR>
+</P>
+<H2 CLASS="western">3.1General Properties</H2>
+<H3 CLASS="western">3.1.1AllowRace – AllowAliens, AllowMarines,
+AllowCorporates, AllowPredators.</H3>
+<P CLASS="western" STYLE="font-weight: normal">If any of these fields
+is set to false, that race of AI’s will not be able to use the
+node.  Other restrictions (node is outside leash, node can only be
+used by wall walkers, others?) still apply.</P>
+<H3 CLASS="western">3.1.2Dims</H3>
+<P CLASS="western" STYLE="font-weight: normal">The dimensions of the
+node.  The dimensions are only used by wall walk nodes to determine
+what faces they are touching.</P>
+<H3 CLASS="western">3.1.3MoveToFloor</H3>
+<P CLASS="western" STYLE="font-weight: normal">If true, the node will
+be moved to the floor.  Almost all non-wall-walking nodes should do
+this.</P>
+<H3 CLASS="western">3.1.4StartActive</H3>
+<P CLASS="western" STYLE="font-weight: normal">If true the node will
+be usable by an AI from the get-go.  Otherwise the node will need to
+be activated via an AINodeMgr object.<BR><BR>
+</P>
+<H3 CLASS="western">3.1.5TriggerObject</H3>
+<P CLASS="western" STYLE="font-weight: normal">See AINodePatrol.</P>
+<H3 CLASS="western">3.1.6TriggerMsg</H3>
+<P CLASS="western" STYLE="font-weight: normal">See AINodePatrol.</P>
+<H3 CLASS="western">3.1.7SelfTriggerMsg</H3>
+<P CLASS="western" STYLE="font-weight: normal">See AINodePatrol.</P>
+<H3 CLASS="western">3.1.8WallWalk</H3>
+<P CLASS="western" STYLE="font-weight: normal">Indicates that this is
+a wall walk node. See AINodeWallWalk for requirements of wall walk
+nodes.</P>
+<H3 CLASS="western">3.1.9VolumeConnect</H3>
+<P CLASS="western" STYLE="font-weight: normal">Indicates that the
+node should connect to the volume containing.  You will usually want
+to leave this true.  Wall walking nodes are the only time you may not
+want to connect to a volume.</P>
+<H3 CLASS="western">3.1.10NeighborX (in NeighborProperties)</H3>
+<P CLASS="western" STYLE="font-weight: normal">Use these to connect
+nodes together or explicitly to certain volumes.  You need only do
+this with nodes not in a volume or not having VolumeConnect turned on
+(wall walk nodes).  When a node is connected to another node, it is
+assumed that the AI can reach that node by walking straight toward
+it.</P>
+<P CLASS="western" STYLE="font-weight: normal">These connections are
+two-way.  You only need to make the connection from one node, the
+other node will automatically do the reverse connection.</P>
+<H3 CLASS="western">3.1.11JumpTo (in NeighborProperties)</H3>
+<P CLASS="western" STYLE="font-weight: normal">Use this to indicate
+that the AI should jump to a certain node.  The AI does not check for
+clearance!  If the destination node is a wall walk node, the AI will
+“pounce” to that node. A “pounce” is a direct jump with no
+arc, and the AI is non-solid during the “pounce”.</P>
+<P CLASS="western" STYLE="font-weight: normal">Unless you specify a
+TwoWayJump, this is a one-way connection. If you want the AI to jump
+both directions between two nodes you need to set each to jump to the
+other.</P>
+<H3 CLASS="western">3.1.12TwoWayJump (in NeighborProperties)</H3>
+<P CLASS="western" STYLE="font-weight: normal">If true, the JumpTo
+property will become a two-way connection.  Just like the other
+Neighbor fields.</P>
+<H2 CLASS="western" STYLE="margin-left: 0.7in; text-indent: -0.4in">3.2AINodePatrol</H2>
+<P STYLE="margin-left: 1in; font-weight: normal">A patrol goal is
+given a patrol node.  The path formed by the linked patrol nodes are
+what the AI will walk along.  The path can be circular.  <BR><BR>
+</P>
+<H3 CLASS="western" STYLE="margin-left: 1in; text-indent: -0.5in"><B>3.2.1WaitTime</B></H3>
+<P STYLE="margin-left: 1in; font-weight: normal">The AI will wait
+this many seconds at this point. If the AI does wait he will face in
+the same direction as the node. 0 is allowed (and the node facing
+will be ignored).</P>
+<H3 CLASS="western" STYLE="margin-left: 1in; text-indent: -0.5in"><B>3.2.2NextPoint</B></H3>
+<P STYLE="margin-left: 1in; font-weight: normal">Indicates next
+Patrol node the chain.  If there is not a next node, AI will follow
+the node chain in reverse order.</P>
+<H3 CLASS="western"><B>3.2.3TriggerObject</B></H3>
+<P STYLE="margin-left: 1in; font-weight: normal">When the AI reaches
+the patrol node, a trigger message will be sent to this object.  If
+you want any advanced triggering (like only trigger once, delayed
+trigger, etc.) I would suggest setting up a second trigger to be
+triggered by the patrol node.</P>
+<H3 CLASS="western" STYLE="margin-left: 1.53in; text-indent: -0.5in"><B>3.2.4TriggerMsg</B></H3>
+<P STYLE="margin-left: 1in; font-weight: normal">This is the message
+sent to the TriggerObject.</P>
+<H3 CLASS="western" STYLE="margin-left: 1.5in; text-indent: -0.5in"><B>3.2.5SelfTriggerMsg</B></H3>
+<P STYLE="margin-left: 1in; font-weight: normal">If this is
+non-empty, the AI will be sent a trigger with this message.  I expect
+this to be used for having the AI’s work at terminals and such.</P>
+<H3 CLASS="western"><B>3.2.6Cycle (default FALSE)</B></H3>
+<P STYLE="margin-left: 1in; font-weight: normal">If there is not a
+NextPoint, this parameter is checked.  If TRUE, the AI will follow
+the path in the reverse direction.  If FALSE, the patrol goal will
+deactivate itself.  To get an AI to go back and forth along a path, 
+set Cycle to TRUE on both ends of the path.<BR><BR>
+</P>
+<H2 CLASS="western">3.3AINodeCover</H2>
+<P CLASS="western" STYLE="font-weight: normal">This is a node used
+for defensive purposes.  They do not link like Patrol nodes, and most
+of the behavior is automatic.  An AI will choose a node and lock it
+until departure; these nodes are not shared with other AIs.<BR><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal"><B>EFFECT ON AI
+MOVEMENT:<BR></B><I>(only applies to AIs who have their UseCover flag
+set to TRUE)<BR></I><B><BR></B>a) Attack goal uses these nodes to
+advance, instead of the standard ApproachTarget code.  It will pick
+the nearest AICoverNode that is in the direction of its target, AND
+blocks line of sight to the target.<BR><BR>b) Dodge behavior is
+enhanced by cover nodes.  When fired upon, the AI will try to find a
+Cover Node which blocks line of sight to the target, and go there. 
+If there are no such nodes in range, then the AI will fall back to
+the standard dodge behavior (random left / right).<BR><B><BR></B><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal"><B>NOTE #1: </B>Remember
+to use 2 nodes – one on each side of an obstacle/brush, if you want
+to provide cover in both directions.  The AI will try to go to the
+one that obstructs its target’s visibility.</P>
+<P CLASS="western" STYLE="font-weight: normal"><B>NOTE #2: </B>AIs
+may use these nodes differently, depending on their current goal. 
+For example, an AI in the Attack goal will only consider nodes that
+help it move closer to its target.<BR><BR>
+</P>
+<H3 CLASS="western"><B>3.3.1Crouch</B></H3>
+<P CLASS="western" STYLE="font-weight: normal">If set to TRUE, the AI
+will crouch when it arrives at this node.  It will then stand up and
+attack from this position (if possible).  When it needs to reload, it
+will crouch to reload.</P>
+<H3 CLASS="western"><B>3.3.2CoverRadius</B></H3>
+<P CLASS="western" STYLE="font-weight: normal">An AI must be inside
+this radius in order for it to choose this node as a valid dodging
+destination.  Default is 128 units.<BR><BR>
+</P>
+<H3 CLASS="western"><B>3.3.3Cower</B></H3>
+<P CLASS="western" STYLE="font-weight: normal">Set this to true if
+you want the AI’s to use this as a cower node.</P>
+<P CLASS="western" STYLE="font-weight: normal"><BR>
+</P>
+<H2 CLASS="western">3.4AINodeWallWalk</H2>
+<P CLASS="western" STYLE="font-weight: normal">These are to be used
+to get an AI to wall walk.  The wall walking volumes are having many
+problems and should only be used on simple geometry.</P>
+<P CLASS="western" STYLE="font-weight: normal">The node has only
+neighbor link fields.  The node can be linked to another AINode of
+any type or another volume.  If a node is placed inside a volume, the
+volume will automatically link to it.</P>
+<P CLASS="western" STYLE="font-weight: normal">The wall walking AI’s
+are able to traverse and use these nodes just like volumes.  When an
+AI is using the node, it will simply move forward and turn left/right
+until it reaches the node.  “Reaching” the node is defined as
+having the node within the AI’s bounding box; so put the nodes
+close to the wall.<BR><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal">Place the nodes near
+or on the wall or ceiling the AI is to be walking on.</P>
+<P CLASS="western" STYLE="font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal">The nodes can have up
+to 5 neighbors.  The neighbor connections are two way; so if node
+Alpha has node Beta in its list of neighbors, there is no need to
+list node Alpha in node Beta’s neighbor list.<BR><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal">If a node is placed in
+a volume, it will automatically connect to that volume.  AI’s will
+know that they can go to that volume to get to that node.  If you do
+not want the AI’s to move from a node inside a volume to the volume
+set “VolumeConnect” to false.  This is sometimes needed when
+several nodes need to be placed on a wall below the height of the
+volumes.  Mark all but the last node in the chain as “VolumeConnect:
+FALSE”, and the AI will always use the chain of nodes (rather than
+highest node contained by the volume).<BR><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal">AI’s do best when
+the node is placed in the middle of a brush face.  If it all
+possible, make sure the next node(s) to go to are not directly above
+or below the current node.</P>
+<P CLASS="western" STYLE="font-weight: normal"><BR>
+</P>
+<H2 CLASS="western">3.5AINodeSnipe</H2>
+<P CLASS="western" STYLE="font-weight: normal">The Snipe goal will
+camp out on these nodes.</P>
+<P CLASS="western" STYLE="font-weight: normal">The AINodeGroup field
+is used to assign this snipe node to an AINodeGroup object.  AIs with
+the Snipe Goal may limit themselves to an AINodeGroup, if desired
+(see Snipe Goal, below).<BR><BR>
+</P>
+<H2 CLASS="western">3.6AINodeAlarm</H2>
+<P CLASS="western" STYLE="font-weight: normal"><B>Purpose:</B> Alarm
+nodes tell the AI where they can turn on the alarm for the level. 
+Typically, this would be near some kind of button on the wall.  The
+node needs to be aligned so that it points towards the switch.</P>
+<P CLASS="western" STYLE="font-weight: normal"><B>Usage:</B> In the
+node’s AlarmObject field, you must specify an Alarm object that
+will be triggered.  The node’s AlarmMessage can be ON or OFF. 
+Usually you will have multiple AINodeAlarms, but only one Alarm
+object on a level.  This Alarm object handles the sound effect, and
+can trigger off other events (such as spawners).</P>
+<P CLASS="western" STYLE="font-weight: normal"><B>Effect:</B> When an
+AI with the Alarm goal detects the player, he will find the nearest
+AINodeAlarm, lock it, and run to it.  When he arrives, he will rotate
+to match the node’s forward vector.  He then plays his Push_Button
+animation and a message will be sent to the Alarm object.  All AIs
+will exit the alarm goal when the alarm is turned on for the level.</P>
+<P CLASS="western" STYLE="font-weight: normal">Similar to Snipe
+nodes, Alarm nodes may be assigned to an AINodeGroup.<BR><BR>
+</P>
+<H2 CLASS="western">3.7AINodeGeneric</H2>
+<P CLASS="western" STYLE="font-weight: normal">This is just a simple
+little node.  Use it when you just need a node.<BR><BR>
+</P>
+<H2 CLASS="western">3.8AINodeJump</H2>
+<P CLASS="western" STYLE="font-weight: normal">This is intended for
+non-wall-walking movement.</P>
+<P CLASS="western" STYLE="font-weight: normal">The AI will jump from
+the jump node to the destination node.  
+</P>
+<P CLASS="western" STYLE="font-weight: normal"><U>The connection is
+one way</U>.  If the AI jumps from on volume to another and there is
+no other connection between the two volumes, the AI will not be able
+to return to the previous weapon.</P>
+<P CLASS="western" STYLE="font-weight: normal">If you want an AI to
+be able to jump from one spot to another, you need to use two jump
+nodes. Just set each node to be the destination of the other.</P>
+<P CLASS="western" STYLE="font-weight: normal">The AI is solid while
+jumping,  so if she bumps into some geometry while in mid-air she
+will not reach her destination.  Jumping up onto ledges requires a
+little node placement work.  If the jump node is too close to the
+base of the ledge, the AI will just hit the ledge and fall back down
+to the base of the ledge.<BR><BR>
+</P>
+<H3 CLASS="western">3.8.1JumpDestination 
+</H3>
+<P CLASS="western" STYLE="font-weight: normal">The destination of the
+AI’s jump.  This must be another node.  AINodeGeneric comes in
+handy for this.</P>
+<P CLASS="western" STYLE="font-weight: normal"><BR>
+</P>
+<H1 CLASS="western">4SimpleNode<BR><BR><BR>
+</H1>
+<P CLASS="western" STYLE="font-weight: normal">These are nodes used
+by the simple aliens to help navigate indoor levels.</P>
+<P CLASS="western" STYLE="font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal">The simple aliens will
+use the nodes if they have been in a node in the past (or are
+currently in a node), if their target (the player?) has been in a
+node in the past, and if there is a path from their previous/current
+node to their target’s previous/current node.  The simple aliens
+will keep moving to the next node in the path until they get inside
+that node.  They will then proceed to the next node.</P>
+<P CLASS="western" STYLE="font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal">Being inside the node
+is defined as being inside the y-dimensions of the node and within
+the radius of the node in the x-z plane.  So the nodes form
+cylinders.  The last node is the closest previous (or current) node
+which they were inside.</P>
+<P CLASS="western" STYLE="font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal">SimpleNodes
+automatically connect by having their radius and height over-lap.</P>
+<P CLASS="western" STYLE="font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal">In order to prevent
+simple ai from getting stuck when placing nodes, they must be placed
+so that:</P>
+<OL>
+	<LI><P CLASS="western" STYLE="font-weight: normal">The radius does
+	not contain a face pointing away from the node.  This gets tricky
+	when placing nodes around the end of wall, as the radius cannot
+	include the opposite side of the wall.</P>
+	<LI><P CLASS="western" STYLE="font-weight: normal">The connections
+	do not go straight through a wall.  The connection can cut a corner,
+	but it cannot actually go from one side of a wall to the other. It
+	is better if the connections does not even cut a corner.</P>
+</OL>
+<P CLASS="western" STYLE="font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal"><BR>
+</P>
+<H2 CLASS="western">4.1General Properties</H2>
+<H3 CLASS="western">4.1.1Dims</H3>
+<P CLASS="western" STYLE="font-weight: normal">The dimensions of the
+node.  Only the y-dimension is used.</P>
+<H3 CLASS="western">4.1.2Radius</H3>
+<P CLASS="western" STYLE="font-weight: normal">The radius of the
+node.  If a character’s x-z position is within this radius of the
+node’s x-z position, and they are within the y-dims. of node, they
+are inside the node.</P>
+<H3 CLASS="western">4.1.3Offset</H3>
+<P CLASS="western" STYLE="font-weight: normal">This can be used to
+place an offset attractor.  When trying to reach a node, the simple
+aliens move toward the attractor.  I suggest only using this to push
+the attractor up (toward the ceiling) or down (toward the floor) to
+help get them higher or lower.  The nodes actual position is still
+used to determine if they are inside the node (and they stop moving
+toward the attractor as soon as they get inside the node).</P>
+<H1 CLASS="western"><A NAME="GoalSection"></A>5Goals</H1>
+<P CLASS="western" STYLE="font-weight: normal">The AI’s have
+multiple goals, but only one is active at a time.  Each goal has a
+unique name, a type (such as Patrol or Attack), a priority, and
+various goal specific parameters.  The highest priority goal that is
+valid will become the active goal.  Goal validity is mostly
+determined by whether the goal has valid parameters and whether the
+AI can use the goal on something (ie. the AI must have a target
+before Attack will become valid).<FONT FACE="Arial, sans-serif"><FONT SIZE=4>
+<BR></FONT></FONT><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal">Here are how the goals
+become active:</P>
+<P CLASS="western" STYLE="font-weight: normal">Script – always
+valid until receives “end” or is explicitly killed.</P>
+<P CLASS="western" STYLE="font-weight: normal">Alarm – Valid if has
+a combat target and can find an alarm node.  Valid until the alarm is
+set.</P>
+<P CLASS="western" STYLE="font-weight: normal">Snipe – Valid as
+long as the AI has a goal and an enemy is not within MinRange (see
+snipe goal).</P>
+<P CLASS="western" STYLE="font-weight: normal">Lurk – Valid if has
+a combat target.  Valid until target is lost (very rare to lose a
+target).</P>
+<P CLASS="western" STYLE="font-weight: normal">Attack – Valid if
+has a combat target.  Valid until does not have a combat target
+(killed target and can not find another).</P>
+<P CLASS="western" STYLE="font-weight: normal">Retreat – Valid if
+sees an enemy.  Valid until AI does not have target (target died).</P>
+<P CLASS="western" STYLE="font-weight: normal">Investigate – Valid
+if triggered by “inv” command or one of these senses gets raises
+above 0 (in order of preference) :   SeeDeadBody, 
+SeeEnemyFlashlight, HearEnemyFootstep, HearAllyWeaponFire,
+HearWeaponImpact, HearDeath, HearAllyPain,SeeCloaked, SeeBlood (not
+currently working).  Valid for duration of investigation routine.</P>
+<P CLASS="western" STYLE="font-weight: normal">Cower – Valid if one
+of these senses is fully triggered (reaches 1.0) : SeeEnemy,
+SeeDeadBody, HearWeaponImpact, HearEnemyWeaponFire.  Length of goal
+is described in Cower goal description.</P>
+<P CLASS="western" STYLE="font-weight: normal">IdleScript – Just
+like script.</P>
+<P CLASS="western" STYLE="font-weight: normal">Patrol – Valid if
+the AI has a patrol path.</P>
+<H2 CLASS="western" STYLE="margin-left: 0.9in; text-indent: -0.4in">5.1Default
+Goal Priorities</H2>
+<P CLASS="western" STYLE="margin-left: 0.9in; font-weight: normal">Goals
+no longer use a priority field in DEdit.  Instead, they use a default
+value which currently (1/12/01) uses the following values:<BR><BR>
+</P>
+<DL>
+	<DL>
+		<DD>
+		<TABLE WIDTH=145 CELLPADDING=7 CELLSPACING=0>
+			<COL WIDTH=92>
+			<COL WIDTH=23>
+			<TR VALIGN=TOP>
+				<TD WIDTH=92 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0in">
+					<P CLASS="western" STYLE="font-weight: normal">Script</P>
+				</TD>
+				<TD WIDTH=23 STYLE="border: 1px solid #000000; padding: 0in 0.08in">
+					<P CLASS="western" STYLE="font-weight: normal">90.0</P>
+				</TD>
+			</TR>
+			<TR VALIGN=TOP>
+				<TD WIDTH=92 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0in">
+					<P CLASS="western" STYLE="font-weight: normal">Alarm</P>
+				</TD>
+				<TD WIDTH=23 STYLE="border: 1px solid #000000; padding: 0in 0.08in">
+					<P CLASS="western" STYLE="font-weight: normal">75.0</P>
+				</TD>
+			</TR>
+			<TR VALIGN=TOP>
+				<TD WIDTH=92 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0in">
+					<P CLASS="western" STYLE="font-weight: normal">Snipe</P>
+				</TD>
+				<TD WIDTH=23 STYLE="border: 1px solid #000000; padding: 0in 0.08in">
+					<P CLASS="western" STYLE="font-weight: normal">70.0</P>
+				</TD>
+			</TR>
+			<TR VALIGN=TOP>
+				<TD WIDTH=92 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0in">
+					<P CLASS="western" STYLE="font-weight: normal">Lurk</P>
+				</TD>
+				<TD WIDTH=23 STYLE="border: 1px solid #000000; padding: 0in 0.08in">
+					<P CLASS="western" STYLE="font-weight: normal">65.0</P>
+				</TD>
+			</TR>
+			<TR VALIGN=TOP>
+				<TD WIDTH=92 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0in">
+					<P CLASS="western" STYLE="font-weight: normal">AttackSeeEnemy</P>
+				</TD>
+				<TD WIDTH=23 STYLE="border: 1px solid #000000; padding: 0in 0.08in">
+					<P CLASS="western" STYLE="font-weight: normal">60.0</P>
+				</TD>
+			</TR>
+			<TR VALIGN=TOP>
+				<TD WIDTH=92 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0in">
+					<P CLASS="western" STYLE="font-weight: normal">Retreat</P>
+				</TD>
+				<TD WIDTH=23 STYLE="border: 1px solid #000000; padding: 0in 0.08in">
+					<P CLASS="western" STYLE="font-weight: normal">55.0</P>
+				</TD>
+			</TR>
+			<TR VALIGN=TOP>
+				<TD WIDTH=92 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0in">
+					<P CLASS="western" STYLE="font-weight: normal">Investigate</P>
+				</TD>
+				<TD WIDTH=23 STYLE="border: 1px solid #000000; padding: 0in 0.08in">
+					<P CLASS="western" STYLE="font-weight: normal">40.0</P>
+				</TD>
+			</TR>
+			<TR VALIGN=TOP>
+				<TD WIDTH=92 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0in">
+					<P CLASS="western" STYLE="font-weight: normal">Cower</P>
+				</TD>
+				<TD WIDTH=23 STYLE="border: 1px solid #000000; padding: 0in 0.08in">
+					<P CLASS="western" STYLE="font-weight: normal">35.0</P>
+				</TD>
+			</TR>
+			<TR VALIGN=TOP>
+				<TD WIDTH=92 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0in">
+					<P CLASS="western" STYLE="font-weight: normal">AttackOther</P>
+				</TD>
+				<TD WIDTH=23 STYLE="border: 1px solid #000000; padding: 0in 0.08in">
+					<P CLASS="western" STYLE="font-weight: normal">30.0</P>
+				</TD>
+			</TR>
+			<TR VALIGN=TOP>
+				<TD WIDTH=92 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0in">
+					<P CLASS="western" STYLE="font-weight: normal">IdleScript</P>
+				</TD>
+				<TD WIDTH=23 STYLE="border: 1px solid #000000; padding: 0in 0.08in">
+					<P CLASS="western" STYLE="font-weight: normal">20.0</P>
+				</TD>
+			</TR>
+			<TR VALIGN=TOP>
+				<TD WIDTH=92 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0in">
+					<P CLASS="western" STYLE="font-weight: normal">Patrol</P>
+				</TD>
+				<TD WIDTH=23 STYLE="border: 1px solid #000000; padding: 0in 0.08in">
+					<P CLASS="western" STYLE="font-weight: normal">10.0</P>
+				</TD>
+			</TR>
+		</TABLE>
+	</DL>
+</DL>
+<P CLASS="western" STYLE="font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal">I’m trying to stick
+with a 1 – 100 range to keep it consistent.  When you add goals in
+DEdit now, it doesn’t matter what order you list them.  They will
+prioritize based on the values in this table.<BR><BR>
+</P>
+<H2 CLASS="western">5.2Patrol Goal</H2>
+<P CLASS="western" STYLE="margin-left: 0.9in; font-weight: normal">Must
+be given an AINodePatrol object.  When started, the AI will find the
+closest node in the chain and move towards it.  When it reaches that
+node, the AI will wait the amount of time it is told to wait and then
+go to the next node in the chain.  If you want the AI to follow a
+circuit, make a circuit.  If the chain does not form a circuit, the
+AI will go back and forth along the chain of nodes.</P>
+<H2 CLASS="western" STYLE="margin-left: 0.9in; text-indent: -0.4in">5.3Attack
+Goal</H2>
+<P STYLE="margin-left: 0.9in; font-weight: normal">Take a guess………..
+      Yep, the AI will attack an enemy!  This doesn’t have any
+parameters at the moment.  The AI will attack anything it hates. 
+Right now, all AI’s hate the player and love each other.</P>
+<P STYLE="margin-left: 0.9in; font-weight: normal">Attack is special.
+ SeeEnemy, HearWeaponFire, HearWeaponImpact, and HearEnemyFootstep
+can activate this goal.  <B>However</B>, only SeeEnemy will cause it
+to override Investigate behavior.</P>
+<H2 CLASS="western" STYLE="margin-left: 0.88in; text-indent: -0.38in">
+5.4MeleeAttack Goal</H2>
+<P STYLE="margin-left: 1in; font-weight: normal">This is intended for
+AI’s with melee weapons.  The AI will try pretty hard to flank the
+player.  They will also jump occasionally.  The flanking and jumping
+parameters are set by the AI Attribute template.  Note that the
+weapon’s range determines how close the AI will approach.  So if
+you give an AI with a rifle a melee attack they will still keep a
+reasonable distance back, but they will constantly try to flank the
+player and occasionally jump.</P>
+<H2 CLASS="western" STYLE="margin-left: 0.9in; text-indent: -0.4in">5.5Chase
+Goal</H2>
+<P STYLE="margin-left: 0.9in"><B>No longer implemented – was for
+debugging purposes only.</B></P>
+<H2 CLASS="western">5.6Script Goal</H2>
+<P STYLE="margin-left: 1in; font-weight: normal">The AI will follow
+the script given to it.  This goal is always valid and more important
+than any other goal.  To make the goal end either explicitly kill it
+or give it the script command “end”.  See scripting below.</P>
+<H2 CLASS="western">5.7IdleScript Goal</H2>
+<P CLASS="western" STYLE="font-weight: normal">Same as a script goal
+but of lower priority, it is more important than patrol or idle, but
+less important than investigate, attack, lurk, snipe, and so forth.</P>
+<H2 CLASS="western">5.8Lurk Goal</H2>
+<P CLASS="western" STYLE="font-weight: normal">The AI approaches
+aggressively as long as the target’s back is turned.  This AI
+retreats and seeks cover if the target is facing towards it.</P>
+<P CLASS="western" STYLE="font-weight: normal">The Retreat behavior
+finds the AIVolume which is furthest from the target, and moves to
+it.  If there are no options left, the AI is considered “cornered”
+at which time it may attack.</P>
+<H2 CLASS="western">5.9Investigate Goal</H2>
+<P CLASS="western" STYLE="font-weight: normal">This goal is the
+primary user of the AI Senses.  AIs with this goal will become alert
+when a sense is triggered, and may move towards the disturbance if
+the stimulus is strong or lasts a long time.</P>
+<P CLASS="western" STYLE="font-weight: normal">Currently, this goal
+reacts to the following senses:<BR><BR><B>SeeBlood</B> – sees blood
+trails<BR><B>SeeEnemyFlashlight</B> – sees flashlight use by
+players<B><BR>SeeDeadBody </B>– sees CBodyProp
+objects<B><BR>HearEnemyWeaponFire</B> – hears weapon
+activation<B><BR>HearEnemyWeaponImpact</B> – hears weapons hitting
+things<B><BR>HearEnemyFootstep</B> – hears footsteps<B><BR></B><BR>
+</P>
+<H2 CLASS="western">5.10Idle Goal</H2>
+<P CLASS="western" STYLE="font-weight: normal">This goal does almost
+nothing.  It can be used to get an AI to just “stand still.”  The
+AI will still go through its idle animations, so he will look like he
+is just standing there like any other schmoe on the real world.</P>
+<H2 CLASS="western">5.11Snipe Goal</H2>
+<P CLASS="western" STYLE="font-weight: normal">This goal is valid as
+long as there are snipe nodes the AI can get to.  If the target gets
+within MinRange of the AI, the snipe goal will invalidate.  So put an
+attack or retreat goal at a priority below snipe so that the AI will
+do something “smart” when the player gets too close to snipe at,
+OR set the MinRange very low.</P>
+<P CLASS="western" STYLE="font-weight: normal">The AI will go to the
+nearest snipe node and camp out there, waiting for an enemy to show
+up.  If the AI is shot at and there is a different snipe node
+available, the AI will run off to that node.  He’ll also change
+nodes if he can no longer see his target.  He will try to choose the
+node that is closest to his target.</P>
+<H3 CLASS="western">5.11.1Parameters:</H3>
+<H4 CLASS="western">5.11.1.1MinRange (default 1024)</H4>
+<P CLASS="western" STYLE="font-weight: normal">The goal invalidates
+when the target gets within this range.</P>
+<H4 CLASS="western">5.11.1.2NG <I>AINodeGroup</I></H4>
+<P CLASS="western" STYLE="font-weight: normal">If you want this
+sniper to use a specific AINodeGroup, then you must assign it with
+this command.  Ex: <I>NG AINodeGroup0<BR></I><BR>
+</P>
+<H2 CLASS="western">5.12Cinematic Goal</H2>
+<P CLASS="western" STYLE="font-weight: normal">This is a required
+goal for Cinematic Triggers to control AI’s. If you want the AI’s
+to follow the Cinematic Trigger, no matter what, give this goal a
+very high priority.  If you would like the AI to attack or
+investigate out of a Cinematic Trigger, then set this goal at a lower
+priority.  <B>I don’t think this is implemented anymore. (?)</B></P>
+<H2 CLASS="western">5.13Node Check Goal</H2>
+<P CLASS="western" STYLE="font-weight: normal">This goal is used to
+check that AI’s can path through all nodes.  It should be
+especially useful in checking out AINodeWallWalk nodes.</P>
+<P CLASS="western" STYLE="font-weight: normal">The goal has one
+required parameter and one optional parameter which must be entered
+either in the parameter field in Dedit or when sending an Add Goal
+command.  The required parameter is a radius.  The AI will try to
+move to all nodes inside that radius.  The optional parameter is the
+keyword “WallWalkOnly”.  If that parameter is sent, the AI will
+only check Wall Walking nodes (AINodeWallWalk and nodes generated by
+WallWalkOnly volumes).</P>
+<P CLASS="western" STYLE="font-weight: normal">When running, the AI
+will list all found nodes in random order and try to move to each
+node in the list.  When he has gone through the list he will shuffle
+them up again and start over.  If the system cannot figure out how to
+get to a node the node will be removed from the list.  If the system
+cannot detects that it is stuck while trying to reach a node, the AI
+will move on to the next node.  The AI may get stuck and not detect
+it.  That is very bad.  In that situation, you’ll find the AI just
+hovering somewhere.  If it is an AINodeWallWalk, there probably needs
+to be more nodes guiding the AI to that point.  You can use script
+commands (“trigger ai_name scr (mt node_before_stuck; mt
+node_stuck”) to see how the AI is getting stuck. <B>I don’t think
+this is implemented anymore either. (?)</B></P>
+<H2 CLASS="western">5.14Alarm Goal</H2>
+<P CLASS="western" STYLE="font-weight: normal">This goal is used for
+AIs that try to trigger the Alarm when they detect the player.  See
+AINodeAlarm, above, for more details.</P>
+<P CLASS="western" STYLE="font-weight: normal"><B>Activates:</B> if
+the SeeEnemy, HearWeaponFire, or HearWeaponImpact senses reach full
+stimulation, AND the alarm is currently off for this level, AND there
+are unlocked AINodeAlarms.</P>
+<P CLASS="western" STYLE="font-weight: normal"><B>Deactivates:</B> if
+the Alarm is turned off, OR there are no unlocked AINodeAlarms to
+move to.</P>
+<P CLASS="western">Example:<BR><SPAN STYLE="font-weight: normal">Place
+an AI on your level with goals Alarm (1000), Attack (500),
+Investigate (100).<BR>Place an Alarm object on the level and leave it
+with the default settings.<BR>Place one or more AINodeAlarm objects
+on the level.  In the AlarmObject field, put in the name of your
+Alarm (e.g. Alarm0).  The AlarmMessage defaults to ON, so leave this
+alone.<BR>Start your level and walk within the AI’s field of view
+in order to activate the goal (SeeEnemy sense).  He should run to the
+node closest to his position.<BR>Also try placing two AIs and one
+node.  One of them will enter the Alarm goal and run to the node. 
+The other will see that the node is already locked, so he can’t
+enter his Alarm goal.  He will start attacking you instead, since
+that is the next available goal.  Once the first AI activates the
+alarm, he will also drop out of his Alarm goal.</SPAN></P>
+<H3 CLASS="western">5.14.1Parameters:</H3>
+<H4 CLASS="western">5.14.1.1NG <I>AINodeGroup</I></H4>
+<P CLASS="western" STYLE="font-weight: normal">If you want this AI to
+use a specific AINodeGroup, then you must assign it with this
+command.  This will restrict the Alarm nodes that are available to
+him.  Ex: <I>NG AINodeGroup0</I><B><BR></B><BR>
+</P>
+<H2 CLASS="western">5.15Cower Goal</H2>
+<P CLASS="western" STYLE="font-weight: normal">The AI will cower when
+an enemy is spotted.  The AI looks for the nearest cower node (cover
+nodes with Cower set to true) away from the enemy and runs to it. 
+The cower nodes can be grouped and the goal can be given that group
+to prevent an AI from running to nodes on the other side of the level
+(this is highly suggested).  There are attributes in the AI butes
+file to control the AI’s behavior while cowering.  Currently, they
+can run to other nodes after cowering for a while if the enemy is far
+enough away.</P>
+<P CLASS="western" STYLE="font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal">The cower goal will
+send an &quot;inv (spot that scared me)&quot; command to other
+friendly AIs.  So AIs in a cower goal will alert other AI's to
+investigate the location that made them start to run.  These other
+AI's need to have an investigate goal and not be in a more important
+goal (such as snipe) in the meantime.</P>
+<H3 CLASS="western">5.15.1Parameters:</H3>
+<H4 CLASS="western">5.15.1.1NG <I>AINodeGroup</I></H4>
+<P CLASS="western" STYLE="font-weight: normal">If you want this AI to
+use a specific AINodeGroup, then you must assign it with this
+command.  This will restrict the Cower nodes that are available to
+him.  Ex: <I>NG AINodeGroup0</I><B><BR></B><BR>
+</P>
+<H1 CLASS="western">6AI Commands</H1>
+<P STYLE="margin-left: 1in; font-weight: normal">AI’s can be sent
+commands via a trigger.  Capitalization is not important except for
+object names.</P>
+<H2 CLASS="western">6.1AG – Add Goal</H2>
+<P STYLE="margin-left: 1in; font-weight: normal">Gives the AI a new
+goal. It has two formats:</P>
+<P STYLE="margin-left: 1in; font-weight: normal"> “AG goal_type”</P>
+<P STYLE="margin-left: 1in; font-weight: normal">“AG goal_type
+priority goal_name (parameters)”</P>
+<P STYLE="margin-left: 1in; font-weight: normal">If you use the first
+format, the game will choose the default priority for that goal.</P>
+<P STYLE="margin-left: 1in; font-weight: normal">Patrol is a special
+case because it requires the (parameters).  Use the <B>link </B>keyword
+to tell the AI the starting node.  The patrol nodes in the path must
+be linked.  Example:<BR>“AG goal_type (link AINodePatrol0)”</P>
+<P STYLE="margin-left: 1in; font-weight: normal">*** In the second
+format, the <B>priority</B> field is required, but it is currently
+ignored.  It will require some work to make it functional.  If you
+absolutely need to use it, email marks and I’ll hook it up.</P>
+<H2 CLASS="western">6.2SGP – Set Goal Priority</H2>
+<P CLASS="western" STYLE="font-weight: normal">“SGP goal_name
+priority”</P>
+<P CLASS="western" STYLE="font-weight: normal">Changes the goal’s
+priority.</P>
+<H2 CLASS="western">6.3KG – Kill Goal</H2>
+<P CLASS="western" STYLE="font-weight: normal">“KG goal_name”</P>
+<P CLASS="western" STYLE="font-weight: normal">Removes the goal from
+AI’s goal list.</P>
+<H2 CLASS="western">6.4ACTIVE – be present and active</H2>
+<P CLASS="western" STYLE="font-weight: normal">“ACTIVE [ 0 | 1 ]”</P>
+<P CLASS="western" STYLE="font-weight: normal">If set to 1 (true),
+the AI will be solid, visible, and responding.  If set to 0 the AI
+will “go away.”  They stay in where they are, but cannot be seen,
+heard, touched, or smelled.  Use this to activate an AI which had its
+properties set to start inactive.</P>
+<H2 CLASS="western">6.5SCR – Script</H2>
+<P CLASS="western" STYLE="font-weight: normal">“SCR
+(script_command1 params; script_command2 params; …)”</P>
+<P CLASS="western" STYLE="font-weight: normal">Gives the AI a script
+goal with a very high priority.  Note that the script goal will stay
+active until it is given a script command “end”.  If the AI is
+already performing a script created in this way (as opposed to
+through Add Goal or Dedit properties) it will be aborted and replaced
+with this new script.</P>
+<H2 CLASS="western">6.6ISCR – IdleScript</H2>
+<P CLASS="western" STYLE="font-weight: normal">“ISCR
+(script_command1 params; script_command2 params; …)”</P>
+<P CLASS="western" STYLE="font-weight: normal">Gives the AI an idle
+script goal.  Otherwise this is the same as “scr” above.</P>
+<H2 CLASS="western">6.7SCR+ -- Add to Script</H2>
+<P CLASS="western" STYLE="font-weight: normal">“SCR+
+(script_command1 params; script_command2 params; …)”</P>
+<P CLASS="western" STYLE="font-weight: normal">If the AI has an
+active script or idlescript goal, these script commands will be added
+to the end of the script.  Otherwise it is ignored  
+</P>
+<P CLASS="western" STYLE="font-weight: normal">Use this to issue
+commands to an AI that should only be followed if the AI has not gone
+into another state (like attacking the player).</P>
+<H2 CLASS="western">6.8KillScripts</H2>
+<P CLASS="western" STYLE="font-weight: normal">“killscripts”</P>
+<P CLASS="western" STYLE="font-weight: normal">This kills every
+script goal the AI currently has.  If the AI is in a script, that
+script will be stopped.  This can be used to be sure an AI has no
+scripts.</P>
+<H2 CLASS="western">6.9 TRG – Target</H2>
+<P CLASS="western" STYLE="font-weight: normal">“TRG character_name”</P>
+<P CLASS="western" STYLE="font-weight: normal">Has AI target the
+specified character.  Many goals and script commands will use this
+target.  If the character_name is “player” then the the AI will
+target the closest player (this is important for multi-player
+situations).</P>
+<H2 CLASS="western">6.10TLP – Teleport</H2>
+<P CLASS="western" STYLE="font-weight: normal">“TLP (# # #)”</P>
+<P CLASS="western" STYLE="font-weight: normal">“TLP node_name”</P>
+<P CLASS="western" STYLE="font-weight: normal">Teleports the AI to
+the vector location or node name.</P>
+<H2 CLASS="western">6.11ROT – Rotate Towards</H2>
+<P CLASS="western" STYLE="font-weight: normal">“rot (# # #)”</P>
+<P CLASS="western" STYLE="font-weight: normal">“rot target”</P>
+<P CLASS="western" STYLE="font-weight: normal">“rot player”</P>
+<P CLASS="western" STYLE="font-weight: normal">“rot object_name”</P>
+<P CLASS="western" STYLE="font-weight: normal">Rotates the AI so that
+her body is facing the specified thing.  A vector (the first format)
+specifies a location to face.  Player means the closest player.</P>
+<H2 CLASS="western">6.12SAY – start and lip sync to a sound</H2>
+<P CLASS="western" STYLE="font-weight: normal">“say sound_name”</P>
+<P CLASS="western" STYLE="font-weight: normal">The AI will play and
+lip sync to the sound file at “Sounds\Dialogue\sound_name.wav”. 
+Like play animation, the AI will not wait for the sound file to
+finish.  Use reply (“RPLY”) script command to get the AI to wait
+for the sound to finish.</P>
+<H2 CLASS="western">6.13LA – Look At</H2>
+<P CLASS="western" STYLE="font-weight: normal">“la (# # #)”</P>
+<P CLASS="western" STYLE="font-weight: normal">“la player”</P>
+<P CLASS="western" STYLE="font-weight: normal">“la target”</P>
+<P CLASS="western" STYLE="font-weight: normal">“la object_name”</P>
+<P CLASS="western" STYLE="font-weight: normal">“la off”</P>
+<P CLASS="western" STYLE="font-weight: normal">The AI’s head will
+follow the specified target.  Note that if the animation moves the
+head around this will wreak havoc with the poor AI’s head.<BR><BR>
+</P>
+<H2 CLASS="western">6.14SW – Set Weapon</H2>
+<P CLASS="western" STYLE="font-weight: normal">“sw weapon_name”</P>
+<P CLASS="western" STYLE="font-weight: normal">“sw none”</P>
+<P CLASS="western" STYLE="font-weight: normal">Sets the weapon the AI
+will use (or no weapons if none).  Clears out all other weapons the
+AI had.  If the AI does not have a weapon, they will not attack, so
+be sure they have a retreat goal or an on-damage message to make them
+do something when they take damage!</P>
+<H2 CLASS="western">6.15AW – Add Weapon</H2>
+<P CLASS="western" STYLE="font-weight: normal">“aw weapon_name”</P>
+<P CLASS="western" STYLE="font-weight: normal">Gives the AI a weapon
+at lowest priority.</P>
+<H2 CLASS="western">6.16SL – Shoulder Lamp</H2>
+<P CLASS="western" STYLE="font-weight: normal">“sl on/off”</P>
+<P CLASS="western" STYLE="font-weight: normal">Turns shoulder lamp on
+and off.  Note that the beginning of every script will turn off the
+flashlight, as will most other goals.</P>
+<H2 CLASS="western">6.17SLLOCK – Shoulder Lamp Lock</H2>
+<P CLASS="western" STYLE="font-weight: normal">“sllock on/off”</P>
+<P CLASS="western" STYLE="font-weight: normal">Forces shoulder lamp
+to stay on.  When given “sllock on” the AI will turn on its
+should lamp and leave it on until it receives “sllock off” or “sl
+off”.</P>
+<H2 CLASS="western">6.18SMS – Set Movement Style</H2>
+<P CLASS="western" STYLE="font-weight: normal">“sms investigate”,
+“sms combat”, etc.</P>
+<P CLASS="western" STYLE="font-weight: normal">“sms default”</P>
+<P CLASS="western" STYLE="font-weight: normal">This can be used to
+set the movement animation and speeds of an AI.  For instance, &quot;sms
+investigate&quot; will cause the AI to use her investigate
+animations. Use &quot;sms default&quot; to return him to normal.  The
+style name, ie. &quot;Investigate&quot;, is set-up in
+AnimationButes.txt.</P>
+<P CLASS="western" STYLE="font-weight: normal">Every goal will reset
+this to “Default” when it starts and when it finishes. So I
+suggest only using this inside a script.</P>
+<H2 CLASS="western">6.19CL – Cloak</H2>
+<P CLASS="western" STYLE="font-weight: normal">“cl on/off”</P>
+<P CLASS="western" STYLE="font-weight: normal">If the AI is a
+predator, this turns the cloaking on or off.</P>
+<H2 CLASS="western">6.20NVRLSTRGT – NeverLoseTarget</H2>
+<P CLASS="western" STYLE="font-weight: normal">“nvrlstrgt on/off”</P>
+<P CLASS="western" STYLE="font-weight: normal">If this is on, the AI
+always know where their target is.  Set this on when you want to make
+sure the player will not lose an AI.  A neat trick you can do with
+this: When this is on and the target has an attack goal, you can send
+the AI a “trg player” command and the AI will start chasing the
+player from where-ever the heck it is.  Since aliens always have this
+on, you can just send an alien a “trg player” command and they
+will start chasing and attacking the player.</P>
+<P CLASS="western" STYLE="font-weight: normal">Note that the
+automatic deactivation can still kick in.  So if you have an AI on
+the other side of a level, don’t expect them to chase down the
+player until they get inside the player’s vis-list.</P>
+<H2 CLASS="western">6.21LSH – Leash</H2>
+<P CLASS="western" STYLE="font-weight: normal">“lsh # node_name”</P>
+<P CLASS="western" STYLE="font-weight: normal">“lsh # object_name”</P>
+<P CLASS="western" STYLE="font-weight: normal"> “lsh # here”</P>
+<P CLASS="western" STYLE="font-weight: normal">Sets the AI’s leash
+to be # units long.  The center of the zone is marked by the node or
+object’s position at the time the message is received.  If no name,
+or “here” is used, the AI’s current position will be used.</P>
+<P CLASS="western" STYLE="font-weight: normal">Be sure the AI is
+within the leash zone when they get the command!</P>
+<H2 CLASS="western">6.22SEETHROUGH – See Through</H2>
+<P CLASS="western" STYLE="font-weight: normal">“seethrough 0/1”</P>
+<P CLASS="western" STYLE="font-weight: normal">Equivalent to setting
+CanSeeThrough FALSE or TRUE in Dedit.  When true, AI will be able to
+see through things marked “AICanSeeThrough”.</P>
+<H2 CLASS="western">6.23SHOOTTHROUGH – ShootThrough</H2>
+<P CLASS="western" STYLE="font-weight: normal">“shootthrough 0/1”</P>
+<P CLASS="western" STYLE="font-weight: normal">Equivalent to setting
+CanShootThrough FALSE or TRUE in Dedit.  When true, AI will try to
+shoot her target through things marke “AICanShootThrough”.  AI
+will not necessarily be able to actually shoot through that object,
+she will just act as if she can.</P>
+<H2 CLASS="western">6.24INV – Investigate 
+</H2>
+<P CLASS="western" STYLE="font-weight: normal">“inv (# # #)”</P>
+<P CLASS="western" STYLE="font-weight: normal">“inv player”</P>
+<P CLASS="western" STYLE="font-weight: normal">“inv node_name”</P>
+<P CLASS="western" STYLE="font-weight: normal">“inv object_name”</P>
+<P CLASS="western" STYLE="font-weight: normal">If the AI has an
+investigate goal, and no other more important goal is running (such
+as attack or script), the AI will investigate the named location.  So
+&quot;inv player&quot; would cause the AI to investigate the player's
+location (the player's location is determined when the AI receives
+the command).  You can also use &quot;inv (345 -232 557)&quot; to
+investigate a location or &quot;inv node_name&quot; to investigate a
+node or &quot;inv object_name&quot; for an object.</P>
+<H2 CLASS="western">6.25RESETSENSE – Reset Sense</H2>
+<P CLASS="western" STYLE="font-weight: normal"> &quot;ResetSense all&quot;
+</P>
+<P CLASS="western" STYLE="font-weight: normal">&quot;ResetSense
+sense_name&quot;, where sense name is the name of one of the sense
+(like &quot;SeeEnemy&quot; or &quot;HearAllyWeaponFire&quot;).</P>
+<P CLASS="western" STYLE="font-weight: normal">  This command will
+cause the AI to trigger the 1stReaction message when the sense goes
+off again, even if that message had been sent already.  The names of
+the senses are the same as the reaction names without the “1<SUP>st</SUP>”
+and “Message” or “Target”.  Ie.  “1<SUP>st</SUP>SeeDeadBodyMessage”
+is sent for the sense “SeeDeadBody”.</P>
+<H1 CLASS="western">7AI Scripting</H1>
+<P CLASS="western" STYLE="font-weight: normal">Scripting is performed
+via a script goal.  If another goal takes over while a script goal is
+active the script goal will be removed.  The script goal is always
+valid.  If it doesn’t have anything to do it will just sit there
+(playing its idle animations) and wait for a “SCR+” command to be
+sent to it. 
+</P>
+<P CLASS="western" STYLE="font-weight: normal">A script is a sequence
+of script commands separated by a semicolon. Ie. (mt console0; wt 5;
+mt console1; wt 2; end).  Yes, the parentheses are needed.  Again,
+capitalization is only important for object names.  ‘#’ means a
+floating point number (ie. 112, 5.6, or 155.0).</P>
+<P CLASS="western" STYLE="font-weight: normal">If a command is not
+understood it will be interpreted as a message to self command (for
+any engineers reading this, it is put into a “msgself” command). 
+This is set-up so that you can use the AI commands in a script just
+as if they were script commands, ie.  “script (mt console_0; wait
+5; target player; do something else involving player)”.</P>
+<H2 CLASS="western">7.1END – End</H2>
+<P CLASS="western" STYLE="font-weight: normal">“end”</P>
+<P CLASS="western" STYLE="font-weight: normal">When a script goal
+reaches this command it will terminate itself.  Use this to keep a
+script goal from lingering after all the commands have been executed.
+ In other words, if you don’t plan to use “SCR+” to send more
+commands to the AI, make sure “end” is part of the script.</P>
+<H2 CLASS="western">7.2MT – MoveTo</H2>
+<P CLASS="western" STYLE="font-weight: normal">“mt (# # #)”</P>
+<P CLASS="western" STYLE="font-weight: normal">“mt node_name”</P>
+<P CLASS="western" STYLE="font-weight: normal">“mt player”</P>
+<P CLASS="western" STYLE="font-weight: normal">The first format
+specifies a location with a vector.  The second just uses a node. 
+Use this command in the middle of a path for smooth movement to the
+next destination.  The AI may overshoot the point by 10% of their
+movement speed (usually ~10 units).  Use PreciseMoveTo for exact
+movement.</P>
+<H2 CLASS="western">7.3PMT – PreciseMoveTo</H2>
+<P CLASS="western" STYLE="font-weight: normal">“pmt (# # #)”</P>
+<P CLASS="western" STYLE="font-weight: normal">“pmt node_name”</P>
+<P CLASS="western" STYLE="font-weight: normal">“pmt player”</P>
+<P CLASS="western" STYLE="font-weight: normal">This is just like
+MoveTo, but it is precise.  The AI will stop at exactly the point
+specified (except, of course, for their y axis.  They have to stay on
+the ground!).  Only use this at the end of a path.  If you use this
+in the middle of a path the AI will stutter at the point and then
+move on to the next point.</P>
+<H2 CLASS="western">7.4WT – Wait</H2>
+<P CLASS="western" STYLE="font-weight: normal">“wt #”</P>
+<P CLASS="western" STYLE="font-weight: normal">Waits specified number
+of seconds.</P>
+<H2 CLASS="western">7.5MSG – Send Message</H2>
+<P CLASS="western" STYLE="font-weight: normal">“msg object_name
+trigger_message”</P>
+<P CLASS="western" STYLE="font-weight: normal">Sends a trigger to the
+named object.  Note that if the message is compound (has
+semi-colons), you must wrap it in parenthesis, ie.  “msg steam_0 (
+msg Steam_0 on; delay 3 (msg Steam_0 off); delay 2 (msg Steam_0 on);
+delay 20 (msg Steam_0 on) )”.</P>
+<H2 CLASS="western">7.6PA – Play Animation</H2>
+<P CLASS="western" STYLE="font-weight: normal">“pa animation_name”</P>
+<P CLASS="western" STYLE="font-weight: normal">The AI will play the
+animation and wait for it to finish.  If you want the AI to do other
+things (like talk or move) while it is playing the animation, see
+Play Looping Animation or Play Interruptible Animation below.</P>
+<H2 CLASS="western">7.7PLA – Play Looping Animation</H2>
+<P CLASS="western" STYLE="font-weight: normal">“pla animation_name”</P>
+<P CLASS="western" STYLE="font-weight: normal">“pla none”</P>
+<P CLASS="western" STYLE="font-weight: normal">The AI will loop the
+named animation until either the script goal is complete, a Play
+Animation command is given, or “none” is given for the animation
+name of “pla”.</P>
+<H2 CLASS="western">7.8PIA – Play Interruptible Animation</H2>
+<P CLASS="western" STYLE="font-weight: normal">“pia animation_name”</P>
+<P CLASS="western" STYLE="font-weight: normal">“pia none”</P>
+<P CLASS="western" STYLE="font-weight: normal">The AI will play the
+named animation until either the script goal is complete, or another
+Play Animation command is given, or “none” is given for the
+animation name of “pia”.  Once finished, the AI will return to
+its normal idle animation.</P>
+<P CLASS="western" STYLE="font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal">Note: you should use
+ModelEdit to look up the duration of the animation you are using. The
+duration is given in milliseconds and can be found by sliding the
+time slider all the way to the right. If you are going to give more
+commands after the pia command, add a wt X command (where X is the
+duration of the animation in seconds) after the pia command. In
+combination with using iscr to script an action, this will ensure the
+character plays the entire animation, yet the animation can still be
+interrupted if the character is attacked or sees an enemy, assuming
+the attack and/or investigate goals are present.</P>
+<H2 CLASS="western">7.9PAS – Play Animation from Set</H2>
+<P CLASS="western" STYLE="font-weight: normal">“pas animation_set”</P>
+<P CLASS="western" STYLE="font-weight: normal">This works like
+PlayAnimation (“pa”) above.  But instead of an animation name, it
+takes an animation set name.  Animation sets are defined in
+Attributes\AIAnimations.txt.  If the play chance fails, this command
+will be skipped.</P>
+<H2 CLASS="western">7.10PLAS – Play Looping Animation from Set</H2>
+<P CLASS="western" STYLE="font-weight: normal">Works just like Play
+Looping Animation (“pla”) but takes an animation set rather than
+an animation name.</P>
+<H2 CLASS="western">7.11PIAS  -- Play Interruptible Animation from
+Set</H2>
+<P CLASS="western" STYLE="font-weight: normal">Works just like Play
+Interruptible Animation (“pia”) but takes an animation set rather
+than an animation name.</P>
+<H2 CLASS="western">7.12RPLY – Reply</H2>
+<P CLASS="western" STYLE="font-weight: normal">“rply sound_name”</P>
+<P CLASS="western" STYLE="font-weight: normal">Works just like “SAY”
+above, but AI will wait for sound to finish before continuing with
+the script.</P>
+<H2 CLASS="western">7.13FC – Face</H2>
+<P CLASS="western" STYLE="font-weight: normal">“fc (# # #)”</P>
+<P CLASS="western" STYLE="font-weight: normal">“fc player”</P>
+<P CLASS="western" STYLE="font-weight: normal">“fc target”</P>
+<P CLASS="western" STYLE="font-weight: normal">“fc object_name”</P>
+<P CLASS="western" STYLE="font-weight: normal">“fc off”</P>
+<P CLASS="western" STYLE="font-weight: normal">AI will face and
+continue facing the specified object or location.  Player is the
+nearest player when the script command becomes active.  The AI will
+stop facing when either the script goal is exitted or “fc off”
+occurs.</P>
+<H2 CLASS="western">7.14FR – Fire Weapon</H2>
+<P CLASS="western" STYLE="font-weight: normal">“fr (# # #)”</P>
+<P CLASS="western" STYLE="font-weight: normal">“fr player”</P>
+<P CLASS="western" STYLE="font-weight: normal">“fr target”</P>
+<P CLASS="western" STYLE="font-weight: normal">“fr object_name”</P>
+<P CLASS="western" STYLE="font-weight: normal">“fr off”</P>
+<P CLASS="western" STYLE="font-weight: normal">Works like “Face”.
+ AI will fire weapon at specified object or location.  There are no
+checks for a clear line of sight (although they won’t hurt an ally
+or themselves).  The AI just starts firing in the right direction.</P>
+<H2 CLASS="western">7.15FP – Follow Path</H2>
+<P CLASS="western" STYLE="font-weight: normal">“fp path_base_name”</P>
+<P CLASS="western" STYLE="font-weight: normal">Follows a sequence of
+nodes named “path_base_nameX”, where X is the number of the node.
+ Eg. “fp hallA” will go to nodes : “hallA0”, “halla1”,
+and “HallA2”.  The base name is not case sensitive.</P>
+<H2 CLASS="western">7.16RUN, WALK</H2>
+<P CLASS="western" STYLE="font-weight: normal">“run”</P>
+<P CLASS="western" STYLE="font-weight: normal">“walk”</P>
+<P CLASS="western" STYLE="font-weight: normal">AI will start running
+or walking.  So, to get an AI to run along a path you would use “run;
+fp run_to_exit”.</P>
+<H2 CLASS="western">7.17CROUCH, STAND</H2>
+<P CLASS="western" STYLE="font-weight: normal">“crouch”</P>
+<P CLASS="western" STYLE="font-weight: normal">“stand”</P>
+<P CLASS="western" STYLE="font-weight: normal">AI will crouch or
+stand-up.  So, to get an AI to do a running crouch down a path use
+“run; crouch; fp run_to_exit”.  The order of run and crouch
+didn’t matter, they just both needed to be before the followpath
+command.</P>
+<P CLASS="western" STYLE="font-weight: normal">Aliens will not obey
+these commands.  Aliens always stand when they are moving to a point
+or node in a volume and they always crouch when they are moving to a
+wall walk node.</P>
+<H2 CLASS="western">7.18JP – Jump</H2>
+<P CLASS="western" STYLE="font-weight: normal">“jp (# # #)”</P>
+<P CLASS="western" STYLE="font-weight: normal">“jp node_name”</P>
+<P CLASS="western" STYLE="font-weight: normal">“jp object_name”</P>
+<P CLASS="western" STYLE="font-weight: normal">AI will jump to the
+specified location.  This works just like the jump connections with
+the AINodes.  The AI does not check whether the distance is
+reasonable.  The AI does not check to be sure the jump path is clear.
+ If something blocks the AI while jumping, the AI will not make it.</P>
+<H2 CLASS="western">7.19IGD – Ignore Damage</H2>
+<P CLASS="western" STYLE="font-weight: normal">“igd”</P>
+<P CLASS="western" STYLE="font-weight: normal">If this command
+appears anywhere in a script, the script will keep running even if
+the AI takes damage.  Note that, unlike every other script command,
+it is handled as soon as the AI receives the script.</P>
+<P CLASS="western" STYLE="font-weight: normal"><BR>
+</P>
+<H1 CLASS="western">8AINodeMgr &amp; AIVolumeMgr</H1>
+<P CLASS="western" STYLE="font-weight: normal">If you put one of each
+of these objects in your level you can send messages to nodes and
+volumes by triggering that object.  Possible trigger messages:</P>
+<H2 CLASS="western">8.1“node_name on” and “node_name off”</H2>
+<P CLASS="western" STYLE="font-weight: normal">This will turn nodes
+(or volumes, if sent to the AIVolumeMgr) on or off.  The node_name
+will be matched against the node’s name (case insensitive).</P>
+<P CLASS="western" STYLE="font-weight: normal">  
+</P>
+<H1 CLASS="western">9Random Stuff</H1>
+<H2 CLASS="western">9.1AI Movement Policy (talking about “sms”,
+“run”, “walk”, “crouch”, and “stand”).</H2>
+<P CLASS="western" STYLE="font-weight: normal">AI’s will start most
+goals walking with the default movement style (equivalent of “sms
+Default”).  In some, like attack, they will run rather than walk.<BR><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal">When in a script, you
+can use the “sms” command to get the AI’s to use a different
+movement style.  They will stay in that movement style until they
+receive another “sms” command or when they leave the script goal.
+ You can also give them “walk”, “run”, “crouch”, and
+“stand” commands to get them to start walking, running, etc. from
+point to point in the script.  When they start another goal they will
+go back to whatever is appropriate for that goal.<BR><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal">“crouch” and
+“stand” won’t work for wall walkers because they automatically
+stand up when they start moving in a volume and automatically crouch
+when they start wall walking.<BR><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal">I would like to
+explain the movement styles a little bit.  The movement styles are
+simply a full set of animations.  These are all set up in the
+animation attributes.  Right now there is the “investigate”
+movement style,  those are the animations the AI uses when
+investigating. <BR><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal">These movement styles
+can be added through the bute system, no code changes.  So if you
+want more than the current movement styles it is mostly a matter of
+gathering the resources (the animations) and setting up the
+attributes in AnimationButes.txt.</P>
+<P CLASS="western" STYLE="font-weight: normal"><BR>
+</P>
+<H2 CLASS="western">9.2AI Volume Tips</H2>
+<P CLASS="western" STYLE="font-weight: normal">The AI’s believe
+they can walk from one touching volume to the next.  If one volume is
+more than the AI’s stair step height from the other, you will see
+an AI walking into a ledge. <BR><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal">Volumes go where AI’s
+can move.  I’ve seen a volume put between two crates that were 32
+units apart.  Don’t do that!<BR><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal">The volumes can only
+touch where the AI can actually travel. If two volumes touch in a
+place the AI cannot just walk to, the AI will very likely spend all
+his energy trying to get to that point. <BR><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal">I’ve said it was
+okay to let volumes go a little outside the geometry, but I’ve seen
+some ridiculous stuff.  Do it sparingly and don’t let it get more
+than about 100 units out.  Even 100 units is pushing it.<BR><BR>
+</P>
+<H2 CLASS="western">9.3Wall Walk node usage</H2>
+<P CLASS="western" STYLE="font-weight: normal">Here are the rules:</P>
+<OL>
+	<LI><P CLASS="western" STYLE="font-weight: normal">A wall-walk-able
+	node has to be slightly clipping into a face, just as before. 
+	Nothing changed on that front.</P>
+	<LI><P CLASS="western" STYLE="font-weight: normal">A wall-walk-able
+	node must be at least half the AI’s Y-dims away an edge of the
+	face the node is touching.  So for drones and runners, that means 32
+	units away from the face edges!  Read this to yourself 3 more times,
+	it’s very important.</P>
+	<LI><P CLASS="western" STYLE="font-weight: normal">You’ll want a
+	node at least every 90 degrees of rotation;  if the AI ends up being
+	underneath the node (like on the bottom of an overhang) or on the
+	other side of a node (like on the  opposite wall in a room), their
+	chances of reliably finding the node are slim.  This rule should be
+	fairly obvious.  If you put nodes about where you think they should
+	be (following rule 2, it is an important rule!) you’ll likely get
+	this one right.<BR><BR>
+	</P>
+</OL>
+<P CLASS="western" STYLE="font-weight: normal">You have the drop
+nodes and jumping to help you out as well.  If the geometry is
+getting dicey enough that you can’t follow rule 2, I would suggest
+you don’t try to get an AI wall walking over that area!  Note that
+jumping to a wall walk node is a non-solid “pounce,” so they
+_<I>will</I>_ make it!</P>
+<P CLASS="western" STYLE="font-weight: normal"><BR>
+</P>
+<H1 CLASS="western">10Some example scripts:</H1>
+<P CLASS="western" STYLE="font-weight: normal"><BR>
+</P>
+<P CLASS="western"><B>Examples from P1 and P3:</B></P>
+<P CLASS="western" STYLE="font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal"><I>Predator Todd moves
+up to the node todd_dest0, targets Guard Jibber, uncloaks, and ends
+his script (which automatically drops him back into an attack state):</I></P>
+<P CLASS="western" STYLE="font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal">msg predator_todd
+(killscripts; lsh 0; scr (run; mt todd_dest0; trg guard_jibber; cl
+off; end;););</P>
+<P CLASS="western" STYLE="font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal"><I>Predator Todd uses
+an idlescript to chill out. If he is attacked the use of iscr and pia
+will allow this script to be interrupted:</I></P>
+<P CLASS="western" STYLE="font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal">msg predator_todd
+(killscripts; iscr (pia Cine_4_8; wt 14.6; pia Cine_4_5; wt 16.4; msg
+todd_chill trigger; end;););</P>
+<P CLASS="western" STYLE="font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal"><I>Drone Tony stops
+his attack, turns, and runs/wallwalks to wallwalk node wallwalk_A7,
+before deactivating.</I></P>
+<P CLASS="western" STYLE="font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal">msg drone_tony (kg
+attack; kg investigate; scr (rot praetorian_jump3; wt 1; run; mt
+wallwalk_A7; active 0;););</P>
+<P CLASS="western" STYLE="font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal"><I>Guard Wayvin
+activates, moves to his destination node, turns to face another
+guard’s destination node, and triggers the beginning of a
+conversation between himself and his pal:</I></P>
+<P CLASS="western" STYLE="font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal">msg guard_wayvin
+(active 1; iscr (run; mt wayvin_dest0; rot swissmenz_dest0; msg
+grotto_conv_start trigger; end;););</P>
+<P CLASS="western" STYLE="font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal"><I>Guard Balzac
+activates and moves to various destinations, playing animations and
+pausing. The use of iscr and pia (instead of scr and pa) allows his
+actions to be interrupted if he sees an enemy or is attacked:</I></P>
+<P CLASS="western" STYLE="font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal">msg guard_balzac
+(active 1; iscr (wt 2.0; mt balzac_dest0; wt 2.0; sms investigate; mt
+balzac_dest1; mt balzac_dest2; pia M6I1_1; wt 5.0; mt balzac_dest3;
+end;););</P>
+<P CLASS="western" STYLE="font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal"><I>Guard Jackie turns
+towards the player, plays an animation, says something, and sends a
+message to a trigger if he is not killed before reaching that point
+in the script. After that, he targets the player and ends the script,
+dropping him into his newly-added attack goal:</I></P>
+<P CLASS="western" STYLE="font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal">msg guard_jackie
+(killscripts; scr (rot player; pia Touch_Earphone; wt 1; say 29084;
+wt 3; msg target_seen trigger; wt 1; ag attack; trg player; end;));</P>
+<P CLASS="western" STYLE="font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal"><I>Guard Bob stops his
+patrolling and investigating, and moves towards Repairman Joe. He
+looks at Joe, reactivates the investigate goal,  and begins a
+conversation. The use of iscr ensures the script can be interrupted
+if Joe is attacked or sees something:</I></P>
+<P CLASS="western" STYLE="font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal">msg guard_bob (kg
+patrol; kg investigate; iscr (mt bob_dest0; rot repairman_joe; ag
+investigate; la repairman_joe; msg hurry_up_conv0 on; end;););</P>
+<P CLASS="western" STYLE="font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal"><BR>
+</P>
+</BODY>
+</HTML>

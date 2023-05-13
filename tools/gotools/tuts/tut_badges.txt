@@ -1,0 +1,61 @@
+	###########################################
+
+27.10.2012
+Fallout <falloutdc at gmail dot com>
+fallout.bplaced.net
+globalops.tk
+
+	###########################################
+
+Badges are little images you can place on your ingame alterego. Badges may not exceed 32x32 pixels!
+
+How to crate badges for Global Operations WITHOUT existing GRAYSCALE alpha channel.
+
+If your image allready have an grayscale alpha channel you can skip directly to 'STEP2' .
+PNG images usualy have an transparency alpha channel added if the background appears white.
+If your image spans across the entire space and/or you do not have to hide the background around your actual picture jump to 'STEP2' 
+You may aswell create a solid alpha directly inside GOedit . Select your imported badge > right click > Create Solit Alpha > set 'Scale Percentage' to '500' voila. ;)
+
+Requirements
+Gimp
+GOedit or DEdit
+Some image in 32x32 64x64 128x128 and so on if the aspect ratio is like 128x78 you have to crop or cut the wanted content to an equal height and width
+
+
+STEP1
+Create Alpha Channel transparency
+
+Open Gimp -> Click on 'FILE' > 'OPEN' find the image you wan't to modify click OPEN <IMAGE1>
+Now with your image opened . On the layers tab 'RIGHT CLICK' on your image select 'ADD LAYERMASK' select 'GRAYSTYLE COPY OF IMAGE' Make sure you selected the layermask from the Layer list<IMAGE2> TIP: Hold CTRL and use your mouse wheel to zoom in or out.
+Now depending on the image you may select the 'fuzzy select' tool aka 'magic wand' and select the background of your image that you wan't removed TIP: Hold SHIFT to select many regions at once
+Select the 'Bucket Fill Tool' and switch to 'BLACK' as foreground color. Now Click anywhere on your image to fill the areas that you selected using the "fuzzy select' tool to make it invisible.
+Now select the 'PENCIL' tools and set the 'Scale' to something like 10 so you can erase unwanted areas pixel by pixel. Once your done painting unwanted background with white.
+Change foreground color back to 'WHITE' . Now we are going to paint the areas white thet we WANT to show in game. You may do this by using the 'fuzzy select' tool again and inverting the selection then use 'fill bucket' to fill the entire area with white.
+But as the image is very small 32x32 I tend to use the pencil . Once your satisfied with the result we should prepare your image for Import into GOEdit (aka DEdit).
+The last step is to actually apply the changes we did to the Image to do so -> Layer->Mask->Apply layer mask to apply the layer mask to the alpha channel. Now your Alpha channel is ready
+In Left Top menu select 'EXPORT' select a filename give it the ending 'TGA' (Very important!) (If your image is allready in Targa format (.tga) select 'SAVE AS' 
+A dialog box pops up . Make sure to remove the checkbox 'RLE COMPRESSION' otherwise we cannot import the image into GOedit
+
+
+STEP2
+Import into GOedit
+
+Open up GOedit
+From file Tab load 'globalops.dep'
+Now browse to 'Textures' tab and into the 'badges' directory
+Right Click anywhere in the lower filelisting of badges and select in the list 'IMPORT TGA...'
+Find your edited tga file on your filesystem
+Browse for the name you gave your image eg 'my_cool_newbadge.dtx'
+Double click on it or right click select 'Texture Properties..'
+
+Now change the following entrys
+
+Number of Mipmaps	1
+Compression		S3TC DXT3 (4x compression)
+Compression		S3TC DXT1 (8x compression) ONLY if your images have a full white! alpha channel otherwise alpha channel gets destroyed
+Texture Format		use 5551 in 16-bit mode (rgba5551 If your image is grayscale)
+Texture Format		use 4444 in 16-bit mode (rgba4444 If your images is rgb)
+
+Click OK
+
+Thats it your badge should now be selectebal in game and show up to others if the server allows uploading of badges and the clients have it enbled

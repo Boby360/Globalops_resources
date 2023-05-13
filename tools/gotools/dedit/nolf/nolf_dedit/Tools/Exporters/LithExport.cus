@@ -1,0 +1,29 @@
+#
+# SoftExport custom effect
+#
+# Location: Tools->Export
+#
+Menu 14
+
+_SYMBOLS
+  strOutput    4
+  BROWSER.abc    5
+  bAppendAnimInfo    6
+  strAnimation    7
+_END
+
+_BROWSER
+5 4
+_END
+
+_EXCLUSIVE
+_END
+
+# DSO Specification
+_DYNAMIC_LINK
+LINKNAME LithExport
+
+CUSTOM_INIT_FUNCTION    init
+CUSTOM_CLEANUP_FUNCTION cleanup
+
+_END

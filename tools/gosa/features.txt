@@ -1,0 +1,317 @@
+Author/Creator:	~BUG~Falcon 
+Bugs send to:	<bugs@gosa.bug-clan.de>
+Idea send to:	<info@gosa.bug-clan.de>
+Homepage:	http://gosa.bug-clan.de
+
+
+Version 1.40
+Fixed:
+	- Crash after long connect
+	- Display of timers
+	- Account-Update
+	- Crash on using kick-menu (?)
+	- Another unexpected bug
+
+
+Version 1.39
+Features:
+	- Friendly-Fire hits (not only kills) are shown now
+Fixed:
+	- Minor (menu-)display bug
+	- Teamkill menu bug
+
+
+Version 1.38
+Features:
+	- You can set the "time to be banned" manually
+	- Changed menu-structure for serverlog-info
+Fixed:
+	- On some systems (never mine :-() there does exceptions occur
+	  inserted some error handler to fix that.
+
+
+Version 1.37
+Fixed:
+	- Crash on "clear all TKs"
+
+
+Version 1.36
+Features:
+	- Adding list of teamkillers to (middle-mouse-btn) menu (at serverlog-info)
+	- Adding list of standard messages to (middle-mouse-btn) menu (at serverlog-info)
+	- Adding map-commands to (middle-mouse-btn) menu (at serverlog-info)
+	- Each account is available in the menu (to connect to)
+	- Refreshing Free-playerinfo via popup-menu
+	- Advanced Display-Option added
+	- Autosaving history if it's getting to big (and SaveOnExit is activated otherwise history is cleared only)
+	- Adding Profiles to "display serverlog-infos"
+Fixed:
+	- Sorting playertable 
+	- SaveHistoryOnExit-variable wasn't saved correctly
+	- SaveChatOnExit-variable wasn't saved correctly
+Bugs:
+FIXED	- if BigScreen & statuswindow & then connect => resize error
+
+
+Version 1.31
+Features:
+	- Automated command sending integrated
+	- Swapping to "player-table" (on playerinfo) can be deactivated
+Fixed:
+	- Minor bugs
+	- Settings-Handling
+
+
+Version 1.30
+Features:
+	- Additional options for Server-Info
+	- 8 char-restriction for config-variables removed
+Fixed:
+	- Changed most of variable denotations (making settings to older versions incompatible)
+	- Minor bugs
+
+
+Version 1.21
+Features:
+	- Integration of GOSSIPs-ServerInfoWindow into main-window
+	- Added missed serverlog-lines
+	- Changed debug-creation
+
+BUG:
+	- Alert-window causes GOSA to crash if a settings-window is open (fixed crash, not bug-source)
+
+
+Version 1.20
+Features:
+	- Logfile-infos can be cleared
+	- Logfile-info is colored - for easy watching
+	- Logfile-entries to be displayed can be selected
+	- New variable "SLogDisp" defines what logfile-entires should be displayed (at startup)
+	- Double-clicking a history line makes it available in the command-line (for reuse)
+
+Bugs:
+FIXED	- If "GOSSIPon=1" and no GOSSIP is supported, GOSA can't login.
+
+
+Version 1.19
+Features:
+	- New variable "MsgPre": Defines the message prefix prepended before each saying
+
+
+Version 1.18
+Features:
+	- New variable "GOSSIPon": GOSSIP will be activated on server connect
+
+Fixed:
+	- GOSSIP-Support: corrected button-activation
+	- Setting correct values if timeout was set wrong
+	- Some minor bugs
+	- "busy message"
+
+
+Version 1.17
+
+Features:
+	- Import/Export TeamIDs and Messages
+	- Maplist can be imported in the format of the server.cfg
+
+Fixed:
+	- Missing Timer
+	- Players with "," in their names were displayed wrong.
+
+
+Version 1.15
+
+Features:
+	- Playerlist sorted by teams and subsorted by names after that.
+	- Free-Playerinfo sorted by frags
+	- New setup-variable
+	- You can view the frags in the Playerinfo (no swapping anymore)
+	- Settings are grouped in categories (easier to change values)
+	- Changing of internal setting-handling
+	- Detecting newer version (no auto-update)
+
+Fixed:
+	- Free-Playerinfo table cleared on account change
+	- Variable-setting issue
+
+Bugs:
+FIXED	- "In Menu" players are not sorted correctly
+
+
+Version 1.12
+
+Features:
+	- Each account can specify it's own maplist-file.
+
+Fixed:
+	- Changemap didn't work
+	- Few minor bugs
+
+
+Version 1.11
+
+Features:
+	- Prepared for Socks v4 support (not ready)
+	- English Setup
+
+Fixed:
+	- Variable refresh bug, inserted in v1.10
+
+
+Version 1.10
+
+Features:
+	- Player table is automatically sorted by teams
+	- GOSSIP parser completed
+	- Send commands via return-key
+	- Extra window that displays server-infos (from GOSSIP)
+	- New setup-variables
+	- Buttons to clear debug, history and chat
+	- Timeout-Counter
+	- Player can call the admin (GOSSIP must be supported)
+
+Fixed:
+	- Internal structure changed slightly
+	- Useability issue
+	- Display bug
+
+
+Version 1.08
+
+Fixed:
+	- Minor timer bugs
+	- Minor combo bug
+	- Changed internal variable handling, to fix an untraceable error under WinXP
+
+
+Version 1.06
+
+Features:
+	- Showing some time-informations
+
+Fixed:
+	- "NO Player"-bug
+	- Minor status-display bug
+	- Minor timeout bugs
+	- Ultra-fast button clicking screw up the table
+
+
+Version 1.04
+
+Fixed:
+	- Fixed wrong status message if server busy
+	- Menu available by click on ID too
+	- Changed few labels to increase intuitive usage
+	- GOSSIP ready - more, read on the website
+	- Changed menu
+	- Chat window can be save now
+	
+
+Version 1.00 (Release)
+
+Features:
+	- Parsing arbitrary commands
+	- History can be saved on exit and read on startup
+
+Fixed:
+	- Grammar bug
+	- Changed program-info, debug-handling, icons of sub-forms
+	- Minor performance-bug, options-bug
+	- Major connection-synchronisation bug
+	- Major update-settings-bug
+	- Minor reconnect-bug fixed
+	- Changed history a little
+	- Major Timeout-bug, when server is unavailable
+	- Connect-button disabled when no account available
+
+Bugs:
+FIXED 	- Display-bug when map changes (after time hit zero)
+
+
+Version 0.16 (RC 2)
+
+Features:
+	- Helpfile created
+
+Fixed:
+	- few minor bugs
+
+BUGs:
+FIXED	- If no account is loaded, "Free Update" is available.
+
+
+Version 0.15 (RC 1)
+
+Features:
+	- Added Account-management
+
+Fixed:
+	- History adjusted
+	- Minor resize bug
+	- Changed encryption (old account.ini files won't work anymore)
+	- File-read bug when more then one account was stored
+	- Wrong message while reading maplist
+
+BUGs:
+FIXED	- Tooltip OS/Teamratio
+FIXED	- Changing name of accounts doesnt update mainwindow-combo
+FIXED	- idle-time bug fixed
+FIXED	- Major encryption bug.
+FIXED	- Sometimes the components are wrong resized
+
+
+Version 0.14 (beta)
+
+Features:
+	- More Menu-Options
+	- Server-Settings can be modified by the app.
+	- Team-IDs can be modified by the app.
+	- Server-Commands can be modified by the app.
+	- Standard-Messages can be modified by the app.
+	- Arbitrary setting-variables can be added (and are stored)
+Fixed:
+	- Minor display bug
+
+
+Version 0.13 (beta)
+
+Features:
+	- Added server.ini for individual settings
+	- Added About-Frame
+	- Added Menu-Options
+	- Saving the window-size after qutting the program
+	- Added window for go-chatter
+Fixed:
+	- Few little displaying mistakes
+	- Updated error-handling
+
+
+Version 0.12 (beta)
+
+Features:
+	- Auto update of server-info when map changes (after 5 seconds) [not tested]
+	- Auto-disconnection after idle time
+	- Server-ini file, containing usefull data ;-)
+	- History of manually sent commands
+	- History with all commands sent to the server
+
+Fixed:
+	- Buttons correctly enabled on map-delete/add
+	- Commands are send correctly now
+	- Wrong popup-menu appearance
+
+
+Version 0.10 (beta)
+
+Features:
+	- Password covered by *
+	- Accounts.ini encrypted
+	- Window resizeable (vertical only)
+	- Optimized tables
+	- Tables can be sorted
+	- Pop-Up Menu (left-click) to kill, kick, ban, talk
+	- Adding/Removing maps
+
+Bugs:
+FIXED	- only 16 chars are send via Winsock

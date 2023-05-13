@@ -1,0 +1,87 @@
+Loading Levels from the Custom Level Menu
+=========================================
+
+
+There are two ways to get levels to appear in the "Single Player-->
+Custom Level" menu:
+
+I.   Levels in the "Worlds\Custom" Directory
+II.  Levels in Other "Worlds" Directories
+
+
+===================================================================
+
+I.   Levels in the "Worlds\Custom" Directory
+
+Levels (.dat files) placed in a "Worlds\Custom" directory, or any
+subdirectory inside "Worlds\Custom," will show up in the Custom
+World menu if the game is run with the "-rez avp2" command-line
+option.*
+
+Step-by-step:
+
+    1) Create a folder named "Custom" inside your
+    GameDirPath\AVP2\Worlds folder.
+    2) Insert the desired .dat files here. You can also place .dat
+    files in subdirectories inside this "Custom" folder.
+    3) Run avp2.exe.
+    4) Click the "Options" button in the launcher window.
+    5) Type "-rez avp2" in the "Command-Line" field.
+    6) Check the "Always specify these command-line parameters" box
+    if you want levels to show up on the "Custom Level" screen each
+    time you run the game.
+
+Now when you launch the game you should see levels placed in the
+"Custom" folder or its subdirectories listed in the Custom Level
+screen. To load a listed level, click on its name. You can scroll
+the list with the Up/Down Arrow and Page Up/Down keys.
+
+If you want to work with levels in the Custom folder directly using
+DEdit, you'll need to place a "DirTypeWorlds" file in the Custom
+folder and in any subdirectories. You can use a copy of any of the
+"DirTypeWorlds" files in the SinglePlayer or Multi directory trees,
+or just create your own by making an empty text file and renaming
+it "DirTypeWorlds":
+
+    1) Browse to the Custom folder in Windows Explorer.
+    2) Open the Custom folder.
+    3) Right-click on the open folder's window background.
+    4) Select "New-->Text Document" from the pop-up menu.
+    5) Enter "DirTypeWorlds" as the file name, with no extension.
+    6) Run DEdit.
+    7) Open the AVP2 project.
+    8) Click the "Worlds" tab.
+
+"Custom" should show up in the directory tree and you will now be
+able to create and load .ed files in that directory.
+
+
+===================================================================
+
+II.  Levels in Other "Worlds" Directories
+
+Levels (.dat files) in the "Worlds" directory or any of its
+subdirectories will show up in the Custom World menu if the game is
+run with the "-rez avp2" and "+enableretaillevels 1" command-line
+options.*
+
+    1) Run avp2.exe.
+    2) Click the "Options" button in the launcher window.
+    3) Type "-rez avp2 +enableretaillevels 1" in the "Command-Line"
+    field.
+    4) Check the "Always specify these command-line parameters" box
+    if you want levels to show up on the "Custom Level" screen each
+    time you run the game.
+
+Now when you launch the game you should see all .dat files in your
+Worlds directory or subdirectories listed in the Custom Level
+screen. To load a listed level, click on its name. You can scroll
+the list with the Up/Down Arrow and Page Up/Down keys.
+
+
+===================================================================
+
+* NOTE: As of AVP2 version 1.0.9.3, the Custom Level menu does not
+show levels which are inside .rez files. Future versions of AVP2
+may add the ability to load levels inside .rez files through the
+Custom Level screen.

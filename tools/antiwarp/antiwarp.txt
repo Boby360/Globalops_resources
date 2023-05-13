@@ -1,0 +1,1 @@
+If you have "warping" problems, unzip the file to your Global Operations directory and start the antiwarp.exe before you start GO.

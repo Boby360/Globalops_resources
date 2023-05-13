@@ -1,0 +1,453 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=utf-8">
+	<TITLE>NOLF COMMAND ARCHITECTURE</TITLE>
+	<META NAME="GENERATOR" CONTENT="LibreOffice 3.5  (Linux)">
+	<META NAME="AUTHOR" CONTENT="COURTNEY EVANS">
+	<META NAME="CREATED" CONTENT="20020104;23580000">
+	<META NAME="CHANGEDBY" CONTENT="COURTNEY EVANS">
+	<META NAME="CHANGED" CONTENT="20020115;380000">
+	<META NAME="Info 1" CONTENT="">
+	<META NAME="Info 2" CONTENT="">
+	<META NAME="Info 3" CONTENT="">
+	<META NAME="Info 4" CONTENT="">
+	<STYLE TYPE="text/css">
+	<!--
+		@page { size: 8.5in 11in; margin-right: 1.25in; margin-top: 1in; margin-bottom: 1in }
+		P { margin-bottom: 0in; direction: ltr; color: #000000; widows: 2; orphans: 2 }
+		P.western { font-family: "Times New Roman", serif; font-size: 12pt; so-language: ; font-weight: bold }
+		P.cjk { font-family: "Times New Roman", serif; font-size: 12pt; font-weight: bold }
+		P.ctl { font-family: "Times New Roman", serif; font-size: 10pt }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="en-US" TEXT="#000000" DIR="LTR">
+<P CLASS="western"><FONT SIZE=6><B>AVP2 Messages and Commands</B></FONT></P>
+<P CLASS="western" STYLE="font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal"><FONT SIZE=2>In the
+properties of a Trigger object, you'll come across a list of targets
+and messages. It looks something like this:</FONT></P>
+<P CLASS="western" STYLE="font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal"><FONT FACE="Courier, monospace"><FONT SIZE=2>Target1:<BR>Message1:<BR>Target2:<BR>Message2:<BR>Target3:<BR>Message3:
+</FONT></FONT>
+</P>
+<P CLASS="western" STYLE="font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal"><FONT SIZE=2>Obviously,
+the simplest way to approach this is by just filling in the fields
+like so: </FONT>
+</P>
+<P CLASS="western" STYLE="font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal"><FONT FACE="Courier, monospace"><FONT SIZE=2>Target1:
+door_7<BR>Message1: trigger<BR>Target2: door_8<BR>Message2:
+triggerclose<BR>Target3: keyframer_9248773<BR>Message3: pause </FONT></FONT>
+</P>
+<P CLASS="western" STYLE="font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal"><FONT SIZE=2>When this
+trigger object is triggered (either by receiving a “trigger”
+message from another object, or by being moved into by a player or AI
+if the trigger is set up to pay attention to players and/or AI) it
+will immediately send each target object its corresponding message. </FONT>
+</P>
+<P CLASS="western" STYLE="font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal"><FONT SIZE=2>This,
+however, is only scratching the surface. There is another way to
+enter commands, which is by nullifying the target field and entering
+a message string into the message field. You do this by using the <B>Msg</B>
+command. The Msg command looks like:</FONT></P>
+<P CLASS="western" STYLE="font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal"><FONT FACE="Courier, monospace"><FONT SIZE=2>msg
+Target Message;</FONT></FONT></P>
+<P CLASS="western" STYLE="font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal"><FONT SIZE=2>The same
+example as above, using this method, would turn out like this: </FONT>
+</P>
+<P CLASS="western" STYLE="font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal"><FONT FACE="Courier, monospace"><FONT SIZE=2>Target1:
+[NULL]<BR>Message1: msg door_7 trigger; msg door_8 triggerclose; msg
+keyframer_9248773 pause; </FONT></FONT>
+</P>
+<P CLASS="western" STYLE="font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal"><FONT SIZE=2>This will
+do the exact same thing as the simple trigger in the previous
+example. </FONT>
+</P>
+<P CLASS="western" STYLE="font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal"><FONT SIZE=2>You must
+put [NULL] in the target field so the engine knows to ignore that
+field and just execute the string in the message field. (You can also
+write 'bogus' or whatever, as long as you don't put the name of an
+actual object in the map. you must put something other than blank
+space here though.) </FONT>
+</P>
+<P CLASS="western" STYLE="font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal"><FONT SIZE=2>The
+syntax is &quot;msg Target Message&quot; where target is the name of
+the object to receive the message, and message is what you are
+telling the object to do. Keep in mind you can click the little
+button next to the message field to look at the whole message if it
+starts getting too long to fit in the 1-line text box. (There is a
+limit to the length, though, so watch out.)</FONT></P>
+<P CLASS="western" STYLE="font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal"><FONT SIZE=2>If you
+are sending a multi-part message to a target, that message must be in
+parentheses. For example:</FONT></P>
+<P CLASS="western" STYLE="font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal"><FONT FACE="Courier, monospace"><FONT SIZE=2>msg
+AI_Bob (active 1);</FONT></FONT></P>
+<P CLASS="western" STYLE="font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal"><FONT SIZE=2>This will
+send AI_Bob the message “active 1”. If you write this message as:</FONT></P>
+<P CLASS="western" STYLE="font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal"><FONT FACE="Courier, monospace"><FONT SIZE=2>msg
+AI_Bob active 1;</FONT></FONT></P>
+<P CLASS="western" STYLE="font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal"><FONT SIZE=2>you will
+only be sending AI_Bob the message “active”, and the 1 will be
+thrown out and/or invalidate the entire message. Always use
+parentheses.</FONT></P>
+<P CLASS="western" STYLE="font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal"><FONT SIZE=2>Successive
+messages in the same text field must be separated with a semicolon.
+For example: </FONT>
+</P>
+<P CLASS="western" STYLE="font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal"><FONT FACE="Courier, monospace"><FONT SIZE=2>msg
+AI_Bob (active 1); msg Plants_Group (animloop wind); msg Glass_Wall
+destroy; msg Door_9 lock; </FONT></FONT>
+</P>
+<P CLASS="western" STYLE="font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal"><FONT SIZE=2>There are
+spaces after the semicolons here for clarity but spaces are not
+required. </FONT>
+</P>
+<P CLASS="western" STYLE="font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal"><FONT SIZE=2>With this
+approach you can do much more. Here are some additional commands.</FONT></P>
+<P CLASS="western" STYLE="font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal"><FONT SIZE=2><B>Delay</B>
+is very useful, and looks like this: </FONT>
+</P>
+<P CLASS="western" STYLE="font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal"><FONT FACE="Courier, monospace"><FONT SIZE=2>delay
+X (message); </FONT></FONT>
+</P>
+<P CLASS="western" STYLE="font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal"><FONT SIZE=2>X is a
+number. When this message is processed, the engine will wait X number
+of seconds before processing the message within the parentheses. For
+example:</FONT></P>
+<P CLASS="western" STYLE="font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal"><FONT FACE="Courier, monospace"><FONT SIZE=2>delay
+4.3 (msg AI_Bob (ag attack; trg player;)); </FONT></FONT>
+</P>
+<P CLASS="western" STYLE="font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal"><FONT SIZE=2>When this
+message is processed the engine will wait 4.3 seconds, then tell
+AI_Bob to add 'attack' to his list of goals and target the player.</FONT></P>
+<P CLASS="western" STYLE="font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal"><FONT SIZE=2><B>DelayID</B>
+is like delay, but gives you the ability to abort the delayed message
+using the <B>Abort</B> command. The DelayID command looks like this:</FONT></P>
+<P CLASS="western" STYLE="font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal"><FONT FACE="Courier, monospace"><FONT SIZE=2>delayid
+N X (message);</FONT></FONT></P>
+<P CLASS="western" STYLE="font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal"><FONT SIZE=2>N is a
+string and X is a number. When this message is processed, the engine
+will wait X number of seconds before processing the message within
+the parentheses. If the message is aborted before the delay elapses,
+the message will not be processed. The message is aborted by using
+the Abort command like this:</FONT></P>
+<P CLASS="western" STYLE="font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal"><FONT FACE="Courier, monospace"><FONT SIZE=2>abort
+N;</FONT></FONT></P>
+<P CLASS="western" STYLE="font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal"><FONT SIZE=2>N is a
+string. Using these commands together can be very powerful. For
+example, one trigger could have:</FONT></P>
+<P CLASS="western" STYLE="font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal"><FONT FACE="Courier, monospace"><FONT SIZE=2>delayid
+Countdown1 30.0 (msg explosion_group on);</FONT></FONT></P>
+<P CLASS="western" STYLE="font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal"><FONT SIZE=2>While
+another trigger could be set up to stop this with:</FONT></P>
+<P CLASS="western" STYLE="font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal"><FONT FACE="Courier, monospace"><FONT SIZE=2>abort
+Countdown1;</FONT></FONT></P>
+<P CLASS="western" STYLE="font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal"><FONT SIZE=2>Another
+useful command is <B>Rand</B>. This command can be used to randomly
+send one of two commands based on a specified percentage. It looks
+like this:</FONT></P>
+<P CLASS="western" STYLE="font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal"><FONT FACE="Courier, monospace"><FONT SIZE=2>rand
+X (message) (message);</FONT></FONT></P>
+<P CLASS="western" STYLE="font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal"><FONT SIZE=2>X is a
+number between 0 and 1 that specifies the probability of the 1<SUP>st</SUP>
+command being executed. For example:</FONT></P>
+<P CLASS="western" STYLE="font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal"><FONT FACE="Courier, monospace"><FONT SIZE=2>rand
+0.25 (msg prop0 destroy) (msg door0 trigger);</FONT></FONT></P>
+<P CLASS="western" STYLE="font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal"><FONT SIZE=2>With this
+message there is a 25% chance of prop0 getting destroyed, and a 75%
+chance of door0 triggering.</FONT></P>
+<P CLASS="western" STYLE="font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal"><FONT SIZE=2>You can
+also randomly pick between a wider number of messages using the
+<B>Rand2</B>, <B>Rand3</B>, <B>Rand4</B>, <B>Rand5</B>, <B>Rand6</B>,
+<B>Rand7</B>, and <B>Rand8</B> commands. These commands give an equal
+probability to each message. For example, using Rand4:</FONT></P>
+<P CLASS="western" STYLE="font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal"><FONT FACE="Courier, monospace"><FONT SIZE=2>rand4
+(msg prop0 destroy) (msg door0 trigger) (msg window0 destroy) (msg
+keyframer0 on);</FONT></FONT></P>
+<P CLASS="western" STYLE="font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal"><FONT SIZE=2>This
+would give a 25% chance to each of these commands, randomly pick one
+of them, and execute it.</FONT></P>
+<P CLASS="western" STYLE="font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal"><FONT SIZE=2><B>Loop</B>
+continuously repeats a specific command. It looks like this:</FONT></P>
+<P CLASS="western" STYLE="font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal"><FONT FACE="Courier, monospace"><FONT SIZE=2>loop
+X Y (message);</FONT></FONT></P>
+<P CLASS="western" STYLE="font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal"><FONT SIZE=2>X and Y
+are numbers defining the minimum and maximum delay times,
+respectively. For example:</FONT></P>
+<P CLASS="western" STYLE="font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal"><FONT FACE="Courier, monospace"><FONT SIZE=2>loop
+1.5 22.0 (msg sparks0 trigger);</FONT></FONT></P>
+<P CLASS="western" STYLE="font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal"><FONT SIZE=2>This will
+wait a random duration (between 1.5 and 22 seconds) and then process
+the message telling sparks0 to trigger – then it will do it all
+again, over and over. The loop duration is recalculated every time
+the command is processed. What this means is the delays will be
+something like this:</FONT></P>
+<P CLASS="western" STYLE="font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal"><FONT SIZE=2>1.7 21.8
+14.3 19.2</FONT></P>
+<P CLASS="western" STYLE="font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal"><FONT SIZE=2>Instead
+of something like this:</FONT></P>
+<P CLASS="western" STYLE="font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal"><FONT SIZE=2>17.2 17.2
+17.2 17.2</FONT></P>
+<P CLASS="western" STYLE="font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal"><FONT SIZE=2>If you
+want a constant delay duration with no randomness, you can set the
+minimum and maximum values to be equal. For example:</FONT></P>
+<P CLASS="western" STYLE="font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal"><FONT FACE="Courier, monospace"><FONT SIZE=2>loop
+2.0 2.0 (msg sparks0 trigger);</FONT></FONT></P>
+<P CLASS="western" STYLE="font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal"><FONT SIZE=2>This will
+tell sparks0 to trigger every two seconds, on the dot.</FONT></P>
+<P CLASS="western" STYLE="font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal"><FONT SIZE=2><B>LoopID</B>
+is like loop, but can be terminated using the Abort command. It looks
+like this:</FONT></P>
+<P CLASS="western" STYLE="font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal"><FONT FACE="Courier, monospace"><FONT SIZE=2>loopid
+N X Y (message);</FONT></FONT></P>
+<P CLASS="western" STYLE="font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal"><FONT SIZE=2>N is a
+string, and X and Y are numbers defining the minimum and maximum
+delay times, respectively. For example:</FONT></P>
+<P CLASS="western" STYLE="font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal"><FONT FACE="Courier, monospace"><FONT SIZE=2>loopid
+Crazyloop0 20.0 60.0 (msg crazy_group trigger);</FONT></FONT></P>
+<P CLASS="western" STYLE="font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal"><FONT SIZE=2>This loop
+would be stopped by sending an Abort command like this:</FONT></P>
+<P CLASS="western" STYLE="font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal"><FONT FACE="Courier, monospace"><FONT SIZE=2>abort
+Crazyloop0;</FONT></FONT></P>
+<P CLASS="western" STYLE="font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal"><FONT SIZE=2><B>Repeat</B>
+does things over and over. It looks like this:</FONT></P>
+<P CLASS="western" STYLE="font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal"><FONT FACE="Courier, monospace"><FONT SIZE=2>repeat
+A B X Y (message);</FONT></FONT></P>
+<P CLASS="western" STYLE="font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal"><FONT SIZE=2>A and B
+are numbers defining the minimum and maximum number of times to
+repeat the message, and X and Y are numbers defining the minimum and
+maximum delay times, respectively. For example:</FONT></P>
+<P CLASS="western" STYLE="font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal"><FONT FACE="Courier, monospace"><FONT SIZE=2>repeat
+10 20 5.0 7.0 (msg group0 trigger);</FONT></FONT></P>
+<P CLASS="western" STYLE="font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal"><FONT SIZE=2>This
+would trigger group0 every 5 to 7 seconds, a total of 10 to 20 times.
+If you wanted a specific number of repeats or a specific delay
+duration, you could make the values equal. For example:</FONT></P>
+<P CLASS="western" STYLE="font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal"><FONT FACE="Courier, monospace"><FONT SIZE=2>repeat
+150 150 1.0 1.0 (msg sparks0 trigger);</FONT></FONT></P>
+<P CLASS="western" STYLE="font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal"><FONT SIZE=2>This
+would trigger sparks0 once per second, 150 times.</FONT></P>
+<P CLASS="western" STYLE="font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal"><FONT SIZE=2><B>RepeatID</B>
+works like Repeat, but can be aborted. It looks like:</FONT></P>
+<P CLASS="western" STYLE="font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal"><FONT FACE="Courier, monospace"><FONT SIZE=2>repeatid
+N A B X Y (message);</FONT></FONT></P>
+<P CLASS="western" STYLE="font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal"><FONT SIZE=2>N is a
+string, A and B are numbers defining the minimum and maximum number
+of times to repeat the message, and X and Y are numbers defining the
+minimum and maximum delay times, respectively. For example:</FONT></P>
+<P CLASS="western" STYLE="font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal"><FONT FACE="Courier, monospace"><FONT SIZE=2>repeatid
+Dull_Repetition 1200 1400 80.0 90.0 (msg watercooler0 trigger);</FONT></FONT></P>
+<P CLASS="western" STYLE="font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal"><FONT SIZE=2>This
+would trigger watercoolor0 every 80 to 90 seconds, a total of 1200 to
+1400 times, unless the following command was sent:</FONT></P>
+<P CLASS="western" STYLE="font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal"><FONT FACE="Courier, monospace"><FONT SIZE=2>abort
+Dull_Repetition;</FONT></FONT></P>
+<P CLASS="western" STYLE="font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><FONT SIZE=2><B>Triggers and EventCounters</B></FONT></P>
+<P CLASS="western" STYLE="font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal"><FONT SIZE=2>In the
+trigger object, there is a property called ActivationCount. This
+determines how many times the trigger must receive a ‘trigger’
+message before it activates. (This defaults to 1.) If you need to use
+this property for a critical purpose, you should be aware that there
+is a limitation in the engine: a trigger object that receives two
+‘trigger’ messages very quickly may only process that as 1
+message, and therefore (if it has an ActivationCount of 2) not
+activate when you want it to. You should use the EventCounter object
+instead, and set the EventCounter object up to activate the trigger
+(which is set to ActivationCount = 1.)</FONT></P>
+<P CLASS="western" STYLE="font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal"><FONT SIZE=2>The
+EventCounter object has a starting value which defaults to 0. When
+the EventCounter receives an increment or decrement command, that
+counter value will go up or down. Under Event1, Event2, etc. you will
+find 3 properties for each event. The first is EventXValue, which is
+the target value that the counter value needs to reach to send a
+message. The second is EventXIncToValCmd, which is the message which
+will get sent when the counter value reaches the target value from a
+value lower than the target value. The third is EventXDecToValCmd,
+which is the message which will get sent when the counter value
+reaches the target value from a value higher than the target value.</FONT></P>
+<P CLASS="western" STYLE="font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal"><FONT SIZE=2>To
+increment or decrement the value in an EventCounter, just send it the
+message ‘increment’ or ‘decrement.’</FONT></P>
+<P CLASS="western" STYLE="font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal"> 
+</P>
+<P CLASS="western" STYLE="font-weight: normal"><BR>
+</P>
+<P CLASS="western"><FONT SIZE=2><B>Additional Notes:</B></FONT></P>
+<P CLASS="western" STYLE="font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal"><FONT SIZE=2>Note that
+ID’s don’t exist until they are used in a command. You can’t
+abort a command ID before you’ve started it, for example.</FONT></P>
+<P CLASS="western" STYLE="font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal"><FONT SIZE=2>Commands
+and object names are not case sensitive.</FONT></P>
+<P CLASS="western" STYLE="font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="font-weight: normal"><FONT SIZE=2>There are
+many objects in AVP2 that have message fields. For example, in a
+TranslucentWorldModel’s damage properties are messages which get
+sent when the object is damaged, destroyed, etc. You can use these
+commands in any of these fields. Look around and experiment – the
+system can be used to do many interesting things.</FONT></P>
+<P CLASS="western" STYLE="font-weight: normal"> 
+</P>
+</BODY>
+</HTML>

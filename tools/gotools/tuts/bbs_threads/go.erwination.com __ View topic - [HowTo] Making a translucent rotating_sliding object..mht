@@ -1,0 +1,3251 @@
+Content-Type: multipart/related; start=<op.mhtml.1351379937512.71f99d07493ecb6f@192.168.0.5>; boundary=----------jJSse7hvpzDtpXSbn8uWcu
+Content-Location: http://web.archive.org/web/20050324061951/http://www.erwination.com/global/phpBB2/viewtopic.php?p=1422&amp
+Subject: =?utf-8?Q?go.erwination.com=20::=20View=20topic=20-=20[HowTo]=20Making=20a=20translucent=20rotating/sliding=20object.?=
+MIME-Version: 1.0
+
+------------jJSse7hvpzDtpXSbn8uWcu
+Content-Disposition: inline; filename=viewtopic.htm
+Content-Type: text/html; charset=utf-8; name=viewtopic.htm
+Content-ID: <op.mhtml.1351379937512.71f99d07493ecb6f@192.168.0.5>
+Content-Location: http://web.archive.org/web/20050324061951/http://www.erwination.com/global/phpBB2/viewtopic.php?p=1422&amp
+Content-Transfer-Encoding: Quoted-Printable
+
+<head>
+<link rel=3D"%s" href=3D"http://web.archive.org/web/20050324061951/http:=
+//www.erwination.com/global/phpBB2/%s" title=3D"%s" /> <link rel=3D'chap=
+ter'> =
+
+</head>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html dir=3D"ltr">
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Diso-88=
+59-1">
+<meta http-equiv=3D"Content-Style-Type" content=3D"text/css">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<title>go.erwination.com :: View topic - [HowTo] Making a translucent ro=
+tating/sliding object.</title>
+<style type=3D"text/css">
+<!--
+/*
+  The original Jenova Theme for phpBB version 2+
+  Created by Digital-delusion design
+  http://web.archive.org/web/20050324061951/http://www.digital-delusion.=
+com/
+
+  NOTE: These CSS definitions are stored within the main page body so th=
+at you can use the phpBB2
+  theme administration centre. When you have finalised your style you co=
+uld cut the final CSS code
+  and place it in an external file, deleting this section to save bandwi=
+dth.
+*/
+
+/* General page style. The scroll bar colours only visible in IE5.5+ */
+body {
+	background-color: #E5E5E5;
+        font-size: 11px;
+	color: #626769;
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	scrollbar-face-color: #EDEDED;
+	scrollbar-highlight-color: #A7B1B5;
+	scrollbar-shadow-color: #A7B1B5;
+	scrollbar-3dlight-color: #EDEDED;
+	scrollbar-arrow-color:  #A7B1B5;
+	scrollbar-track-color: #e5e5e5;
+	scrollbar-darkshadow-color: #EDEDED;
+}
+
+/* General font families for common tags */
+font,th,td,p { font-family: Geneva, Arial, Helvetica, sans-serif; }
+a:link,a:active,a:visited { text-decoration: underline; color : #626769;=
+ }
+a:hover		{ text-decoration: none; color : #5B97B1; }
+hr	{ height: 0px; border: solid #A7B1B5 0px; border-top-width: 1px;}
+
+/* This is the border line & background colour round the entire page */
+.bodyline	{ background-color: #FFFFFF; border: 1px #98AAB1 solid; }
+
+/* This is the outline round the main forum tables */
+.forumline	{ background-color: #E5E5E5; border: 2px #A7B1B5 solid; }
+
+/* Main table cell colours and backgrounds */
+td.row1	{ background-color: #EDEDED; border: solid 1px #A7B1B5;}
+td.row2	{ background-color: #E5E5E5; border: solid 1px #A7B1B5; }
+td.row3	{ background-color: #D1D7DC; }
+
+/*
+  This is for the table cell above the Topics, Post & Last posts on the =
+index.php page
+  By default this is the fading out gradiated silver background.
+  However, you could replace this with a bitmap specific for each forum
+*/
+td.rowpic {
+		background-color: #FFFFFF;
+		background-image: url(templates/subSilver/templates/Jenova/images/cell=
+pic2.jpg);
+		background-repeat: repeat-y;
+}
+
+/* Header cells - the blue and silver gradient backgrounds */
+th	{
+        font-size: 11px;
+	font-weight: bold;
+	color: #e2e2e2;
+	background-color: #A7B1B5;
+}
+
+td.cat,td.catHead,td.catSides,td.catLeft,td.catRight,td.catBottom {
+			background-color: #C1C7C9; border: #FFFFFF; border-style: solid; heig=
+ht: 28px;
+}
+
+/*
+  Setting additional nice inner borders for the main table cells.
+  The names indicate which sides the border will be on.
+  Don't worry if you don't understand this, just ignore it :-)
+*/
+td.cat,td.catHead,td.catBottom {
+	height: 29px;
+	border-width: 0px 0px 0px 0px;
+}
+th.thHead,th.thSides,th.thTop,th.thLeft,th.thRight,th.thBottom,th.thCorn=
+erL,th.thCornerR {
+	font-weight: bold; border: #FFFFFF; border-style: solid; height: 28px;
+}
+td.row3Right,td.spaceRow {
+	background-color: #CACDD0; border: #FFFFFF; border-style: solid;
+}
+
+th.thHead,td.catHead { font-size: 12px; border-width: 0px 0px 0px 0px; }=
+
+th.thSides,td.catSides,td.spaceRow	 { border-width: 0px 0px 0px 0px; }
+th.thRight,td.catRight,td.row3Right	 { border-width: 0px 0px 0px 0px; }
+th.thLeft,td.catLeft	  { border-width: 0px 0px 0px 0px; }
+th.thBottom,td.catBottom  { border-width: 0px 1px 1px 1px; }
+th.thTop	 { border-width: 0px 0px 0px 0px; }
+th.thCornerL { border-width: 0px 0px 0px 0px; }
+th.thCornerR { border-width: 0px 0px 0px 0px; }
+
+/* The largest text used in the index page title and toptic title etc. *=
+/
+.maintitle	{
+	font-weight: bold; font-size: 22px; font-family: "Trebuchet MS",Verdana=
+, Arial, Helvetica, sans-serif;
+	text-decoration: none; line-height : 120%; color : #626769;
+}
+
+/* General text */
+.gen { font-size : 12px; }
+.genmed { font-size : 11px; }
+.gensmall { font-size : 10px; }
+.gen,.genmed,.gensmall { color : #626769; }
+a.gen,a.genmed,a.gensmall { color: #5B97B1; text-decoration: none; }
+a.gen:hover,a.genmed:hover,a.gensmall:hover	{ color: #006699; text-decor=
+ation: none; }
+
+/* The register, login, search etc links at the top of the page */
+.mainmenu		{ font-size : 11px; color : #000000 }
+a.mainmenu		{ text-decoration: none; color : #5B97B1;  }
+a.mainmenu:hover{ text-decoration: none; color : #006699; }
+
+/* Forum category titles */
+.cattitle		{ font-weight: bold; font-size: 12px ; letter-spacing: 1px; c=
+olor : #5B97B1;}
+a.cattitle		{ text-decoration: none; color : #5B97B1; }
+a.cattitle:hover{ text-decoration: underline; }
+
+/* Forum title: Text and link to the forums used in: index.php */
+.forumlink		{ font-weight: bold; font-size: 12px; color : #006699; }
+a.forumlink 	{ text-decoration: none; color : #5B97B1; }
+a.forumlink:hover{ text-decoration: none; color : #006699; }
+a.forumlink:visited{ text-decoration: none; color : #5B97B1; }
+
+/* Used for the navigation text, (Page 1,2,3 etc) and the navigation bar=
+ when in a forum */
+.nav			{ font-weight: bold; font-size: 11px; color : #626769;}
+a.nav			{ text-decoration: none; color : #5B97B1; }
+a.nav:hover		{ text-decoration: none; color : #006699; }
+a.nav:visited		{ text-decoration: none; color : #5B97B1; }
+
+/* titles for the topics: could specify viewed link colour too */
+.topictitle,h1,h2	{ font-weight: bold; font-size: 11px; color : #626769;=
+ }
+a.topictitle:link   { text-decoration: none; color : #5B97B1; }
+a.topictitle:visited { text-decoration: none; color : #5B97B1; }
+a.topictitle:hover	{ text-decoration: none; color : #006699; }
+
+/* Name of poster in viewmsg.php and viewtopic.php and other places */
+.name			{ font-size : 11px; color : #000000;}
+
+/* Location, number of posts, post date etc */
+.postdetails		{ font-size : 10px; color : #000000; }
+
+/* The content of the posts (body of text) */
+.postbody { font-size : 12px; line-height: 18px}
+a.postlink:link	{ text-decoration: none; color : #5B97B1 }
+a.postlink:visited { text-decoration: none; color : #5B97B1; }
+a.postlink:hover { text-decoration: none; color : #006699 }
+
+/* Quote & Code blocks */
+.code {
+	font-family: Courier; font-size: 11px; color: #006699;
+	background-color: #F5F6F7; border: #D1D7DC; border-style: solid;
+	border-left-width: 1px; border-top-width: 1px; border-right-width: 1px;=
+ border-bottom-width: 1px
+}
+
+.quote {
+	font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px; co=
+lor: #626769; line-height: 125%;
+	background-color: #FAFAFA; border: #D1D7DC; border-style: solid;
+	border-left-width: 1px; border-top-width: 1px; border-right-width: 1px;=
+ border-bottom-width: 1px
+}
+
+/* Copyright and bottom info */
+.copyright		{ font-size: 10px; font-family: Verdana, Arial, Helvetica, s=
+ans-serif; color: #444444; letter-spacing: -1px;}
+a.copyright		{ color: #626769; text-decoration: underline;}
+a.copyright:hover { color: #5B97B1; text-decoration: none;}
+
+/* Form elements */
+input,textarea, select {
+        font-size: 12px;
+	color: #828A8D;
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	background-color: #C7CED0;
+	border: 1px solid #939B9E;
+}
+
+/* The text input fields background colour
+input.post, textarea.post, select {
+	background-color : #FFFFFF;
+} */
+
+input { text-indent : 2px; }
+
+/* The buttons used for bbCode styling in message post */
+input.button {
+	background-color : #EFEFEF;
+	color : #000000;
+	font-size: 11px; font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+/* The main submit button option
+input.mainoption {
+	background-color : #FAFAFA;
+	font-weight : bold;*/
+}
+
+/* None-bold submit button
+input.liteoption {
+	background-color : #FAFAFA;
+	font-weight : normal;
+}*/
+
+/* This is the line in the posting page which shows the rollover
+  help line. This is actually a text box, but if set to be the same
+  colour as the background no one will know ;)
+*/
+.helpline { background-color: #C7CED0 border solid 1px #939B9E; }
+
+/* Import the fancy styles for IE only (NS4.x doesn't use the @import fu=
+nction) */
+@import url("templates/Jenova/formIE.css");
+.text {	font-family: Geneva, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #828A8D;
+	background-color: #C7CED0;
+	border: 1px solid #939B9E;
+}
+A.catlink {
+	font-size: 11px;
+	font-weight: bold;
+	color: #5B97B1;
+	text-decoration: none;
+}
+A.catlink:visited {
+	font-size: 11px;
+	font-weight: bold;
+	color: #5B97B1;
+	text-decoration: none;
+	}
+	.A.catlink:active {
+	font-size: 11px;
+	font-weight: bold;
+	color: #5B97B1;
+	text-decoration: none;
+	}
+A.catlink:hover {
+	font-size: 11px;
+	font-weight: bold;
+	color: #006699;
+	text-decoration: none;
+}
+.catty {
+	font-size: 11px;
+	font-weight: bold;
+	color: #e2e2e2;
+	}
+.head {
+        font-size: 11px;
+	font-weight: bold;
+	color: #e2e2e2;
+	background-color: #A7B1B5;
+	}
+-->
+</style>
+<script language=3D"JavaScript" type=3D"text/JavaScript">
+<!--
+function MM_preloadImages() { //v3.0
+  var d=3Ddocument; if(d.images){ if(!d.MM_p) d.MM_p=3Dnew Array();
+    var i,j=3Dd.MM_p.length,a=3DMM_preloadImages.arguments; for(i=3D0; i=
+<a.length; i++)
+    if (a[i].indexOf("#")!=3D0){ d.MM_p[j]=3Dnew Image; d.MM_p[j++].src=3D=
+a[i];}}
+}
+
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=3Ddocument.MM_sr; for(i=3D0;a&&i<a.length&&(x=3Da[i])&&x.oSr=
+c;i++) x.src=3Dx.oSrc;
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=3Ddocument; if((p=3Dn.indexOf("?"))>0&&parent.fra=
+mes.length) {
+    d=3Dparent.frames[n.substring(p+1)].document; n=3Dn.substring(0,p);}=
+
+  if(!(x=3Dd[n])&&d.all) x=3Dd.all[n]; for (i=3D0;!x&&i<d.forms.length;i=
+++) x=3Dd.forms[i][n];
+  for(i=3D0;!x&&d.layers&&i<d.layers.length;i++) x=3DMM_findObj(n,d.laye=
+rs[i].document);
+  if(!x && d.getElementById) x=3Dd.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=3D0,x,a=3DMM_swapImage.arguments; document.MM_sr=3Dnew Array; =
+for(i=3D0;i<(a.length-2);i+=3D3)
+   if ((x=3DMM_findObj(a[i]))!=3Dnull){document.MM_sr[j++]=3Dx; if(!x.oS=
+rc) x.oSrc=3Dx.src; x.src=3Da[i+2];}
+}
+//-->
+</script>
+</head>
+<body onLoad=3D"MM_preloadImages('templates/Jenova/images/main2.gif','te=
+mplates/Jenova/images/search2.gif','templates/Jenova/images/faq2.gif','t=
+emplates/Jenova/images/members2.gif','templates/Jenova/images/groups2.gi=
+f','templates/Jenova/images/profile2.gif','templates/Jenova/images/pms2.=
+gif')">
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+
+<script type=3D"text/javascript" src=3D"http://staticweb.archive.org/js/=
+disclaim-element.js" ></script>
+<script type=3D"text/javascript" src=3D"http://staticweb.archive.org/js/=
+graph-calc.js" ></script>
+<script type=3D"text/javascript" src=3D"http://staticweb.archive.org/jfl=
+ot/jquery.min.js" ></script>
+<script type=3D"text/javascript">
+//<![CDATA[
+var firstDate =3D 820454400000;
+var lastDate =3D 1356998399999;
+var wbPrefix =3D "http://web.archive.org/web/";
+var wbCurrentUrl =3D "http:\/\/www.erwination.com\/global\/phpBB2\/viewt=
+opic.php?p=3D1422&amp";
+
+var curYear =3D -1;
+var curMonth =3D -1;
+var yearCount =3D 18;
+var firstYear =3D 1996;
+var imgWidth=3D450;
+var yearImgWidth =3D 25;
+var monthImgWidth =3D 2;
+var trackerVal =3D "none";
+var displayDay =3D "24";
+var displayMonth =3D "Mrz";
+var displayYear =3D "2005";
+var prettyMonths =3D ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","S=
+ep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val =3D=3D trackerVal) {
+		return;
+	}
+	if(val =3D=3D "inline") {
+		document.getElementById("displayYearEl").style.color =3D "#ec008c";
+		document.getElementById("displayMonthEl").style.color =3D "#ec008c";
+		document.getElementById("displayDayEl").style.color =3D "#ec008c";		=
+
+	} else {
+		document.getElementById("displayYearEl").innerHTML =3D displayYear;
+		document.getElementById("displayYearEl").style.color =3D "#ff0";
+		document.getElementById("displayMonthEl").innerHTML =3D displayMonth;
+		document.getElementById("displayMonthEl").style.color =3D "#ff0";
+		document.getElementById("displayDayEl").innerHTML =3D displayDay;
+		document.getElementById("displayDayEl").style.color =3D "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display =3D val;=
+
+   document.getElementById("wbMouseTrackMonthImg").style.display =3D val=
+;
+   trackerVal =3D val;
+}
+function getElementX2(obj) {
+	var thing =3D jQuery(obj);
+	if((thing =3D=3D undefined) =
+
+			|| (typeof thing =3D=3D "undefined") =
+
+			|| (typeof thing.offset =3D=3D "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX =3D getEventX(event);
+   var elementX =3D getElementX2(element);
+   var xOff =3D eventX - elementX;
+	if(xOff < 0) {
+		xOff =3D 0;
+	} else if(xOff > imgWidth) {
+		xOff =3D imgWidth;
+	}
+   var monthOff =3D xOff % yearImgWidth;
+
+   var year =3D Math.floor(xOff / yearImgWidth);
+	var yearStart =3D year * yearImgWidth;
+   var monthOfYear =3D Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear =3D 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month =3D (year * 12) + monthOfYear;
+   var day =3D 1;
+	if(monthOff % 2 =3D=3D 1) {
+		day =3D 15;
+	}
+	var dateString =3D =
+
+		zeroPad(year + firstYear) + =
+
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString =3D prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML =3D year + 1996;
+	document.getElementById("displayMonthEl").innerHTML =3D monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML =3D zeroPad(day,2);=
+
+
+	var url =3D wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href =3D url;
+
+   //document.getElementById("wmtbURL").value=3D"evX("+eventX+") elX("+e=
+lementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") =
+DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear !=3D year) {
+       var yrOff =3D year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left =3D yrO=
+ff + "px";
+       curYear =3D year;
+   }
+   if(curMonth !=3D month) {
+       var mtOff =3D year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left =3D mt=
+Off + "px";
+       curMonth =3D month;
+   }
+}
+//]]>
+</script>
+
+<style type=3D"text/css">body{margin-top:0!important;padding-top:0!impor=
+tant;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underlin=
+e!important;}</style>
+<div id=3D"wm-ipp" style=3D"display:none; position:relative;padding:0 5p=
+x;min-height:70px;min-width:800px; z-index:9000;">
+<div id=3D"wm-ipp-inside" style=3D"position:fixed;padding:0!important;ma=
+rgin:0!important;width:97%;min-width:780px;border:5px solid #000;border-=
+top:none;background-image:url(http://staticweb.archive.org/images/toolba=
+r/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;=
+-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-siz=
+e:11px!important;font-family:'Lucida Grande','Arial',sans-serif!importan=
+t;">
+   <table style=3D"border-collapse:collapse;margin:0;padding:0;width:100=
+%;"><tbody><tr>
+   <td style=3D"padding:10px;vertical-align:top;min-width:110px;">
+   <a href=3D"http://wayback.archive.org/web/" title=3D"Wayback Machine =
+home page" style=3D"background-color:transparent;border:none;"><img src=3D=
+"http://staticweb.archive.org/images/toolbar/wayback-toolbar-logo.png" a=
+lt=3D"Wayback Machine" width=3D"110" height=3D"39" border=3D"0"/></a>
+   </td>
+   <td style=3D"padding:0!important;text-align:center;vertical-align:top=
+;width:100%;">
+
+       <table style=3D"border-collapse:collapse;margin:0 auto;padding:0;=
+width:570px;"><tbody><tr>
+       <td style=3D"padding:3px 0;" colspan=3D"2">
+       <form target=3D"_top" method=3D"get" action=3D"http://wayback.arc=
+hive.org/web/form-submit.jsp" name=3D"wmtb" id=3D"wmtb" style=3D"margin:=
+0!important;padding:0!important;"><input type=3D"text" name=3D"url" id=3D=
+"wmtbURL" value=3D"http://www.erwination.com/global/phpBB2/viewtopic.php=
+?p=3D1422&amp;amp" style=3D"width:400px;font-size:11px;font-family:'Luci=
+da Grande','Arial',sans-serif;" onfocus=3D"javascript:this.focus();this.=
+select();" /><input type=3D"hidden" name=3D"type" value=3D"replay" /><in=
+put type=3D"hidden" name=3D"date" value=3D"20050324061951" /><input type=
+=3D"submit" value=3D"Go" style=3D"font-size:11px;font-family:'Lucida Gra=
+nde','Arial',sans-serif;margin-left:5px;" /><span id=3D"wm_tb_options" s=
+tyle=3D"display:block;"></span></form>
+       </td>
+       <td style=3D"vertical-align:bottom;padding:5px 0 0 0!important;" =
+rowspan=3D"2">
+           <table style=3D"border-collapse:collapse;width:110px;color:#9=
+9a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			=
+
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style=3D"width:110px;height:16px;font-size:10px!important=
+;">
+           	<td style=3D"padding-right:9px;font-size:11px!important;font=
+-weight:bold;text-transform:uppercase;text-align:right;white-space:nowra=
+p;overflow:visible;" nowrap=3D"nowrap">
+               =
+
+		                <a href=3D"http://web.archive.org/web/20050217114241/h=
+ttp://www.erwination.com/global/phpBB2/viewtopic.php?p=3D1422&amp;amp" s=
+tyle=3D"text-decoration:none;color:#33f;font-weight:bold;background-colo=
+r:transparent;border:none;" title=3D"17 Feb 2005"><strong>FEB</strong></=
+a>
+		                =
+
+               </td>
+               <td id=3D"displayMonthEl" style=3D"background:#000;color:=
+#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;=
+width:34px;height:15px;padding-top:1px;text-align:center;" title=3D"You =
+are here: 6:19:51 Mrz 24, 2005">MRZ</td>
+				<td style=3D"padding-left:9px;font-size:11px!important;font-weight:b=
+old;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowra=
+p=3D"nowrap">
+               =
+
+                       Apr
+                       =
+
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style=3D"padding-right:9px;white-space:nowrap;overflo=
+w:visible;text-align:right!important;vertical-align:middle!important;" n=
+owrap=3D"nowrap">
+               =
+
+		                <a href=3D"http://web.archive.org/web/20050217114241/h=
+ttp://www.erwination.com/global/phpBB2/viewtopic.php?p=3D1422&amp;amp" t=
+itle=3D"11:42:41 Feb 17, 2005" style=3D"background-color:transparent;bor=
+der:none;"><img src=3D"http://staticweb.archive.org/images/toolbar/wm_tb=
+_prv_on.png" alt=3D"Previous capture" width=3D"14" height=3D"16" border=3D=
+"0" /></a>
+		                =
+
+               </td>
+               <td id=3D"displayDayEl" style=3D"background:#000;color:#f=
+f0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:=
+24px;font-weight: bold;" title=3D"You are here: 6:19:51 Mrz 24, 2005">24=
+</td>
+				<td style=3D"padding-left:9px;white-space:nowrap;overflow:visible;te=
+xt-align:left!important;vertical-align:middle!important;" nowrap=3D"nowr=
+ap">
+               =
+
+                       <img src=3D"http://staticweb.archive.org/images/t=
+oolbar/wm_tb_nxt_off.png" alt=3D"Next capture" width=3D"14" height=3D"16=
+" border=3D"0"/>
+                       =
+
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style=3D"width:110px;height:13px;font-size:9px!important;=
+">
+				<td style=3D"padding-right:9px;font-size:11px!important;font-weight:=
+ bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap=3D"n=
+owrap">
+               =
+
+                       2004
+                       =
+
+               </td>
+               <td id=3D"displayYearEl" style=3D"background:#000;color:#=
+ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34p=
+x;height:13px;text-align:center;" title=3D"You are here: 6:19:51 Mrz 24,=
+ 2005">2005</td>
+				<td style=3D"padding-left:9px;font-size:11px!important;font-weight: =
+bold;white-space:nowrap;overflow:visible;" nowrap=3D"nowrap">
+               =
+
+                       2006
+                       =
+
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style=3D"vertical-align:middle;padding:0!important;">
+           <a href=3D"http://wayback.archive.org/web/20050324061951*/htt=
+p://www.erwination.com/global/phpBB2/viewtopic.php?p=3D1422&amp;amp" sty=
+le=3D"color:#33f;font-size:11px;font-weight:bold;background-color:transp=
+arent;border:none;" title=3D"See a list of every capture for this URL"><=
+strong>3 captures</strong></a>
+           <div style=3D"margin:0!important;padding:0!important;color:#6=
+66;font-size:9px;padding-top:2px!important;white-space:nowrap;" title=3D=
+"Timespan for captures of this URL">5 Jan 05 - 24 Mrz 05</div>
+       </td>
+       <td style=3D"padding:0!important;">
+       <a style=3D"position:relative; white-space:nowrap; width:450px;he=
+ight:27px;" href=3D"" id=3D"wm-graph-anchor">
+       <div id=3D"wm-ipp-sparkline" style=3D"position:relative; white-sp=
+ace:nowrap; width:450px;height:27px;background-color:#fff;cursor:pointer=
+;border-right:1px solid #ccc;" title=3D"Explore captures for this URL">
+			<img id=3D"sparklineImgId" style=3D"position:absolute; z-index:9012; =
+top:0px; left:0px;"
+				onmouseover=3D"showTrackers('inline');" =
+
+				onmouseout=3D"showTrackers('none');"
+				onmousemove=3D"trackMouseMove(event,this)"
+				alt=3D"sparklines"
+				width=3D"450"
+				height=3D"27"
+				border=3D"0"
+				src=3D"http://wayback.archive.org/web/jsp/graph.jsp?graphdata=3D450_=
+27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-=
+1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:0000000=
+00000_2003:-1:000000000000_2004:-1:000000000000_2005:2:111000000000_2006=
+:-1:000000000000_2007:-1:000000000000_2008:-1:000000000000_2009:-1:00000=
+0000000_2010:-1:000000000000_2011:-1:000000000000_2012:-1:000000000000">=
+</img>
+			<img id=3D"wbMouseTrackYearImg" =
+
+				style=3D"display:none; position:absolute; z-index:9010;"
+				width=3D"25" =
+
+				height=3D"27"
+				border=3D"0"
+				src=3D"http://staticweb.archive.org/images/toolbar/transp-yellow-pix=
+el.png"></img>
+			<img id=3D"wbMouseTrackMonthImg"
+				style=3D"display:none; position:absolute; z-index:9011; " =
+
+				width=3D"2"
+				height=3D"27" =
+
+				border=3D"0"
+				src=3D"http://staticweb.archive.org/images/toolbar/transp-red-pixel.=
+png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style=3D"text-align:right;padding:5px;width:65px;font-size:11px!i=
+mportant;">
+       <a href=3D"javascript:;" onclick=3D"document.getElementById('wm-i=
+pp').style.display=3D'none';" style=3D"display:block;padding-right:18px;=
+background:url(http://staticweb.archive.org/images/toolbar/wm_tb_close.p=
+ng) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans=
+-serif;margin-bottom:23px;background-color:transparent;border:none;" tit=
+le=3D"Close the toolbar">Close</a>
+       <a href=3D"http://faq.web.archive.org/" style=3D"display:block;pa=
+dding-right:18px;background:url(http://staticweb.archive.org/images/tool=
+bar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Gran=
+de','Arial',sans-serif;background-color:transparent;border:none;" title=3D=
+"Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type=3D"text/javascript">
+ var wmDisclaimBanner =3D document.getElementById("wm-ipp");
+ if(wmDisclaimBanner !=3D null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+<TABLE width=3D"100%"  cellspacing=3D"0" cellpadding=3D"0">
+  <TR>
+    <TD width=3D"1%" align=3D"left" background=3D"http://web.archive.org=
+/web/20050324061951im_/http://www.erwination.com/global/phpBB2/templates=
+/Jenova/images/head_r1_c2.gif"><img name=3D"head_r1_c1" src=3D"http://we=
+b.archive.org/web/20050324061951im_/http://www.erwination.com/global/php=
+BB2/templates/Jenova/images/head_r1_c1.gif" width=3D"7" height=3D"105" b=
+order=3D"0" alt=3D""></TD>
+    <TD width=3D"12%" align=3D"center" valign=3D"top" background=3D"http=
+://web.archive.org/web/20050324061951im_/http://www.erwination.com/globa=
+l/phpBB2/templates/Jenova/images/head_r1_c2.gif"><TABLE width=3D"100%" h=
+eight=3D"82" cellpadding=3D"0"  cellspacing=3D"0">
+      <TR>
+        <TD height=3D"52" valign=3D"top"><A name=3D"top"></A></TD>
+      </TR>
+      <TR>
+        <TD align=3D"left"><TABLE width=3D"100%"  cellspacing=3D"0" cell=
+padding=3D"0">
+            <TR align=3D"center">
+              <TD><A href=3D"http://web.archive.org/web/20050324061951/h=
+ttp://www.erwination.com/global/phpBB2/index.php?sid=3D7135efc1670081904=
+3e27b84ffc76303" onmouseout=3D"MM_swapImgRestore()" onmouseover=3D"MM_sw=
+apImage('main1','','templates/Jenova/images/main2.gif',1)"><IMG src=3D"h=
+ttp://web.archive.org/web/20050324061951im_/http://www.erwination.com/gl=
+obal/phpBB2/templates/Jenova/images/main1.gif" alt=3D"Main" name=3D"main=
+1" width=3D"32" height=3D"13" border=3D"0" id=3D"main1"></A></TD>
+              <TD><A href=3D"http://web.archive.org/web/20050324061951/h=
+ttp://www.erwination.com/global/phpBB2/search.php?sid=3D7135efc167008190=
+43e27b84ffc76303" onmouseout=3D"MM_swapImgRestore()" onmouseover=3D"MM_s=
+wapImage('search1','','templates/Jenova/images/search2.gif',1)"><IMG src=
+=3D"http://web.archive.org/web/20050324061951im_/http://www.erwination.c=
+om/global/phpBB2/templates/Jenova/images/search1.gif" alt=3D"Search" nam=
+e=3D"search1" width=3D"42" height=3D"13" border=3D"0" id=3D"search1"></A=
+></TD>
+            </TR>
+        </TABLE></TD>
+      </TR>
+    </TABLE></TD>
+    <TD width=3D"5%" align=3D"right" background=3D"http://web.archive.or=
+g/web/20050324061951im_/http://www.erwination.com/global/phpBB2/template=
+s/Jenova/images/head_r1_c2.gif"><img name=3D"head_r1_c4" src=3D"http://w=
+eb.archive.org/web/20050324061951im_/http://www.erwination.com/global/ph=
+pBB2/templates/Jenova/images/head_r1_c4.gif" width=3D"50" height=3D"105"=
+ border=3D"0" alt=3D""></TD>
+    <TD width=3D"48%" align=3D"center" valign=3D"top" background=3D"http=
+://web.archive.org/web/20050324061951im_/http://www.erwination.com/globa=
+l/phpBB2/templates/Jenova/images/head_r1_c5.gif"><TABLE width=3D"94%"  c=
+ellspacing=3D"0" cellpadding=3D"0">
+      <TR>
+        <TD height=3D"72" align=3D"center" valign=3D"top"><A href=3D"htt=
+p://web.archive.org/web/20050324061951/http://go.erwination.com/"><IMG s=
+rc=3D"http://web.archive.org/web/20050324061951im_/http://www.erwination=
+.com/global/phpBB2/templates/Jenova/images/logo.gif" alt=3D"go.erwinatio=
+n.com Forum Index" width=3D"256" height=3D"64" border=3D"0"></A></TD>
+      </TR>
+      <TR>
+        <TD>&nbsp;</TD>
+      </TR>
+    </TABLE></TD>
+    <TD width=3D"5%" align=3D"left" background=3D"http://web.archive.org=
+/web/20050324061951im_/http://www.erwination.com/global/phpBB2/templates=
+/Jenova/images/head_r1_c8.gif"><img name=3D"head_r1_c7" src=3D"http://we=
+b.archive.org/web/20050324061951im_/http://www.erwination.com/global/php=
+BB2/templates/Jenova/images/head_r1_c7.gif" width=3D"52" height=3D"105" =
+border=3D"0" alt=3D""></TD>
+    <TD width=3D"28%" align=3D"center" valign=3D"top" background=3D"http=
+://web.archive.org/web/20050324061951im_/http://www.erwination.com/globa=
+l/phpBB2/templates/Jenova/images/head_r1_c8.gif"><TABLE width=3D"100%" h=
+eight=3D"80" cellpadding=3D"0"  cellspacing=3D"0">
+      <TR>
+        <TD height=3D"51">&nbsp;</TD>
+      </TR>
+      <TR>
+        <TD><TABLE width=3D"100%" height=3D"23" cellpadding=3D"0"  cells=
+pacing=3D"0">
+            <TR align=3D"center" valign=3D"middle">
+              <TD><A href=3D"http://web.archive.org/web/20050324061951/h=
+ttp://www.erwination.com/global/phpBB2/faq.php?sid=3D7135efc16700819043e=
+27b84ffc76303" onmouseout=3D"MM_swapImgRestore()" onmouseover=3D"MM_swap=
+Image('gaq1','','templates/Jenova/images/faq2.gif',1)"><IMG src=3D"http:=
+//web.archive.org/web/20050324061951im_/http://www.erwination.com/global=
+/phpBB2/templates/Jenova/images/faq1.gif" alt=3D"FAQ" name=3D"gaq1" widt=
+h=3D"29" height=3D"13" border=3D"0" id=3D"gaq1"></A></TD>
+              <TD><A href=3D"http://web.archive.org/web/20050324061951/h=
+ttp://www.erwination.com/global/phpBB2/memberlist.php?sid=3D7135efc16700=
+819043e27b84ffc76303" onmouseout=3D"MM_swapImgRestore()" onmouseover=3D"=
+MM_swapImage('members1','','templates/Jenova/images/members2.gif',1)"><I=
+MG src=3D"http://web.archive.org/web/20050324061951im_/http://www.erwina=
+tion.com/global/phpBB2/templates/Jenova/images/members1.gif" alt=3D"Memb=
+ers" name=3D"members1" width=3D"56" height=3D"13" border=3D"0" id=3D"mem=
+bers1"></A></TD>
+              <TD><A href=3D"http://web.archive.org/web/20050324061951/h=
+ttp://www.erwination.com/global/phpBB2/groupcp.php?sid=3D7135efc16700819=
+043e27b84ffc76303" onmouseout=3D"MM_swapImgRestore()" onmouseover=3D"MM_=
+swapImage('groups1','','templates/Jenova/images/groups2.gif',1)"><IMG sr=
+c=3D"http://web.archive.org/web/20050324061951im_/http://www.erwination.=
+com/global/phpBB2/templates/Jenova/images/groups1.gif" alt=3D"Groups" na=
+me=3D"groups1" width=3D"44" height=3D"13" border=3D"0" id=3D"groups1"></=
+A></TD>
+              <TD><A href=3D"http://web.archive.org/web/20050324061951/h=
+ttp://www.erwination.com/global/phpBB2/profile.php?mode=3Deditprofile&si=
+d=3D7135efc16700819043e27b84ffc76303" onmouseout=3D"MM_swapImgRestore()"=
+ onmouseover=3D"MM_swapImage('profile1','','templates/Jenova/images/prof=
+ile2.gif',1)"><IMG src=3D"http://web.archive.org/web/20050324061951im_/h=
+ttp://www.erwination.com/global/phpBB2/templates/Jenova/images/profile.g=
+if" alt=3D"Profile" name=3D"profile1" width=3D"41" height=3D"13" border=3D=
+"0" id=3D"profile1"></A></TD>
+              <TD><A href=3D"http://web.archive.org/web/20050324061951/h=
+ttp://www.erwination.com/global/phpBB2/privmsg.php?folder=3Dinbox&sid=3D=
+7135efc16700819043e27b84ffc76303" onmouseout=3D"MM_swapImgRestore()" onm=
+ouseover=3D"MM_swapImage('pm1','','templates/Jenova/images/pms2.gif',1)"=
+><IMG src=3D"http://web.archive.org/web/20050324061951im_/http://www.erw=
+ination.com/global/phpBB2/templates/Jenova/images/pms1.gif" alt=3D"Priva=
+te Messages" name=3D"pm1" width=3D"30" height=3D"13" border=3D"0" id=3D"=
+pm1"></A></TD>
+            </TR>
+        </TABLE></TD>
+      </TR>
+    </TABLE></TD>
+    <TD width=3D"1%" align=3D"right" background=3D"http://web.archive.or=
+g/web/20050324061951im_/http://www.erwination.com/global/phpBB2/template=
+s/Jenova/images/head_r1_c8.gif"><img name=3D"head_r1_c10" src=3D"http://=
+web.archive.org/web/20050324061951im_/http://www.erwination.com/global/p=
+hpBB2/templates/Jenova/images/head_r1_c10.gif" width=3D"7" height=3D"105=
+" border=3D"0" alt=3D""></TD>
+  </TR>
+</TABLE>
+<BR>
+
+
+
+
+<table width=3D"100%" cellspacing=3D"2" cellpadding=3D"2" border=3D"0">
+  <tr>
+	<td align=3D"left" valign=3D"bottom" colspan=3D"2"><a class=3D"maintitl=
+e" href=3D"http://web.archive.org/web/20050324061951/http://www.erwinati=
+on.com/global/phpBB2/viewtopic.php?t=3D269&start=3D0&postdays=3D0&postor=
+der=3Dasc&highlight=3D&sid=3D7135efc16700819043e27b84ffc76303">[HowTo] M=
+aking a translucent rotating/sliding object.</a><br />
+	  <span class=3D"gensmall"><b></b><br />
+	  &nbsp; </span></td>
+  </tr>
+</table>
+
+<table width=3D"100%" cellspacing=3D"2" cellpadding=3D"2" border=3D"0">
+  <tr>
+	<td align=3D"left" valign=3D"bottom" nowrap=3D"nowrap"><span class=3D"n=
+av"><a href=3D"http://web.archive.org/web/20050324061951/http://www.erwi=
+nation.com/global/phpBB2/posting.php?mode=3Dnewtopic&f=3D2&sid=3D7135efc=
+16700819043e27b84ffc76303"><img src=3D"http://web.archive.org/web/200503=
+24061951im_/http://www.erwination.com/global/phpBB2/templates/Jenova/ima=
+ges/lang_english/post.gif" border=3D"0" alt=3D"Post new topic" align=3D"=
+middle" /></a>&nbsp;&nbsp;&nbsp;<a href=3D"http://web.archive.org/web/20=
+050324061951/http://www.erwination.com/global/phpBB2/posting.php?mode=3D=
+reply&t=3D269&sid=3D7135efc16700819043e27b84ffc76303"><img src=3D"http:/=
+/web.archive.org/web/20050324061951im_/http://www.erwination.com/global/=
+phpBB2/templates/Jenova/images/lang_english/reply.gif" border=3D"0" alt=3D=
+"Reply to topic" align=3D"middle" /></a></span></td>
+	<td align=3D"left" valign=3D"middle" width=3D"100%"><span class=3D"nav"=
+>&nbsp;&nbsp;&nbsp;<a href=3D"http://web.archive.org/web/20050324061951/=
+http://www.erwination.com/global/phpBB2/index.php?sid=3D7135efc167008190=
+43e27b84ffc76303" class=3D"nav">go.erwination.com Forum Index</a>
+	  -> <a href=3D"http://web.archive.org/web/20050324061951/http://www.er=
+wination.com/global/phpBB2/viewforum.php?f=3D2&sid=3D7135efc16700819043e=
+27b84ffc76303" class=3D"nav">Custom Map Questions</a></span></td>
+  </tr>
+</table>
+
+<table class=3D"forumline" width=3D"100%" cellspacing=3D"1" cellpadding=3D=
+"3" border=3D"0">
+	<tr align=3D"right">
+		<td class=3D"catHead" colspan=3D"2" height=3D"28"><span class=3D"nav">=
+<a href=3D"http://web.archive.org/web/20050324061951/http://www.erwinati=
+on.com/global/phpBB2/viewtopic.php?t=3D269&view=3Dprevious&sid=3D7135efc=
+16700819043e27b84ffc76303" class=3D"nav">View previous topic</a> :: <a h=
+ref=3D"http://web.archive.org/web/20050324061951/http://www.erwination.c=
+om/global/phpBB2/viewtopic.php?t=3D269&view=3Dnext&sid=3D7135efc16700819=
+043e27b84ffc76303" class=3D"nav">View next topic</a> &nbsp;</span></td>
+	</tr>
+	=
+
+	<tr>
+		<th class=3D"thLeft" width=3D"150" height=3D"26" nowrap=3D"nowrap">Aut=
+hor</th>
+		<th class=3D"thRight" nowrap=3D"nowrap">Message</th>
+	</tr>
+	<tr>
+		<td width=3D"150" align=3D"left" valign=3D"top" class=3D"row1"><span c=
+lass=3D"name"><a name=3D"1416"></a><b>Spookstah</b></span><br /><span cl=
+ass=3D"postdetails">Commander<br /><img src=3D"http://web.archive.org/we=
+b/20050324061951im_/http://www.erwination.com/global/phpBB2/templates/Je=
+nova/images/bullet_ranks_5.gif" alt=3D"Commander" title=3D"Commander" bo=
+rder=3D"0" /><br /><br /><br />Joined: 02 Jan 2004<br />Posts: 120<br />=
+Location: The Netherlands</span><br /></td>
+		<td class=3D"row1" width=3D"100%" height=3D"28" valign=3D"top"><table =
+width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+			<tr>
+				<td width=3D"100%"><a href=3D"http://web.archive.org/web/20050324061=
+951/http://www.erwination.com/global/phpBB2/viewtopic.php?p=3D1416&sid=3D=
+7135efc16700819043e27b84ffc76303#1416"><img src=3D"http://web.archive.or=
+g/web/20050324061951im_/http://www.erwination.com/global/phpBB2/template=
+s/Jenova/images/icon_minipost.gif" width=3D"12" height=3D"9" alt=3D"Post=
+" title=3D"Post" border=3D"0" /></a><span class=3D"postdetails">Posted: =
+Sun Sep 12, 2004 1:20 pm<span class=3D"gen">&nbsp;</span>&nbsp; &nbsp;Po=
+st subject: [HowTo] Making a translucent rotating/sliding object.</span>=
+</td>
+				<td valign=3D"top" nowrap=3D"nowrap"><a href=3D"http://web.archive.o=
+rg/web/20050324061951/http://www.erwination.com/global/phpBB2/posting.ph=
+p?mode=3Dquote&p=3D1416&sid=3D7135efc16700819043e27b84ffc76303"><img src=
+=3D"http://web.archive.org/web/20050324061951im_/http://www.erwination.c=
+om/global/phpBB2/templates/Jenova/images/lang_english/icon_quote.gif" al=
+t=3D"Reply with quote" title=3D"Reply with quote" border=3D"0" /></a>   =
+</td>
+			</tr>
+			<tr>
+				<td colspan=3D"2"><hr /></td>
+			</tr>
+			<tr>
+				<td colspan=3D"2"><span class=3D"postbody">I havent seen anyone usin=
+g/making a rotating or sliding translucent object and i didnt know yet h=
+ow to make one so i did make some test objects and found it out in 5 min=
+utes.
+<br />
+
+<br />
+1. Make a brush of the object you want to make translucent and rotating/=
+sliding.
+<br />
+2. Set the properties of the brush: Solid=3DTRUE, Translucent=3DTRUE, Go=
+uraudShade=3DTRUE, LightMap=3DTRUE, Subdivide=3DTRUE, DetailLevel=3D1 an=
+d if you use a singlesided poly/brush set NoSnap=3DTRUE
+<br />
+3. Apply a Invisible or a Invisible_MetalGrate texture to the brush (tex=
+ture can be found in yout \textures\misc directory)
+<br />
+4. Apply a texture of a metalgrate, fence or glasswindow to 1 side of th=
+e object. (you can also apply it to the whole brush if you want, if so y=
+ou can skip step 3)
+<br />
+5. Move your marker to the centre of the brush and Bind it to a Transluc=
+ent object.
+<br />
+6. Select the Translucent object and the brush and Bind it to a Sliding =
+or Rotation object.
+<br />
+7. Now you will notice you have two sliding or rotation objects, 1 of th=
+e brush and 1 with the translucent object.
+<br />
+8. You will also notice that the Translucent or Sliding object isnt loca=
+ted in the middle of your brush but in 1 of the corners, so we have to f=
+ix this.
+<br />
+8. Move you maker again to the middle of the brush and select the object=
+(s) which arent in the middle of the brush but at the corners and move t=
+hem to the middle.
+<br />
+9. Go into the properties of the sliding objects and set the delay/dista=
+nce/sound etc.and we are done with the brush and objects.
+<br />
+10. Move the marker to a corner of the brush again and add a Sequencer. =
+(dont use Bind but use ADD)
+<br />
+11. Go into the properties of the Sequencer and set as Target1: SlidingD=
+oor0000 and as Target2: SlidingDoor0001 or what ever those 2 objects are=
+ called.
+<br />
+12. You also want something to activate the translucent/sliding object, =
+you could use a trigger or a button. (examples can be found in the tutor=
+ial mpas or in the docs)
+<br />
+13. When the trigger or button is ready give it as target: Sequencer0000=
+ (or whatever its name is).
+<br />
+
+<br />
+Now you will have a sliding or rotation translucent object.
+<br />
+I`ve made an example, which still needs some fine tuning but you will ge=
+t the idea.
+<br />
+
+<br />
+<a href=3D"http://web.archive.org/web/20050324061951/http://www.thelostp=
+aradise.com/files/translucent-sliding-object.ed" target=3D"_blank">http:=
+//www.thelostparadise.com/files/translucent-sliding-object.ed</a></span>=
+<span class=3D"gensmall"></span></td>
+			</tr>
+		</table></td>
+	</tr>
+	<tr>
+		<td class=3D"row1" width=3D"150" align=3D"left" valign=3D"middle"><spa=
+n class=3D"nav"><a href=3D"http://web.archive.org/web/20050324061951/htt=
+p://www.erwination.com/global/phpBB2/viewtopic.php?p=3D1422&amp#top" cla=
+ss=3D"nav">Back to top</a></span></td>
+		<td class=3D"row1" width=3D"100%" height=3D"28" valign=3D"bottom" nowr=
+ap=3D"nowrap"><table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" he=
+ight=3D"18" width=3D"18">
+			<tr>
+				<td valign=3D"middle" nowrap=3D"nowrap"><a href=3D"http://web.archiv=
+e.org/web/20050324061951/http://www.erwination.com/global/phpBB2/profile=
+.php?mode=3Dviewprofile&u=3D70&sid=3D7135efc16700819043e27b84ffc76303"><=
+img src=3D"http://web.archive.org/web/20050324061951im_/http://www.erwin=
+ation.com/global/phpBB2/templates/Jenova/images/lang_english/icon_profil=
+e.gif" alt=3D"View user's profile" title=3D"View user's profile" border=3D=
+"0" /></a> <a href=3D"http://web.archive.org/web/20050324061951/http://w=
+ww.erwination.com/global/phpBB2/privmsg.php?mode=3Dpost&u=3D70&sid=3D713=
+5efc16700819043e27b84ffc76303"><img src=3D"http://web.archive.org/web/20=
+050324061951im_/http://www.erwination.com/global/phpBB2/templates/Jenova=
+/images/lang_english/icon_pm.gif" alt=3D"Send private message" title=3D"=
+Send private message" border=3D"0" /></a>  <a href=3D"http://web.archive=
+.org/web/20050324061951/http://www.thelostparadise.com/" target=3D"_user=
+www"><img src=3D"http://web.archive.org/web/20050324061951im_/http://www=
+.erwination.com/global/phpBB2/templates/Jenova/images/lang_english/icon_=
+www.gif" alt=3D"Visit poster's website" title=3D"Visit poster's website"=
+ border=3D"0" /></a>   <script language=3D"JavaScript" type=3D"text/java=
+script"><!--
+
+	if ( navigator.userAgent.toLowerCase().indexOf('mozilla') !=3D -1 && na=
+vigator.userAgent.indexOf('5.') =3D=3D -1 && navigator.userAgent.indexOf=
+('6.') =3D=3D -1 )
+		document.write(' ');
+	else
+		document.write('</td><td>&nbsp;</td><td valign=3D"top" nowrap=3D"nowra=
+p"><div style=3D"position:relative"><div style=3D"position:absolute"></d=
+iv><div style=3D"position:absolute;left:3px;top:-1px"></div></div>');
+
+				//--></script><noscript></noscript></td>
+			</tr>
+		</table></td>
+	</tr>
+	<tr>
+		<td class=3D"spaceRow" colspan=3D"2" height=3D"1"><img src=3D"http://w=
+eb.archive.org/web/20050324061951im_/http://www.erwination.com/global/ph=
+pBB2/templates/subSilver/images/spacer.gif" alt=3D"" width=3D"1" height=3D=
+"1" /></td>
+	</tr>
+	<tr>
+		<td width=3D"150" align=3D"left" valign=3D"top" class=3D"row1"><span c=
+lass=3D"name"><a name=3D"1417"></a><b>El Scorpion</b></span><br /><span =
+class=3D"postdetails">Site Admin<br /><img src=3D"http://web.archive.org=
+/web/20050324061951im_/http://www.erwination.com/global/phpBB2/templates=
+/Jenova/images/bullet_ranks_5_admin.gif" alt=3D"Site Admin" title=3D"Sit=
+e Admin" border=3D"0" /><br /><img src=3D"http://web.archive.org/web/200=
+50324061951im_/http://www.thebestcontrol.com/bugstop/images/scorpion.jpg=
+" alt=3D"" border=3D"0" /><br /><br />Joined: 16 Aug 2003<br />Posts: 58=
+1<br />Location: CANADA</span><br /></td>
+		<td class=3D"row1" width=3D"100%" height=3D"28" valign=3D"top"><table =
+width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+			<tr>
+				<td width=3D"100%"><a href=3D"http://web.archive.org/web/20050324061=
+951/http://www.erwination.com/global/phpBB2/viewtopic.php?p=3D1417&sid=3D=
+7135efc16700819043e27b84ffc76303#1417"><img src=3D"http://web.archive.or=
+g/web/20050324061951im_/http://www.erwination.com/global/phpBB2/template=
+s/Jenova/images/icon_minipost.gif" width=3D"12" height=3D"9" alt=3D"Post=
+" title=3D"Post" border=3D"0" /></a><span class=3D"postdetails">Posted: =
+Sun Sep 12, 2004 4:37 pm<span class=3D"gen">&nbsp;</span>&nbsp; &nbsp;Po=
+st subject: </span></td>
+				<td valign=3D"top" nowrap=3D"nowrap"><a href=3D"http://web.archive.o=
+rg/web/20050324061951/http://www.erwination.com/global/phpBB2/posting.ph=
+p?mode=3Dquote&p=3D1417&sid=3D7135efc16700819043e27b84ffc76303"><img src=
+=3D"http://web.archive.org/web/20050324061951im_/http://www.erwination.c=
+om/global/phpBB2/templates/Jenova/images/lang_english/icon_quote.gif" al=
+t=3D"Reply with quote" title=3D"Reply with quote" border=3D"0" /></a>   =
+</td>
+			</tr>
+			<tr>
+				<td colspan=3D"2"><hr /></td>
+			</tr>
+			<tr>
+				<td colspan=3D"2"><span class=3D"postbody">there is a much easier wa=
+y to do this,
+<br />
+
+<br />
+When binding the sliding door, when the menu comes up asking you wat to =
+bind on, in the top corner there is a box that says "bind indivibualy"  =
+Uncheck this box, and it will bind both objects to the one slidingdoor/r=
+otatingdoor/button
+<br />
+
+<br />
+after that u do not need a sequencer, you just have to fill out the slid=
+ingdoor/rotatingdoor/button.<br />_________________<br />FUn Can Kill YO=
+U!!</span><span class=3D"gensmall"></span></td>
+			</tr>
+		</table></td>
+	</tr>
+	<tr>
+		<td class=3D"row1" width=3D"150" align=3D"left" valign=3D"middle"><spa=
+n class=3D"nav"><a href=3D"http://web.archive.org/web/20050324061951/htt=
+p://www.erwination.com/global/phpBB2/viewtopic.php?p=3D1422&amp#top" cla=
+ss=3D"nav">Back to top</a></span></td>
+		<td class=3D"row1" width=3D"100%" height=3D"28" valign=3D"bottom" nowr=
+ap=3D"nowrap"><table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" he=
+ight=3D"18" width=3D"18">
+			<tr>
+				<td valign=3D"middle" nowrap=3D"nowrap"><a href=3D"http://web.archiv=
+e.org/web/20050324061951/http://www.erwination.com/global/phpBB2/profile=
+.php?mode=3Dviewprofile&u=3D31&sid=3D7135efc16700819043e27b84ffc76303"><=
+img src=3D"http://web.archive.org/web/20050324061951im_/http://www.erwin=
+ation.com/global/phpBB2/templates/Jenova/images/lang_english/icon_profil=
+e.gif" alt=3D"View user's profile" title=3D"View user's profile" border=3D=
+"0" /></a> <a href=3D"http://web.archive.org/web/20050324061951/http://w=
+ww.erwination.com/global/phpBB2/privmsg.php?mode=3Dpost&u=3D31&sid=3D713=
+5efc16700819043e27b84ffc76303"><img src=3D"http://web.archive.org/web/20=
+050324061951im_/http://www.erwination.com/global/phpBB2/templates/Jenova=
+/images/lang_english/icon_pm.gif" alt=3D"Send private message" title=3D"=
+Send private message" border=3D"0" /></a>  <a href=3D"http://web.archive=
+.org/web/20050324061951/http://www.ssclan-go.tk/" target=3D"_userwww"><i=
+mg src=3D"http://web.archive.org/web/20050324061951im_/http://www.erwina=
+tion.com/global/phpBB2/templates/Jenova/images/lang_english/icon_www.gif=
+" alt=3D"Visit poster's website" title=3D"Visit poster's website" border=
+=3D"0" /></a>   <script language=3D"JavaScript" type=3D"text/javascript"=
+><!--
+
+	if ( navigator.userAgent.toLowerCase().indexOf('mozilla') !=3D -1 && na=
+vigator.userAgent.indexOf('5.') =3D=3D -1 && navigator.userAgent.indexOf=
+('6.') =3D=3D -1 )
+		document.write(' <a href=3D"http://web.archive.org/web/20050324061951/=
+http://wwp.icq.com//scripts/search.dll?to=3D245000070"><img src=3D"templ=
+ates/Jenova/images/lang_english/icon_icq_add.gif" alt=3D"ICQ Number" tit=
+le=3D"ICQ Number" border=3D"0" /></a>');
+	else
+		document.write('</td><td>&nbsp;</td><td valign=3D"top" nowrap=3D"nowra=
+p"><div style=3D"position:relative"><div style=3D"position:absolute"><a =
+href=3D"http://web.archive.org/web/20050324061951/http://wwp.icq.com//sc=
+ripts/search.dll?to=3D245000070"><img src=3D"templates/Jenova/images/lan=
+g_english/icon_icq_add.gif" alt=3D"ICQ Number" title=3D"ICQ Number" bord=
+er=3D"0" /></a></div><div style=3D"position:absolute;left:3px;top:-1px">=
+<a href=3D"http://web.archive.org/web/20050324061951/http://wwp.icq.com/=
+/245000070#pager"><img src=3D"http://web.archive.org/web/20050324061951/=
+http://web.icq.com//whitepages/online?icq=3D245000070&img=3D5" width=3D"=
+18" height=3D"18" border=3D"0" /></a></div></div>');
+
+				//--></script><noscript><a href=3D"http://web.archive.org/web/200503=
+24061951/http://wwp.icq.com/scripts/search.dll?to=3D245000070"><img src=3D=
+"http://web.archive.org/web/20050324061951im_/http://www.erwination.com/=
+global/phpBB2/templates/Jenova/images/lang_english/icon_icq_add.gif" alt=
+=3D"ICQ Number" title=3D"ICQ Number" border=3D"0" /></a></noscript></td>=
+
+			</tr>
+		</table></td>
+	</tr>
+	<tr>
+		<td class=3D"spaceRow" colspan=3D"2" height=3D"1"><img src=3D"http://w=
+eb.archive.org/web/20050324061951im_/http://www.erwination.com/global/ph=
+pBB2/templates/subSilver/images/spacer.gif" alt=3D"" width=3D"1" height=3D=
+"1" /></td>
+	</tr>
+	<tr>
+		<td width=3D"150" align=3D"left" valign=3D"top" class=3D"row1"><span c=
+lass=3D"name"><a name=3D"1419"></a><b>Spookstah</b></span><br /><span cl=
+ass=3D"postdetails">Commander<br /><img src=3D"http://web.archive.org/we=
+b/20050324061951im_/http://www.erwination.com/global/phpBB2/templates/Je=
+nova/images/bullet_ranks_5.gif" alt=3D"Commander" title=3D"Commander" bo=
+rder=3D"0" /><br /><br /><br />Joined: 02 Jan 2004<br />Posts: 120<br />=
+Location: The Netherlands</span><br /></td>
+		<td class=3D"row1" width=3D"100%" height=3D"28" valign=3D"top"><table =
+width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+			<tr>
+				<td width=3D"100%"><a href=3D"http://web.archive.org/web/20050324061=
+951/http://www.erwination.com/global/phpBB2/viewtopic.php?p=3D1419&sid=3D=
+7135efc16700819043e27b84ffc76303#1419"><img src=3D"http://web.archive.or=
+g/web/20050324061951im_/http://www.erwination.com/global/phpBB2/template=
+s/Jenova/images/icon_minipost.gif" width=3D"12" height=3D"9" alt=3D"Post=
+" title=3D"Post" border=3D"0" /></a><span class=3D"postdetails">Posted: =
+Mon Sep 13, 2004 3:31 pm<span class=3D"gen">&nbsp;</span>&nbsp; &nbsp;Po=
+st subject: </span></td>
+				<td valign=3D"top" nowrap=3D"nowrap"><a href=3D"http://web.archive.o=
+rg/web/20050324061951/http://www.erwination.com/global/phpBB2/posting.ph=
+p?mode=3Dquote&p=3D1419&sid=3D7135efc16700819043e27b84ffc76303"><img src=
+=3D"http://web.archive.org/web/20050324061951im_/http://www.erwination.c=
+om/global/phpBB2/templates/Jenova/images/lang_english/icon_quote.gif" al=
+t=3D"Reply with quote" title=3D"Reply with quote" border=3D"0" /></a>   =
+</td>
+			</tr>
+			<tr>
+				<td colspan=3D"2"><hr /></td>
+			</tr>
+			<tr>
+				<td colspan=3D"2"><span class=3D"postbody">Why didnt i never found t=
+hat option <img src=3D"http://web.archive.org/web/20050324061951im_/http=
+://www.erwination.com/global/phpBB2/images/smiles/icon_smile.gif" alt=3D=
+"Smile" border=3D"0" />
+<br />
+
+<br />
+But you are right and also wrong, it works if you use 1 object (transluc=
+ent) but if you use also a non translucent object you need 2 sliding obj=
+ects and a sequencer, maybe i could make a new test .ed file with both w=
+ays of making a translucent movinf object(s).</span><span class=3D"gensm=
+all"></span></td>
+			</tr>
+		</table></td>
+	</tr>
+	<tr>
+		<td class=3D"row1" width=3D"150" align=3D"left" valign=3D"middle"><spa=
+n class=3D"nav"><a href=3D"http://web.archive.org/web/20050324061951/htt=
+p://www.erwination.com/global/phpBB2/viewtopic.php?p=3D1422&amp#top" cla=
+ss=3D"nav">Back to top</a></span></td>
+		<td class=3D"row1" width=3D"100%" height=3D"28" valign=3D"bottom" nowr=
+ap=3D"nowrap"><table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" he=
+ight=3D"18" width=3D"18">
+			<tr>
+				<td valign=3D"middle" nowrap=3D"nowrap"><a href=3D"http://web.archiv=
+e.org/web/20050324061951/http://www.erwination.com/global/phpBB2/profile=
+.php?mode=3Dviewprofile&u=3D70&sid=3D7135efc16700819043e27b84ffc76303"><=
+img src=3D"http://web.archive.org/web/20050324061951im_/http://www.erwin=
+ation.com/global/phpBB2/templates/Jenova/images/lang_english/icon_profil=
+e.gif" alt=3D"View user's profile" title=3D"View user's profile" border=3D=
+"0" /></a> <a href=3D"http://web.archive.org/web/20050324061951/http://w=
+ww.erwination.com/global/phpBB2/privmsg.php?mode=3Dpost&u=3D70&sid=3D713=
+5efc16700819043e27b84ffc76303"><img src=3D"http://web.archive.org/web/20=
+050324061951im_/http://www.erwination.com/global/phpBB2/templates/Jenova=
+/images/lang_english/icon_pm.gif" alt=3D"Send private message" title=3D"=
+Send private message" border=3D"0" /></a>  <a href=3D"http://web.archive=
+.org/web/20050324061951/http://www.thelostparadise.com/" target=3D"_user=
+www"><img src=3D"http://web.archive.org/web/20050324061951im_/http://www=
+.erwination.com/global/phpBB2/templates/Jenova/images/lang_english/icon_=
+www.gif" alt=3D"Visit poster's website" title=3D"Visit poster's website"=
+ border=3D"0" /></a>   <script language=3D"JavaScript" type=3D"text/java=
+script"><!--
+
+	if ( navigator.userAgent.toLowerCase().indexOf('mozilla') !=3D -1 && na=
+vigator.userAgent.indexOf('5.') =3D=3D -1 && navigator.userAgent.indexOf=
+('6.') =3D=3D -1 )
+		document.write(' ');
+	else
+		document.write('</td><td>&nbsp;</td><td valign=3D"top" nowrap=3D"nowra=
+p"><div style=3D"position:relative"><div style=3D"position:absolute"></d=
+iv><div style=3D"position:absolute;left:3px;top:-1px"></div></div>');
+
+				//--></script><noscript></noscript></td>
+			</tr>
+		</table></td>
+	</tr>
+	<tr>
+		<td class=3D"spaceRow" colspan=3D"2" height=3D"1"><img src=3D"http://w=
+eb.archive.org/web/20050324061951im_/http://www.erwination.com/global/ph=
+pBB2/templates/subSilver/images/spacer.gif" alt=3D"" width=3D"1" height=3D=
+"1" /></td>
+	</tr>
+	<tr>
+		<td width=3D"150" align=3D"left" valign=3D"top" class=3D"row1"><span c=
+lass=3D"name"><a name=3D"1422"></a><b>El Scorpion</b></span><br /><span =
+class=3D"postdetails">Site Admin<br /><img src=3D"http://web.archive.org=
+/web/20050324061951im_/http://www.erwination.com/global/phpBB2/templates=
+/Jenova/images/bullet_ranks_5_admin.gif" alt=3D"Site Admin" title=3D"Sit=
+e Admin" border=3D"0" /><br /><img src=3D"http://web.archive.org/web/200=
+50324061951im_/http://www.thebestcontrol.com/bugstop/images/scorpion.jpg=
+" alt=3D"" border=3D"0" /><br /><br />Joined: 16 Aug 2003<br />Posts: 58=
+1<br />Location: CANADA</span><br /></td>
+		<td class=3D"row1" width=3D"100%" height=3D"28" valign=3D"top"><table =
+width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+			<tr>
+				<td width=3D"100%"><a href=3D"http://web.archive.org/web/20050324061=
+951/http://www.erwination.com/global/phpBB2/viewtopic.php?p=3D1422&sid=3D=
+7135efc16700819043e27b84ffc76303#1422"><img src=3D"http://web.archive.or=
+g/web/20050324061951im_/http://www.erwination.com/global/phpBB2/template=
+s/Jenova/images/icon_minipost.gif" width=3D"12" height=3D"9" alt=3D"Post=
+" title=3D"Post" border=3D"0" /></a><span class=3D"postdetails">Posted: =
+Tue Sep 14, 2004 2:08 pm<span class=3D"gen">&nbsp;</span>&nbsp; &nbsp;Po=
+st subject: </span></td>
+				<td valign=3D"top" nowrap=3D"nowrap"><a href=3D"http://web.archive.o=
+rg/web/20050324061951/http://www.erwination.com/global/phpBB2/posting.ph=
+p?mode=3Dquote&p=3D1422&sid=3D7135efc16700819043e27b84ffc76303"><img src=
+=3D"http://web.archive.org/web/20050324061951im_/http://www.erwination.c=
+om/global/phpBB2/templates/Jenova/images/lang_english/icon_quote.gif" al=
+t=3D"Reply with quote" title=3D"Reply with quote" border=3D"0" /></a>   =
+</td>
+			</tr>
+			<tr>
+				<td colspan=3D"2"><hr /></td>
+			</tr>
+			<tr>
+				<td colspan=3D"2"><span class=3D"postbody">lol.
+<br />
+
+<br />
+ok<br />_________________<br />FUn Can Kill YOU!!</span><span class=3D"g=
+ensmall"></span></td>
+			</tr>
+		</table></td>
+	</tr>
+	<tr>
+		<td class=3D"row1" width=3D"150" align=3D"left" valign=3D"middle"><spa=
+n class=3D"nav"><a href=3D"http://web.archive.org/web/20050324061951/htt=
+p://www.erwination.com/global/phpBB2/viewtopic.php?p=3D1422&amp#top" cla=
+ss=3D"nav">Back to top</a></span></td>
+		<td class=3D"row1" width=3D"100%" height=3D"28" valign=3D"bottom" nowr=
+ap=3D"nowrap"><table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" he=
+ight=3D"18" width=3D"18">
+			<tr>
+				<td valign=3D"middle" nowrap=3D"nowrap"><a href=3D"http://web.archiv=
+e.org/web/20050324061951/http://www.erwination.com/global/phpBB2/profile=
+.php?mode=3Dviewprofile&u=3D31&sid=3D7135efc16700819043e27b84ffc76303"><=
+img src=3D"http://web.archive.org/web/20050324061951im_/http://www.erwin=
+ation.com/global/phpBB2/templates/Jenova/images/lang_english/icon_profil=
+e.gif" alt=3D"View user's profile" title=3D"View user's profile" border=3D=
+"0" /></a> <a href=3D"http://web.archive.org/web/20050324061951/http://w=
+ww.erwination.com/global/phpBB2/privmsg.php?mode=3Dpost&u=3D31&sid=3D713=
+5efc16700819043e27b84ffc76303"><img src=3D"http://web.archive.org/web/20=
+050324061951im_/http://www.erwination.com/global/phpBB2/templates/Jenova=
+/images/lang_english/icon_pm.gif" alt=3D"Send private message" title=3D"=
+Send private message" border=3D"0" /></a>  <a href=3D"http://web.archive=
+.org/web/20050324061951/http://www.ssclan-go.tk/" target=3D"_userwww"><i=
+mg src=3D"http://web.archive.org/web/20050324061951im_/http://www.erwina=
+tion.com/global/phpBB2/templates/Jenova/images/lang_english/icon_www.gif=
+" alt=3D"Visit poster's website" title=3D"Visit poster's website" border=
+=3D"0" /></a>   <script language=3D"JavaScript" type=3D"text/javascript"=
+><!--
+
+	if ( navigator.userAgent.toLowerCase().indexOf('mozilla') !=3D -1 && na=
+vigator.userAgent.indexOf('5.') =3D=3D -1 && navigator.userAgent.indexOf=
+('6.') =3D=3D -1 )
+		document.write(' <a href=3D"http://web.archive.org/web/20050324061951/=
+http://wwp.icq.com//scripts/search.dll?to=3D245000070"><img src=3D"templ=
+ates/Jenova/images/lang_english/icon_icq_add.gif" alt=3D"ICQ Number" tit=
+le=3D"ICQ Number" border=3D"0" /></a>');
+	else
+		document.write('</td><td>&nbsp;</td><td valign=3D"top" nowrap=3D"nowra=
+p"><div style=3D"position:relative"><div style=3D"position:absolute"><a =
+href=3D"http://web.archive.org/web/20050324061951/http://wwp.icq.com//sc=
+ripts/search.dll?to=3D245000070"><img src=3D"templates/Jenova/images/lan=
+g_english/icon_icq_add.gif" alt=3D"ICQ Number" title=3D"ICQ Number" bord=
+er=3D"0" /></a></div><div style=3D"position:absolute;left:3px;top:-1px">=
+<a href=3D"http://web.archive.org/web/20050324061951/http://wwp.icq.com/=
+/245000070#pager"><img src=3D"http://web.archive.org/web/20050324061951/=
+http://web.icq.com//whitepages/online?icq=3D245000070&img=3D5" width=3D"=
+18" height=3D"18" border=3D"0" /></a></div></div>');
+
+				//--></script><noscript><a href=3D"http://web.archive.org/web/200503=
+24061951/http://wwp.icq.com/scripts/search.dll?to=3D245000070"><img src=3D=
+"http://web.archive.org/web/20050324061951im_/http://www.erwination.com/=
+global/phpBB2/templates/Jenova/images/lang_english/icon_icq_add.gif" alt=
+=3D"ICQ Number" title=3D"ICQ Number" border=3D"0" /></a></noscript></td>=
+
+			</tr>
+		</table></td>
+	</tr>
+	<tr>
+		<td class=3D"spaceRow" colspan=3D"2" height=3D"1"><img src=3D"http://w=
+eb.archive.org/web/20050324061951im_/http://www.erwination.com/global/ph=
+pBB2/templates/subSilver/images/spacer.gif" alt=3D"" width=3D"1" height=3D=
+"1" /></td>
+	</tr>
+	<tr align=3D"center">
+		<td class=3D"catBottom" colspan=3D"2" height=3D"28"><table cellspacing=
+=3D"0" cellpadding=3D"0" border=3D"0">
+			<tr><form method=3D"post" action=3D"http://web.archive.org/web/200503=
+24061951/http://www.erwination.com/global/phpBB2/viewtopic.php?t=3D269&s=
+tart=3D0&sid=3D7135efc16700819043e27b84ffc76303">
+				<td align=3D"center"><span class=3D"gensmall">Display posts from pre=
+vious: <select name=3D"postdays"><option value=3D"0" selected=3D"selecte=
+d">All Posts</option><option value=3D"1">1 Day</option><option value=3D"=
+7">7 Days</option><option value=3D"14">2 Weeks</option><option value=3D"=
+30">1 Month</option><option value=3D"90">3 Months</option><option value=3D=
+"180">6 Months</option><option value=3D"364">1 Year</option></select>&nb=
+sp;<select name=3D"postorder"><option value=3D"asc" selected=3D"selected=
+">Oldest First</option><option value=3D"desc">Newest First</option></sel=
+ect>&nbsp;<input type=3D"submit" value=3D"Go" class=3D"liteoption" name=3D=
+"submit" /></span></td>
+			</form></tr>
+		</table></td>
+	</tr>
+</table>
+
+<table width=3D"100%" cellspacing=3D"2" cellpadding=3D"2" border=3D"0" a=
+lign=3D"center">
+  <tr>
+	<td align=3D"left" valign=3D"middle" nowrap=3D"nowrap"><span class=3D"n=
+av"><a href=3D"http://web.archive.org/web/20050324061951/http://www.erwi=
+nation.com/global/phpBB2/posting.php?mode=3Dnewtopic&f=3D2&sid=3D7135efc=
+16700819043e27b84ffc76303"><img src=3D"http://web.archive.org/web/200503=
+24061951im_/http://www.erwination.com/global/phpBB2/templates/Jenova/ima=
+ges/lang_english/post.gif" border=3D"0" alt=3D"Post new topic" align=3D"=
+middle" /></a>&nbsp;&nbsp;&nbsp;<a href=3D"http://web.archive.org/web/20=
+050324061951/http://www.erwination.com/global/phpBB2/posting.php?mode=3D=
+reply&t=3D269&sid=3D7135efc16700819043e27b84ffc76303"><img src=3D"http:/=
+/web.archive.org/web/20050324061951im_/http://www.erwination.com/global/=
+phpBB2/templates/Jenova/images/lang_english/reply.gif" border=3D"0" alt=3D=
+"Reply to topic" align=3D"middle" /></a></span></td>
+	<td align=3D"left" valign=3D"middle" width=3D"100%"><span class=3D"nav"=
+>&nbsp;&nbsp;&nbsp;<a href=3D"http://web.archive.org/web/20050324061951/=
+http://www.erwination.com/global/phpBB2/index.php?sid=3D7135efc167008190=
+43e27b84ffc76303" class=3D"nav">go.erwination.com Forum Index</a>
+	  -> <a href=3D"http://web.archive.org/web/20050324061951/http://www.er=
+wination.com/global/phpBB2/viewforum.php?f=3D2&sid=3D7135efc16700819043e=
+27b84ffc76303" class=3D"nav">Custom Map Questions</a></span></td>
+	<td align=3D"right" valign=3D"top" nowrap=3D"nowrap"><span class=3D"gen=
+small">All times are GMT - 5 Hours</span><br /><span class=3D"nav"></spa=
+n>
+	  </td>
+  </tr>
+  <tr>
+	<td align=3D"left" colspan=3D"3"><span class=3D"nav">Page <b>1</b> of <=
+b>1</b></span></td>
+  </tr>
+</table>
+
+<table width=3D"100%" cellspacing=3D"2" border=3D"0" align=3D"center">
+  <tr>
+	<td width=3D"40%" valign=3D"top" nowrap=3D"nowrap" align=3D"left"><span=
+ class=3D"gensmall"></span><br />
+	  &nbsp;<br />
+	  </td>
+	<td align=3D"right" valign=3D"top" nowrap=3D"nowrap">
+<form method=3D"get" name=3D"jumpbox" action=3D"http://web.archive.org/w=
+eb/20050324061951/http://www.erwination.com/global/phpBB2/viewforum.php?=
+sid=3D7135efc16700819043e27b84ffc76303" onSubmit=3D"if(document.jumpbox.=
+f.value =3D=3D -1){return false;}"><table cellspacing=3D"0" cellpadding=3D=
+"0" border=3D"0">
+	<tr>
+		<td nowrap=3D"nowrap"><span class=3D"gensmall">Jump to:&nbsp;<select n=
+ame=3D"f" onchange=3D"if(this.options[this.selectedIndex].value !=3D -1)=
+{ forms['jumpbox'].submit() }"><option value=3D"-1">Select a forum</opti=
+on><option value=3D"-1">&nbsp;</option><option value=3D"-1">Global Opera=
+tions Editing</option><option value=3D"-1">----------------</option><opt=
+ion value=3D"1">General</option><option value=3D"2"selected=3D"selected"=
+>Custom Map Questions</option><option value=3D"3">Playtesting</option><o=
+ption value=3D"4">Custom Prefabs</option><option value=3D"5">Server Ques=
+tions</option><option value=3D"6">Off Topic</option><option value=3D"-1"=
+>&nbsp;</option><option value=3D"-1">Global-Op World</option><option val=
+ue=3D"-1">----------------</option><option value=3D"8">Website Suggestio=
+ns & Feedback</option><option value=3D"9">Erwination Active Members</opt=
+ion></select><input type=3D"hidden" name=3D"sid" value=3D"7135efc1670081=
+9043e27b84ffc76303" />&nbsp;<input type=3D"submit" value=3D"Go" class=3D=
+"liteoption" /></span></td>
+	</tr>
+</table></form>
+
+<span class=3D"gensmall">You <b>cannot</b> post new topics in this forum=
+<br />You <b>cannot</b> reply to topics in this forum<br />You <b>cannot=
+</b> edit your posts in this forum<br />You <b>cannot</b> delete your po=
+sts in this forum<br />You <b>cannot</b> vote in polls in this forum<br =
+/></span></td>
+  </tr>
+</table>
+
+
+<div align=3D"center">
+  <TABLE width=3D"100%"  cellspacing=3D"0" cellpadding=3D"0">
+    <TR>
+      <TD align=3D"right"><A href=3D"http://web.archive.org/web/20050324=
+061951/http://www.erwination.com/global/phpBB2/viewtopic.php?p=3D1422&am=
+p#top"><IMG src=3D"http://web.archive.org/web/20050324061951im_/http://w=
+ww.erwination.com/global/phpBB2/templates/Jenova/images/up.gif" alt=3D"B=
+ack to Top" width=3D"45" height=3D"44" border=3D"0"></A>&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD=
+>
+    </TR>
+  </TABLE>
+  <TABLE width=3D"100%"  cellspacing=3D"0" cellpadding=3D"0">
+    <TR>
+      <TD width=3D"1%" align=3D"left" background=3D"http://web.archive.o=
+rg/web/20050324061951im_/http://www.erwination.com/global/phpBB2/templat=
+es/Jenova/images/foot_r1_c2.gif"><img name=3D"foot_r1_c1" src=3D"http://=
+web.archive.org/web/20050324061951im_/http://www.erwination.com/global/p=
+hpBB2/templates/Jenova/images/foot_r1_c1.gif" width=3D"7" height=3D"66" =
+border=3D"0" alt=3D""></TD>
+      <TD width=3D"98%" align=3D"center" valign=3D"top" background=3D"ht=
+tp://web.archive.org/web/20050324061951im_/http://www.erwination.com/glo=
+bal/phpBB2/templates/Jenova/images/foot_r1_c2.gif"><TABLE width=3D"56%" =
+height=3D"64" cellpadding=3D"0"  cellspacing=3D"0">
+          <TR>
+            <TD height=3D"28" align=3D"center" valign=3D"middle"><span c=
+lass=3D"copyright"></span></TD>
+          </TR>
+          <TR>
+            <TD height=3D"29" align=3D"center"><span class=3D"copyright"=
+>Jenova Template &copy; <A href=3D"http://web.archive.org/web/2005032406=
+1951/http://www.digital-delusion.com/">digital-delusion.com </A><BR>
+            Powered by <a href=3D"http://web.archive.org/web/20050324061=
+951/http://www.phpbb.com/" target=3D"_phpbb" class=3D"copyright">phpBB</=
+a> 2.0.5 &copy; 2001, 2002 phpBB Group</span></TD>
+          </TR>
+      </TABLE></TD>
+      <TD width=3D"1%" align=3D"right" background=3D"http://web.archive.=
+org/web/20050324061951im_/http://www.erwination.com/global/phpBB2/templa=
+tes/Jenova/images/foot_r1_c2.gif"><img name=3D"foot_r1_c4" src=3D"http:/=
+/web.archive.org/web/20050324061951im_/http://www.erwination.com/global/=
+phpBB2/templates/Jenova/images/foot_r1_c4.gif" width=3D"8" height=3D"66"=
+ border=3D"0" alt=3D""></TD>
+    </TR>
+  </TABLE>
+  <span class=3D"copyright"><br />
+</span></div>
+		</td>
+	</tr>
+</table>
+
+</body>
+</html>
+
+
+
+
+
+
+<!--
+     FILE ARCHIVED ON 6:19:51 Mrz 24, 2005 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 23:18:11 Okt 27, 2012.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.=
+
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->
+
+------------jJSse7hvpzDtpXSbn8uWcu
+Content-Disposition: inline; filename=disclaim-element.js
+Content-Type: text/javascript; name=disclaim-element.js
+Content-Location: http://staticweb.archive.org/js/disclaim-element.js
+Content-Transfer-Encoding: 8bit
+
+function getFrameArea(frame) {
+  if(frame.innerWidth) return frame.innerWidth * frame.innerHeight;
+  if(frame.document.documentElement && frame.document.documentElement.clientHeight) return frame.document.documentElement.clientWidth * frame.document.documentElement.clientHeight;
+  if(frame.document.body) return frame.document.body.clientWidth * frame.document.body.clientHeight;
+  return 0;
+}
+
+function isLargestFrame() {
+	if(top == self) {
+		return true;
+	}
+	if(top.document.body.tagName == "BODY") {
+		return false;
+	}
+	largestArea = 0;
+	largestFrame = null;
+	for(i=0;i<top.frames.length;i++) {
+		frame = top.frames[i];
+		area = getFrameArea(frame);
+		if(area > largestArea) {
+			largestFrame = frame;
+			largestArea = area;
+		}
+	}
+	return (self == largestFrame);
+}
+
+function disclaimElement(element) {
+	if(isLargestFrame()) {
+		element.style.display="block";
+		document.body.insertBefore(element,document.body.firstChild);
+	}
+}
+
+function disclaimToggle(largest, nonLargest) {
+	if(isLargestFrame()) {
+		largest.style.display="block";
+		nonLargest.style.display="none";
+	} else {
+		largest.style.display="none";
+		nonLargest.style.display="block";
+	}
+}
+
+
+------------jJSse7hvpzDtpXSbn8uWcu
+Content-Disposition: inline; filename=graph-calc.js
+Content-Type: text/javascript; name=graph-calc.js
+Content-Location: http://staticweb.archive.org/js/graph-calc.js
+Content-Transfer-Encoding: 8bit
+
+function getEventX(event) {
+	var posx = 0;
+	if (event.pageX || event.pageY) {
+		posx =  event.pageX;
+	}
+	else if (event.clientX || event.clientY) 	{
+		posx = event.clientX + document.body.scrollLeft
+			+ document.documentElement.scrollLeft;
+	}
+	return posx;
+}
+function getElementX(obj) {
+	var x = 0;
+	if (obj.offsetParent) {
+		do {
+			x += obj.offsetLeft;
+		} while (obj = obj.offsetParent);
+	}
+	return x;
+}
+function zeroPad(str,len) {
+	var i;
+	var pad = "";
+	var s = str.toString();
+	for(i=s.length; i < len; i++) {
+		pad = "0".toString() + pad.toString();
+	}
+	return pad.toString() + s.toString();
+}
+
+function dateToTimestamp(date) {
+	return date.getFullYear() +
+		zeroPad(date.getMonth()+1,2) +
+		zeroPad(date.getDay()+1,2) +
+		zeroPad(date.getHours(),2) +
+		zeroPad(date.getMinutes(),2) +
+		zeroPad(date.getSeconds(),2);
+}
+
+function calcTimestamp(event,element,firstMS,lastMS) {
+	  var eventX = getEventX(event);
+	  var elementX = getElementX(element);
+	  var elementWidth = element.width;
+	  var msWidth = lastMS - firstMS;
+	  var x = eventX - elementX;
+	  var pct = x / elementWidth;
+	  var pctDate = pct * msWidth;
+	  var date = pctDate + firstMS;
+	  return dateToTimestamp(new Date(date));
+}
+
+------------jJSse7hvpzDtpXSbn8uWcu
+Content-Disposition: inline; filename=jquery.min.js
+Content-Type: text/javascript; name=jquery.min.js
+Content-Location: http://staticweb.archive.org/jflot/jquery.min.js
+Content-Transfer-Encoding: Quoted-Printable
+
+/*
+ * jQuery JavaScript Library v1.3.2
+ * http://jquery.com/
+ *
+ * Copyright (c) 2009 John Resig
+ * Dual licensed under the MIT and GPL licenses.
+ * http://docs.jquery.com/License
+ *
+ * Date: 2009-02-19 17:34:21 -0500 (Thu, 19 Feb 2009)
+ * Revision: 6246
+ */
+(function(){var window=3Dthis,undefined,_jQuery=3Dwindow.jQuery,_$=3Dwin=
+dow.$,jQuery=3Dwindow.jQuery=3Dwindow.$=3Dfunction(selector,context){ret=
+urn new jQuery.fn.init(selector,context)},quickExpr=3D/^[^<]*(<(.|\s)+>)=
+[^>]*$|^#([\w-]+)$/,isSimple=3D/^.[^:#\[\.,]*$/;jQuery.fn=3DjQuery.proto=
+type=3D{init:function(selector,context){selector=3Dselector||document;if=
+(selector.nodeType){this[0]=3Dselector;this.length=3D1;this.context=3Dse=
+lector;return this}if(typeof selector=3D=3D=3D"string"){var match=3Dquic=
+kExpr.exec(selector);if(match&&(match[1]||!context)){if(match[1]){select=
+or=3DjQuery.clean([match[1]],context)}else{var elem=3Ddocument.getElemen=
+tById(match[3]);if(elem&&elem.id!=3Dmatch[3]){return jQuery().find(selec=
+tor)}var ret=3DjQuery(elem||[]);ret.context=3Ddocument;ret.selector=3Dse=
+lector;return ret}}else{return jQuery(context).find(selector)}}else{if(j=
+Query.isFunction(selector)){return jQuery(document).ready(selector)}}if(=
+selector.selector&&selector.context){this.selector=3Dselector.selector;t=
+his.context=3Dselector.context}return this.setArray(jQuery.isArray(selec=
+tor)?selector:jQuery.makeArray(selector))},selector:"",jquery:"1.3.2",si=
+ze:function(){return this.length},get:function(num){return num=3D=3D=3Du=
+ndefined?Array.prototype.slice.call(this):this[num]},pushStack:function(=
+elems,name,selector){var ret=3DjQuery(elems);ret.prevObject=3Dthis;ret.c=
+ontext=3Dthis.context;if(name=3D=3D=3D"find"){ret.selector=3Dthis.select=
+or+(this.selector?" ":"")+selector}else{if(name){ret.selector=3Dthis.sel=
+ector+"."+name+"("+selector+")"}}return ret},setArray:function(elems){th=
+is.length=3D0;Array.prototype.push.apply(this,elems);return this},each:f=
+unction(callback,args){return jQuery.each(this,callback,args)},index:fun=
+ction(elem){return jQuery.inArray(elem&&elem.jquery?elem[0]:elem,this)},=
+attr:function(name,value,type){var options=3Dname;if(typeof name=3D=3D=3D=
+"string"){if(value=3D=3D=3Dundefined){return this[0]&&jQuery[type||"attr=
+"](this[0],name)}else{options=3D{};options[name]=3Dvalue}}return this.ea=
+ch(function(i){for(name in options){jQuery.attr(type?this.style:this,nam=
+e,jQuery.prop(this,options[name],type,i,name))}})},css:function(key,valu=
+e){if((key=3D=3D"width"||key=3D=3D"height")&&parseFloat(value)<0){value=3D=
+undefined}return this.attr(key,value,"curCSS")},text:function(text){if(t=
+ypeof text!=3D=3D"object"&&text!=3Dnull){return this.empty().append((thi=
+s[0]&&this[0].ownerDocument||document).createTextNode(text))}var ret=3D"=
+";jQuery.each(text||this,function(){jQuery.each(this.childNodes,function=
+(){if(this.nodeType!=3D8){ret+=3Dthis.nodeType!=3D1?this.nodeValue:jQuer=
+y.fn.text([this])}})});return ret},wrapAll:function(html){if(this[0]){va=
+r wrap=3DjQuery(html,this[0].ownerDocument).clone();if(this[0].parentNod=
+e){wrap.insertBefore(this[0])}wrap.map(function(){var elem=3Dthis;while(=
+elem.firstChild){elem=3Delem.firstChild}return elem}).append(this)}retur=
+n this},wrapInner:function(html){return this.each(function(){jQuery(this=
+).contents().wrapAll(html)})},wrap:function(html){return this.each(funct=
+ion(){jQuery(this).wrapAll(html)})},append:function(){return this.domMan=
+ip(arguments,true,function(elem){if(this.nodeType=3D=3D1){this.appendChi=
+ld(elem)}})},prepend:function(){return this.domManip(arguments,true,func=
+tion(elem){if(this.nodeType=3D=3D1){this.insertBefore(elem,this.firstChi=
+ld)}})},before:function(){return this.domManip(arguments,false,function(=
+elem){this.parentNode.insertBefore(elem,this)})},after:function(){return=
+ this.domManip(arguments,false,function(elem){this.parentNode.insertBefo=
+re(elem,this.nextSibling)})},end:function(){return this.prevObject||jQue=
+ry([])},push:[].push,sort:[].sort,splice:[].splice,find:function(selecto=
+r){if(this.length=3D=3D=3D1){var ret=3Dthis.pushStack([],"find",selector=
+);ret.length=3D0;jQuery.find(selector,this[0],ret);return ret}else{retur=
+n this.pushStack(jQuery.unique(jQuery.map(this,function(elem){return jQu=
+ery.find(selector,elem)})),"find",selector)}},clone:function(events){var=
+ ret=3Dthis.map(function(){if(!jQuery.support.noCloneEvent&&!jQuery.isXM=
+LDoc(this)){var html=3Dthis.outerHTML;if(!html){var div=3Dthis.ownerDocu=
+ment.createElement("div");div.appendChild(this.cloneNode(true));html=3Dd=
+iv.innerHTML}return jQuery.clean([html.replace(/ jQuery\d+=3D"(?:\d+|nul=
+l)"/g,"").replace(/^\s*/,"")])[0]}else{return this.cloneNode(true)}});if=
+(events=3D=3D=3Dtrue){var orig=3Dthis.find("*").andSelf(),i=3D0;ret.find=
+("*").andSelf().each(function(){if(this.nodeName!=3D=3Dorig[i].nodeName)=
+{return }var events=3DjQuery.data(orig[i],"events");for(var type in even=
+ts){for(var handler in events[type]){jQuery.event.add(this,type,events[t=
+ype][handler],events[type][handler].data)}}i++})}return ret},filter:func=
+tion(selector){return this.pushStack(jQuery.isFunction(selector)&&jQuery=
+.grep(this,function(elem,i){return selector.call(elem,i)})||jQuery.multi=
+Filter(selector,jQuery.grep(this,function(elem){return elem.nodeType=3D=3D=
+=3D1})),"filter",selector)},closest:function(selector){var pos=3DjQuery.=
+expr.match.POS.test(selector)?jQuery(selector):null,closer=3D0;return th=
+is.map(function(){var cur=3Dthis;while(cur&&cur.ownerDocument){if(pos?po=
+s.index(cur)>-1:jQuery(cur).is(selector)){jQuery.data(cur,"closest",clos=
+er);return cur}cur=3Dcur.parentNode;closer++}})},not:function(selector){=
+if(typeof selector=3D=3D=3D"string"){if(isSimple.test(selector)){return =
+this.pushStack(jQuery.multiFilter(selector,this,true),"not",selector)}el=
+se{selector=3DjQuery.multiFilter(selector,this)}}var isArrayLike=3Dselec=
+tor.length&&selector[selector.length-1]!=3D=3Dundefined&&!selector.nodeT=
+ype;return this.filter(function(){return isArrayLike?jQuery.inArray(this=
+,selector)<0:this!=3Dselector})},add:function(selector){return this.push=
+Stack(jQuery.unique(jQuery.merge(this.get(),typeof selector=3D=3D=3D"str=
+ing"?jQuery(selector):jQuery.makeArray(selector))))},is:function(selecto=
+r){return !!selector&&jQuery.multiFilter(selector,this).length>0},hasCla=
+ss:function(selector){return !!selector&&this.is("."+selector)},val:func=
+tion(value){if(value=3D=3D=3Dundefined){var elem=3Dthis[0];if(elem){if(j=
+Query.nodeName(elem,"option")){return(elem.attributes.value||{}).specifi=
+ed?elem.value:elem.text}if(jQuery.nodeName(elem,"select")){var index=3De=
+lem.selectedIndex,values=3D[],options=3Delem.options,one=3Delem.type=3D=3D=
+"select-one";if(index<0){return null}for(var i=3Done?index:0,max=3Done?i=
+ndex+1:options.length;i<max;i++){var option=3Doptions[i];if(option.selec=
+ted){value=3DjQuery(option).val();if(one){return value}values.push(value=
+)}}return values}return(elem.value||"").replace(/\r/g,"")}return undefin=
+ed}if(typeof value=3D=3D=3D"number"){value+=3D""}return this.each(functi=
+on(){if(this.nodeType!=3D1){return }if(jQuery.isArray(value)&&/radio|che=
+ckbox/.test(this.type)){this.checked=3D(jQuery.inArray(this.value,value)=
+>=3D0||jQuery.inArray(this.name,value)>=3D0)}else{if(jQuery.nodeName(thi=
+s,"select")){var values=3DjQuery.makeArray(value);jQuery("option",this).=
+each(function(){this.selected=3D(jQuery.inArray(this.value,values)>=3D0|=
+|jQuery.inArray(this.text,values)>=3D0)});if(!values.length){this.select=
+edIndex=3D-1}}else{this.value=3Dvalue}}})},html:function(value){return v=
+alue=3D=3D=3Dundefined?(this[0]?this[0].innerHTML.replace(/ jQuery\d+=3D=
+"(?:\d+|null)"/g,""):null):this.empty().append(value)},replaceWith:funct=
+ion(value){return this.after(value).remove()},eq:function(i){return this=
+.slice(i,+i+1)},slice:function(){return this.pushStack(Array.prototype.s=
+lice.apply(this,arguments),"slice",Array.prototype.slice.call(arguments)=
+.join(","))},map:function(callback){return this.pushStack(jQuery.map(thi=
+s,function(elem,i){return callback.call(elem,i,elem)}))},andSelf:functio=
+n(){return this.add(this.prevObject)},domManip:function(args,table,callb=
+ack){if(this[0]){var fragment=3D(this[0].ownerDocument||this[0]).createD=
+ocumentFragment(),scripts=3DjQuery.clean(args,(this[0].ownerDocument||th=
+is[0]),fragment),first=3Dfragment.firstChild;if(first){for(var i=3D0,l=3D=
+this.length;i<l;i++){callback.call(root(this[i],first),this.length>1||i>=
+0?fragment.cloneNode(true):fragment)}}if(scripts){jQuery.each(scripts,ev=
+alScript)}}return this;function root(elem,cur){return table&&jQuery.node=
+Name(elem,"table")&&jQuery.nodeName(cur,"tr")?(elem.getElementsByTagName=
+("tbody")[0]||elem.appendChild(elem.ownerDocument.createElement("tbody")=
+)):elem}}};jQuery.fn.init.prototype=3DjQuery.fn;function evalScript(i,el=
+em){if(elem.src){jQuery.ajax({url:elem.src,async:false,dataType:"script"=
+})}else{jQuery.globalEval(elem.text||elem.textContent||elem.innerHTML||"=
+")}if(elem.parentNode){elem.parentNode.removeChild(elem)}}function now()=
+{return +new Date}jQuery.extend=3DjQuery.fn.extend=3Dfunction(){var targ=
+et=3Darguments[0]||{},i=3D1,length=3Darguments.length,deep=3Dfalse,optio=
+ns;if(typeof target=3D=3D=3D"boolean"){deep=3Dtarget;target=3Darguments[=
+1]||{};i=3D2}if(typeof target!=3D=3D"object"&&!jQuery.isFunction(target)=
+){target=3D{}}if(length=3D=3Di){target=3Dthis;--i}for(;i<length;i++){if(=
+(options=3Darguments[i])!=3Dnull){for(var name in options){var src=3Dtar=
+get[name],copy=3Doptions[name];if(target=3D=3D=3Dcopy){continue}if(deep&=
+&copy&&typeof copy=3D=3D=3D"object"&&!copy.nodeType){target[name]=3DjQue=
+ry.extend(deep,src||(copy.length!=3Dnull?[]:{}),copy)}else{if(copy!=3D=3D=
+undefined){target[name]=3Dcopy}}}}}return target};var exclude=3D/z-?inde=
+x|font-?weight|opacity|zoom|line-?height/i,defaultView=3Ddocument.defaul=
+tView||{},toString=3DObject.prototype.toString;jQuery.extend({noConflict=
+:function(deep){window.$=3D_$;if(deep){window.jQuery=3D_jQuery}return jQ=
+uery},isFunction:function(obj){return toString.call(obj)=3D=3D=3D"[objec=
+t Function]"},isArray:function(obj){return toString.call(obj)=3D=3D=3D"[=
+object Array]"},isXMLDoc:function(elem){return elem.nodeType=3D=3D=3D9&&=
+elem.documentElement.nodeName!=3D=3D"HTML"||!!elem.ownerDocument&&jQuery=
+.isXMLDoc(elem.ownerDocument)},globalEval:function(data){if(data&&/\S/.t=
+est(data)){var head=3Ddocument.getElementsByTagName("head")[0]||document=
+.documentElement,script=3Ddocument.createElement("script");script.type=3D=
+"text/javascript";if(jQuery.support.scriptEval){script.appendChild(docum=
+ent.createTextNode(data))}else{script.text=3Ddata}head.insertBefore(scri=
+pt,head.firstChild);head.removeChild(script)}},nodeName:function(elem,na=
+me){return elem.nodeName&&elem.nodeName.toUpperCase()=3D=3Dname.toUpperC=
+ase()},each:function(object,callback,args){var name,i=3D0,length=3Dobjec=
+t.length;if(args){if(length=3D=3D=3Dundefined){for(name in object){if(ca=
+llback.apply(object[name],args)=3D=3D=3Dfalse){break}}}else{for(;i<lengt=
+h;){if(callback.apply(object[i++],args)=3D=3D=3Dfalse){break}}}}else{if(=
+length=3D=3D=3Dundefined){for(name in object){if(callback.call(object[na=
+me],name,object[name])=3D=3D=3Dfalse){break}}}else{for(var value=3Dobjec=
+t[0];i<length&&callback.call(value,i,value)!=3D=3Dfalse;value=3Dobject[+=
++i]){}}}return object},prop:function(elem,value,type,i,name){if(jQuery.i=
+sFunction(value)){value=3Dvalue.call(elem,i)}return typeof value=3D=3D=3D=
+"number"&&type=3D=3D"curCSS"&&!exclude.test(name)?value+"px":value},clas=
+sName:{add:function(elem,classNames){jQuery.each((classNames||"").split(=
+/\s+/),function(i,className){if(elem.nodeType=3D=3D1&&!jQuery.className.=
+has(elem.className,className)){elem.className+=3D(elem.className?" ":"")=
++className}})},remove:function(elem,classNames){if(elem.nodeType=3D=3D1)=
+{elem.className=3DclassNames!=3D=3Dundefined?jQuery.grep(elem.className.=
+split(/\s+/),function(className){return !jQuery.className.has(classNames=
+,className)}).join(" "):""}},has:function(elem,className){return elem&&j=
+Query.inArray(className,(elem.className||elem).toString().split(/\s+/))>=
+-1}},swap:function(elem,options,callback){var old=3D{};for(var name in o=
+ptions){old[name]=3Delem.style[name];elem.style[name]=3Doptions[name]}ca=
+llback.call(elem);for(var name in options){elem.style[name]=3Dold[name]}=
+},css:function(elem,name,force,extra){if(name=3D=3D"width"||name=3D=3D"h=
+eight"){var val,props=3D{position:"absolute",visibility:"hidden",display=
+:"block"},which=3Dname=3D=3D"width"?["Left","Right"]:["Top","Bottom"];fu=
+nction getWH(){val=3Dname=3D=3D"width"?elem.offsetWidth:elem.offsetHeigh=
+t;if(extra=3D=3D=3D"border"){return }jQuery.each(which,function(){if(!ex=
+tra){val-=3DparseFloat(jQuery.curCSS(elem,"padding"+this,true))||0}if(ex=
+tra=3D=3D=3D"margin"){val+=3DparseFloat(jQuery.curCSS(elem,"margin"+this=
+,true))||0}else{val-=3DparseFloat(jQuery.curCSS(elem,"border"+this+"Widt=
+h",true))||0}})}if(elem.offsetWidth!=3D=3D0){getWH()}else{jQuery.swap(el=
+em,props,getWH)}return Math.max(0,Math.round(val))}return jQuery.curCSS(=
+elem,name,force)},curCSS:function(elem,name,force){var ret,style=3Delem.=
+style;if(name=3D=3D"opacity"&&!jQuery.support.opacity){ret=3DjQuery.attr=
+(style,"opacity");return ret=3D=3D""?"1":ret}if(name.match(/float/i)){na=
+me=3DstyleFloat}if(!force&&style&&style[name]){ret=3Dstyle[name]}else{if=
+(defaultView.getComputedStyle){if(name.match(/float/i)){name=3D"float"}n=
+ame=3Dname.replace(/([A-Z])/g,"-$1").toLowerCase();var computedStyle=3Dd=
+efaultView.getComputedStyle(elem,null);if(computedStyle){ret=3DcomputedS=
+tyle.getPropertyValue(name)}if(name=3D=3D"opacity"&&ret=3D=3D""){ret=3D"=
+1"}}else{if(elem.currentStyle){var camelCase=3Dname.replace(/\-(\w)/g,fu=
+nction(all,letter){return letter.toUpperCase()});ret=3Delem.currentStyle=
+[name]||elem.currentStyle[camelCase];if(!/^\d+(px)?$/i.test(ret)&&/^\d/.=
+test(ret)){var left=3Dstyle.left,rsLeft=3Delem.runtimeStyle.left;elem.ru=
+ntimeStyle.left=3Delem.currentStyle.left;style.left=3Dret||0;ret=3Dstyle=
+.pixelLeft+"px";style.left=3Dleft;elem.runtimeStyle.left=3DrsLeft}}}}ret=
+urn ret},clean:function(elems,context,fragment){context=3Dcontext||docum=
+ent;if(typeof context.createElement=3D=3D=3D"undefined"){context=3Dconte=
+xt.ownerDocument||context[0]&&context[0].ownerDocument||document}if(!fra=
+gment&&elems.length=3D=3D=3D1&&typeof elems[0]=3D=3D=3D"string"){var mat=
+ch=3D/^<(\w+)\s*\/?>$/.exec(elems[0]);if(match){return[context.createEle=
+ment(match[1])]}}var ret=3D[],scripts=3D[],div=3Dcontext.createElement("=
+div");jQuery.each(elems,function(i,elem){if(typeof elem=3D=3D=3D"number"=
+){elem+=3D""}if(!elem){return }if(typeof elem=3D=3D=3D"string"){elem=3De=
+lem.replace(/(<(\w+)[^>]*?)\/>/g,function(all,front,tag){return tag.matc=
+h(/^(abbr|br|col|img|input|link|meta|param|hr|area|embed)$/i)?all:front+=
+"></"+tag+">"});var tags=3Delem.replace(/^\s+/,"").substring(0,10).toLow=
+erCase();var wrap=3D!tags.indexOf("<opt")&&[1,"<select multiple=3D'multi=
+ple'>","</select>"]||!tags.indexOf("<leg")&&[1,"<fieldset>","</fieldset>=
+"]||tags.match(/^<(thead|tbody|tfoot|colg|cap)/)&&[1,"<table>","</table>=
+"]||!tags.indexOf("<tr")&&[2,"<table><tbody>","</tbody></table>"]||(!tag=
+s.indexOf("<td")||!tags.indexOf("<th"))&&[3,"<table><tbody><tr>","</tr><=
+/tbody></table>"]||!tags.indexOf("<col")&&[2,"<table><tbody></tbody><col=
+group>","</colgroup></table>"]||!jQuery.support.htmlSerialize&&[1,"div<d=
+iv>","</div>"]||[0,"",""];div.innerHTML=3Dwrap[1]+elem+wrap[2];while(wra=
+p[0]--){div=3Ddiv.lastChild}if(!jQuery.support.tbody){var hasBody=3D/<tb=
+ody/i.test(elem),tbody=3D!tags.indexOf("<table")&&!hasBody?div.firstChil=
+d&&div.firstChild.childNodes:wrap[1]=3D=3D"<table>"&&!hasBody?div.childN=
+odes:[];for(var j=3Dtbody.length-1;j>=3D0;--j){if(jQuery.nodeName(tbody[=
+j],"tbody")&&!tbody[j].childNodes.length){tbody[j].parentNode.removeChil=
+d(tbody[j])}}}if(!jQuery.support.leadingWhitespace&&/^\s/.test(elem)){di=
+v.insertBefore(context.createTextNode(elem.match(/^\s*/)[0]),div.firstCh=
+ild)}elem=3DjQuery.makeArray(div.childNodes)}if(elem.nodeType){ret.push(=
+elem)}else{ret=3DjQuery.merge(ret,elem)}});if(fragment){for(var i=3D0;re=
+t[i];i++){if(jQuery.nodeName(ret[i],"script")&&(!ret[i].type||ret[i].typ=
+e.toLowerCase()=3D=3D=3D"text/javascript")){scripts.push(ret[i].parentNo=
+de?ret[i].parentNode.removeChild(ret[i]):ret[i])}else{if(ret[i].nodeType=
+=3D=3D=3D1){ret.splice.apply(ret,[i+1,0].concat(jQuery.makeArray(ret[i].=
+getElementsByTagName("script"))))}fragment.appendChild(ret[i])}}return s=
+cripts}return ret},attr:function(elem,name,value){if(!elem||elem.nodeTyp=
+e=3D=3D3||elem.nodeType=3D=3D8){return undefined}var notxml=3D!jQuery.is=
+XMLDoc(elem),set=3Dvalue!=3D=3Dundefined;name=3Dnotxml&&jQuery.props[nam=
+e]||name;if(elem.tagName){var special=3D/href|src|style/.test(name);if(n=
+ame=3D=3D"selected"&&elem.parentNode){elem.parentNode.selectedIndex}if(n=
+ame in elem&&notxml&&!special){if(set){if(name=3D=3D"type"&&jQuery.nodeN=
+ame(elem,"input")&&elem.parentNode){throw"type property can't be changed=
+"}elem[name]=3Dvalue}if(jQuery.nodeName(elem,"form")&&elem.getAttributeN=
+ode(name)){return elem.getAttributeNode(name).nodeValue}if(name=3D=3D"ta=
+bIndex"){var attributeNode=3Delem.getAttributeNode("tabIndex");return at=
+tributeNode&&attributeNode.specified?attributeNode.value:elem.nodeName.m=
+atch(/(button|input|object|select|textarea)/i)?0:elem.nodeName.match(/^(=
+a|area)$/i)&&elem.href?0:undefined}return elem[name]}if(!jQuery.support.=
+style&&notxml&&name=3D=3D"style"){return jQuery.attr(elem.style,"cssText=
+",value)}if(set){elem.setAttribute(name,""+value)}var attr=3D!jQuery.sup=
+port.hrefNormalized&&notxml&&special?elem.getAttribute(name,2):elem.getA=
+ttribute(name);return attr=3D=3D=3Dnull?undefined:attr}if(!jQuery.suppor=
+t.opacity&&name=3D=3D"opacity"){if(set){elem.zoom=3D1;elem.filter=3D(ele=
+m.filter||"").replace(/alpha\([^)]*\)/,"")+(parseInt(value)+""=3D=3D"NaN=
+"?"":"alpha(opacity=3D"+value*100+")")}return elem.filter&&elem.filter.i=
+ndexOf("opacity=3D")>=3D0?(parseFloat(elem.filter.match(/opacity=3D([^)]=
+*)/)[1])/100)+"":""}name=3Dname.replace(/-([a-z])/ig,function(all,letter=
+){return letter.toUpperCase()});if(set){elem[name]=3Dvalue}return elem[n=
+ame]},trim:function(text){return(text||"").replace(/^\s+|\s+$/g,"")},mak=
+eArray:function(array){var ret=3D[];if(array!=3Dnull){var i=3Darray.leng=
+th;if(i=3D=3Dnull||typeof array=3D=3D=3D"string"||jQuery.isFunction(arra=
+y)||array.setInterval){ret[0]=3Darray}else{while(i){ret[--i]=3Darray[i]}=
+}}return ret},inArray:function(elem,array){for(var i=3D0,length=3Darray.=
+length;i<length;i++){if(array[i]=3D=3D=3Delem){return i}}return -1},merg=
+e:function(first,second){var i=3D0,elem,pos=3Dfirst.length;if(!jQuery.su=
+pport.getAll){while((elem=3Dsecond[i++])!=3Dnull){if(elem.nodeType!=3D8)=
+{first[pos++]=3Delem}}}else{while((elem=3Dsecond[i++])!=3Dnull){first[po=
+s++]=3Delem}}return first},unique:function(array){var ret=3D[],done=3D{}=
+;try{for(var i=3D0,length=3Darray.length;i<length;i++){var id=3DjQuery.d=
+ata(array[i]);if(!done[id]){done[id]=3Dtrue;ret.push(array[i])}}}catch(e=
+){ret=3Darray}return ret},grep:function(elems,callback,inv){var ret=3D[]=
+;for(var i=3D0,length=3Delems.length;i<length;i++){if(!inv!=3D!callback(=
+elems[i],i)){ret.push(elems[i])}}return ret},map:function(elems,callback=
+){var ret=3D[];for(var i=3D0,length=3Delems.length;i<length;i++){var val=
+ue=3Dcallback(elems[i],i);if(value!=3Dnull){ret[ret.length]=3Dvalue}}ret=
+urn ret.concat.apply([],ret)}});var userAgent=3Dnavigator.userAgent.toLo=
+werCase();jQuery.browser=3D{version:(userAgent.match(/.+(?:rv|it|ra|ie)[=
+\/: ]([\d.]+)/)||[0,"0"])[1],safari:/webkit/.test(userAgent),opera:/oper=
+a/.test(userAgent),msie:/msie/.test(userAgent)&&!/opera/.test(userAgent)=
+,mozilla:/mozilla/.test(userAgent)&&!/(compatible|webkit)/.test(userAgen=
+t)};jQuery.each({parent:function(elem){return elem.parentNode},parents:f=
+unction(elem){return jQuery.dir(elem,"parentNode")},next:function(elem){=
+return jQuery.nth(elem,2,"nextSibling")},prev:function(elem){return jQue=
+ry.nth(elem,2,"previousSibling")},nextAll:function(elem){return jQuery.d=
+ir(elem,"nextSibling")},prevAll:function(elem){return jQuery.dir(elem,"p=
+reviousSibling")},siblings:function(elem){return jQuery.sibling(elem.par=
+entNode.firstChild,elem)},children:function(elem){return jQuery.sibling(=
+elem.firstChild)},contents:function(elem){return jQuery.nodeName(elem,"i=
+frame")?elem.contentDocument||elem.contentWindow.document:jQuery.makeArr=
+ay(elem.childNodes)}},function(name,fn){jQuery.fn[name]=3Dfunction(selec=
+tor){var ret=3DjQuery.map(this,fn);if(selector&&typeof selector=3D=3D"st=
+ring"){ret=3DjQuery.multiFilter(selector,ret)}return this.pushStack(jQue=
+ry.unique(ret),name,selector)}});jQuery.each({appendTo:"append",prependT=
+o:"prepend",insertBefore:"before",insertAfter:"after",replaceAll:"replac=
+eWith"},function(name,original){jQuery.fn[name]=3Dfunction(selector){var=
+ ret=3D[],insert=3DjQuery(selector);for(var i=3D0,l=3Dinsert.length;i<l;=
+i++){var elems=3D(i>0?this.clone(true):this).get();jQuery.fn[original].a=
+pply(jQuery(insert[i]),elems);ret=3Dret.concat(elems)}return this.pushSt=
+ack(ret,name,selector)}});jQuery.each({removeAttr:function(name){jQuery.=
+attr(this,name,"");if(this.nodeType=3D=3D1){this.removeAttribute(name)}}=
+,addClass:function(classNames){jQuery.className.add(this,classNames)},re=
+moveClass:function(classNames){jQuery.className.remove(this,classNames)}=
+,toggleClass:function(classNames,state){if(typeof state!=3D=3D"boolean")=
+{state=3D!jQuery.className.has(this,classNames)}jQuery.className[state?"=
+add":"remove"](this,classNames)},remove:function(selector){if(!selector|=
+|jQuery.filter(selector,[this]).length){jQuery("*",this).add([this]).eac=
+h(function(){jQuery.event.remove(this);jQuery.removeData(this)});if(this=
+.parentNode){this.parentNode.removeChild(this)}}},empty:function(){jQuer=
+y(this).children().remove();while(this.firstChild){this.removeChild(this=
+.firstChild)}}},function(name,fn){jQuery.fn[name]=3Dfunction(){return th=
+is.each(fn,arguments)}});function num(elem,prop){return elem[0]&&parseIn=
+t(jQuery.curCSS(elem[0],prop,true),10)||0}var expando=3D"jQuery"+now(),u=
+uid=3D0,windowData=3D{};jQuery.extend({cache:{},data:function(elem,name,=
+data){elem=3Delem=3D=3Dwindow?windowData:elem;var id=3Delem[expando];if(=
+!id){id=3Delem[expando]=3D++uuid}if(name&&!jQuery.cache[id]){jQuery.cach=
+e[id]=3D{}}if(data!=3D=3Dundefined){jQuery.cache[id][name]=3Ddata}return=
+ name?jQuery.cache[id][name]:id},removeData:function(elem,name){elem=3De=
+lem=3D=3Dwindow?windowData:elem;var id=3Delem[expando];if(name){if(jQuer=
+y.cache[id]){delete jQuery.cache[id][name];name=3D"";for(name in jQuery.=
+cache[id]){break}if(!name){jQuery.removeData(elem)}}}else{try{delete ele=
+m[expando]}catch(e){if(elem.removeAttribute){elem.removeAttribute(expand=
+o)}}delete jQuery.cache[id]}},queue:function(elem,type,data){if(elem){ty=
+pe=3D(type||"fx")+"queue";var q=3DjQuery.data(elem,type);if(!q||jQuery.i=
+sArray(data)){q=3DjQuery.data(elem,type,jQuery.makeArray(data))}else{if(=
+data){q.push(data)}}}return q},dequeue:function(elem,type){var queue=3Dj=
+Query.queue(elem,type),fn=3Dqueue.shift();if(!type||type=3D=3D=3D"fx"){f=
+n=3Dqueue[0]}if(fn!=3D=3Dundefined){fn.call(elem)}}});jQuery.fn.extend({=
+data:function(key,value){var parts=3Dkey.split(".");parts[1]=3Dparts[1]?=
+"."+parts[1]:"";if(value=3D=3D=3Dundefined){var data=3Dthis.triggerHandl=
+er("getData"+parts[1]+"!",[parts[0]]);if(data=3D=3D=3Dundefined&&this.le=
+ngth){data=3DjQuery.data(this[0],key)}return data=3D=3D=3Dundefined&&par=
+ts[1]?this.data(parts[0]):data}else{return this.trigger("setData"+parts[=
+1]+"!",[parts[0],value]).each(function(){jQuery.data(this,key,value)})}}=
+,removeData:function(key){return this.each(function(){jQuery.removeData(=
+this,key)})},queue:function(type,data){if(typeof type!=3D=3D"string"){da=
+ta=3Dtype;type=3D"fx"}if(data=3D=3D=3Dundefined){return jQuery.queue(thi=
+s[0],type)}return this.each(function(){var queue=3DjQuery.queue(this,typ=
+e,data);if(type=3D=3D"fx"&&queue.length=3D=3D1){queue[0].call(this)}})},=
+dequeue:function(type){return this.each(function(){jQuery.dequeue(this,t=
+ype)})}});
+/*
+ * Sizzle CSS Selector Engine - v0.9.3
+ *  Copyright 2009, The Dojo Foundation
+ *  Released under the MIT, BSD, and GPL Licenses.
+ *  More information: http://sizzlejs.com/
+ */
+(function(){var chunker=3D/((?:\((?:\([^()]+\)|[^()]+)+\)|\[(?:\[[^[\]]*=
+\]|['"][^'"]*['"]|[^[\]'"]+)+\]|\\.|[^ >+~,(\[\\]+)+|[>+~])(\s*,\s*)?/g,=
+done=3D0,toString=3DObject.prototype.toString;var Sizzle=3Dfunction(sele=
+ctor,context,results,seed){results=3Dresults||[];context=3Dcontext||docu=
+ment;if(context.nodeType!=3D=3D1&&context.nodeType!=3D=3D9){return[]}if(=
+!selector||typeof selector!=3D=3D"string"){return results}var parts=3D[]=
+,m,set,checkSet,check,mode,extra,prune=3Dtrue;chunker.lastIndex=3D0;whil=
+e((m=3Dchunker.exec(selector))!=3D=3Dnull){parts.push(m[1]);if(m[2]){ext=
+ra=3DRegExp.rightContext;break}}if(parts.length>1&&origPOS.exec(selector=
+)){if(parts.length=3D=3D=3D2&&Expr.relative[parts[0]]){set=3DposProcess(=
+parts[0]+parts[1],context)}else{set=3DExpr.relative[parts[0]]?[context]:=
+Sizzle(parts.shift(),context);while(parts.length){selector=3Dparts.shift=
+();if(Expr.relative[selector]){selector+=3Dparts.shift()}set=3DposProces=
+s(selector,set)}}}else{var ret=3Dseed?{expr:parts.pop(),set:makeArray(se=
+ed)}:Sizzle.find(parts.pop(),parts.length=3D=3D=3D1&&context.parentNode?=
+context.parentNode:context,isXML(context));set=3DSizzle.filter(ret.expr,=
+ret.set);if(parts.length>0){checkSet=3DmakeArray(set)}else{prune=3Dfalse=
+}while(parts.length){var cur=3Dparts.pop(),pop=3Dcur;if(!Expr.relative[c=
+ur]){cur=3D""}else{pop=3Dparts.pop()}if(pop=3D=3Dnull){pop=3Dcontext}Exp=
+r.relative[cur](checkSet,pop,isXML(context))}}if(!checkSet){checkSet=3Ds=
+et}if(!checkSet){throw"Syntax error, unrecognized expression: "+(cur||se=
+lector)}if(toString.call(checkSet)=3D=3D=3D"[object Array]"){if(!prune){=
+results.push.apply(results,checkSet)}else{if(context.nodeType=3D=3D=3D1)=
+{for(var i=3D0;checkSet[i]!=3Dnull;i++){if(checkSet[i]&&(checkSet[i]=3D=3D=
+=3Dtrue||checkSet[i].nodeType=3D=3D=3D1&&contains(context,checkSet[i])))=
+{results.push(set[i])}}}else{for(var i=3D0;checkSet[i]!=3Dnull;i++){if(c=
+heckSet[i]&&checkSet[i].nodeType=3D=3D=3D1){results.push(set[i])}}}}}els=
+e{makeArray(checkSet,results)}if(extra){Sizzle(extra,context,results,see=
+d);if(sortOrder){hasDuplicate=3Dfalse;results.sort(sortOrder);if(hasDupl=
+icate){for(var i=3D1;i<results.length;i++){if(results[i]=3D=3D=3Dresults=
+[i-1]){results.splice(i--,1)}}}}}return results};Sizzle.matches=3Dfuncti=
+on(expr,set){return Sizzle(expr,null,null,set)};Sizzle.find=3Dfunction(e=
+xpr,context,isXML){var set,match;if(!expr){return[]}for(var i=3D0,l=3DEx=
+pr.order.length;i<l;i++){var type=3DExpr.order[i],match;if((match=3DExpr=
+.match[type].exec(expr))){var left=3DRegExp.leftContext;if(left.substr(l=
+eft.length-1)!=3D=3D"\\"){match[1]=3D(match[1]||"").replace(/\\/g,"");se=
+t=3DExpr.find[type](match,context,isXML);if(set!=3Dnull){expr=3Dexpr.rep=
+lace(Expr.match[type],"");break}}}}if(!set){set=3Dcontext.getElementsByT=
+agName("*")}return{set:set,expr:expr}};Sizzle.filter=3Dfunction(expr,set=
+,inplace,not){var old=3Dexpr,result=3D[],curLoop=3Dset,match,anyFound,is=
+XMLFilter=3Dset&&set[0]&&isXML(set[0]);while(expr&&set.length){for(var t=
+ype in Expr.filter){if((match=3DExpr.match[type].exec(expr))!=3Dnull){va=
+r filter=3DExpr.filter[type],found,item;anyFound=3Dfalse;if(curLoop=3D=3D=
+result){result=3D[]}if(Expr.preFilter[type]){match=3DExpr.preFilter[type=
+](match,curLoop,inplace,result,not,isXMLFilter);if(!match){anyFound=3Dfo=
+und=3Dtrue}else{if(match=3D=3D=3Dtrue){continue}}}if(match){for(var i=3D=
+0;(item=3DcurLoop[i])!=3Dnull;i++){if(item){found=3Dfilter(item,match,i,=
+curLoop);var pass=3Dnot^!!found;if(inplace&&found!=3Dnull){if(pass){anyF=
+ound=3Dtrue}else{curLoop[i]=3Dfalse}}else{if(pass){result.push(item);any=
+Found=3Dtrue}}}}}if(found!=3D=3Dundefined){if(!inplace){curLoop=3Dresult=
+}expr=3Dexpr.replace(Expr.match[type],"");if(!anyFound){return[]}break}}=
+}if(expr=3D=3Dold){if(anyFound=3D=3Dnull){throw"Syntax error, unrecogniz=
+ed expression: "+expr}else{break}}old=3Dexpr}return curLoop};var Expr=3D=
+Sizzle.selectors=3D{order:["ID","NAME","TAG"],match:{ID:/#((?:[\w\u00c0-=
+\uFFFF_-]|\\.)+)/,CLASS:/\.((?:[\w\u00c0-\uFFFF_-]|\\.)+)/,NAME:/\[name=3D=
+['"]*((?:[\w\u00c0-\uFFFF_-]|\\.)+)['"]*\]/,ATTR:/\[\s*((?:[\w\u00c0-\uF=
+FFF_-]|\\.)+)\s*(?:(\S?=3D)\s*(['"]*)(.*?)\3|)\s*\]/,TAG:/^((?:[\w\u00c0=
+-\uFFFF\*_-]|\\.)+)/,CHILD:/:(only|nth|last|first)-child(?:\((even|odd|[=
+\dn+-]*)\))?/,POS:/:(nth|eq|gt|lt|first|last|even|odd)(?:\((\d*)\))?(?=3D=
+[^-]|$)/,PSEUDO:/:((?:[\w\u00c0-\uFFFF_-]|\\.)+)(?:\((['"]*)((?:\([^\)]+=
+\)|[^\2\(\)]*)+)\2\))?/},attrMap:{"class":"className","for":"htmlFor"},a=
+ttrHandle:{href:function(elem){return elem.getAttribute("href")}},relati=
+ve:{"+":function(checkSet,part,isXML){var isPartStr=3Dtypeof part=3D=3D=3D=
+"string",isTag=3DisPartStr&&!/\W/.test(part),isPartStrNotTag=3DisPartStr=
+&&!isTag;if(isTag&&!isXML){part=3Dpart.toUpperCase()}for(var i=3D0,l=3Dc=
+heckSet.length,elem;i<l;i++){if((elem=3DcheckSet[i])){while((elem=3Delem=
+.previousSibling)&&elem.nodeType!=3D=3D1){}checkSet[i]=3DisPartStrNotTag=
+||elem&&elem.nodeName=3D=3D=3Dpart?elem||false:elem=3D=3D=3Dpart}}if(isP=
+artStrNotTag){Sizzle.filter(part,checkSet,true)}},">":function(checkSet,=
+part,isXML){var isPartStr=3Dtypeof part=3D=3D=3D"string";if(isPartStr&&!=
+/\W/.test(part)){part=3DisXML?part:part.toUpperCase();for(var i=3D0,l=3D=
+checkSet.length;i<l;i++){var elem=3DcheckSet[i];if(elem){var parent=3Del=
+em.parentNode;checkSet[i]=3Dparent.nodeName=3D=3D=3Dpart?parent:false}}}=
+else{for(var i=3D0,l=3DcheckSet.length;i<l;i++){var elem=3DcheckSet[i];i=
+f(elem){checkSet[i]=3DisPartStr?elem.parentNode:elem.parentNode=3D=3D=3D=
+part}}if(isPartStr){Sizzle.filter(part,checkSet,true)}}},"":function(che=
+ckSet,part,isXML){var doneName=3Ddone++,checkFn=3DdirCheck;if(!part.matc=
+h(/\W/)){var nodeCheck=3Dpart=3DisXML?part:part.toUpperCase();checkFn=3D=
+dirNodeCheck}checkFn("parentNode",part,doneName,checkSet,nodeCheck,isXML=
+)},"~":function(checkSet,part,isXML){var doneName=3Ddone++,checkFn=3Ddir=
+Check;if(typeof part=3D=3D=3D"string"&&!part.match(/\W/)){var nodeCheck=3D=
+part=3DisXML?part:part.toUpperCase();checkFn=3DdirNodeCheck}checkFn("pre=
+viousSibling",part,doneName,checkSet,nodeCheck,isXML)}},find:{ID:functio=
+n(match,context,isXML){if(typeof context.getElementById!=3D=3D"undefined=
+"&&!isXML){var m=3Dcontext.getElementById(match[1]);return m?[m]:[]}},NA=
+ME:function(match,context,isXML){if(typeof context.getElementsByName!=3D=
+=3D"undefined"){var ret=3D[],results=3Dcontext.getElementsByName(match[1=
+]);for(var i=3D0,l=3Dresults.length;i<l;i++){if(results[i].getAttribute(=
+"name")=3D=3D=3Dmatch[1]){ret.push(results[i])}}return ret.length=3D=3D=3D=
+0?null:ret}},TAG:function(match,context){return context.getElementsByTag=
+Name(match[1])}},preFilter:{CLASS:function(match,curLoop,inplace,result,=
+not,isXML){match=3D" "+match[1].replace(/\\/g,"")+" ";if(isXML){return m=
+atch}for(var i=3D0,elem;(elem=3DcurLoop[i])!=3Dnull;i++){if(elem){if(not=
+^(elem.className&&(" "+elem.className+" ").indexOf(match)>=3D0)){if(!inp=
+lace){result.push(elem)}}else{if(inplace){curLoop[i]=3Dfalse}}}}return f=
+alse},ID:function(match){return match[1].replace(/\\/g,"")},TAG:function=
+(match,curLoop){for(var i=3D0;curLoop[i]=3D=3D=3Dfalse;i++){}return curL=
+oop[i]&&isXML(curLoop[i])?match[1]:match[1].toUpperCase()},CHILD:functio=
+n(match){if(match[1]=3D=3D"nth"){var test=3D/(-?)(\d*)n((?:\+|-)?\d*)/.e=
+xec(match[2]=3D=3D"even"&&"2n"||match[2]=3D=3D"odd"&&"2n+1"||!/\D/.test(=
+match[2])&&"0n+"+match[2]||match[2]);match[2]=3D(test[1]+(test[2]||1))-0=
+;match[3]=3Dtest[3]-0}match[0]=3Ddone++;return match},ATTR:function(matc=
+h,curLoop,inplace,result,not,isXML){var name=3Dmatch[1].replace(/\\/g,""=
+);if(!isXML&&Expr.attrMap[name]){match[1]=3DExpr.attrMap[name]}if(match[=
+2]=3D=3D=3D"~=3D"){match[4]=3D" "+match[4]+" "}return match},PSEUDO:func=
+tion(match,curLoop,inplace,result,not){if(match[1]=3D=3D=3D"not"){if(mat=
+ch[3].match(chunker).length>1||/^\w/.test(match[3])){match[3]=3DSizzle(m=
+atch[3],null,null,curLoop)}else{var ret=3DSizzle.filter(match[3],curLoop=
+,inplace,true^not);if(!inplace){result.push.apply(result,ret)}return fal=
+se}}else{if(Expr.match.POS.test(match[0])||Expr.match.CHILD.test(match[0=
+])){return true}}return match},POS:function(match){match.unshift(true);r=
+eturn match}},filters:{enabled:function(elem){return elem.disabled=3D=3D=
+=3Dfalse&&elem.type!=3D=3D"hidden"},disabled:function(elem){return elem.=
+disabled=3D=3D=3Dtrue},checked:function(elem){return elem.checked=3D=3D=3D=
+true},selected:function(elem){elem.parentNode.selectedIndex;return elem.=
+selected=3D=3D=3Dtrue},parent:function(elem){return !!elem.firstChild},e=
+mpty:function(elem){return !elem.firstChild},has:function(elem,i,match){=
+return !!Sizzle(match[3],elem).length},header:function(elem){return/h\d/=
+i.test(elem.nodeName)},text:function(elem){return"text"=3D=3D=3Delem.typ=
+e},radio:function(elem){return"radio"=3D=3D=3Delem.type},checkbox:functi=
+on(elem){return"checkbox"=3D=3D=3Delem.type},file:function(elem){return"=
+file"=3D=3D=3Delem.type},password:function(elem){return"password"=3D=3D=3D=
+elem.type},submit:function(elem){return"submit"=3D=3D=3Delem.type},image=
+:function(elem){return"image"=3D=3D=3Delem.type},reset:function(elem){re=
+turn"reset"=3D=3D=3Delem.type},button:function(elem){return"button"=3D=3D=
+=3Delem.type||elem.nodeName.toUpperCase()=3D=3D=3D"BUTTON"},input:functi=
+on(elem){return/input|select|textarea|button/i.test(elem.nodeName)}},set=
+Filters:{first:function(elem,i){return i=3D=3D=3D0},last:function(elem,i=
+,match,array){return i=3D=3D=3Darray.length-1},even:function(elem,i){ret=
+urn i%2=3D=3D=3D0},odd:function(elem,i){return i%2=3D=3D=3D1},lt:functio=
+n(elem,i,match){return i<match[3]-0},gt:function(elem,i,match){return i>=
+match[3]-0},nth:function(elem,i,match){return match[3]-0=3D=3Di},eq:func=
+tion(elem,i,match){return match[3]-0=3D=3Di}},filter:{PSEUDO:function(el=
+em,match,i,array){var name=3Dmatch[1],filter=3DExpr.filters[name];if(fil=
+ter){return filter(elem,i,match,array)}else{if(name=3D=3D=3D"contains"){=
+return(elem.textContent||elem.innerText||"").indexOf(match[3])>=3D0}else=
+{if(name=3D=3D=3D"not"){var not=3Dmatch[3];for(var i=3D0,l=3Dnot.length;=
+i<l;i++){if(not[i]=3D=3D=3Delem){return false}}return true}}}},CHILD:fun=
+ction(elem,match){var type=3Dmatch[1],node=3Delem;switch(type){case"only=
+":case"first":while(node=3Dnode.previousSibling){if(node.nodeType=3D=3D=3D=
+1){return false}}if(type=3D=3D"first"){return true}node=3Delem;case"last=
+":while(node=3Dnode.nextSibling){if(node.nodeType=3D=3D=3D1){return fals=
+e}}return true;case"nth":var first=3Dmatch[2],last=3Dmatch[3];if(first=3D=
+=3D1&&last=3D=3D0){return true}var doneName=3Dmatch[0],parent=3Delem.par=
+entNode;if(parent&&(parent.sizcache!=3D=3DdoneName||!elem.nodeIndex)){va=
+r count=3D0;for(node=3Dparent.firstChild;node;node=3Dnode.nextSibling){i=
+f(node.nodeType=3D=3D=3D1){node.nodeIndex=3D++count}}parent.sizcache=3Dd=
+oneName}var diff=3Delem.nodeIndex-last;if(first=3D=3D0){return diff=3D=3D=
+0}else{return(diff%first=3D=3D0&&diff/first>=3D0)}}},ID:function(elem,ma=
+tch){return elem.nodeType=3D=3D=3D1&&elem.getAttribute("id")=3D=3D=3Dmat=
+ch},TAG:function(elem,match){return(match=3D=3D=3D"*"&&elem.nodeType=3D=3D=
+=3D1)||elem.nodeName=3D=3D=3Dmatch},CLASS:function(elem,match){return(" =
+"+(elem.className||elem.getAttribute("class"))+" ").indexOf(match)>-1},A=
+TTR:function(elem,match){var name=3Dmatch[1],result=3DExpr.attrHandle[na=
+me]?Expr.attrHandle[name](elem):elem[name]!=3Dnull?elem[name]:elem.getAt=
+tribute(name),value=3Dresult+"",type=3Dmatch[2],check=3Dmatch[4];return =
+result=3D=3Dnull?type=3D=3D=3D"!=3D":type=3D=3D=3D"=3D"?value=3D=3D=3Dch=
+eck:type=3D=3D=3D"*=3D"?value.indexOf(check)>=3D0:type=3D=3D=3D"~=3D"?("=
+ "+value+" ").indexOf(check)>=3D0:!check?value&&result!=3D=3Dfalse:type=3D=
+=3D=3D"!=3D"?value!=3Dcheck:type=3D=3D=3D"^=3D"?value.indexOf(check)=3D=3D=
+=3D0:type=3D=3D=3D"$=3D"?value.substr(value.length-check.length)=3D=3D=3D=
+check:type=3D=3D=3D"|=3D"?value=3D=3D=3Dcheck||value.substr(0,check.leng=
+th+1)=3D=3D=3Dcheck+"-":false},POS:function(elem,match,i,array){var name=
+=3Dmatch[2],filter=3DExpr.setFilters[name];if(filter){return filter(elem=
+,i,match,array)}}}};var origPOS=3DExpr.match.POS;for(var type in Expr.ma=
+tch){Expr.match[type]=3DRegExp(Expr.match[type].source+/(?![^\[]*\])(?![=
+^\(]*\))/.source)}var makeArray=3Dfunction(array,results){array=3DArray.=
+prototype.slice.call(array);if(results){results.push.apply(results,array=
+);return results}return array};try{Array.prototype.slice.call(document.d=
+ocumentElement.childNodes)}catch(e){makeArray=3Dfunction(array,results){=
+var ret=3Dresults||[];if(toString.call(array)=3D=3D=3D"[object Array]"){=
+Array.prototype.push.apply(ret,array)}else{if(typeof array.length=3D=3D=3D=
+"number"){for(var i=3D0,l=3Darray.length;i<l;i++){ret.push(array[i])}}el=
+se{for(var i=3D0;array[i];i++){ret.push(array[i])}}}return ret}}var sort=
+Order;if(document.documentElement.compareDocumentPosition){sortOrder=3Df=
+unction(a,b){var ret=3Da.compareDocumentPosition(b)&4?-1:a=3D=3D=3Db?0:1=
+;if(ret=3D=3D=3D0){hasDuplicate=3Dtrue}return ret}}else{if("sourceIndex"=
+ in document.documentElement){sortOrder=3Dfunction(a,b){var ret=3Da.sour=
+ceIndex-b.sourceIndex;if(ret=3D=3D=3D0){hasDuplicate=3Dtrue}return ret}}=
+else{if(document.createRange){sortOrder=3Dfunction(a,b){var aRange=3Da.o=
+wnerDocument.createRange(),bRange=3Db.ownerDocument.createRange();aRange=
+.selectNode(a);aRange.collapse(true);bRange.selectNode(b);bRange.collaps=
+e(true);var ret=3DaRange.compareBoundaryPoints(Range.START_TO_END,bRange=
+);if(ret=3D=3D=3D0){hasDuplicate=3Dtrue}return ret}}}}(function(){var fo=
+rm=3Ddocument.createElement("form"),id=3D"script"+(new Date).getTime();f=
+orm.innerHTML=3D"<input name=3D'"+id+"'/>";var root=3Ddocument.documentE=
+lement;root.insertBefore(form,root.firstChild);if(!!document.getElementB=
+yId(id)){Expr.find.ID=3Dfunction(match,context,isXML){if(typeof context.=
+getElementById!=3D=3D"undefined"&&!isXML){var m=3Dcontext.getElementById=
+(match[1]);return m?m.id=3D=3D=3Dmatch[1]||typeof m.getAttributeNode!=3D=
+=3D"undefined"&&m.getAttributeNode("id").nodeValue=3D=3D=3Dmatch[1]?[m]:=
+undefined:[]}};Expr.filter.ID=3Dfunction(elem,match){var node=3Dtypeof e=
+lem.getAttributeNode!=3D=3D"undefined"&&elem.getAttributeNode("id");retu=
+rn elem.nodeType=3D=3D=3D1&&node&&node.nodeValue=3D=3D=3Dmatch}}root.rem=
+oveChild(form)})();(function(){var div=3Ddocument.createElement("div");d=
+iv.appendChild(document.createComment(""));if(div.getElementsByTagName("=
+*").length>0){Expr.find.TAG=3Dfunction(match,context){var results=3Dcont=
+ext.getElementsByTagName(match[1]);if(match[1]=3D=3D=3D"*"){var tmp=3D[]=
+;for(var i=3D0;results[i];i++){if(results[i].nodeType=3D=3D=3D1){tmp.pus=
+h(results[i])}}results=3Dtmp}return results}}div.innerHTML=3D"<a href=3D=
+'#'></a>";if(div.firstChild&&typeof div.firstChild.getAttribute!=3D=3D"u=
+ndefined"&&div.firstChild.getAttribute("href")!=3D=3D"#"){Expr.attrHandl=
+e.href=3Dfunction(elem){return elem.getAttribute("href",2)}}})();if(docu=
+ment.querySelectorAll){(function(){var oldSizzle=3DSizzle,div=3Ddocument=
+.createElement("div");div.innerHTML=3D"<p class=3D'TEST'></p>";if(div.qu=
+erySelectorAll&&div.querySelectorAll(".TEST").length=3D=3D=3D0){return }=
+Sizzle=3Dfunction(query,context,extra,seed){context=3Dcontext||document;=
+if(!seed&&context.nodeType=3D=3D=3D9&&!isXML(context)){try{return makeAr=
+ray(context.querySelectorAll(query),extra)}catch(e){}}return oldSizzle(q=
+uery,context,extra,seed)};Sizzle.find=3DoldSizzle.find;Sizzle.filter=3Do=
+ldSizzle.filter;Sizzle.selectors=3DoldSizzle.selectors;Sizzle.matches=3D=
+oldSizzle.matches})()}if(document.getElementsByClassName&&document.docum=
+entElement.getElementsByClassName){(function(){var div=3Ddocument.create=
+Element("div");div.innerHTML=3D"<div class=3D'test e'></div><div class=3D=
+'test'></div>";if(div.getElementsByClassName("e").length=3D=3D=3D0){retu=
+rn }div.lastChild.className=3D"e";if(div.getElementsByClassName("e").len=
+gth=3D=3D=3D1){return }Expr.order.splice(1,0,"CLASS");Expr.find.CLASS=3D=
+function(match,context,isXML){if(typeof context.getElementsByClassName!=3D=
+=3D"undefined"&&!isXML){return context.getElementsByClassName(match[1])}=
+}})()}function dirNodeCheck(dir,cur,doneName,checkSet,nodeCheck,isXML){v=
+ar sibDir=3Ddir=3D=3D"previousSibling"&&!isXML;for(var i=3D0,l=3DcheckSe=
+t.length;i<l;i++){var elem=3DcheckSet[i];if(elem){if(sibDir&&elem.nodeTy=
+pe=3D=3D=3D1){elem.sizcache=3DdoneName;elem.sizset=3Di}elem=3Delem[dir];=
+var match=3Dfalse;while(elem){if(elem.sizcache=3D=3D=3DdoneName){match=3D=
+checkSet[elem.sizset];break}if(elem.nodeType=3D=3D=3D1&&!isXML){elem.siz=
+cache=3DdoneName;elem.sizset=3Di}if(elem.nodeName=3D=3D=3Dcur){match=3De=
+lem;break}elem=3Delem[dir]}checkSet[i]=3Dmatch}}}function dirCheck(dir,c=
+ur,doneName,checkSet,nodeCheck,isXML){var sibDir=3Ddir=3D=3D"previousSib=
+ling"&&!isXML;for(var i=3D0,l=3DcheckSet.length;i<l;i++){var elem=3Dchec=
+kSet[i];if(elem){if(sibDir&&elem.nodeType=3D=3D=3D1){elem.sizcache=3Ddon=
+eName;elem.sizset=3Di}elem=3Delem[dir];var match=3Dfalse;while(elem){if(=
+elem.sizcache=3D=3D=3DdoneName){match=3DcheckSet[elem.sizset];break}if(e=
+lem.nodeType=3D=3D=3D1){if(!isXML){elem.sizcache=3DdoneName;elem.sizset=3D=
+i}if(typeof cur!=3D=3D"string"){if(elem=3D=3D=3Dcur){match=3Dtrue;break}=
+}else{if(Sizzle.filter(cur,[elem]).length>0){match=3Delem;break}}}elem=3D=
+elem[dir]}checkSet[i]=3Dmatch}}}var contains=3Ddocument.compareDocumentP=
+osition?function(a,b){return a.compareDocumentPosition(b)&16}:function(a=
+,b){return a!=3D=3Db&&(a.contains?a.contains(b):true)};var isXML=3Dfunct=
+ion(elem){return elem.nodeType=3D=3D=3D9&&elem.documentElement.nodeName!=
+=3D=3D"HTML"||!!elem.ownerDocument&&isXML(elem.ownerDocument)};var posPr=
+ocess=3Dfunction(selector,context){var tmpSet=3D[],later=3D"",match,root=
+=3Dcontext.nodeType?[context]:context;while((match=3DExpr.match.PSEUDO.e=
+xec(selector))){later+=3Dmatch[0];selector=3Dselector.replace(Expr.match=
+.PSEUDO,"")}selector=3DExpr.relative[selector]?selector+"*":selector;for=
+(var i=3D0,l=3Droot.length;i<l;i++){Sizzle(selector,root[i],tmpSet)}retu=
+rn Sizzle.filter(later,tmpSet)};jQuery.find=3DSizzle;jQuery.filter=3DSiz=
+zle.filter;jQuery.expr=3DSizzle.selectors;jQuery.expr[":"]=3DjQuery.expr=
+.filters;Sizzle.selectors.filters.hidden=3Dfunction(elem){return elem.of=
+fsetWidth=3D=3D=3D0||elem.offsetHeight=3D=3D=3D0};Sizzle.selectors.filte=
+rs.visible=3Dfunction(elem){return elem.offsetWidth>0||elem.offsetHeight=
+>0};Sizzle.selectors.filters.animated=3Dfunction(elem){return jQuery.gre=
+p(jQuery.timers,function(fn){return elem=3D=3D=3Dfn.elem}).length};jQuer=
+y.multiFilter=3Dfunction(expr,elems,not){if(not){expr=3D":not("+expr+")"=
+}return Sizzle.matches(expr,elems)};jQuery.dir=3Dfunction(elem,dir){var =
+matched=3D[],cur=3Delem[dir];while(cur&&cur!=3Ddocument){if(cur.nodeType=
+=3D=3D1){matched.push(cur)}cur=3Dcur[dir]}return matched};jQuery.nth=3Df=
+unction(cur,result,dir,elem){result=3Dresult||1;var num=3D0;for(;cur;cur=
+=3Dcur[dir]){if(cur.nodeType=3D=3D1&&++num=3D=3Dresult){break}}return cu=
+r};jQuery.sibling=3Dfunction(n,elem){var r=3D[];for(;n;n=3Dn.nextSibling=
+){if(n.nodeType=3D=3D1&&n!=3Delem){r.push(n)}}return r};return ;window.S=
+izzle=3DSizzle})();jQuery.event=3D{add:function(elem,types,handler,data)=
+{if(elem.nodeType=3D=3D3||elem.nodeType=3D=3D8){return }if(elem.setInter=
+val&&elem!=3Dwindow){elem=3Dwindow}if(!handler.guid){handler.guid=3Dthis=
+.guid++}if(data!=3D=3Dundefined){var fn=3Dhandler;handler=3Dthis.proxy(f=
+n);handler.data=3Ddata}var events=3DjQuery.data(elem,"events")||jQuery.d=
+ata(elem,"events",{}),handle=3DjQuery.data(elem,"handle")||jQuery.data(e=
+lem,"handle",function(){return typeof jQuery!=3D=3D"undefined"&&!jQuery.=
+event.triggered?jQuery.event.handle.apply(arguments.callee.elem,argument=
+s):undefined});handle.elem=3Delem;jQuery.each(types.split(/\s+/),functio=
+n(index,type){var namespaces=3Dtype.split(".");type=3Dnamespaces.shift()=
+;handler.type=3Dnamespaces.slice().sort().join(".");var handlers=3Devent=
+s[type];if(jQuery.event.specialAll[type]){jQuery.event.specialAll[type].=
+setup.call(elem,data,namespaces)}if(!handlers){handlers=3Devents[type]=3D=
+{};if(!jQuery.event.special[type]||jQuery.event.special[type].setup.call=
+(elem,data,namespaces)=3D=3D=3Dfalse){if(elem.addEventListener){elem.add=
+EventListener(type,handle,false)}else{if(elem.attachEvent){elem.attachEv=
+ent("on"+type,handle)}}}}handlers[handler.guid]=3Dhandler;jQuery.event.g=
+lobal[type]=3Dtrue});elem=3Dnull},guid:1,global:{},remove:function(elem,=
+types,handler){if(elem.nodeType=3D=3D3||elem.nodeType=3D=3D8){return }va=
+r events=3DjQuery.data(elem,"events"),ret,index;if(events){if(types=3D=3D=
+=3Dundefined||(typeof types=3D=3D=3D"string"&&types.charAt(0)=3D=3D"."))=
+{for(var type in events){this.remove(elem,type+(types||""))}}else{if(typ=
+es.type){handler=3Dtypes.handler;types=3Dtypes.type}jQuery.each(types.sp=
+lit(/\s+/),function(index,type){var namespaces=3Dtype.split(".");type=3D=
+namespaces.shift();var namespace=3DRegExp("(^|\\.)"+namespaces.slice().s=
+ort().join(".*\\.")+"(\\.|$)");if(events[type]){if(handler){delete event=
+s[type][handler.guid]}else{for(var handle in events[type]){if(namespace.=
+test(events[type][handle].type)){delete events[type][handle]}}}if(jQuery=
+.event.specialAll[type]){jQuery.event.specialAll[type].teardown.call(ele=
+m,namespaces)}for(ret in events[type]){break}if(!ret){if(!jQuery.event.s=
+pecial[type]||jQuery.event.special[type].teardown.call(elem,namespaces)=3D=
+=3D=3Dfalse){if(elem.removeEventListener){elem.removeEventListener(type,=
+jQuery.data(elem,"handle"),false)}else{if(elem.detachEvent){elem.detachE=
+vent("on"+type,jQuery.data(elem,"handle"))}}}ret=3Dnull;delete events[ty=
+pe]}}})}for(ret in events){break}if(!ret){var handle=3DjQuery.data(elem,=
+"handle");if(handle){handle.elem=3Dnull}jQuery.removeData(elem,"events")=
+;jQuery.removeData(elem,"handle")}}},trigger:function(event,data,elem,bu=
+bbling){var type=3Devent.type||event;if(!bubbling){event=3Dtypeof event=3D=
+=3D=3D"object"?event[expando]?event:jQuery.extend(jQuery.Event(type),eve=
+nt):jQuery.Event(type);if(type.indexOf("!")>=3D0){event.type=3Dtype=3Dty=
+pe.slice(0,-1);event.exclusive=3Dtrue}if(!elem){event.stopPropagation();=
+if(this.global[type]){jQuery.each(jQuery.cache,function(){if(this.events=
+&&this.events[type]){jQuery.event.trigger(event,data,this.handle.elem)}}=
+)}}if(!elem||elem.nodeType=3D=3D3||elem.nodeType=3D=3D8){return undefine=
+d}event.result=3Dundefined;event.target=3Delem;data=3DjQuery.makeArray(d=
+ata);data.unshift(event)}event.currentTarget=3Delem;var handle=3DjQuery.=
+data(elem,"handle");if(handle){handle.apply(elem,data)}if((!elem[type]||=
+(jQuery.nodeName(elem,"a")&&type=3D=3D"click"))&&elem["on"+type]&&elem["=
+on"+type].apply(elem,data)=3D=3D=3Dfalse){event.result=3Dfalse}if(!bubbl=
+ing&&elem[type]&&!event.isDefaultPrevented()&&!(jQuery.nodeName(elem,"a"=
+)&&type=3D=3D"click")){this.triggered=3Dtrue;try{elem[type]()}catch(e){}=
+}this.triggered=3Dfalse;if(!event.isPropagationStopped()){var parent=3De=
+lem.parentNode||elem.ownerDocument;if(parent){jQuery.event.trigger(event=
+,data,parent,true)}}},handle:function(event){var all,handlers;event=3Dar=
+guments[0]=3DjQuery.event.fix(event||window.event);event.currentTarget=3D=
+this;var namespaces=3Devent.type.split(".");event.type=3Dnamespaces.shif=
+t();all=3D!namespaces.length&&!event.exclusive;var namespace=3DRegExp("(=
+^|\\.)"+namespaces.slice().sort().join(".*\\.")+"(\\.|$)");handlers=3D(j=
+Query.data(this,"events")||{})[event.type];for(var j in handlers){var ha=
+ndler=3Dhandlers[j];if(all||namespace.test(handler.type)){event.handler=3D=
+handler;event.data=3Dhandler.data;var ret=3Dhandler.apply(this,arguments=
+);if(ret!=3D=3Dundefined){event.result=3Dret;if(ret=3D=3D=3Dfalse){event=
+.preventDefault();event.stopPropagation()}}if(event.isImmediatePropagati=
+onStopped()){break}}}},props:"altKey attrChange attrName bubbles button =
+cancelable charCode clientX clientY ctrlKey currentTarget data detail ev=
+entPhase fromElement handler keyCode metaKey newValue originalTarget pag=
+eX pageY prevValue relatedNode relatedTarget screenX screenY shiftKey sr=
+cElement target toElement view wheelDelta which".split(" "),fix:function=
+(event){if(event[expando]){return event}var originalEvent=3Devent;event=3D=
+jQuery.Event(originalEvent);for(var i=3Dthis.props.length,prop;i;){prop=3D=
+this.props[--i];event[prop]=3DoriginalEvent[prop]}if(!event.target){even=
+t.target=3Devent.srcElement||document}if(event.target.nodeType=3D=3D3){e=
+vent.target=3Devent.target.parentNode}if(!event.relatedTarget&&event.fro=
+mElement){event.relatedTarget=3Devent.fromElement=3D=3Devent.target?even=
+t.toElement:event.fromElement}if(event.pageX=3D=3Dnull&&event.clientX!=3D=
+null){var doc=3Ddocument.documentElement,body=3Ddocument.body;event.page=
+X=3Devent.clientX+(doc&&doc.scrollLeft||body&&body.scrollLeft||0)-(doc.c=
+lientLeft||0);event.pageY=3Devent.clientY+(doc&&doc.scrollTop||body&&bod=
+y.scrollTop||0)-(doc.clientTop||0)}if(!event.which&&((event.charCode||ev=
+ent.charCode=3D=3D=3D0)?event.charCode:event.keyCode)){event.which=3Deve=
+nt.charCode||event.keyCode}if(!event.metaKey&&event.ctrlKey){event.metaK=
+ey=3Devent.ctrlKey}if(!event.which&&event.button){event.which=3D(event.b=
+utton&1?1:(event.button&2?3:(event.button&4?2:0)))}return event},proxy:f=
+unction(fn,proxy){proxy=3Dproxy||function(){return fn.apply(this,argumen=
+ts)};proxy.guid=3Dfn.guid=3Dfn.guid||proxy.guid||this.guid++;return prox=
+y},special:{ready:{setup:bindReady,teardown:function(){}}},specialAll:{l=
+ive:{setup:function(selector,namespaces){jQuery.event.add(this,namespace=
+s[0],liveHandler)},teardown:function(namespaces){if(namespaces.length){v=
+ar remove=3D0,name=3DRegExp("(^|\\.)"+namespaces[0]+"(\\.|$)");jQuery.ea=
+ch((jQuery.data(this,"events").live||{}),function(){if(name.test(this.ty=
+pe)){remove++}});if(remove<1){jQuery.event.remove(this,namespaces[0],liv=
+eHandler)}}}}}};jQuery.Event=3Dfunction(src){if(!this.preventDefault){re=
+turn new jQuery.Event(src)}if(src&&src.type){this.originalEvent=3Dsrc;th=
+is.type=3Dsrc.type}else{this.type=3Dsrc}this.timeStamp=3Dnow();this[expa=
+ndo]=3Dtrue};function returnFalse(){return false}function returnTrue(){r=
+eturn true}jQuery.Event.prototype=3D{preventDefault:function(){this.isDe=
+faultPrevented=3DreturnTrue;var e=3Dthis.originalEvent;if(!e){return }if=
+(e.preventDefault){e.preventDefault()}e.returnValue=3Dfalse},stopPropaga=
+tion:function(){this.isPropagationStopped=3DreturnTrue;var e=3Dthis.orig=
+inalEvent;if(!e){return }if(e.stopPropagation){e.stopPropagation()}e.can=
+celBubble=3Dtrue},stopImmediatePropagation:function(){this.isImmediatePr=
+opagationStopped=3DreturnTrue;this.stopPropagation()},isDefaultPrevented=
+:returnFalse,isPropagationStopped:returnFalse,isImmediatePropagationStop=
+ped:returnFalse};var withinElement=3Dfunction(event){var parent=3Devent.=
+relatedTarget;while(parent&&parent!=3Dthis){try{parent=3Dparent.parentNo=
+de}catch(e){parent=3Dthis}}if(parent!=3Dthis){event.type=3Devent.data;jQ=
+uery.event.handle.apply(this,arguments)}};jQuery.each({mouseover:"mousee=
+nter",mouseout:"mouseleave"},function(orig,fix){jQuery.event.special[fix=
+]=3D{setup:function(){jQuery.event.add(this,orig,withinElement,fix)},tea=
+rdown:function(){jQuery.event.remove(this,orig,withinElement)}}});jQuery=
+.fn.extend({bind:function(type,data,fn){return type=3D=3D"unload"?this.o=
+ne(type,data,fn):this.each(function(){jQuery.event.add(this,type,fn||dat=
+a,fn&&data)})},one:function(type,data,fn){var one=3DjQuery.event.proxy(f=
+n||data,function(event){jQuery(this).unbind(event,one);return(fn||data).=
+apply(this,arguments)});return this.each(function(){jQuery.event.add(thi=
+s,type,one,fn&&data)})},unbind:function(type,fn){return this.each(functi=
+on(){jQuery.event.remove(this,type,fn)})},trigger:function(type,data){re=
+turn this.each(function(){jQuery.event.trigger(type,data,this)})},trigge=
+rHandler:function(type,data){if(this[0]){var event=3DjQuery.Event(type);=
+event.preventDefault();event.stopPropagation();jQuery.event.trigger(even=
+t,data,this[0]);return event.result}},toggle:function(fn){var args=3Darg=
+uments,i=3D1;while(i<args.length){jQuery.event.proxy(fn,args[i++])}retur=
+n this.click(jQuery.event.proxy(fn,function(event){this.lastToggle=3D(th=
+is.lastToggle||0)%i;event.preventDefault();return args[this.lastToggle++=
+].apply(this,arguments)||false}))},hover:function(fnOver,fnOut){return t=
+his.mouseenter(fnOver).mouseleave(fnOut)},ready:function(fn){bindReady()=
+;if(jQuery.isReady){fn.call(document,jQuery)}else{jQuery.readyList.push(=
+fn)}return this},live:function(type,fn){var proxy=3DjQuery.event.proxy(f=
+n);proxy.guid+=3Dthis.selector+type;jQuery(document).bind(liveConvert(ty=
+pe,this.selector),this.selector,proxy);return this},die:function(type,fn=
+){jQuery(document).unbind(liveConvert(type,this.selector),fn?{guid:fn.gu=
+id+this.selector+type}:null);return this}});function liveHandler(event){=
+var check=3DRegExp("(^|\\.)"+event.type+"(\\.|$)"),stop=3Dtrue,elems=3D[=
+];jQuery.each(jQuery.data(this,"events").live||[],function(i,fn){if(chec=
+k.test(fn.type)){var elem=3DjQuery(event.target).closest(fn.data)[0];if(=
+elem){elems.push({elem:elem,fn:fn})}}});elems.sort(function(a,b){return =
+jQuery.data(a.elem,"closest")-jQuery.data(b.elem,"closest")});jQuery.eac=
+h(elems,function(){if(this.fn.call(this.elem,event,this.fn.data)=3D=3D=3D=
+false){return(stop=3Dfalse)}});return stop}function liveConvert(type,sel=
+ector){return["live",type,selector.replace(/\./g,"`").replace(/ /g,"|")]=
+.join(".")}jQuery.extend({isReady:false,readyList:[],ready:function(){if=
+(!jQuery.isReady){jQuery.isReady=3Dtrue;if(jQuery.readyList){jQuery.each=
+(jQuery.readyList,function(){this.call(document,jQuery)});jQuery.readyLi=
+st=3Dnull}jQuery(document).triggerHandler("ready")}}});var readyBound=3D=
+false;function bindReady(){if(readyBound){return }readyBound=3Dtrue;if(d=
+ocument.addEventListener){document.addEventListener("DOMContentLoaded",f=
+unction(){document.removeEventListener("DOMContentLoaded",arguments.call=
+ee,false);jQuery.ready()},false)}else{if(document.attachEvent){document.=
+attachEvent("onreadystatechange",function(){if(document.readyState=3D=3D=
+=3D"complete"){document.detachEvent("onreadystatechange",arguments.calle=
+e);jQuery.ready()}});if(document.documentElement.doScroll&&window=3D=3Dw=
+indow.top){(function(){if(jQuery.isReady){return }try{document.documentE=
+lement.doScroll("left")}catch(error){setTimeout(arguments.callee,0);retu=
+rn }jQuery.ready()})()}}}jQuery.event.add(window,"load",jQuery.ready)}jQ=
+uery.each(("blur,focus,load,resize,scroll,unload,click,dblclick,mousedow=
+n,mouseup,mousemove,mouseover,mouseout,mouseenter,mouseleave,change,sele=
+ct,submit,keydown,keypress,keyup,error").split(","),function(i,name){jQu=
+ery.fn[name]=3Dfunction(fn){return fn?this.bind(name,fn):this.trigger(na=
+me)}});jQuery(window).bind("unload",function(){for(var id in jQuery.cach=
+e){if(id!=3D1&&jQuery.cache[id].handle){jQuery.event.remove(jQuery.cache=
+[id].handle.elem)}}});(function(){jQuery.support=3D{};var root=3Ddocumen=
+t.documentElement,script=3Ddocument.createElement("script"),div=3Ddocume=
+nt.createElement("div"),id=3D"script"+(new Date).getTime();div.style.dis=
+play=3D"none";div.innerHTML=3D'   <link/><table></table><a href=3D"/a" s=
+tyle=3D"color:red;float:left;opacity:.5;">a</a><select><option>text</opt=
+ion></select><object><param/></object>';var all=3Ddiv.getElementsByTagNa=
+me("*"),a=3Ddiv.getElementsByTagName("a")[0];if(!all||!all.length||!a){r=
+eturn }jQuery.support=3D{leadingWhitespace:div.firstChild.nodeType=3D=3D=
+3,tbody:!div.getElementsByTagName("tbody").length,objectAll:!!div.getEle=
+mentsByTagName("object")[0].getElementsByTagName("*").length,htmlSeriali=
+ze:!!div.getElementsByTagName("link").length,style:/red/.test(a.getAttri=
+bute("style")),hrefNormalized:a.getAttribute("href")=3D=3D=3D"/a",opacit=
+y:a.style.opacity=3D=3D=3D"0.5",cssFloat:!!a.style.cssFloat,scriptEval:f=
+alse,noCloneEvent:true,boxModel:null};script.type=3D"text/javascript";tr=
+y{script.appendChild(document.createTextNode("window."+id+"=3D1;"))}catc=
+h(e){}root.insertBefore(script,root.firstChild);if(window[id]){jQuery.su=
+pport.scriptEval=3Dtrue;delete window[id]}root.removeChild(script);if(di=
+v.attachEvent&&div.fireEvent){div.attachEvent("onclick",function(){jQuer=
+y.support.noCloneEvent=3Dfalse;div.detachEvent("onclick",arguments.calle=
+e)});div.cloneNode(true).fireEvent("onclick")}jQuery(function(){var div=3D=
+document.createElement("div");div.style.width=3Ddiv.style.paddingLeft=3D=
+"1px";document.body.appendChild(div);jQuery.boxModel=3DjQuery.support.bo=
+xModel=3Ddiv.offsetWidth=3D=3D=3D2;document.body.removeChild(div).style.=
+display=3D"none"})})();var styleFloat=3DjQuery.support.cssFloat?"cssFloa=
+t":"styleFloat";jQuery.props=3D{"for":"htmlFor","class":"className","flo=
+at":styleFloat,cssFloat:styleFloat,styleFloat:styleFloat,readonly:"readO=
+nly",maxlength:"maxLength",cellspacing:"cellSpacing",rowspan:"rowSpan",t=
+abindex:"tabIndex"};jQuery.fn.extend({_load:jQuery.fn.load,load:function=
+(url,params,callback){if(typeof url!=3D=3D"string"){return this._load(ur=
+l)}var off=3Durl.indexOf(" ");if(off>=3D0){var selector=3Durl.slice(off,=
+url.length);url=3Durl.slice(0,off)}var type=3D"GET";if(params){if(jQuery=
+.isFunction(params)){callback=3Dparams;params=3Dnull}else{if(typeof para=
+ms=3D=3D=3D"object"){params=3DjQuery.param(params);type=3D"POST"}}}var s=
+elf=3Dthis;jQuery.ajax({url:url,type:type,dataType:"html",data:params,co=
+mplete:function(res,status){if(status=3D=3D"success"||status=3D=3D"notmo=
+dified"){self.html(selector?jQuery("<div/>").append(res.responseText.rep=
+lace(/<script(.|\s)*?\/script>/g,"")).find(selector):res.responseText)}i=
+f(callback){self.each(callback,[res.responseText,status,res])}}});return=
+ this},serialize:function(){return jQuery.param(this.serializeArray())},=
+serializeArray:function(){return this.map(function(){return this.element=
+s?jQuery.makeArray(this.elements):this}).filter(function(){return this.n=
+ame&&!this.disabled&&(this.checked||/select|textarea/i.test(this.nodeNam=
+e)||/text|hidden|password|search/i.test(this.type))}).map(function(i,ele=
+m){var val=3DjQuery(this).val();return val=3D=3Dnull?null:jQuery.isArray=
+(val)?jQuery.map(val,function(val,i){return{name:elem.name,value:val}}):=
+{name:elem.name,value:val}}).get()}});jQuery.each("ajaxStart,ajaxStop,aj=
+axComplete,ajaxError,ajaxSuccess,ajaxSend".split(","),function(i,o){jQue=
+ry.fn[o]=3Dfunction(f){return this.bind(o,f)}});var jsc=3Dnow();jQuery.e=
+xtend({get:function(url,data,callback,type){if(jQuery.isFunction(data)){=
+callback=3Ddata;data=3Dnull}return jQuery.ajax({type:"GET",url:url,data:=
+data,success:callback,dataType:type})},getScript:function(url,callback){=
+return jQuery.get(url,null,callback,"script")},getJSON:function(url,data=
+,callback){return jQuery.get(url,data,callback,"json")},post:function(ur=
+l,data,callback,type){if(jQuery.isFunction(data)){callback=3Ddata;data=3D=
+{}}return jQuery.ajax({type:"POST",url:url,data:data,success:callback,da=
+taType:type})},ajaxSetup:function(settings){jQuery.extend(jQuery.ajaxSet=
+tings,settings)},ajaxSettings:{url:location.href,global:true,type:"GET",=
+contentType:"application/x-www-form-urlencoded",processData:true,async:t=
+rue,xhr:function(){return window.ActiveXObject?new ActiveXObject("Micros=
+oft.XMLHTTP"):new XMLHttpRequest()},accepts:{xml:"application/xml, text/=
+xml",html:"text/html",script:"text/javascript, application/javascript",j=
+son:"application/json, text/javascript",text:"text/plain",_default:"*/*"=
+}},lastModified:{},ajax:function(s){s=3DjQuery.extend(true,s,jQuery.exte=
+nd(true,{},jQuery.ajaxSettings,s));var jsonp,jsre=3D/=3D\?(&|$)/g,status=
+,data,type=3Ds.type.toUpperCase();if(s.data&&s.processData&&typeof s.dat=
+a!=3D=3D"string"){s.data=3DjQuery.param(s.data)}if(s.dataType=3D=3D"json=
+p"){if(type=3D=3D"GET"){if(!s.url.match(jsre)){s.url+=3D(s.url.match(/\?=
+/)?"&":"?")+(s.jsonp||"callback")+"=3D?"}}else{if(!s.data||!s.data.match=
+(jsre)){s.data=3D(s.data?s.data+"&":"")+(s.jsonp||"callback")+"=3D?"}}s.=
+dataType=3D"json"}if(s.dataType=3D=3D"json"&&(s.data&&s.data.match(jsre)=
+||s.url.match(jsre))){jsonp=3D"jsonp"+jsc++;if(s.data){s.data=3D(s.data+=
+"").replace(jsre,"=3D"+jsonp+"$1")}s.url=3Ds.url.replace(jsre,"=3D"+json=
+p+"$1");s.dataType=3D"script";window[jsonp]=3Dfunction(tmp){data=3Dtmp;s=
+uccess();complete();window[jsonp]=3Dundefined;try{delete window[jsonp]}c=
+atch(e){}if(head){head.removeChild(script)}}}if(s.dataType=3D=3D"script"=
+&&s.cache=3D=3Dnull){s.cache=3Dfalse}if(s.cache=3D=3D=3Dfalse&&type=3D=3D=
+"GET"){var ts=3Dnow();var ret=3Ds.url.replace(/(\?|&)_=3D.*?(&|$)/,"$1_=3D=
+"+ts+"$2");s.url=3Dret+((ret=3D=3Ds.url)?(s.url.match(/\?/)?"&":"?")+"_=3D=
+"+ts:"")}if(s.data&&type=3D=3D"GET"){s.url+=3D(s.url.match(/\?/)?"&":"?"=
+)+s.data;s.data=3Dnull}if(s.global&&!jQuery.active++){jQuery.event.trigg=
+er("ajaxStart")}var parts=3D/^(\w+:)?\/\/([^\/?#]+)/.exec(s.url);if(s.da=
+taType=3D=3D"script"&&type=3D=3D"GET"&&parts&&(parts[1]&&parts[1]!=3Dloc=
+ation.protocol||parts[2]!=3Dlocation.host)){var head=3Ddocument.getEleme=
+ntsByTagName("head")[0];var script=3Ddocument.createElement("script");sc=
+ript.src=3Ds.url;if(s.scriptCharset){script.charset=3Ds.scriptCharset}if=
+(!jsonp){var done=3Dfalse;script.onload=3Dscript.onreadystatechange=3Dfu=
+nction(){if(!done&&(!this.readyState||this.readyState=3D=3D"loaded"||thi=
+s.readyState=3D=3D"complete")){done=3Dtrue;success();complete();script.o=
+nload=3Dscript.onreadystatechange=3Dnull;head.removeChild(script)}}}head=
+.appendChild(script);return undefined}var requestDone=3Dfalse;var xhr=3D=
+s.xhr();if(s.username){xhr.open(type,s.url,s.async,s.username,s.password=
+)}else{xhr.open(type,s.url,s.async)}try{if(s.data){xhr.setRequestHeader(=
+"Content-Type",s.contentType)}if(s.ifModified){xhr.setRequestHeader("If-=
+Modified-Since",jQuery.lastModified[s.url]||"Thu, 01 Jan 1970 00:00:00 G=
+MT")}xhr.setRequestHeader("X-Requested-With","XMLHttpRequest");xhr.setRe=
+questHeader("Accept",s.dataType&&s.accepts[s.dataType]?s.accepts[s.dataT=
+ype]+", */*":s.accepts._default)}catch(e){}if(s.beforeSend&&s.beforeSend=
+(xhr,s)=3D=3D=3Dfalse){if(s.global&&!--jQuery.active){jQuery.event.trigg=
+er("ajaxStop")}xhr.abort();return false}if(s.global){jQuery.event.trigge=
+r("ajaxSend",[xhr,s])}var onreadystatechange=3Dfunction(isTimeout){if(xh=
+r.readyState=3D=3D0){if(ival){clearInterval(ival);ival=3Dnull;if(s.globa=
+l&&!--jQuery.active){jQuery.event.trigger("ajaxStop")}}}else{if(!request=
+Done&&xhr&&(xhr.readyState=3D=3D4||isTimeout=3D=3D"timeout")){requestDon=
+e=3Dtrue;if(ival){clearInterval(ival);ival=3Dnull}status=3DisTimeout=3D=3D=
+"timeout"?"timeout":!jQuery.httpSuccess(xhr)?"error":s.ifModified&&jQuer=
+y.httpNotModified(xhr,s.url)?"notmodified":"success";if(status=3D=3D"suc=
+cess"){try{data=3DjQuery.httpData(xhr,s.dataType,s)}catch(e){status=3D"p=
+arsererror"}}if(status=3D=3D"success"){var modRes;try{modRes=3Dxhr.getRe=
+sponseHeader("Last-Modified")}catch(e){}if(s.ifModified&&modRes){jQuery.=
+lastModified[s.url]=3DmodRes}if(!jsonp){success()}}else{jQuery.handleErr=
+or(s,xhr,status)}complete();if(isTimeout){xhr.abort()}if(s.async){xhr=3D=
+null}}}};if(s.async){var ival=3DsetInterval(onreadystatechange,13);if(s.=
+timeout>0){setTimeout(function(){if(xhr&&!requestDone){onreadystatechang=
+e("timeout")}},s.timeout)}}try{xhr.send(s.data)}catch(e){jQuery.handleEr=
+ror(s,xhr,null,e)}if(!s.async){onreadystatechange()}function success(){i=
+f(s.success){s.success(data,status)}if(s.global){jQuery.event.trigger("a=
+jaxSuccess",[xhr,s])}}function complete(){if(s.complete){s.complete(xhr,=
+status)}if(s.global){jQuery.event.trigger("ajaxComplete",[xhr,s])}if(s.g=
+lobal&&!--jQuery.active){jQuery.event.trigger("ajaxStop")}}return xhr},h=
+andleError:function(s,xhr,status,e){if(s.error){s.error(xhr,status,e)}if=
+(s.global){jQuery.event.trigger("ajaxError",[xhr,s,e])}},active:0,httpSu=
+ccess:function(xhr){try{return !xhr.status&&location.protocol=3D=3D"file=
+:"||(xhr.status>=3D200&&xhr.status<300)||xhr.status=3D=3D304||xhr.status=
+=3D=3D1223}catch(e){}return false},httpNotModified:function(xhr,url){try=
+{var xhrRes=3Dxhr.getResponseHeader("Last-Modified");return xhr.status=3D=
+=3D304||xhrRes=3D=3DjQuery.lastModified[url]}catch(e){}return false},htt=
+pData:function(xhr,type,s){var ct=3Dxhr.getResponseHeader("content-type"=
+),xml=3Dtype=3D=3D"xml"||!type&&ct&&ct.indexOf("xml")>=3D0,data=3Dxml?xh=
+r.responseXML:xhr.responseText;if(xml&&data.documentElement.tagName=3D=3D=
+"parsererror"){throw"parsererror"}if(s&&s.dataFilter){data=3Ds.dataFilte=
+r(data,type)}if(typeof data=3D=3D=3D"string"){if(type=3D=3D"script"){jQu=
+ery.globalEval(data)}if(type=3D=3D"json"){data=3Dwindow["eval"]("("+data=
++")")}}return data},param:function(a){var s=3D[];function add(key,value)=
+{s[s.length]=3DencodeURIComponent(key)+"=3D"+encodeURIComponent(value)}i=
+f(jQuery.isArray(a)||a.jquery){jQuery.each(a,function(){add(this.name,th=
+is.value)})}else{for(var j in a){if(jQuery.isArray(a[j])){jQuery.each(a[=
+j],function(){add(j,this)})}else{add(j,jQuery.isFunction(a[j])?a[j]():a[=
+j])}}}return s.join("&").replace(/%20/g,"+")}});var elemdisplay=3D{},tim=
+erId,fxAttrs=3D[["height","marginTop","marginBottom","paddingTop","paddi=
+ngBottom"],["width","marginLeft","marginRight","paddingLeft","paddingRig=
+ht"],["opacity"]];function genFx(type,num){var obj=3D{};jQuery.each(fxAt=
+trs.concat.apply([],fxAttrs.slice(0,num)),function(){obj[this]=3Dtype});=
+return obj}jQuery.fn.extend({show:function(speed,callback){if(speed){ret=
+urn this.animate(genFx("show",3),speed,callback)}else{for(var i=3D0,l=3D=
+this.length;i<l;i++){var old=3DjQuery.data(this[i],"olddisplay");this[i]=
+.style.display=3Dold||"";if(jQuery.css(this[i],"display")=3D=3D=3D"none"=
+){var tagName=3Dthis[i].tagName,display;if(elemdisplay[tagName]){display=
+=3Delemdisplay[tagName]}else{var elem=3DjQuery("<"+tagName+" />").append=
+To("body");display=3Delem.css("display");if(display=3D=3D=3D"none"){disp=
+lay=3D"block"}elem.remove();elemdisplay[tagName]=3Ddisplay}jQuery.data(t=
+his[i],"olddisplay",display)}}for(var i=3D0,l=3Dthis.length;i<l;i++){thi=
+s[i].style.display=3DjQuery.data(this[i],"olddisplay")||""}return this}}=
+,hide:function(speed,callback){if(speed){return this.animate(genFx("hide=
+",3),speed,callback)}else{for(var i=3D0,l=3Dthis.length;i<l;i++){var old=
+=3DjQuery.data(this[i],"olddisplay");if(!old&&old!=3D=3D"none"){jQuery.d=
+ata(this[i],"olddisplay",jQuery.css(this[i],"display"))}}for(var i=3D0,l=
+=3Dthis.length;i<l;i++){this[i].style.display=3D"none"}return this}},_to=
+ggle:jQuery.fn.toggle,toggle:function(fn,fn2){var bool=3Dtypeof fn=3D=3D=
+=3D"boolean";return jQuery.isFunction(fn)&&jQuery.isFunction(fn2)?this._=
+toggle.apply(this,arguments):fn=3D=3Dnull||bool?this.each(function(){var=
+ state=3Dbool?fn:jQuery(this).is(":hidden");jQuery(this)[state?"show":"h=
+ide"]()}):this.animate(genFx("toggle",3),fn,fn2)},fadeTo:function(speed,=
+to,callback){return this.animate({opacity:to},speed,callback)},animate:f=
+unction(prop,speed,easing,callback){var optall=3DjQuery.speed(speed,easi=
+ng,callback);return this[optall.queue=3D=3D=3Dfalse?"each":"queue"](func=
+tion(){var opt=3DjQuery.extend({},optall),p,hidden=3Dthis.nodeType=3D=3D=
+1&&jQuery(this).is(":hidden"),self=3Dthis;for(p in prop){if(prop[p]=3D=3D=
+"hide"&&hidden||prop[p]=3D=3D"show"&&!hidden){return opt.complete.call(t=
+his)}if((p=3D=3D"height"||p=3D=3D"width")&&this.style){opt.display=3DjQu=
+ery.css(this,"display");opt.overflow=3Dthis.style.overflow}}if(opt.overf=
+low!=3Dnull){this.style.overflow=3D"hidden"}opt.curAnim=3DjQuery.extend(=
+{},prop);jQuery.each(prop,function(name,val){var e=3Dnew jQuery.fx(self,=
+opt,name);if(/toggle|show|hide/.test(val)){e[val=3D=3D"toggle"?hidden?"s=
+how":"hide":val](prop)}else{var parts=3Dval.toString().match(/^([+-]=3D)=
+?([\d+-.]+)(.*)$/),start=3De.cur(true)||0;if(parts){var end=3DparseFloat=
+(parts[2]),unit=3Dparts[3]||"px";if(unit!=3D"px"){self.style[name]=3D(en=
+d||1)+unit;start=3D((end||1)/e.cur(true))*start;self.style[name]=3Dstart=
++unit}if(parts[1]){end=3D((parts[1]=3D=3D"-=3D"?-1:1)*end)+start}e.custo=
+m(start,end,unit)}else{e.custom(start,val,"")}}});return true})},stop:fu=
+nction(clearQueue,gotoEnd){var timers=3DjQuery.timers;if(clearQueue){thi=
+s.queue([])}this.each(function(){for(var i=3Dtimers.length-1;i>=3D0;i--)=
+{if(timers[i].elem=3D=3Dthis){if(gotoEnd){timers[i](true)}timers.splice(=
+i,1)}}});if(!gotoEnd){this.dequeue()}return this}});jQuery.each({slideDo=
+wn:genFx("show",1),slideUp:genFx("hide",1),slideToggle:genFx("toggle",1)=
+,fadeIn:{opacity:"show"},fadeOut:{opacity:"hide"}},function(name,props){=
+jQuery.fn[name]=3Dfunction(speed,callback){return this.animate(props,spe=
+ed,callback)}});jQuery.extend({speed:function(speed,easing,fn){var opt=3D=
+typeof speed=3D=3D=3D"object"?speed:{complete:fn||!fn&&easing||jQuery.is=
+Function(speed)&&speed,duration:speed,easing:fn&&easing||easing&&!jQuery=
+.isFunction(easing)&&easing};opt.duration=3DjQuery.fx.off?0:typeof opt.d=
+uration=3D=3D=3D"number"?opt.duration:jQuery.fx.speeds[opt.duration]||jQ=
+uery.fx.speeds._default;opt.old=3Dopt.complete;opt.complete=3Dfunction()=
+{if(opt.queue!=3D=3Dfalse){jQuery(this).dequeue()}if(jQuery.isFunction(o=
+pt.old)){opt.old.call(this)}};return opt},easing:{linear:function(p,n,fi=
+rstNum,diff){return firstNum+diff*p},swing:function(p,n,firstNum,diff){r=
+eturn((-Math.cos(p*Math.PI)/2)+0.5)*diff+firstNum}},timers:[],fx:functio=
+n(elem,options,prop){this.options=3Doptions;this.elem=3Delem;this.prop=3D=
+prop;if(!options.orig){options.orig=3D{}}}});jQuery.fx.prototype=3D{upda=
+te:function(){if(this.options.step){this.options.step.call(this.elem,thi=
+s.now,this)}(jQuery.fx.step[this.prop]||jQuery.fx.step._default)(this);i=
+f((this.prop=3D=3D"height"||this.prop=3D=3D"width")&&this.elem.style){th=
+is.elem.style.display=3D"block"}},cur:function(force){if(this.elem[this.=
+prop]!=3Dnull&&(!this.elem.style||this.elem.style[this.prop]=3D=3Dnull))=
+{return this.elem[this.prop]}var r=3DparseFloat(jQuery.css(this.elem,thi=
+s.prop,force));return r&&r>-10000?r:parseFloat(jQuery.curCSS(this.elem,t=
+his.prop))||0},custom:function(from,to,unit){this.startTime=3Dnow();this=
+.start=3Dfrom;this.end=3Dto;this.unit=3Dunit||this.unit||"px";this.now=3D=
+this.start;this.pos=3Dthis.state=3D0;var self=3Dthis;function t(gotoEnd)=
+{return self.step(gotoEnd)}t.elem=3Dthis.elem;if(t()&&jQuery.timers.push=
+(t)&&!timerId){timerId=3DsetInterval(function(){var timers=3DjQuery.time=
+rs;for(var i=3D0;i<timers.length;i++){if(!timers[i]()){timers.splice(i--=
+,1)}}if(!timers.length){clearInterval(timerId);timerId=3Dundefined}},13)=
+}},show:function(){this.options.orig[this.prop]=3DjQuery.attr(this.elem.=
+style,this.prop);this.options.show=3Dtrue;this.custom(this.prop=3D=3D"wi=
+dth"||this.prop=3D=3D"height"?1:0,this.cur());jQuery(this.elem).show()},=
+hide:function(){this.options.orig[this.prop]=3DjQuery.attr(this.elem.sty=
+le,this.prop);this.options.hide=3Dtrue;this.custom(this.cur(),0)},step:f=
+unction(gotoEnd){var t=3Dnow();if(gotoEnd||t>=3Dthis.options.duration+th=
+is.startTime){this.now=3Dthis.end;this.pos=3Dthis.state=3D1;this.update(=
+);this.options.curAnim[this.prop]=3Dtrue;var done=3Dtrue;for(var i in th=
+is.options.curAnim){if(this.options.curAnim[i]!=3D=3Dtrue){done=3Dfalse}=
+}if(done){if(this.options.display!=3Dnull){this.elem.style.overflow=3Dth=
+is.options.overflow;this.elem.style.display=3Dthis.options.display;if(jQ=
+uery.css(this.elem,"display")=3D=3D"none"){this.elem.style.display=3D"bl=
+ock"}}if(this.options.hide){jQuery(this.elem).hide()}if(this.options.hid=
+e||this.options.show){for(var p in this.options.curAnim){jQuery.attr(thi=
+s.elem.style,p,this.options.orig[p])}}this.options.complete.call(this.el=
+em)}return false}else{var n=3Dt-this.startTime;this.state=3Dn/this.optio=
+ns.duration;this.pos=3DjQuery.easing[this.options.easing||(jQuery.easing=
+.swing?"swing":"linear")](this.state,n,0,1,this.options.duration);this.n=
+ow=3Dthis.start+((this.end-this.start)*this.pos);this.update()}return tr=
+ue}};jQuery.extend(jQuery.fx,{speeds:{slow:600,fast:200,_default:400},st=
+ep:{opacity:function(fx){jQuery.attr(fx.elem.style,"opacity",fx.now)},_d=
+efault:function(fx){if(fx.elem.style&&fx.elem.style[fx.prop]!=3Dnull){fx=
+.elem.style[fx.prop]=3Dfx.now+fx.unit}else{fx.elem[fx.prop]=3Dfx.now}}}}=
+);if(document.documentElement.getBoundingClientRect){jQuery.fn.offset=3D=
+function(){if(!this[0]){return{top:0,left:0}}if(this[0]=3D=3D=3Dthis[0].=
+ownerDocument.body){return jQuery.offset.bodyOffset(this[0])}var box=3Dt=
+his[0].getBoundingClientRect(),doc=3Dthis[0].ownerDocument,body=3Ddoc.bo=
+dy,docElem=3Ddoc.documentElement,clientTop=3DdocElem.clientTop||body.cli=
+entTop||0,clientLeft=3DdocElem.clientLeft||body.clientLeft||0,top=3Dbox.=
+top+(self.pageYOffset||jQuery.boxModel&&docElem.scrollTop||body.scrollTo=
+p)-clientTop,left=3Dbox.left+(self.pageXOffset||jQuery.boxModel&&docElem=
+.scrollLeft||body.scrollLeft)-clientLeft;return{top:top,left:left}}}else=
+{jQuery.fn.offset=3Dfunction(){if(!this[0]){return{top:0,left:0}}if(this=
+[0]=3D=3D=3Dthis[0].ownerDocument.body){return jQuery.offset.bodyOffset(=
+this[0])}jQuery.offset.initialized||jQuery.offset.initialize();var elem=3D=
+this[0],offsetParent=3Delem.offsetParent,prevOffsetParent=3Delem,doc=3De=
+lem.ownerDocument,computedStyle,docElem=3Ddoc.documentElement,body=3Ddoc=
+.body,defaultView=3Ddoc.defaultView,prevComputedStyle=3DdefaultView.getC=
+omputedStyle(elem,null),top=3Delem.offsetTop,left=3Delem.offsetLeft;whil=
+e((elem=3Delem.parentNode)&&elem!=3D=3Dbody&&elem!=3D=3DdocElem){compute=
+dStyle=3DdefaultView.getComputedStyle(elem,null);top-=3Delem.scrollTop,l=
+eft-=3Delem.scrollLeft;if(elem=3D=3D=3DoffsetParent){top+=3Delem.offsetT=
+op,left+=3Delem.offsetLeft;if(jQuery.offset.doesNotAddBorder&&!(jQuery.o=
+ffset.doesAddBorderForTableAndCells&&/^t(able|d|h)$/i.test(elem.tagName)=
+)){top+=3DparseInt(computedStyle.borderTopWidth,10)||0,left+=3DparseInt(=
+computedStyle.borderLeftWidth,10)||0}prevOffsetParent=3DoffsetParent,off=
+setParent=3Delem.offsetParent}if(jQuery.offset.subtractsBorderForOverflo=
+wNotVisible&&computedStyle.overflow!=3D=3D"visible"){top+=3DparseInt(com=
+putedStyle.borderTopWidth,10)||0,left+=3DparseInt(computedStyle.borderLe=
+ftWidth,10)||0}prevComputedStyle=3DcomputedStyle}if(prevComputedStyle.po=
+sition=3D=3D=3D"relative"||prevComputedStyle.position=3D=3D=3D"static"){=
+top+=3Dbody.offsetTop,left+=3Dbody.offsetLeft}if(prevComputedStyle.posit=
+ion=3D=3D=3D"fixed"){top+=3DMath.max(docElem.scrollTop,body.scrollTop),l=
+eft+=3DMath.max(docElem.scrollLeft,body.scrollLeft)}return{top:top,left:=
+left}}}jQuery.offset=3D{initialize:function(){if(this.initialized){retur=
+n }var body=3Ddocument.body,container=3Ddocument.createElement("div"),in=
+nerDiv,checkDiv,table,td,rules,prop,bodyMarginTop=3Dbody.style.marginTop=
+,html=3D'<div style=3D"position:absolute;top:0;left:0;margin:0;border:5p=
+x solid #000;padding:0;width:1px;height:1px;"><div></div></div><table st=
+yle=3D"position:absolute;top:0;left:0;margin:0;border:5px solid #000;pad=
+ding:0;width:1px;height:1px;" cellpadding=3D"0" cellspacing=3D"0"><tr><t=
+d></td></tr></table>';rules=3D{position:"absolute",top:0,left:0,margin:0=
+,border:0,width:"1px",height:"1px",visibility:"hidden"};for(prop in rule=
+s){container.style[prop]=3Drules[prop]}container.innerHTML=3Dhtml;body.i=
+nsertBefore(container,body.firstChild);innerDiv=3Dcontainer.firstChild,c=
+heckDiv=3DinnerDiv.firstChild,td=3DinnerDiv.nextSibling.firstChild.first=
+Child;this.doesNotAddBorder=3D(checkDiv.offsetTop!=3D=3D5);this.doesAddB=
+orderForTableAndCells=3D(td.offsetTop=3D=3D=3D5);innerDiv.style.overflow=
+=3D"hidden",innerDiv.style.position=3D"relative";this.subtractsBorderFor=
+OverflowNotVisible=3D(checkDiv.offsetTop=3D=3D=3D-5);body.style.marginTo=
+p=3D"1px";this.doesNotIncludeMarginInBodyOffset=3D(body.offsetTop=3D=3D=3D=
+0);body.style.marginTop=3DbodyMarginTop;body.removeChild(container);this=
+.initialized=3Dtrue},bodyOffset:function(body){jQuery.offset.initialized=
+||jQuery.offset.initialize();var top=3Dbody.offsetTop,left=3Dbody.offset=
+Left;if(jQuery.offset.doesNotIncludeMarginInBodyOffset){top+=3DparseInt(=
+jQuery.curCSS(body,"marginTop",true),10)||0,left+=3DparseInt(jQuery.curC=
+SS(body,"marginLeft",true),10)||0}return{top:top,left:left}}};jQuery.fn.=
+extend({position:function(){var left=3D0,top=3D0,results;if(this[0]){var=
+ offsetParent=3Dthis.offsetParent(),offset=3Dthis.offset(),parentOffset=3D=
+/^body|html$/i.test(offsetParent[0].tagName)?{top:0,left:0}:offsetParent=
+.offset();offset.top-=3Dnum(this,"marginTop");offset.left-=3Dnum(this,"m=
+arginLeft");parentOffset.top+=3Dnum(offsetParent,"borderTopWidth");paren=
+tOffset.left+=3Dnum(offsetParent,"borderLeftWidth");results=3D{top:offse=
+t.top-parentOffset.top,left:offset.left-parentOffset.left}}return result=
+s},offsetParent:function(){var offsetParent=3Dthis[0].offsetParent||docu=
+ment.body;while(offsetParent&&(!/^body|html$/i.test(offsetParent.tagName=
+)&&jQuery.css(offsetParent,"position")=3D=3D"static")){offsetParent=3Dof=
+fsetParent.offsetParent}return jQuery(offsetParent)}});jQuery.each(["Lef=
+t","Top"],function(i,name){var method=3D"scroll"+name;jQuery.fn[method]=3D=
+function(val){if(!this[0]){return null}return val!=3D=3Dundefined?this.e=
+ach(function(){this=3D=3Dwindow||this=3D=3Ddocument?window.scrollTo(!i?v=
+al:jQuery(window).scrollLeft(),i?val:jQuery(window).scrollTop()):this[me=
+thod]=3Dval}):this[0]=3D=3Dwindow||this[0]=3D=3Ddocument?self[i?"pageYOf=
+fset":"pageXOffset"]||jQuery.boxModel&&document.documentElement[method]|=
+|document.body[method]:this[0][method]}});jQuery.each(["Height","Width"]=
+,function(i,name){var tl=3Di?"Left":"Top",br=3Di?"Right":"Bottom",lower=3D=
+name.toLowerCase();jQuery.fn["inner"+name]=3Dfunction(){return this[0]?j=
+Query.css(this[0],lower,false,"padding"):null};jQuery.fn["outer"+name]=3D=
+function(margin){return this[0]?jQuery.css(this[0],lower,false,margin?"m=
+argin":"border"):null};var type=3Dname.toLowerCase();jQuery.fn[type]=3Df=
+unction(size){return this[0]=3D=3Dwindow?document.compatMode=3D=3D"CSS1C=
+ompat"&&document.documentElement["client"+name]||document.body["client"+=
+name]:this[0]=3D=3Ddocument?Math.max(document.documentElement["client"+n=
+ame],document.body["scroll"+name],document.documentElement["scroll"+name=
+],document.body["offset"+name],document.documentElement["offset"+name]):=
+size=3D=3D=3Dundefined?(this.length?jQuery.css(this[0],type):null):this.=
+css(type,typeof size=3D=3D=3D"string"?size:size+"px")}})})();
+------------jJSse7hvpzDtpXSbn8uWcu
+Content-Disposition: inline
+Content-Type: image/png
+Content-Location: http://staticweb.archive.org/images/toolbar/wm_tb_bk_trns.png
+Content-Transfer-Encoding: Base64
+
+iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAGXRFWHRTb2Z0d2Fy
+ZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABBJREFUeNpi+v///zOAAAMACewD5vzl
+V+IAAAAASUVORK5CYII=
+
+------------jJSse7hvpzDtpXSbn8uWcu
+Content-Disposition: inline; filename=wayback-toolbar-logo.png
+Content-Type: image/png; name=wayback-toolbar-logo.png
+Content-Location: http://staticweb.archive.org/images/toolbar/wayback-toolbar-logo.png
+Content-Transfer-Encoding: Base64
+
+iVBORw0KGgoAAAANSUhEUgAAAG4AAAAnCAMAAADZ0o1tAAAAGXRFWHRTb2Z0d2Fy
+ZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAA
+AAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5U
+Y3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6
+eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8w
+Mi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRw
+Oi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpE
+ZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRv
+YmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNv
+bS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20v
+eGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRv
+YmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9Inht
+cC5paWQ6Q0Q3NkY3Njk4RDIwMTFERkFBMUNEQjYxRTQwODkwODIiIHhtcE1NOkRv
+Y3VtZW50SUQ9InhtcC5kaWQ6Q0Q3NkY3NkE4RDIwMTFERkFBMUNEQjYxRTQwODkw
+ODIiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlp
+ZDpDRDc2Rjc2NzhEMjAxMURGQUExQ0RCNjFFNDA4OTA4MiIgc3RSZWY6ZG9jdW1l
+bnRJRD0ieG1wLmRpZDpDRDc2Rjc2ODhEMjAxMURGQUExQ0RCNjFFNDA4OTA4MiIv
+PiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94
+cGFja2V0IGVuZD0iciI/Pi/0bd0AAALxUExURQAAAP/yAP///6USPaYSJgcEAjY4
+NzMsM9aLlrZGc6s0XqcdUrEqN6w5Xtu6s1lYWaUSTqQOOOzq5dGcnrxWTqUSMrg0
+JtTW1MvLyxYYFaQbTeCViKOlo7EzOE1STcuUm5aWmc3IzfHRzNCqn8LUvKxBMcZX
+RuLi4nh8ZeuvpMmSgOGnhURIRascH6cUJnJlbbNGZ9WlsvHa0LuxAMyYizdBTLjA
+u3SDmacXUMhkacTC2w0GDoWFhaUYIJ+enaimp6QSQqYVG8vXw/Do6Nzb28RyZuzs
+7E1NTnd2dqslW6QOLoB/f3d9d7WvtUFAQX53APT09GBeXXRyc6wtVmZhY5OSk9fc
+3P32dd/UAHx6e728vFtiW0A9ANmmq+O8uzk7QMKJjM/Ozvjt7lZSAP/5lHFwcMjG
+xiAeACAgIKUSKaUXMfnp9K+srmZmZouKipybm6cZKLOysvbg19abls2LeuvB1NC4
+o9afrmxsbKQYRsllWFNSUre0tqwoR7UtIjUzMo6OjhAPBLm3upiXmCgqLLI8X5iQ
+AdPQ079OObU9R5GQkNOSnKusq/n5+XB2cMDAv8NbasPCw8p4ieq2qsTJxevDv2Vp
+XNWYpP70N8PLufPw7L5be/nl7Pz0VP39/blVY9vh2bU7Ofb49jAuALtobNqqsERK
+Uf/0JNOho9a8qC4uLJeVlfHx8e/jAOaotfXf6/Li4t3j5efPyqAIJtmYg//8y6w5
+TVVXTOjKzbK2sc5ohawfScvS1fz8/H2Ed2Bja/Dv9//92/b29dqqocuClv3l4N6j
+ofr19e/k3qocNKELHrW+ua4iFsRvf/7y/vTZ6awqI6qype3T2f/8vKYbOas/MuSx
+x6+5touVgqqvnMrAF8/EAKSeqykpN6snNN/LvtHZyP/6/tCJi/v8+9jS2P79+fL1
+9ZyjmM1zevfz8vr49NPOo5qYqp+bkOXdL+Pp8e/y76obQ7izJ5efcvzt5dPR2YKL
+jffo4Tg+L/LGzf///4WTO9IAAAD7dFJOU///////////////////////////////
+////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////8A458DyAAABuRJREFU
+eNrU13dcE1ccAPB3B4dAgBCKhiC2hbZEMFJKahtrZkszoIaEhJJQhLKRDULZG0EE
+qyyte1brtu5Vtc7aXbWu7r33/v3V9wgJAULVT/d9Prn3ubv37vt+797v3QXBP7qh
+f4WLNQOksBOgUAncaLV5LkCzURoHwNWLzZEAMvaWLYX4yBjXEAn8gtjoOGv76AIa
+7/ON4i24aMhX432GjF+Bi7hqvGPPp6U+AMb8fB97To8r8OszwMwHrkyvDgCYm5wi
+xee0nUZcFGcnKNXkKK8Tc53s6Dwrp9cSThXNzgTwERRmEFvMdwFyA3KhgFYrAarV
+DXx7TrwZ4JmG6oQCcpZoUCyo6QKYx+5SY45rZnOjcQ12gExHxkJmGx2zlrSIlbLn
+4ybVNLlaGNukJTcgdIKKOxf3J1qcp7PnyOjoCruq1T79jfEuT9uJO7yGrdLjg5Sa
+hnwxwTdL55HhCrBqfhUqUlndwsY37SQ7/Bj0m0lgeWREdYLYFHzSnC9dM+TZ4b7r
+CiC2RUlGgzwZmWAN5nTVCQLc70yZzsUIcFzlx8dPEoybrdzcGpkKFxVxWi5A5CY/
+crWggF+PCyl5dnTFJlIto5mrtOdkuL90CuiaSf+6SCN+QTEeMjpgxYc1AFsi6bZi
+ciSTkbFLiLRFB0AibVImtJHzYnLAbfsATyuYLyZcZHF/tYbmZ/7FRPhPc7+VvfJP
+crMlvv3lKvM+vZG98NahV49Nz7wWF5R0blnS/ty+pOeGXt429eDBk2UjOM4cUuh+
+RTyEGhmUMeRqIFp/Le6OMN9bcsaV1ypC6ZITi5JS6YgQr6CekB3du0TO8tr9wxq5
+ceac6is79S4as0SF4rpQC9C9X765aij3yBTIPLCqBqfRN9Kfm9YM4V538r3Fe8Jt
+7s6huXsVcsnKlxcpXu3wUIx3Hfv2g4aoUoCL409H4Hrv7XiOplPD5cEhiqKe25EL
+fTNqXsK8BXkMg1oO028mv6VXtqH1vZcz6dc+gXocPTMdpqBp6OjQ6Kzc3eUczUqN
+87a7/N++ydMZcx5Pec4shaoiheTVcnhlqefspSXz3DjBIZP9vSzcrT7MGFChK2Z0
+5GGm5SjKaGN4DOLx77+EuSMV6N5AJIjMZt51zLlGhW90d550l7/HAIeL0IjJIk+D
+fDW8FHWIxVm3xM0Jcyx7bgp6uglNfAFFH5umDWR44mwUqGoEF7TqNXTvfWghJDP3
+j8o95h42jPMS5SyqcqoLcnOqesl7dYQj7uHpaOI96KEHpgn8UD3okR+bhzluAOEe
+AZdRubEjuJmhXizFk1OdxgW5cR58tHLcNbhANAbuvG7OYXQsyQwr5/3Xco6jG+T8
+/9fRPb/3T0XH3BAXun3/uXcMI6LzV9i4XXUOuGR02Bpd8g1wYXgBAQdc0eTyAe5E
+cFVJP1dpz126DHmEexya/G4oOuiecweryI7Dq8ruH8vKcoPlhFtgWTODT0vCUxcP
+cuSNbuHImjmc+4M0vzhWfsieq12qCV+Ga3xkx80WGQyVB8GOO/6VmD06Vy/mjTpV
+OJ7vG3JsXA5LxKrtgaSqqXtFNi5chM9e6LMbzFjENFq4hJSRHMPjbTo8at5ttJ+Z
+h2ZrJKXLXnTiiFiEm7osqOQBN/mc7u+GzcwDeQNTRTuS26dUfrziOvNulvvM0LIi
+/wXtlf1TpVTRnwg9I5boGsd5l/XDF2nfP/FEfPyG+D+O7il3h2vmdaZ5Crt1w1XT
+8q+pwS3eAdch16zTFE0qF9Wu1IRZZibJu2uvKjXkBXTkjC26qxbDJBQKYxIT3xCu
+pahnh7/Nw0J3npU7i57fvfOst8jCvY+T0Rad07pu73aHHP8AmtiL9hUifZuFo7au
+TcyKEWbFxJjeSKSotLRWarmVWyCfEM7ShBucJ8GM7vJFJ/ugx7XDMHO8a1RlrUgS
+8iRLMgu/70rWcQwaztIl+NMoRDEkzQXIqMXpdZRhshd/OMBRiBKmCdcKhVspzDWa
+snB4A1zfBKeonJyosb6pA983Xp+WeuFnt9ujvT18FiRJWJpaVt2pCN+6uvad81Z6
+VCXVTUi6HW2iBSjOB2XDFd609dkTYUXKYh+cdy1gRJmYS0xMI9FtpdJMwqzErFYq
+fYCjt8+YhbcTVg3Kd032ZeWc/jw1N/czgF9WR104y3kxgv6opORl+oPU3NQzubnv
+Pf14HC1d2HtcLQaaz1/h862l6U/ZKhBn926gskxbG02NQqGJihG2tlKmQW7Ett1T
+nlO52vbVud11Y9m2bWeu76tXeQz/YDmVtjYxhkqLiRHa5uae0Th6R8fJjqA/83cg
+fTADNsSfT09/dk/6nr/zL0n6cpzd6fHx8ecHz/0uwACissc3q1bPBgAAAABJRU5E
+rkJggg==
+
+------------jJSse7hvpzDtpXSbn8uWcu
+Content-Disposition: inline; filename=wm_tb_prv_on.png
+Content-Type: image/png; name=wm_tb_prv_on.png
+Content-Location: http://staticweb.archive.org/images/toolbar/wm_tb_prv_on.png
+Content-Transfer-Encoding: Base64
+
+iVBORw0KGgoAAAANSUhEUgAAAA4AAAAQCAYAAAAmlE46AAAAGXRFWHRTb2Z0d2Fy
+ZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAMZJREFUeNqU07EKQWEUwHEuSSaLkicg
+g3TZzCySvIKk2GVgJZmsBg9g8QK8gcHoASwGNoMS/l+db6Au3zn1W279b+fe796w
+779Cyimi7ymCFBbYox51CGLoYIS0XHv+C2uYynofExRmJWgG3fE7TGKMHuK/VrFh
+RJ7DRBmXN2XCBibIa87Ek5US2sM04Ro5DHDRhGbumMu6SzxcQztndFHGVhPaOaCK
+Fo6a0Iz5+jcoYYira2jnhhkKWNlO83ec0EYFu7cAAwCVABzGI3/GxAAAAABJRU5E
+rkJggg==
+
+------------jJSse7hvpzDtpXSbn8uWcu
+Content-Disposition: inline; filename=wm_tb_nxt_off.png
+Content-Type: image/png; name=wm_tb_nxt_off.png
+Content-Location: http://staticweb.archive.org/images/toolbar/wm_tb_nxt_off.png
+Content-Transfer-Encoding: Base64
+
+iVBORw0KGgoAAAANSUhEUgAAAA4AAAAQCAYAAAAmlE46AAAAGXRFWHRTb2Z0d2Fy
+ZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAMhJREFUeNqU0s8KAUEcwPHBJjm5KHkC
+Vy/BRZKnUMpBuXKmHGz+pDblCVwdOCoH5U8pD+DiwM1BSb5TO7WHjfn96tPW1reZ
+ndnI1Jt7SqkR9kowUZSwwwBpSfjxnw2cUEfcJgxOBkNsUZSEZvJYYoGcJDRT8Q+t
+j5Qk1JNAE2fUELMNzWQxwRFlSWgmqXfhCII7unDxsgnfmKGNm3n5L1yhhYPtdVxQ
+RSEsClvxgZ7/9zx/bcUJrKq/o4OrzUnpcI0xNpI7+QowAGDEIqP9eOV2AAAAAElF
+TkSuQmCC
+
+------------jJSse7hvpzDtpXSbn8uWcu
+Content-Disposition: inline; filename=graph.png
+Content-Type: image/png; name=graph.png
+Content-Location: http://wayback.archive.org/web/jsp/graph.jsp?graphdata=450_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:2:111000000000_2006:-1:000000000000_2007:-1:000000000000_2008:-1:000000000000_2009:-1:000000000000_2010:-1:000000000000_2011:-1:000000000000_2012:-1:000000000000
+Content-Transfer-Encoding: Base64
+
+iVBORw0KGgoAAAANSUhEUgAAAcIAAAAbCAYAAADvXo8WAAABQElEQVR42u3VwQmA
+MAxA0czp2XE8OlZHcYdaehO8CFpLeIJneUnkRymlxoAn23eYmJiYmHKY+sfas3z9
+ZvsOE9Pfpvb7Xt4jtv7Wuu5vvfbElN0khExMQiiETEIohExMQiiETEJoeExMQiiE
+TEJoeExMQiiETEJoeExMQiiETEJoeExMQiiETEJoeExMQmhPTEJoeExMQmhPTEJo
+eExMQmhPTEJoeExMQmhPTEJoeExMQmhPTEJoeExMQmhPTELoIJiYhNCemITQQTAx
+CaE9MQmhg2BiEkJ7YhJCB8HEJIT2xCSEDoKJSQjtiUkIHQQTkxDaE5MQOggmJiG0
+JyYhdBBMTEJoT0xC6CCYmITQ7TEJoYNgYhJCt8ckhA6CiUkI3R6TEDoIJiYhdHtM
+E4YwBjzZvsPENIHpNoT2xMT07DkB9fNAIH2TRdcAAAAASUVORK5CYII=
+
+------------jJSse7hvpzDtpXSbn8uWcu
+Content-Disposition: inline; filename=transp-yellow-pixel.png
+Content-Type: image/png; name=transp-yellow-pixel.png
+Content-Location: http://staticweb.archive.org/images/toolbar/transp-yellow-pixel.png
+Content-Transfer-Encoding: Base64
+
+iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP4/5/h
+PwAH/QL+ecrXpAAAAABJRU5ErkJggg==
+
+------------jJSse7hvpzDtpXSbn8uWcu
+Content-Disposition: inline; filename=transp-red-pixel.png
+Content-Type: image/png; name=transp-red-pixel.png
+Content-Location: http://staticweb.archive.org/images/toolbar/transp-red-pixel.png
+Content-Transfer-Encoding: Base64
+
+iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAA
+AAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAA1JREFUCNdj
+eMPQ8x8ABcwCeP+6qaAAAAAASUVORK5CYII=
+
+------------jJSse7hvpzDtpXSbn8uWcu
+Content-Disposition: inline
+Content-Type: image/png
+Content-Location: http://staticweb.archive.org/images/toolbar/wm_tb_close.png
+Content-Transfer-Encoding: Base64
+
+iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAGXRFWHRTb2Z0d2Fy
+ZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAALZJREFUeNpskjEKAkEMRYOthYrrggq2
+FoqohQfWRm30CCqiIngAm232GAqzP5CsMWTgFUn+Z8ifoUREYAw2IJfa0gFrMOOa
+GxPwBgncQebEZ5kVYM7NnTSSMbVA04iVIxuGIrKDKzi53guM9OosMHlxX3dQ2uAS
+iB92rwb9zlfwh3ufugrSiKjTI8nei5/gFpgGbNgGC3YlWh/EgQ0LeZS/NIL0SrDS
+wRTs+crga/TkcZdcVwIMAJcy0EgSRh1cAAAAAElFTkSuQmCC
+
+------------jJSse7hvpzDtpXSbn8uWcu
+Content-Disposition: inline
+Content-Type: image/png
+Content-Location: http://staticweb.archive.org/images/toolbar/wm_tb_help.png
+Content-Transfer-Encoding: Base64
+
+iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAGXRFWHRTb2Z0d2Fy
+ZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAA
+AAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5U
+Y3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6
+eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8w
+Mi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRw
+Oi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpE
+ZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRv
+YmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNv
+bS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20v
+eGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRv
+YmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9Inht
+cC5paWQ6QzJFNjZBNjk4RUE2MTFERkFBQjM5RTlBN0RCQjRFRUYiIHhtcE1NOkRv
+Y3VtZW50SUQ9InhtcC5kaWQ6QzJFNjZBNkE4RUE2MTFERkFBQjM5RTlBN0RCQjRF
+RUYiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlp
+ZDpDMkU2NkE2NzhFQTYxMURGQUFCMzlFOUE3REJCNEVFRiIgc3RSZWY6ZG9jdW1l
+bnRJRD0ieG1wLmRpZDpDMkU2NkE2ODhFQTYxMURGQUFCMzlFOUE3REJCNEVFRiIv
+PiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94
+cGFja2V0IGVuZD0iciI/Ph1Z8GAAAADeSURBVHjaYvz//z9DyMYXDFAQCcQFQKwO
+xL+B+BIQTwfiNSDJNf4SDExQhYxAnADEy4DYDIjZgJgHiJ2AeDUQlwCxAEghTEMg
+EDdA2TuBWAaI5YD4GFSsHIjjkTVoAfFfIH4KxM1A/A6IXwPxUqi8MBArgRgsUIEu
+IO4G4v9Qt8OAD5R+DMQXkTX8YkAF3FD/eEINyQPircga0MEqIPaCOisEiA/BJJiw
+KOaBKgaBKGTF+GxoA+J/SKFEUMMxqO0cQPyNkAYpIN4CZVuj24JNAyg+vgIxM1oQ
+gwFAgAEAJXYr4HQAg4UAAAAASUVORK5CYII=
+
+------------jJSse7hvpzDtpXSbn8uWcu
+Content-Disposition: inline; filename=head_r1_c1.gif
+Content-Type: text/html; name=head_r1_c1.gif
+Content-Location: http://web.archive.org/web/20050324061951im_/http://www.erwination.com/global/phpBB2/templates/Jenova/images/head_r1_c1.gif
+Content-Transfer-Encoding: Base64
+
+R0lGODlhBwBpANUAAPf39/b29vX19fT09PDw8O/v7+7u7u3t7ezs7Ovr6+rq6unp
+6ejo6Ofn5+bm5uXl5eTk5OPj4+Li4uHh4eDg4N7e3t3d3dzc3Nvb29nZ2djY2NbW
+1tTU1NLS0tHR0czMzMjIyMfHx8bGxsTExLfEyLjDx7+/v7m5ubW1tbS0tKexta2t
+rampqaamppObngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAACH5BAQUAP8ALAAAAAAHAGkAAAa/QIlwSCRGjsikcslsOp8R
+iHRKrVqvj6x2y+16HeCweExumM/otHrNaLvf8PhiTq/b74q8fr9P+P+AgYKDCIWG
+h4iJB4uMjY6PBpGSk5MFlpeYmZpFnJ1DLqChoqIlpaanpyqqq6ytrq+wsbKztLW2
+t7i5tyS8vSSjwKGenATFxgQDycrLzM3OzgLR0tPTAdbXAQDa2wDY1526qx8mKCss
+LS0eISYnKO4aHh8gICMjFhkbGx37ExMV/xgwUOk3IQgAOw==
+
+------------jJSse7hvpzDtpXSbn8uWcu
+Content-Disposition: inline; filename=main1.gif
+Content-Type: text/html; name=main1.gif
+Content-Location: http://web.archive.org/web/20050324061951im_/http://www.erwination.com/global/phpBB2/templates/Jenova/images/main1.gif
+Content-Transfer-Encoding: Base64
+
+R0lGODlhIAANALMAALe+wd7f37O7vsPIysrO0Nrb3M7S09LV1r/Fx6+4u8bLzau0
+uNbY2bvBxOLi4qextSH5BAAAAAAALAAAAAAgAA0AAASZ8MlJq71YKCXkUMOVKAk2
+LQ/jOMfTrE5jAQxwoW6sMsWjOKpGokHsLBqLIRH1ktFoDoJjYYjGfjBiLAALCJ4U
+1UDH+AmJjYKhGV0IAoSLCuAYwM0Chh7IVkj0clMBVR86BXoBDH1/DBQjCSoLKg4A
+ZgwHG4eLKQyPOQ2RCEA+VzB8MQ5+nE0SOK4nrQuyrQ84FLYmubq7vBcRADs=
+
+------------jJSse7hvpzDtpXSbn8uWcu
+Content-Disposition: inline; filename=search1.gif
+Content-Type: text/html; name=search1.gif
+Content-Location: http://web.archive.org/web/20050324061951im_/http://www.erwination.com/global/phpBB2/templates/Jenova/images/search1.gif
+Content-Transfer-Encoding: Base64
+
+R0lGODlhKgANALMAALe+wa+4u9rb3NLV1r/Fx97f38PIyrO7vs7S08rO0LvBxKu0
+uMbLzdbY2eLi4qextSH5BAAAAAAALAAAAAAqAA0AAAS98MlJq704L8Z5/pVhYMsz
+OChagmDTVCXjLE6z3OtzKIAUKMCDZNd7AIABV/ChcCgMNocAWFycUIOHLAVE2Rop
+BjhFADSKplRNO10QnD+gACErywzIxpRQeFkIHCcEDX0uTgcuYA0yJS4Ujg+QGG9i
+Ah0MSQIufYwmfhKQkgoMWh1gAAgFCRwjDQMcmp0GDnQMCqENAZiMag4JDwupXlpq
+izMSDAUoYn5KTsDAODkSNxPS1DDTFNos3d7f4B8RADs=
+
+------------jJSse7hvpzDtpXSbn8uWcu
+Content-Disposition: inline; filename=head_r1_c4.gif
+Content-Type: text/html; name=head_r1_c4.gif
+Content-Location: http://web.archive.org/web/20050324061951im_/http://www.erwination.com/global/phpBB2/templates/Jenova/images/head_r1_c4.gif
+Content-Transfer-Encoding: Base64
+
+R0lGODlhMgBpANUAAPf39/b29vX19fT09PPz8/Ly8vHx8fDw8O/v7+7u7u3t7ezs
+7Ovr6+rq6unp6ejo6Ofn5+bm5uXl5eTk5OPj4+Li4uHh4dvb3Nvb29vc3NjZ2dfY
+2NbX2NLU1NHT1NHR0crMzcPGyMTExMHExbfEyLjDx7q+wLm9v7e8vbS0tLC1t6ex
+tamvsaiusKetr6Goqqampp+mqJ2kp5yjppmgo5eeoZWdoJObngAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAACH5BAQUAP8ALAAAAAAyAGkAAAb/wIpwSCwaj8ikcslsJinQ
+qHRKrVqv2Kx2y+16v+CweEwum8/oNHnCbrvf8Lh8Tq/b7/i8fs/v0yWAgYKDhIWG
+h4iJiouMjY6PkJGIEZSVlpeYmZqbnJ2en6ChoqAQpaanqKmqq6ytrq+wsbKztLW2
+rQ+5uru8vb6/wMHCw8TFxsfFDsrLzM3Oz9DR0tPU1dbX2NYN29zd3t/g4eLj5OXm
+4gzp6uvs7e7v8PHy8/T19vf4+frxC/3+/wADChxIsKDBgwgTKlyYUIHDhxAjSpxI
+saLFixgzatzIUWOCjyBDihxJsqTJkyhTqjSJoKXLlzBjypxJs6bNmzhz6tyZE8mB
+/59AgwodSrToUCZGkyot6mSpU6U3okq9EYMDEgNYs2rdyrXr1qlgo7q4UMSr2bNb
+S6hdWyLsjRFl0crlyrauWrAoLBApwLev37+AA68YTHiFXbBwhwRezLhv4ceD60qd
+4UFx48t+IWtmOzXvEAKgQ4seTTq05tOG70Z9seFz6delUZ/mfKMGCNewcxOQjXqt
+1BMWgg8YTry48eO8Zau+0SLDkOPQkSfvrZry8+jYpytfHoKIgO/gw4sXoJ33chV6
+hYxf/728+bZRZbQewl68+/fwb5goEqC///8B3IefVDRUxh+A/QmYnG/xaYDEfwou
+uNwNNHSgRITTMSgVC0hgmNShhlN1N4SH2knm1g0klmdXflGleN+KarkYYV0y1mjj
+jTjKRsKOPPbo449ABimkjycWaeSRSCap5JInOuHkk1BGKWUFT1VppVDYZanlllx2
+6eWXYIYp5phklmlmlvWlqeaabLbp5psIxinnnHTSCcCdeOap55589umnnnUGKuig
+UxaaRI6IJqpohDA06uijkEYq6aSUQprCpZhmqummnHbqqaYihCrqqKSWauqpqJL6
+waqsturqq7DGKqurGNRq66245qrrrrziGtyvwAYr7LDEFitsEAA7
+
+------------jJSse7hvpzDtpXSbn8uWcu
+Content-Disposition: inline; filename=logo.gif
+Content-Type: text/html; name=logo.gif
+Content-Location: http://web.archive.org/web/20050324061951im_/http://www.erwination.com/global/phpBB2/templates/Jenova/images/logo.gif
+Content-Transfer-Encoding: Base64
+
+R0lGODlh3wApAMQQAPDw8BAQEODg4DAwMNDQ0CAgIKCgoHBwcLCwsGBgYJCQkFBQ
+UEBAQMDAwICAgAAAAP///wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAACH5BAEAABAALAAAAADfACkAAAX/ICSOZGmeaHoSSuMYkODM
+jtkkhzAeDDM8DANgJGuMCIaZEQVQMBIEEaBBbSgWQ2KV8egmeoGRI5DQQRzdXhCh
+M/CCIpnje0BkVfi8fs/voxoFXYIACAFdAySADz+LAgKBgocjCUAjC4YPCihokQMC
+DYxcDwkkBoILaQ6MDQiBAz8MEAaMkQcQog8wEAS0XQFRfsHCw8Qjpg+2BIE1AF13
+AIYIsl26PwYEXGEQ0F3AEIFLJ4ZmyxAND2ENhjVSB0AE66Y538jbXTWiRgpddj/s
+Iuce6EClrZjBgwhHcCkwYgqwLiQ4TXqwQAQXBAcCkToTANVGCF3ClSAAUcQ+hucY
+/xBwl4uEAHTTFqAxYoqhRXQARLEJVGAIF5EBRZAUmLCoUT/3RLzJ8fIBCUFHYN6K
+9CAKtCc4RYRMREXAPqdCQwb0pamEIQOUKD4Ygqrs1Ey40gD7SQJBSZAPRB7dy5eE
+u40JDKUrSSABJGCmEE1ls48UJ0Flt0IYYPdeU101zaVRcIcEKgaYHtiUNwKSAFGr
+FFYVkSCJ6LCZ+sqWDS2AGUOIKgPglTdpTooifhh5yQBAIAUKfvTEK80dAhpGKHk6
+/aBGQL0kvhY4VlFEAcWVY+n8EWAJlyGmXMfi/UDa7PdH7Rbw0UWBAEyQEKUNTUBZ
+l/lesIQAewHE5cxIoWWFmv83I93DzT+FFMDSAAAcMwo3ATiR4C/k0WILfCAW5UAg
+AWT0CVWx7eJGD2XxQEtxLJHCw4Y9fEQCAGMAURYNDnRWAgML6ICASiUgIFOPEHwF
+EzYFFLBADwfMcI0aDMyHXYhYEnNlQmZI4WOWYIYp5phklmnmmWimqeaabLbp5ptw
+xinnUZ+c0EAUBkgY5AlToHCajTciYIdQrPyBwJbGvMAEFV8WNUWXxRBQBRUGQJqk
+LgPaYFAUXVqKgoU9EBGAKnMcEMAA/5CgjHsluBPLSIE5cImQT54ggDupnhDIqyXk
+iA6DBzVgRjOI9mFAAGSw9CFAlYDEzofN5LrHrdkMAAP/NGUx4Ok0ik32rGILNLBb
+DMGEWkIBAegCxxm8mlAdAI2OUM+NA0Ahy6lGMcAqAfEG06wAAxSk1ats7MKrsMK4
+k0WeAA3RDAp0iXDsFKAFUW8SRO6CHAFeZQjBkFBa1O7Ho4xwgwgOvAoAJVhoZUgB
+wBCQsrZa5apAqmjI7MABNysAjAJOiptyAwwk80UZEKBSwAtWREF0D05ziIzDgQ0w
+srMx1DAoRlwUdzMMTb4AwAFRrHSzA0vIECUPrO7TpQOfDEBAKx1pHbAtzUqRoQxQ
+8ILIiEaARkW6dvVIEcBE1UoCJe41cA3KsdwnBKq7ILOSbee0kAA71Z3LapJ58bLd
+/xixJEBhYISEXVEBChQSeSY+K/wNZQMwdMwBgVU0CwKU+AhERv/400osgNRgiiYj
+SpMWDr+cUUADGQFrqmjstCKsKUaQZIA6puTq8Qwii1Ae1rJE8a4DkmYEeQmUHOEK
+BF84L0IhU6xljxAHUDFHzWaleo40aLOIbRZBHyMsTSg9wtGr8sKsykmDJFGoF2t0
+V6CbWUo00PtHyW7xKgZYh4G3+OCHEmCEAyDiHCbQASc2wgAjoNAcBZKVDEsRALaw
+I1TEgsCoSvCuSyzACetzicAQoJhQJaA7IKECCNN1mhL5gH+eEZgyUGaeTIBQXu5p
+xSJ4EJwlQEMzWRhA4HSRsv8YaJFCPKwI9JI0GfeYK0qaMUPR7MEORaFhRCOTVRxQ
+oYMWkkxiNjHJ+LzDjgNyUDPR6Y4BhFAdNAxhimfo1iRo9rEOEs8mL8FRe7bhtaoI
+ABVQHME+dAGABXxoZ/ACwkugNQQQmtAkHXTLq9JVuSHkb33fMYeTeMgOARjpFjax
+GsqY4RR4matzEIgSjkjoqXMgxiYBRAOzjECIJtQLepj5Ae++gxYMftIBCiiDqxLz
+HVRlpCVFKtoChPmIHSYgAclBHjqOBQPifAcZx1JUQ2axgAVIKAtoMF1L3DGAA+Qg
+oENojKwO6E94As0+CujIHGchxhm1YBGU0AUgB+DPpPD/E13bMZ22TMGF2j3PVR3T
+F24WoFGhOCkJYkzSdwaUCUT0YERuQUIpAmiAFsjAp0IBqAPsILNrsWIGn7uRsBrX
+U4AEcBdDRd8JnkODpAKEMxEhobhMZgWHdWUbVMjaEu40hbACZKuSakPByMWxEiSh
+CsASwCJfcCiEeYVBWyUUtQSFrpFso0uS2uoNdCBXrM4JRKY77F7OUc81KlZOyELn
+YxHSxCfYZ7JxKuu2MMvZznr2s6ANrWhHCyJQWHUP/yOtas8EgJjyQQbt2OxqZ4uA
+7XVJCIZS1W4QtgvexmEIAuCXWeeHJE6iTVzwkkJepSCzzSLAsGB9BoMk1a/Z8qUQ
+/6+giKQKaq0StNZ0FGrFPTGRslFQ4p3lAViTGMEaPWkiOfcYgxHQ8IoD4MhJohkk
+CV7BBRgorYeiWSdoTHha6/YFXQB4SQ1aQhKRAK4QFVnELmTAEOHcTDNOa0n7HvFA
+sNhFIcLqXLRwFABpCDM7NjHMOWowhlYqhjJJa56B4QM1eEjKfjpEIvw8KCVvRcUu
+o9rTC79hErCsDDRgkWYX3WYRFlvyXBtJMCCk0JIT+5GPM4ZPQPbUjCwAiQRfBnOq
+AlCAd4Z5yN0BRQyKBj3FKBkkhyLKN2oQv6SNTHExUHPlArfA+YIly7OhRAu2urT+
+eGxz8KuOXEkxx4k4IkXKcIVhLEh8OSsYIgr+3EUzSPHPc9xpjjkpTgjv1YaerGZ/
+s2AIGrYHyuoCelOjEswnRPEhmaCsdugrqVueoxQdKNBqL9OZ8ZD6g5vF0BDFIfEC
+pAGl56DDKY3mpy4acIkPJQFuahhRN17dl9Zsw5FCIZNswTRubhfDB7XdjrnXbaZb
+tZTdoA0BADs=
+
+------------jJSse7hvpzDtpXSbn8uWcu
+Content-Disposition: inline; filename=head_r1_c7.gif
+Content-Type: text/html; name=head_r1_c7.gif
+Content-Location: http://web.archive.org/web/20050324061951im_/http://www.erwination.com/global/phpBB2/templates/Jenova/images/head_r1_c7.gif
+Content-Transfer-Encoding: Base64
+
+R0lGODlhNABpANUAAPf39/b29vX19fT09PPz8/Ly8vHx8fDw8O/v7+7u7u3t7ezs
+7Ovr6+rq6unp6ejo6Ofn5+bm5uXl5eTk5OPj4+Li4uHh4d/f4N3e3tvb29vc3Nra
+29bX2NTV1tLU1NDS09HR0c7Q0c3P0MrMzcjLzMTExMHExbfEyLjDx7q+wLS5u7S0
+tKextaqwsqiusKWrraOprKampqCnqZ+mqJ2kp5yjppqipJqhpJifopaeoJeeoZOb
+ngAAAAAAAAAAAAAAACH5BAQUAP8ALAAAAAA0AGkAAAb/wIpwSCwaj8ikcslsNinQ
+qHRKrVqv2Kx2y+16v+CweEwum8/otBo7abvf8Lh8Tq/b7/i8fs/v+/sSgYKDhIWG
+h4iJiouMjY6PkJGSkRGVlpeYmZqbnJ2en6ChoqOklhCnqKmqq6ytrq+wsbKztLW2
+t7i3D7u8vb6/wMHCw8TFxsfIycq8Ds3Oz9DR0tPU1dbX2Nna29zODd/g4eLj5OXm
+5+jp6uoM7e7v8PHy8/T19vf4+fr7/P3+/QsCChxIsKDBgwgTKlzIsKHDhxAFKphI
+saLFixgzatzIsaPHjyBDiqSYoKTJkyhTqlzJsqXLlzBhIphJs6bNmzhz6tzJs6fP
+/59AgwYlcqCo0aNIkypduhQJ06dQoS6JSrUqEhI4dmg1wLWr169gw4o1YASr1rNb
+x6pd67WIhxloz6KYy7buWCIjbsSdy3dugb+AAwseTDgwkQ800Pbly6Jx4ceQDQvZ
+4EJx38aYHUfeLJiIiRxyGWceTaC06dOoU6seQjn03NGwWaieTdv0kLyuY8euzfv0
+kAsqcuuOPaC48ePIkxsf0kGG8OGwlUtX7hn0DtHQiU/fPmCIhhbPs8MWQL68+fPm
+iYSwEVo8dPTwzxNJEd79+PjwiWiAUd/+6AAABiiggEXQpxV2/uk24IJGrNdfgv8x
+eAQHNTwI4WhNiKCDZShcKOWeEhjwx6GH7h3xQlwHIkjicCiiuNiK9rV43WIdwmgf
+jTTaCCGONero449ABinkkMOdYOSRSCap5JJMNrmkjFBGKeWUVFZp5ZROZKnlllx2
+WURVYIapFHdklmnmmWimqeaabLbp5ptwnonfnHTWaeedeOZp3oJ89unnn4AGAMCg
+hBZq6KGIJqooooE26mijXka6BJGUVmrpjzFkqummnHbq6aegerrCqKSWauqpqKaq
+KqoltOrqq7DGKuustMoKwq245qrrrrz26iuvGQQr7LDEFmvsscgaa8GyzDbr7LPQ
+RisttEEAADs=
+
+------------jJSse7hvpzDtpXSbn8uWcu
+Content-Disposition: inline; filename=faq1.gif
+Content-Type: text/html; name=faq1.gif
+Content-Location: http://web.archive.org/web/20050324061951im_/http://www.erwination.com/global/phpBB2/templates/Jenova/images/faq1.gif
+Content-Transfer-Encoding: Base64
+
+R0lGODlhHQANALMAANLV1q+4u8PIyt7f387S09rb3LO7vr/Fx8rO0Le+wbvBxMbL
+zdbY2au0uOLi4qextSH5BAAAAAAALAAAAAAdAA0AAASX8MlJq720rb3DM5sxCQBj
+HlbzAE7bKmsLSEI7DK+kKo7COI2gquEwOTyshISHeCyACUYUKHwcHIKa4PFTPYiM
+hyA8+bmABEfC4Jh1dcXLj7N44FwDLhBOrrwlCQ4FJgUOB38BcRMBCwF/DwhqgA4E
+T5ULaQAKCnU8PnsSBXkTBQUNaWcOG3teXjopOgmbmx6uGLe4uboWEQA7
+
+------------jJSse7hvpzDtpXSbn8uWcu
+Content-Disposition: inline; filename=members1.gif
+Content-Type: text/html; name=members1.gif
+Content-Location: http://web.archive.org/web/20050324061951im_/http://www.erwination.com/global/phpBB2/templates/Jenova/images/members1.gif
+Content-Transfer-Encoding: Base64
+
+R0lGODlhOAANALMAAMPIytrb3N7f387S06+4u8rO0Le+wbO7vr/Fx9LV1tbY2bvB
+xKu0uMbLzeLi4qextSH5BAAAAAAALAAAAAA4AA0AAAT/8MlJq704a8paQxLiMZvV
+LGVKNo4jPEzrNOkU0/VFLs7CKo4DD4gTGiSEhfJhWBxgjoHyiVxKjEzlouNgGBQG
+VqEHcIwbjIQs8QC2AjK0rAV4jN8MnkPBki0AChQsZR4OhA0BWwg9CgoMiwAMA11R
+CwgBiYZeAYUIXwpaJBUsCwEDCaAzCgKNQAuNDzwoLDcSYnuNAoUkk60EJj2oClKq
+nB4NBLCyD7QzEmNnxz5dMMfOSMikfQA8DQMCBR51yj3MlAkNBQIJZQPH5iQA1ic0
+sqQEAgJJM5ICLYHkZlGSEeAJIhlcSLhxcYAWDAmiOHCIaKMig4sUYVyEaGMjxxwg
+B0OKHEnyQgQAOw==
+
+------------jJSse7hvpzDtpXSbn8uWcu
+Content-Disposition: inline; filename=groups1.gif
+Content-Type: text/html; name=groups1.gif
+Content-Location: http://web.archive.org/web/20050324061951im_/http://www.erwination.com/global/phpBB2/templates/Jenova/images/groups1.gif
+Content-Transfer-Encoding: Base64
+
+R0lGODlhLAANALMAAK+4u97f387S09rb3MPIyr/Fx8rO0LO7vtLV1re+wcbLzau0
+uNbY2bvBxOLi4qextSH5BAAAAAAALAAAAAAsAA0AAATN8MlJq704z6K6alooSstT
+OCiqjCxVPo3TME6y3FPSAHDTJJLdY9FY6Hyvg28XAyUYT4dx+VCoaCnDwrFqYh0B
+ZYr7BE5oi+9s0Dh9GgIpFyZjMNoBgXXJs6AJCgN1DHQgVXJdgxIGDAQOdgwFFzR9
+NE+ETRJWW4kzhA8ChICBnxIACqcOCAoGAQEPdg8Ajx0DAVsMCnFrrA4EDR4DDKc8
+TQtxKAMHsJ9WKAEEVQEoAmkpAocpvzIkEzcvFt8VOMzkQ+JDLS2x6u0YCWYiEQA7
+
+------------jJSse7hvpzDtpXSbn8uWcu
+Content-Disposition: inline; filename=profile.gif
+Content-Type: text/html; name=profile.gif
+Content-Location: http://web.archive.org/web/20050324061951im_/http://www.erwination.com/global/phpBB2/templates/Jenova/images/profile.gif
+Content-Transfer-Encoding: Base64
+
+R0lGODlhKQANALMAAMPIytrb3K+4u9LV1rO7vre+wcrO0N7f387S07/Fx8bLzdbY
+2bvBxKu0uOLi4qextSH5BAAAAAAALAAAAAApAA0AAAS88MlJq704q71Fns1WAICg
+eN/TNE7bHk2KOAtgGIzDXLGkOKzFKuFIPBiMGJJReAgWgV2hkNs9qASVQyEBCGmS
+HGDQYixcDsOv1VgsqoSAC/CoUViBDTmHQG6RMwRuO4M6AwMEJkAWLGgGLFxVPkBu
+EoU5AW5nPXc0KzGQRzqTbQuWbzoOAxxcFAwKQZ1cAjQbAQd1prlVAXkbOwpWP7Eg
+W5MvdJW7OgRkLbDGEqCMdysfnJ/SKdvc3d7fExEAOw==
+
+------------jJSse7hvpzDtpXSbn8uWcu
+Content-Disposition: inline; filename=pms1.gif
+Content-Type: text/html; name=pms1.gif
+Content-Location: http://web.archive.org/web/20050324061951im_/http://www.erwination.com/global/phpBB2/templates/Jenova/images/pms1.gif
+Content-Transfer-Encoding: Base64
+
+R0lGODlhHgANALMAAMPIysrO0L/Fx7vBxM7S097f36+4u9rb3NLV1re+wbO7vsbL
+zdbY2au0uOLi4qextSH5BAAAAAAALAAAAAAeAA0AAARz8MlJq734rb3NE1vzNJuQ
+TU3jrGuhroDGptniqEwqOIDDOITH76daYAA5n2TA8zEYj8PzxohlVIcNwsFkEBwG
+R4B4krxYAVyvJyCXcSkRLgF0KNyYwQJHgbeENwsDGDZ8KEoBYoBFVyMWImYojmWU
+lZaWEQA7
+
+------------jJSse7hvpzDtpXSbn8uWcu
+Content-Disposition: inline; filename=head_r1_c10.gif
+Content-Type: text/html; name=head_r1_c10.gif
+Content-Location: http://web.archive.org/web/20050324061951im_/http://www.erwination.com/global/phpBB2/templates/Jenova/images/head_r1_c10.gif
+Content-Transfer-Encoding: Base64
+
+R0lGODlhBwBpANUAAPf39/b29vX19fT09PDw8O/v7+7u7u3t7ezs7Ovr6+rq6unp
+6ejo6Ofn5+bm5uXl5eTk5OPj4+Li4uHh4d7e3tzc3Nvb29bW1tTU1NLS0tHR0czM
+zMjIyMbGxsTExLfEyLjDx7+/v7m5ubW1tbS0tKexta2trampqaamppObngAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAACH5BAQUAP8ALAAAAAAHAGkAAAa4QIlwSCRGjsikcslsOp8R
+iHRKrVqvj6x2y+16HeCweExumM/otHrNaLvf8PhiTq/b74q8fr9P+P+AgYKDCIWG
+h4iJB4uMjY6PBpGSk5MFlpeYmEWbnEMpn6ChoSCkpaamJamqq6ytrq+wsbKztLW2
+t7i5qx+8vR+iwKCdmwTFxgQDycrLzM3OzgLR0tPTAdbXAQDa2wDY15y6qSjjKCcm
+IyTp6SIhHu7uHBsa8/MYGBb4+RQT/P0TQQA7
+
+------------jJSse7hvpzDtpXSbn8uWcu
+Content-Disposition: inline; filename=scorpion.jpg
+Content-Type: text/html; name=scorpion.jpg
+Content-Location: http://web.archive.org/web/20050324061951im_/http://www.thebestcontrol.com/bugstop/images/scorpion.jpg
+Content-Transfer-Encoding: Base64
+
+/9j/4AAQSkZJRgABAgEASABIAAD/7QFQUGhvdG9zaG9wIDMuMABNSUI4A+0AAAAA
+ABAASAAAAAEAAQBIAAAAAQABTUlCOAPzAAAAAAAIAAAAAAAAAABNSUI4JxAAAAAA
+AAoAAAAAAAAAAAACTUlCOAP1AAAAAABIAC9mZgABAGxmZgAGAAAAAAEAAC9mZgAB
+AKGZmgAGAAAAAAEAADIAAAABAFoAAAAGAAAAAAEAADUAAAABAC0AAAAGAAAAAAEA
+TUlCOAP4AAAAAABwAAD/////////////////////////////A+gAAAAA////////
+/////////////////////wPoAAAAAP////////////////////////////8D6AAA
+AAD/////////////////////////////A+gAAE1JQjgD7QAAAAAAEABIAAAAAQAB
+AEgAAAABAAFNSUI4BAYAAAAAAAIAAv/uAA5BZG9iZQBkgAAAAAH/2wCEAAwICAgJ
+CAwJCQwRCwoLERUPDAwPFRgTExUTExgRDAwMDAwMEQwMDAwMDAwMDAwMDAwMDAwM
+DAwMDAwMDAwMDAwBDQsLDQ4NEA4OEBQODg4UFA4ODg4UEQwMDAwMEREMDAwMDAwR
+DAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDP/AABEIADcARgMBIgACEQEDEQH/
+xAE/AAABBQEBAQEBAQAAAAAAAAADAAECBAUGBwgJCgsBAAEFAQEBAQEBAAAAAAAA
+AAEAAgMEBQYHCAkKCxAAAQQBAwIEAgUHBggFAwwzAQACEQMEIRIxBUFRYRMicYEy
+BhSRobFCIyQVUsFiMzRygtFDByWSU/Dh8WNzNRaisoMmRJNUZEXCo3Q2F9JV4mXy
+s4TD03Xj80YnlKSFtJXE1OT0pbXF1eX1VmZ2hpamtsbW5vY3R1dnd4eXp7fH1+f3
+EQACAgECBAQDBAUGBwcGBTUBAAIRAyExEgRBUWFxIhMFMoGRFKGxQiPBUtHwMyRi
+4XKCkkNTFWNzNPElBhaisoMHJjXC0kSTVKMXZEVVNnRl4vKzhMPTdePzRpSkhbSV
+xNTk9KW1xdXl9VZmdoaWprbG1ub2JzdHV2d3h5ent8f/3QAEAAX/2gAMAwEAAhED
+EQA/APVVF72MY573BrGglziYAA1LnEqS5f8AxhZ76eiHp1Mi7qZ9LeCGgVNLLMxr
+3Hd/O4vqVfRQJoWeiYxMiANzo5vWP8Y2R9vHT/q9h/bHnRt9td532M9R1+Nj4tVT
+LLHMrq/n/WZX/I9Kv1Fk4/VP8ZuRhb6n5Ze8E15DqMdrHHXbtp+wvu9L6Hvf6fq/
+4D9GtX/Ft0fp2ThM68WP+0i2xlDd0VVhvqUufRUxte71K7fTufe7I99f6D0P5pd2
+gATvp5MhlCJqIEvGQ/J4j6p/X77WMXD605guyRXVjZ1f0LrjDfs91TN32fJs/nK9
+v6vd/wB1/wBHXb268p+unV+mXZYf0nCNN4tdkXZeSAzEymMb/P4zBa1+butpp9HK
+p/8AUjPSuj5WRmdJwszKYK8jJx6rbqwC0Ne9jbLGbHlz2bXu+i9yIvUHotmBoQCL
+7+HZuJJJIrFJJJJKf//Q9VXCf42a3npmDYDsabn1bp2kOdW65g3afTbj2Mcu7WB9
+dcfpGX0O3E6nlUYT3n1MK699dZF9X6Sr0nZMN/4K7b/2nttr/PQIsFfjkIziTtev
+93q+X/Uz61X/AFYtsNYdkdOL2/b6d7Wsl+4V2YNLw1/2z02fvelkMr9K/wDm6Mun
+2LpHWemdawxm9LyG5OPucwuALS1zfpV2V2BltT/zttjPofpPoLw7PwcmgsdozKpj
+bjWMAFbrHHe+xtw9L1GPH2b9L7/Z/wAEm6N1/qPROpnI6fdbb6JD8j1LCym4Aeg7
+7TV+fXut20Ps/S1/o7PppRPELH2M3McucZAI18B6Z/1oPtuR9Xei5XT8XpmTiMvw
+sINGNRZLmt2VvxK/pO/SbKLX7PU/47+e/SLSXGdP/wAaPQL7ManPDun25FJte58v
+qa71DQypt1bP0jXMY/I+0+nXj1U/zlnqep6fYU3VX1Mupe22q1ofXYwhzXNcNzHs
+e32uY5qLXMSNxTNJJJJCkkkklP8A/9HufrT9Y7Oi1YtGLjuy+o9SsOPhVAEt37Z9
+S136OvYx/p/o330b/wDS1113W1c7d9WcVldn1i+vV7btmOWfZ3u2uB0saz1qH0V2
+ZHtd6OFiM+zfan2XY/q2+lYzZ+sPUenZHWui9IrtZb1Fmc3INDHtL621U22WPvr3
+7692Pbvr3s/SLn+sYvVfrP8AXt3RMwjGwensF9bSx3vxnCtt99Fv0LcrLts+yb/5
+vCqqv9P1bvX9YFlgaFWIiQuUqufDH9EPFZNP2JjsjBZYelhzW1+o6k2EB4uY2ynC
+vy/SvZ+kY97KvRt9X1fSxv5pD34WTUXNIsrZb7KbPZve76O6t211noOf6b/5Ff8A
+OL3Drmbb0/ovUM+kNdbiY119bXyWl1db7WB4aWu2bm/vLzr6r/VrpXVOhdT+seXj
+29QzPWybRi1Wurttcytrn42R9n3ZdV2Rl+ra2jf/AIXHs9FMOPWwaLax896OHJET
+xihR/nP6v7sf0PU8ZZ0y17txsD2tIJMlsbPYNpbuaz0/8H+4xb/1c+vWb9XspmHZ
+nnqvSqatjsZ4DXU6MiyrI22bqaNvosobd/Nv/R43qKhX0jAwmYHUslrL+nZHqNfe
+wsD7GY7vSycvE+0Ms231ZHv2X1/rNf8AN3V/4Lpuk24ruoU4X1f6fW45bxZ9r6kw
+WXerQ26yjN9GhrMbAso35VrLvRsvusyfT/QfzKAkep/DX7FTxQkDwYiLuRnLJxY4
+R/v/AKMv8d2B/jPpdaa29NtcGiXWNeC1oEbvUivdVt93ttaz+asWlV/jB6C9rd7c
+iqxxaBU6vc6CQLnn0H3V7cb6Vv6T3/zeN9ou/RJm/UbEOU3qYy8jD6s8h+RlYPo0
+byT6z6rK2Y3p5GO7I/Su+1V3XZH6P7Xbf6bEbM+pXTuojd1LJycu6T+nd6NT9pDW
+Orf9hx8Wu5nsZ/P122V/4Kxn6RP9WlEfVrA4LqQlX70D/wB/F0Wdf6NZ0+zqLMut
+2LS0Ptc0kuZu+hXZQB67L3fQ+zOq+0er+i9L1UlzP/jSfVg4v2Q2ZBpDt7TGOLA7
+/wANsxG5b2f8DbfZR/wX82knMfp/Hv8Ao/4r/9LvunVfVarOub084Z6gbbXZHpur
+fkeq99tmR6rpdkbvUdkfo3fzX81/NrI+urss9a+rVfS2Vnq32uyymywtAGM2v0+p
+V/pPpsspuY6z0/1n9F+rrwNJJT9VLk+qdDxMmmzO+qmecTqlNT7cWnDuYaLXNa1l
+dVmLYXYzKHPbt/R+hjfaLPtGV668BSSSL1r6vtDOldBvLetYOf03p+bbjburdLyf
+SycMvsYXWsyKTdVbi+lfvbvrt2M9O39D+ly/Xv4fQfqA2mmu+zEGbZ6Tnhmfa9wt
+aCNuLdbkfafS9Wx+zb6fq/ovUZ6lVezwhJA11pfH3b9PFeny3/gv0t09v1aZkFnT
+vsZymkh3omt124bt/qObNzrP5zfv9/8AOLUXyqkj5LJcV+q78X6qSXyqkkh//9k=
+
+------------jJSse7hvpzDtpXSbn8uWcu
+Content-Disposition: inline; filename=up.gif
+Content-Type: text/html; name=up.gif
+Content-Location: http://web.archive.org/web/20050324061951im_/http://www.erwination.com/global/phpBB2/templates/Jenova/images/up.gif
+Content-Transfer-Encoding: Base64
+
+R0lGODlhLQAsALMAAOPj4+Dh4cPJy9fZ2sjNz8rP0M3R0s/T1MbLzd7f39nb3NLV
+1tzd3tTX2MHHyeXl5SH5BAAAAAAALAAAAAAtACwAAAT/8MlJq704a5uaIU4oEkYT
+bGgFNIjoviExpGgjwPiLzDQHuiXGaRJgNAqvAqA3GdxCiMZyE7CJBAzm4NpgPlYu
+HmobG14Gikzi5xBnyI6DBiBAzNluC0Mk1xxCXRoGIQIJGHQhBhsJV2YXAD8EUxWD
+DgiTGEh8VE+BFHshWRoKMKJvIo4Pmn0ZAC1JKKsUAagbDTl5eiKTC4mcOQKYFz+e
+r2l+OYC2IQUStCHCFaDJDqkVzw4SpA4EG5rUihpPWbdxGnDUDqYXmmnlnhaI6THI
+Dl2a8BXl88oY76r9LGDj5yCYP2X4MFQiGGLBQXsP/uli6MLagz8Qy7Gi8IoiM3Yh
+nWZs66bP44t1EsY9wIZJnkko10RMMEah10sX8Mo1k2Az3MqbLwxKIDaBUQgzDJIq
+Xcq0KdMJ0zDJ8kJjKlQRKKle2FbNQqVLWjME6PToic+wFCDFiCZh2ka0DyoVOrcJ
+rtqQY0ZYTLFGRC4McATkQwHGr5YnlgawvWaFUFYUfYE0YICpyJEke1M0prgDroQV
+HdPJ8MzBA5sRJTJbiAAAOw==
+
+------------jJSse7hvpzDtpXSbn8uWcu
+Content-Disposition: inline; filename=foot_r1_c1.gif
+Content-Type: text/html; name=foot_r1_c1.gif
+Content-Location: http://web.archive.org/web/20050324061951im_/http://www.erwination.com/global/phpBB2/templates/Jenova/images/foot_r1_c1.gif
+Content-Transfer-Encoding: Base64
+
+R0lGODlhBwBCAMQAAPj4+Pb29vX19fT09PLy8vHx8e/v7+3t7ezs7Orq6unp6efn
+5+bm5uXl5eTk5OPj4+Li4rzKzqextZObngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAACH5BAQUAP8ALAAAAAAHAEIAAAVoYCOOZGmeqDmtbNtKcCzP
+dG3feK7vfL9HwKBQ6CqyIMikUgloOp/PgHQaEFivWOxgyx0QvmBCYUwuGM5ow2HN
+PiDecERiTk8o7njFYs9fMP6ADA6DhIWGh4gPiosPS46PkJGSk5SVkiEAOw==
+
+------------jJSse7hvpzDtpXSbn8uWcu
+Content-Disposition: inline; filename=foot_r1_c4.gif
+Content-Type: text/html; name=foot_r1_c4.gif
+Content-Location: http://web.archive.org/web/20050324061951im_/http://www.erwination.com/global/phpBB2/templates/Jenova/images/foot_r1_c4.gif
+Content-Transfer-Encoding: Base64
+
+R0lGODlhCABCAMQAAPj4+Pb29vX19fT09PLy8vHx8e/v7+3t7ezs7Orq6unp6efn
+5+bm5uXl5eTk5OPj4+Li4rzKzqextZObngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAACH5BAQUAP8ALAAAAAAIAEIAAAVwYCOOZGmeaDpObOu+kyTP
+dG3feK7vfO//QGBkSCwaI7BkC8JsOp8QgHRKrQIC2CxWwO16v4KBeCwmmM/mgnqt
+Nrjf7oN8LkfY7/aEfq9X+P9+C4KDggyGh4YOiouMjY6PjA+Sk5JQlpeYmZqbnJ2d
+IQA7
+
+------------jJSse7hvpzDtpXSbn8uWcu--

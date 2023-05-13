@@ -1,6 +1,6 @@
 @echo off
 
-
+REM Global Operations Extra Install/Optimize script
 
 :check_Permissions
 REM checking if script ran as Administrator    

@@ -1,0 +1,46 @@
+	###########################################
+
+27.10.2012
+Fallout <falloutdc at gmail dot com>
+fallout.bplaced.net
+globalops.tk
+
+	###########################################
+
+Ok so it was not possible to import non GlobalOps Models into the editor.Kind of annoyance for me so i searched and searched cam to conclusion nobody likes the engine not much info found.
+But I found a simple way of doing it. Im sure there an even simpler way to do this but I had to do it this way ;)
+I successfully imported NOLF 'No one lives forever' models into goedit.
+
+Requirements:
+
+GoEditor
+Noesis	http://oasis.xentax.com/index.php?content=home
+Noesis Lithtech Import Export python plugin	http://xtsukihime.wordpress.com/noesis-plugins/
+If you like Download DTX plugin too (But it does not work that good..)
+Some model you want to use .ABC file and .DTX textures
+
+
+Open up model in noesis (If you added DTX plugin you can see th textured Model BUT only if dtx is in same folder..)
+Select FILE -> EXPORT
+
+In 'Main output type:' select '.obj WaveFront OBJ'
+Everything else don't touch (or?..)
+
+You should also select the right filename Extension 'OBJ' and directory where to save the file under 'BROWSE'
+Hit OK and it should convert the .ABC Lithtech model to .OBJ Wavefront model
+
+Hit up GOedit as usual blabla open project globalops.dep new world bla
+
+now select 'Add Object' from worlds tab or from drop down selection box.
+Select 'PROP'
+Now on left side select 'properties' tab and change 
+	FILENAME to the .ABC model
+	SKIN0 to the Models DTX texture
+	PlaceHolder to the models 'OBJ' file
+
+Thats it your model should appear in editor
+
+PS: 
+.abc Models go into /MODELS
+.dtx Textures /skins
+.obj File into /MODELS

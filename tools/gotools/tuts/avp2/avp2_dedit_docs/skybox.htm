@@ -1,0 +1,619 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 9">
+<meta name=Originator content="Microsoft Word 9">
+<link rel=File-List href="./skybox_files/filelist.xml">
+<link rel=Edit-Time-Data href="./skybox_files/editdata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<title>Building Skyboxes</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Nathan Hendrickson</o:Author>
+  <o:LastAuthor>Nathan Hendrickson</o:LastAuthor>
+  <o:Revision>3</o:Revision>
+  <o:TotalTime>12</o:TotalTime>
+  <o:Created>2001-11-26T18:58:00Z</o:Created>
+  <o:LastSaved>2001-11-26T22:39:00Z</o:LastSaved>
+  <o:Pages>5</o:Pages>
+  <o:Words>2037</o:Words>
+  <o:Characters>11614</o:Characters>
+  <o:Company>Monolith</o:Company>
+  <o:Lines>96</o:Lines>
+  <o:Paragraphs>23</o:Paragraphs>
+  <o:CharactersWithSpaces>14262</o:CharactersWithSpaces>
+  <o:Version>9.2720</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+@font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:2;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:0 268435456 0 0 -2147483648 0;}
+@font-face
+	{font-family:"Formata Light";
+	panose-1:0 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-format:other;
+	mso-font-pitch:auto;
+	mso-font-signature:0 0 0 0 0 0;}
+@font-face
+	{font-family:"Formata Bold";
+	panose-1:0 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-format:other;
+	mso-font-pitch:auto;
+	mso-font-signature:0 0 0 0 0 0;}
+ /* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";}
+h1
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	font-size:14.0pt;
+	font-family:Arial;}
+h2
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:2;
+	font-size:14.0pt;
+	font-family:Arial;
+	font-style:italic;}
+h3
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:3;
+	font-size:13.0pt;
+	font-family:Arial;}
+h4
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:4;
+	font-size:10.0pt;
+	font-family:Arial;
+	font-weight:normal;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+p.ltbody1stparagraph, li.ltbody1stparagraph, div.ltbody1stparagraph
+	{mso-style-name:ltbody1stparagraph;
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Formata Light";
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+p.ltbody, li.ltbody, div.ltbody
+	{mso-style-name:ltbody;
+	margin:0in;
+	margin-bottom:.0001pt;
+	text-indent:.25in;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Formata Light";
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+p.ltheading1, li.ltheading1, div.ltheading1
+	{mso-style-name:ltheading1;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	page-break-before:always;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	font-size:18.0pt;
+	font-family:"Formata Bold";
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+p.ltbodypicture, li.ltbodypicture, div.ltbodypicture
+	{mso-style-name:ltbodypicture;
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Formata Light";
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+p.ltheading3, li.ltheading3, div.ltheading3
+	{mso-style-name:ltheading3;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:"Formata Bold";
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+p.ltbodynote, li.ltbodynote, div.ltbodynote
+	{mso-style-name:ltbodynote;
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Formata Light";
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+span.ltbodybold
+	{mso-style-name:ltbodybold;
+	font-weight:bold;}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+@list l0
+	{mso-list-id:57100396;
+	mso-list-type:hybrid;
+	mso-list-template-ids:692589042 -1258811538 1642091486 -385171464 1075488466 1492146766 -1055764476 791725318 693427306 -1905513452;}
+@list l0:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l1
+	{mso-list-id:104691829;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-234301962 -433272536 -2010504948 834335478 -1837359896 1756254940 1110865210 -1372815358 1375889206 3414382;}
+@list l1:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l2
+	{mso-list-id:1183014347;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-488319428 1642781504 -709484338 -157380082 -1050754556 -1814536218 -2041795150 88214776 -928484886 -1689500328;}
+@list l3
+	{mso-list-id:1728993730;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1740684698 1761500076 1028003294 1582495062 2043858690 837832150 1984739886 -452842220 -1358257326 -309396054;}
+@list l3:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l4
+	{mso-list-id:1957712418;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1921447184 286947644 1671452734 -1526843398 -570641032 1086121926 1184803536 2128509172 -833966964 -257754416;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+<!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="1027"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body bgcolor="#ccffff" lang=EN-US link=blue vlink=purple style='tab-interval:
+.5in'>
+
+<div class=Section1>
+
+<h1>Adding Sky to Your AVP2 Level</h1>
+
+<p class=MsoNormal>This tutorial describes how to add sky to your AVP2 level,
+either using the prefabs or creating a sky using AVP2 textures.</p>
+
+<h2>Add some SkyPortals</h2>
+
+<p class=MsoNormal>Before you can add a sky to your level, you must first add
+some skyportals. Skyportals are brushes that tell the renderer where the player
+will see the sky. Here's how to set them up (See figure 1.):</p>
+
+<ol style='margin-top:0in' start=1 type=1>
+ <li class=MsoNormal style='mso-list:l4 level1 lfo3;tab-stops:list .5in'>Add
+     brushes in your level where the sky is to be rendered.</li>
+ <li class=MsoNormal style='mso-list:l4 level1 lfo3;tab-stops:list .5in'>Assign
+     the <b>Sky</b> texture. </li>
+ <li class=MsoNormal style='mso-list:l4 level1 lfo3;tab-stops:list .5in'>Set
+     the <b>SkyPortal</b> property to <b>TRUE</b>.</li>
+ <li class=MsoNormal style='margin-bottom:12.0pt;mso-list:l4 level1 lfo3;
+     tab-stops:list .5in'>Make sure to set the brush properties <b>LightMap</b>,
+     <b>Subdivide</b>, and <b>GouraudShade</b> to <b>FALSE</b>.</li>
+</ol>
+
+<p class=MsoNormal><img width=685 height=514 id="_x0000_i1025"
+src="Skybox_Files/image002.jpg"></p>
+
+<p class=MsoNormal><i>Figure 1:</i>&nbsp; Adding SkyPortal brushes</p>
+
+<h3>Using a prefab sky from AVP2</h3>
+
+<p class=MsoNormal>If you have downloaded the AVP2 prefabs, you can use a sky
+from AVP2, by simply double-clicking on the description of the Prefab type in
+the Prefabs tab. Under the &quot;<b>Skies</b>&quot; directory in the prefab
+tab's list, the skies are divided into two .ed files: <b>Simple skies</b> and <b>Complex
+skies</b>. </p>
+
+<p class=MsoNormal>The simple skies are composed of a hollowed out cube with
+the inside textured by a set of six textures representing the sky. When using a
+simple sky (called a &quot;skybox&quot;) it is best to check your <b>WorldProperties</b>
+object's <b>FogInfo</b> properties, and make sure <b>SkyFogEnable</b> is set to
+<b>FALSE</b>.</p>
+
+<p class=MsoNormal>Most complex sky types in AVP2 often require the <b>SkyFogEnable
+</b>values to be set, in order for the sky to look right. Usually most skies
+work well with a <b>SkyFogNearZ</b> value of 0 to something like (-256) and a <b>SkyFogFarZ</b>
+value between 256 and 800, depending on the sky used. Experiment with the SkyFog
+color values to find an appropriate color to the sky.&nbsp; Refer to the sample
+maps for reference.</p>
+
+<p class=MsoNormal>Once you place your sky prefab, make sure to move the prefab
+to the outside of your level. A good place for the sky prefab is underneath the
+level, so that the actual geometry won't show through the skyportals like a box
+hanging in the sky. (See figure 2.)</p>
+
+<p class=MsoNormal><img width=679 height=509 id="_x0000_i1026"
+src="Skybox_Files/image004.jpg"></p>
+
+<p class=MsoNormal><i>Figure 2: </i>&nbsp;Placing the Sky Prefab</p>
+
+<h3>Creating a new sky using AVP2 textures</h3>
+
+<p class=MsoNormal>If you have the AVP2 resources but did not download the AVP2
+prefabs, then you can create the same skies manually. Here's how to create the
+simple skybox (See figure 3.):</p>
+
+<ol style='margin-top:0in' start=1 type=1>
+ <li class=MsoNormal style='mso-list:l2 level1 lfo6;tab-stops:list .5in'>Build
+     a hollow box out of the view of the level. A good place is underneath the
+     level, so that the actual geometry won't show through the skyportals like
+     a box hanging in the sky. Make sure the box is large enough to give you
+     good working room (512x512x512 is a decent size)</li>
+ <li class=MsoNormal style='mso-list:l2 level1 lfo6;tab-stops:list .5in'>Set
+     the <b>FullyBright</b> property to <b>TRUE</b>.</li>
+ <li class=MsoNormal style='margin-bottom:12.0pt;mso-list:l2 level1 lfo6;
+     tab-stops:list .5in'>Set the brush properties <b>LightMap</b>, <b>Subdivide</b>,
+     and <b>GouraudShade</b> to <b>FALSE</b>.</li>
+</ol>
+
+<p class=MsoNormal><img width=679 height=509 id="_x0000_i1027"
+src="Skybox_Files/image006.jpg"></p>
+
+<p class=MsoNormal><i>Figure 3:</i>&nbsp; Creating a new sky using AVP2
+textures.</p>
+
+<p class=MsoNormal>With the box geometry ready, place the crosshairs in the
+center of the box and bind the geometry to a <span class=ltbodybold>DemoSkyWorldModel</span>.
+In the <b>Properties</b> tab, set all the InnerPercent fields to
+&quot;0.001&quot; to preserve a static sky, otherwise your sky will move around
+in proportion to the player movement (parallaxing). Next, set the SkyDims of
+the object equal to the inner walls of the box. </p>
+
+<p class=MsoNormal style='margin-left:.5in'><span class=ltbodybold>Example:</span>
+for a 512x512x512 cube, set the dims radius to 256x256x256. Texture the insides
+of the box with the appropriate textures mentioned earlier and you're set. For
+a simple static sky, this may be all you need. (See figure 2.)</p>
+
+<p class=MsoNormal>Next, texture the insides of the cube with the appropriate
+set of sky textures. In the <b>Textures</b> tab, browse for the <b>Sky</b>
+directory under <b>WorldTextures</b>. Usually a set of skybox textures will
+consist of six different textures, one for each side of the box. The name's
+extension depicts the position of the texture like so:</p>
+
+<ul style='margin-top:0in' type=square>
+ <li class=MsoNormal style='mso-list:l3 level1 lfo9;tab-stops:list .5in'><b>blue_bk</b>
+     the back face of the cube.</li>
+ <li class=MsoNormal style='mso-list:l3 level1 lfo9;tab-stops:list .5in'><b>blue_dn</b>
+     the bottom face of the cube.</li>
+ <li class=MsoNormal style='mso-list:l3 level1 lfo9;tab-stops:list .5in'><b>blue_fr</b>
+     is the front.</li>
+ <li class=MsoNormal style='mso-list:l3 level1 lfo9;tab-stops:list .5in'><b>blue_lf</b>
+     is the left.</li>
+ <li class=MsoNormal style='mso-list:l3 level1 lfo9;tab-stops:list .5in'><b>blue_rt</b>
+     is to the right.</li>
+ <li class=MsoNormal style='mso-list:l3 level1 lfo9;tab-stops:list .5in'><b>blue_up</b>
+     is the top face of the cube.</li>
+</ul>
+
+<p class=MsoNormal>Inside the cube, texture a face with the front texture
+first, and then use that as the reference to apply the rest of the textures.</p>
+
+<p class=MsoNormal>If you want to create your own skybox textures, typically
+you will need a 3D package such as Bryce3D, 3DStudio Max or any other 3D
+package that will allow you to render a 3D scene into the six images needed to
+accomplish the effect. As an alternative to 3D, you can use a paint program
+such as Painter or Photoshopto paint a sky utilizing a shareware plug-in named <span
+class=ltbodybold><span style='font-weight:normal'>Skypaint. Skypaint is a handy
+little tool that can aid in setting the correct field of view of the painting
+andit </span></span>assures that the cubic form of the geometry will not show
+in the perspective of the textures.</p>
+
+<p class=MsoNormal>For more information on SkyPaint, visit<a
+href="http://www.wasabisoft.com/">http://www.wasabisoft.com/</a></p>
+
+<h2>Creating a new complex sky using AVP2 textures</h2>
+
+<p class=MsoNormal>A complex sky goes beyond a static skybox. They usually
+contain more than the skybox object, such as panning clouds, or a sunflare, or
+sometimes even a keyframed object. Refer to the Sample_complexsky level for
+construction.</p>
+
+<p class=MsoNormal>In order to create a good complex sky, it's best to start
+with the simple skybox first. Keeping the skybox ensures that we will never see
+the void of 3D space, sometimes resulting in the mirror/shearing effect. Also,
+the <b>DemoSkyWorldModel's</b> object center of the skybox provides a reference
+point, acting as the sky camera. Be aware that any objects added to the sky
+scene will use the <b>DemoSkyWorldModel's</b> object as a reference. </p>
+
+<p class=MsoNormal>The first modification to the original skybox is to
+retexture it. Since we'll be adding objects for visual effects, we can replace
+the six larger textures with a smaller tiling texture, which is more memory
+efficient. For this example use a green color for an alien-looking sky. Open
+the Texture tab and select &quot;p2sky1&quot; which is in the Sky directory.
+Next, resize the skybox to allow more working room; for this example,
+4096x512x4096 will do well. When you resize the geometry make sure the <b>DemoSkyWorldModel</b>
+object stays in the center, and reset the dims to 2048x256x2048. (See figure
+4.)</p>
+
+<p class=MsoNormal><img border=0 width=677 height=509 id="_x0000_i1028"
+src="Skybox_Files/image008.jpg"></p>
+
+<p class=MsoNormal><i>Figure 4: </i>Creating a new complex sky using AVP2
+textures.</p>
+
+<p class=MsoNormal>Now the stage is ready for other objects to be added to the
+scene. The first object to make is the clouds object. Add a 4096x64x4096 brush
+about 64 units above the center of the <b>DemoSkyWorldModel</b> object center.
+Texture the entire brush with the invisible texture so that all the other five
+sides of the brush will render invisible at runtime. Then in Geometry Mode,
+texture the bottom face with a clouds texture with an appropriate alpha mask.
+For this example, use &quot;ylc&quot; in the Sky directory. Right-click on the
+textured face and select <b>Map Texture Coordinates</b> and set the U and V
+fields to 256. This will keep the texture from repeating too much in the sky. </p>
+
+<p class=MsoNormal>Bind this brush to a <b>TranslucentWorldmodel</b> object and
+set the brush properties to:</p>
+
+<ul style='margin-top:0in' type=square>
+ <li class=MsoNormal style='mso-list:l1 level1 lfo12;tab-stops:list .5in'>Subdivide
+     = False</li>
+ <li class=MsoNormal style='mso-list:l1 level1 lfo12;tab-stops:list .5in'>LightMap
+     = False</li>
+ <li class=MsoNormal style='mso-list:l1 level1 lfo12;tab-stops:list .5in'>GouraudShade
+     = False</li>
+ <li class=MsoNormal style='mso-list:l1 level1 lfo12;tab-stops:list .5in'>Translucent
+     = True</li>
+ <li class=MsoNormal style='mso-list:l1 level1 lfo12;tab-stops:list .5in'>FullyBright
+     = True</li>
+</ul>
+
+<p class=MsoNormal>Make sure the <b>TranslucentWorldmodel's</b> <b>FogDisable</b>
+property is set to FALSE, since you want the SkyFog to fade the cloud layer to
+the horizon. Also set the <b>Alpha</b> property to any number &lt;1, such as
+0.99, or less if you want the clouds to be more translucent. In the <b>TranslucentWorldModel</b>
+Name field, enter <span style='font-family:"Courier New"'>Clouds1</span>. (See
+figure 5.)</p>
+
+<p class=MsoNormal><img border=0 width=677 height=509 id="_x0000_i1029"
+src="Skybox_Files/image010.jpg"></p>
+
+<p class=MsoNormal><i>Figure 5: </i>Cloud construction.</p>
+
+<p class=MsoNormal style='margin-left:.5in'><b>NOTE:</b> When working with more
+than just the <b>DemoSkyWorldModel</b> in the sky scene, it is best to name all
+the objects to a more descriptive term, such as changing the DemoSkyWorldModel
+name to &quot;skybox&quot; and the TranslucentWorldModel name to &quot;Clouds1&quot;.
+This will also make the next steps a lot easier to deal with.</p>
+
+<p class=MsoNormal>In order to get the clouds to appear to move, you must open
+the brush properties, and in the <b>Effect</b> field, enter <span
+style='font-family:"Courier New"'>Pan</span>, and in the <b>EffectParam</b>
+field enter two values. The first is the panning speed in the positive <b>X</b>
+direction of the cloud texture in texels per second and the second is the
+panning speed in the negative <b>Y</b> direction in texels per second. Negative
+values can be entered to reverse the direction. For example, entering <span
+style='font-family:"Courier New"'>-64 128</span> will pan the texture
+diagonally, 64 units per second to the left and 128 units down. Because these
+values are relative to the texture, you can rotate the brush or the texture
+itself to modify the direction, as well as scale the texture to affect the speed.
+Sometimes if you cannot detect the cloud texture panning in the sky, try
+setting the <b>EffectParam</b> to a higher value, since scaling the texture and
+the distance of the cloud layer to the camera (the <b>DemoSkyWorldModel</b>
+object) can affect the appearance of the speed.</p>
+
+<p class=MsoNormal style='margin-left:.5in'><b>NOTE:</b> If you only want to
+add the cloud layer, without any other objects, there are a few more steps
+required in order for the clouds to work. Refer to the section on <a
+href="#indexordering">Index ordering multiple sky objects</a>.</p>
+
+<h3>Adding the Sun and the SunFlare object</h3>
+
+<p class=MsoNormal>The next detail you can add to the sky is a sun. Copy the <b>TranslucentWorldModel</b>
+and rename it to &quot;Sun&quot;. Replace the cloud texture with
+&quot;invisible&quot;. Then go into the brush properties and delete the <b>Panning</b>
+values in the <b>Effect</b> and EffectParam fields (otherwise your flare will
+pan) and set the <b>Additive</b> property to TRUE<b>. </b>Also set <b>FogDisable</b>
+to TRUE. </p>
+
+<p class=MsoNormal><img border=0 width=677 height=509 id="_x0000_i1030"
+src="Skybox_Files/image012.jpg"></p>
+
+<p class=MsoNormal><i>Figure 6: </i>Positioning the sun cube.</p>
+
+<p class=MsoNormal>Next, resize the sun geometry to a 32x32x32 cube. Position
+the sun cube so that the closest face is 192 units in the positive Z direction
+(North in the top viewport) from the center of the <b>DemoSkyWorldModel</b> object.
+(See figure 6.) Unselect the geometry and just select the Sun's object, and
+position it in the center of the skybox, at the same point of the <b>DemoSkyWorldModel</b>.
+Copy the sun and rename the copy &quot;SunFlare&quot;; you'll use that later,
+but you can hide it for now. Select the original sun again and in the left
+viewport, right-click and select <b>Rotate Selection</b> and in the field
+enter&nbsp; <span style='font-family:"Courier New"'>-35</span> (be sure that
+your green crosshairs are at the center of the skybox). This will position the
+sun a bit higher in the sky, and keep the front face aimed at the camera. Go
+into <b>Geometry Mode</b> and select the side of the cube facing the camera,
+and apply a sun texture such as &quot;gla2&quot; in the sky texture directory.
+(See figure 7.)</p>
+
+<p class=MsoNormal><img border=0 width=677 height=509 id="_x0000_i1031"
+src="Skybox_Files/image014.jpg"></p>
+
+<p class=MsoNormal>Figure 7:&nbsp; Applying texture to the sun</p>
+
+<p class=MsoNormal style='margin-left:.5in'><b>NOTE:</b> When applying textures
+to an additive worldmodel, it is important that the texture is completely black
+where the texture is to be transparent, otherwise you will see the whole square
+of the face in the sky.</p>
+
+<p class=MsoNormal>Fit the texture by right-clicking on the face and selecting <b>Map
+Texture Coordinates</b>, and in the <b>U</b> and <b>V</b> fields, enter <span
+style='font-family:"Courier New"'>32</span> to scale the texture to the size of
+the cube. To align the texture, keep the face highlighted and press the K key
+several times until the sun is centered. Now that the sun is ready, move on to
+the sun flare.</p>
+
+<p class=MsoNormal>Unhide the &quot;SunFlare&quot; copy of the sun, and scale
+up the height and width to 256 units, keeping the thickness the same as the
+sun. Select an appropriate flare texture, such as &quot;gla3&quot; and, as you
+did with the sun, fit the texture to the face. Then rotate the SunFlare
+geometry in the left viewport by -35 to match the angle of the sun. Now to give
+the flare effect, in the <b>TranslucentWorldModel's</b> properties, set <b>LensFlare</b>
+to TRUE, and under <b>LensFlareProps</b>, set <b>InSkyBox</b> to TRUE. Now that
+the clouds, sun and sunflare objects are all created, you need to set them up
+to render in the sky. </p>
+
+<p class=MsoNormal style='margin-left:.5in'><b>NOTE:</b> If you only want to
+add the sun or sunflare, without any other objects, there are a few more steps
+required in order for the objects to work. Refer to the next section <a
+href="#indexordering">Index ordering multiple sky objects</a>.</p>
+
+<h3><a name=indexordering></a>Index ordering multiple sky objects</h3>
+
+<p class=MsoNormal>Setting the rendering order of all the sky objects is the
+most important step in creating the complex sky type. This is done in the <span
+class=ltbodybold>Index </span>field. Because the <b>DemoSkyWorldmodel</b> is
+the only worldmodel type with an <b>Index</b> field, you have to add a <b>SkyPointer</b>
+object to your sky scene for every object to be added after your skybox, or
+else these objects will not show up in the sky. The <b>SkyPointer</b> object
+references the worldmodel and has an <b>Index</b> field for that worldmodel. </p>
+
+<p class=MsoNormal>Start by adding a <b>SkyPointer</b> for the clouds layer (it
+is recommended to place all objects without geometry at the middle of the
+skybox). Then fill in the name field with a descriptive term such as
+&quot;Clouds1Skypointer&quot; and then set the name of the <b>TranslucsentWorldmodel</b>
+in the <b>SkyObjectName</b> field to &quot;Clouds1&quot;. Continue adding
+SkyPointers for each worldmodel object in your scene (with the exception of the
+<b>DemoSkyWorldmodel</b> skybox).</p>
+
+<p class=MsoNormal>Now that there is an <b>Index</b> field provided for each
+object (via the new SkyPointers), set the ordering of all the objects for the
+sky. Start by opening the properties of the <b>DemoSkyWorldModel</b> (skybox)
+and in the <b>Index</b> field, enter <span style='font-family:"Courier New"'>0</span>,
+and then select the <b>Clouds1SkyPointer</b> and set the <span
+class=ltbodybold>Index</span> to <span style='font-family:"Courier New"'>1</span>.
+Now the game engine knows to draw the Skybox object first, then the clouds layer
+next, drawing the clouds in front of the blue sky. Continue adding more objects
+in your sky as needed, while adding SkyPointers and updating the Index for all
+the objects, and your set.</p>
+
+<h4><span class=ltbodybold><span style='font-family:"Times New Roman"'>Typical
+Index settings for a scene</span></span></h4>
+
+<ul style='margin-top:0in' type=square>
+ <li class=MsoNormal style='mso-list:l0 level1 lfo15;tab-stops:list .5in'>Skybox
+     = 0</li>
+ <li class=MsoNormal style='mso-list:l0 level1 lfo15;tab-stops:list .5in'>Sun =
+     1</li>
+ <li class=MsoNormal style='mso-list:l0 level1 lfo15;tab-stops:list .5in'>SunFlare
+     = 2</li>
+ <li class=MsoNormal style='mso-list:l0 level1 lfo15;tab-stops:list .5in'>Clouds1
+     = 3</li>
+ <li class=MsoNormal style='mso-list:l0 level1 lfo15;tab-stops:list .5in'>Clouds
+     2 = 4</li>
+ <li class=MsoNormal style='mso-list:l0 level1 lfo15;tab-stops:list .5in'>Trees
+     = 5</li>
+</ul>
+
+<h3>The final polish</h3>
+
+<p class=MsoNormal>Once the sky is fully functional, you can add fog to hide
+the edges of the clouds. To do this, go into the <b>WorldProperties</b> object
+and make sure that <b>FogEnable</b> is set to TRUE. In the <b>FogInfo</b>, set
+the <b>SkyFogEnable</b> to TRUE, select white for the <b>FogColor</b>, then set
+the <b>SkyFogNearZ</b> to 0 and the <b>SkyFogFarZ</b> to 800. As an alternative
+to using fog to fade in the clouds, you can add other objects around the
+horizon in front of the clouds (such as trees or buildings), just as you did
+with the sun.</p>
+
+</div>
+
+</body>
+
+</html>
