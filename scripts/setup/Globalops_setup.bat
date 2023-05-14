@@ -82,7 +82,7 @@ if not defined rivapath (
         echo What drive is it installed on?
         set /p "rivadrive=Type in drive letter WITHOUT ':' in front: "
         set "rivapath=%rivadrive%:\Program Files\RivaTuner Statistics Server"
-
+        pause
     )
 )
 
@@ -97,6 +97,7 @@ if "%rivainstalled%"=="0" (
 	echo The run script will use it. please install it:
 	start "" "%batchdir%\[Guru3D.com]-RTSSSetup734.exe"
         pause
+        GOTO Get RTSS Directory
 )
 
 pause
