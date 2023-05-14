@@ -41,7 +41,7 @@ if exist "C:\PROGRA~2\Crave\Global~1\globalops.exe" (
 
 if %globalopspath%==0 (
 echo Install was not found on C drive. What drive is globalops installed on
-set /p "globalopsdrive=Drive letter WITHOUT ":" infront:"
+set /p "globalopsdrive=Drive letter WITHOUT : infront"
 echo %globalopsdrive%
 
 if exist "%globalopsdrive%:\PROGRA~1\Crave\Global~1\?lobalops.exe" (
@@ -82,6 +82,7 @@ if not defined rivapath (
         echo What drive is it installed on?
         set /p "rivadrive=Type in drive letter WITHOUT ':' in front: "
         set "rivapath=%rivadrive%:\Program Files\RivaTuner Statistics Server"
+
     )
 )
 
@@ -95,6 +96,7 @@ if "%rivainstalled%"=="0" (
 	echo This limits game FPS and is critical to smooth gameplay.
 	echo The run script will use it. please install it:
 	start "" "%batchdir%\[Guru3D.com]-RTSSSetup734.exe"
+        pause
 )
 
 pause
