@@ -41,15 +41,15 @@ if exist "C:\PROGRA~2\Crave\Global~1\globalops.exe" (
 
 if %globalopspath%==0 (
 echo Install was not found on C drive. What drive is globalops installed on
-set /p "globalopsdrive=Drive letter WITHOUT : infront"
+set /p "globalopsdrive=Drive letter WITHOUT : infront:"
 echo %globalopsdrive%
 
-if exist "%globalopsdrive%:\PROGRA~1\Crave\Global~1\?lobalops.exe" (
+if exist "%globalopsdrive%:\PROGRA~1\Crave\Global~1\Globalops.exe" (
 set globalopspath=%globalopsdrive%:\PROGRA~1\Crave\Global~1
 )
 
 
-if exist "%globalopsdrive%:\PROGRA~2\Crave\Global~1\?lobalops.exe" (
+if exist "%globalopsdrive%:\PROGRA~2\Crave\Global~1\Globalops.exe" (
 set globalopspath=%globalopsdrive%:\PROGRA~2\Crave\Global~1
 )
 )
