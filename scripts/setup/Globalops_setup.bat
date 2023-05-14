@@ -2,6 +2,8 @@
 
 REM Global Operations Extra Install/Optimize script
 
+
+
 :check_Permissions
 REM checking if script ran as Administrator    
     net session >nul 2>&1
@@ -26,8 +28,8 @@ echo.|set /p="%batchdir%">%batchdir%\batchpath.txt
 
 :Get Global Ops Directory
 
-set globalopspath=0
-set globalopsdrive=C
+set "globalopspath=0"
+set "globalopsdrive=C"
 
 
 if exist "C:\PROGRA~1\Crave\Global~1\globalops.exe" (
@@ -42,15 +44,17 @@ echo Install was not found on C drive. What drive is globalops installed on
 set /p "globalopsdrive=Drive letter WITHOUT ":" infront:"
 echo %globalopsdrive%
 
-if exist "%globalopsdrive%:\PROGRA~1\Crave\Global~1\globalops.exe" (
+if exist "%globalopsdrive%:\PROGRA~1\Crave\Global~1\?lobalops.exe" (
 set globalopspath=%globalopsdrive%:\PROGRA~1\Crave\Global~1
- )
 )
 
-if exist "%globalopsdrive%:\PROGRA~2\Crave\Global~1\globalops.exe" (
+
+if exist "%globalopsdrive%:\PROGRA~2\Crave\Global~1\?lobalops.exe" (
 set globalopspath=%globalopsdrive%:\PROGRA~2\Crave\Global~1
-  
 )
+)
+
+
 REM echo %globalopspath%> globalopspath.txt
 echo.|set /p="%globalopspath%">%batchdir%\globalopspath.txt 
 REM this method only puts 1 line in the text file. This is needed for the registry check.
@@ -86,7 +90,7 @@ echo %rivapath% > %batchdir%\rivapath.txt
 :Download RTSS
 if "%rivainstalled%"=="0" (
 	echo Attemping to download RTSS
-    Powershell.exe -executionpolicy bypass -Command "Invoke-WebRequest -Uri https://ftp.nluug.nl/pub/games/PC/guru3d/afterburner/[Guru3D.com]-RTSS.zip -OutFile %batchdir%\RTSS.zip"
+    Powershell.exe -executionpolicy bypass -Command "$ProgressPreference = 'SilentlyContinue'; Invoke-WebRequest -Uri https://ftp.nluug.nl/pub/games/PC/guru3d/afterburner/[Guru3D.com]-RTSS.zip -OutFile %batchdir%\RTSS.zip"
     Powershell.exe -executionpolicy bypass -Command Expand-Archive -Force -LiteralPath %batchdir%\RTSS.zip -DestinationPath %batchdir%\
 	echo This limits game FPS and is critical to smooth gameplay.
 	echo The run script will use it. please install it:
@@ -112,7 +116,7 @@ pause
 REM Check if 3.5 is already applied. If so, prompt asking if they want to override anyways.
 
 
-set "filename=Globalops.exe"
+set "filename=?lobalops.exe"
 set "hash=df07a775aeeefbdaf2b2109cf912b50742a13acc"
 
 for /f "tokens=*" %%a in ('CertUtil -hashfile "%globalopspath%\%filename%" SHA1 ^| find /v ":"') do set "filehash=%%a"
@@ -123,7 +127,7 @@ if "%filehash%"=="%hash%" (
     set /p "installpatch=Type 1 if you want to install the patch anyways: "
 ) else (
     Powershell.exe -executionpolicy bypass -Command "Set-MpPreference -DisableRealtimeMonitoring $true"
-    Powershell.exe -executionpolicy bypass -Command "Invoke-WebRequest -Uri 'https://github.com/Boby360/Globalops_resources/raw/main/patches/3.5/globalops-35-manual-installer.zip' -OutFile %batchdir%\globalops-35-manual-installer.zip"
+    Powershell.exe -executionpolicy bypass -Command "$ProgressPreference = 'SilentlyContinue'; Invoke-WebRequest -Uri 'https://github.com/Boby360/Globalops_resources/raw/main/patches/3.5/globalops-35-manual-installer.zip' -OutFile %batchdir%\globalops-35-manual-installer.zip"
     Powershell.exe -executionpolicy bypass -Command "Expand-Archive -Force -LiteralPath '%batchdir%\globalops-35-manual-installer.zip' -DestinationPath %globalopspath%"
     Powershell.exe -executionpolicy bypass -Command "Set-MpPreference -DisableRealtimeMonitoring $false"
     echo Downloaded, installed 3.5, and disabled and enabled windows defender.
@@ -132,7 +136,7 @@ if "%filehash%"=="%hash%" (
 
 if "%installpatch%"=="1" (
     Powershell.exe -executionpolicy bypass -Command "Set-MpPreference -DisableRealtimeMonitoring $true"
-    Powershell.exe -executionpolicy bypass -Command "Invoke-WebRequest -Uri 'https://github.com/Boby360/Globalops_resources/raw/main/patches/3.5/globalops-35-manual-installer.zip' -OutFile globalops-35-manual-installer.zip"
+    Powershell.exe -executionpolicy bypass -Command "$ProgressPreference = 'SilentlyContinue'; Invoke-WebRequest -Uri 'https://github.com/Boby360/Globalops_resources/raw/main/patches/3.5/globalops-35-manual-installer.zip' -OutFile globalops-35-manual-installer.zip"
     Powershell.exe -executionpolicy bypass -Command "Expand-Archive -Force -LiteralPath '.\globalops-35-manual-installer.zip' -DestinationPath %globalopspath%"
     Powershell.exe -executionpolicy bypass -Command "Set-MpPreference -DisableRealtimeMonitoring $false"
 	echo Installed 3.5, despite theoretically being installed due to your request.
@@ -160,7 +164,7 @@ if not exist "%globalopspath%\Tools" (
 
 if not exist "%globalopspath%\Tools\TimerTool.exe" (
 	echo file does not exist.
-    Powershell.exe -executionpolicy bypass -Command Invoke-WebRequest -Uri 'https://vvvv.org/sites/all/modules/general/pubdlcnt/pubdlcnt.php?file=https://vvvv.org/sites/default/files/uploads/TimerToolV3.zip' -OutFile %globalopspath%\Tools\TimerToolV3.zip
+    Powershell.exe -executionpolicy bypass -Command $ProgressPreference = 'SilentlyContinue'; Invoke-WebRequest -Uri 'https://vvvv.org/sites/all/modules/general/pubdlcnt/pubdlcnt.php?file=https://vvvv.org/sites/default/files/uploads/TimerToolV3.zip' -OutFile %globalopspath%\Tools\TimerToolV3.zip
 	Powershell.exe -executionpolicy bypass -Command Expand-Archive -Force -LiteralPath %globalopspath%\Tools\TimerToolV3.zip -DestinationPath %globalopspath%\Tools\
 )
 
@@ -169,7 +173,7 @@ pause
 :Riva Profile for Global Ops
 if not exist "%rivapath%\Profiles\Globalops.exe.cfg" (
 	echo Downloading Globalops Riva Profile from Github repo
-	Powershell.exe -executionpolicy bypass -Command "Invoke-WebRequest -Uri https://github.com/Boby360/Globalops_resources/raw/main/profiles/rivatuner-limit100-Globalops.exe.cfg -OutFile %batchdir%\Globalops.exe.cfg"
+	Powershell.exe -executionpolicy bypass -Command "$ProgressPreference = 'SilentlyContinue'; Invoke-WebRequest -Uri https://github.com/Boby360/Globalops_resources/raw/main/profiles/rivatuner-limit100-Globalops.exe.cfg -OutFile %batchdir%\Globalops.exe.cfg"
 	copy "%batchdir%\Globalops.exe.cfg" "%rivapath%\Profiles\"
 )
 
