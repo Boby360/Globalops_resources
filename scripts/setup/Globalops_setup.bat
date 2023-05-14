@@ -97,6 +97,7 @@ if "%rivainstalled%"=="0" (
 	echo The run script will use it. please install it:
 	start "" "%batchdir%\[Guru3D.com]-RTSSSetup734.exe"
         pause
+        mkdir %rivapath%\Profiles
         GOTO Get RTSS Directory
 )
 
