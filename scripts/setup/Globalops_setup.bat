@@ -23,13 +23,13 @@ set "batchfile=%~f0"
 REM Extract the directory from the batch file path
 set "batchdir=%~dp0"
 
-echo.|set /p="%batchdir%">%batchdir%\batchpath.txt 
+echo.|set /p ="%batchdir%">%batchdir%\batchpath.txt 
 
 
 :Get Global Ops Directory
 
-set "globalopspath=0"
-set "globalopsdrive=C"
+set "globalopspath="
+
 
 
 if exist "C:\PROGRA~1\Crave\Global~1\globalops.exe" (
@@ -39,38 +39,46 @@ if exist "C:\PROGRA~2\Crave\Global~1\globalops.exe" (
  set globalopspath=C:\PROGRA~2\Crave\Global~1
 )
 
-if %globalopspath%==0 (
-echo Install was not found on C drive. What drive is globalops installed on
-set /p "globalopsdrive=Drive letter WITHOUT : infront:"
-echo %globalopsdrive%
+IF NOT DEFINED globalopspath (
+    echo Globalops install was not found on C drive. What drive is globalops installed on?
+    set /p globalopsdrive=Drive letter WITHOUT : in front:
+    
 
-if exist "%globalopsdrive%:\PROGRA~1\Crave\Global~1\Globalops.exe" (
-set globalopspath=%globalopsdrive%:\PROGRA~1\Crave\Global~1
+    IF EXIST %globalopsdrive%:\PROGRA~1\Crave\Global~1\Globalops.exe (
+        set globalopspath=%globalopsdrive%:\PROGRA~1\Crave\Global~1
+    )
+
+    IF EXIST %globalopsdrive%:\PROGRA~2\Crave\Global~1\Globalops.exe (
+        set globalopspath=%globalopsdrive%:\PROGRA~2\Crave\Global~1
+    )
+
+    IF NOT DEFINED globalopspath (
+        echo Did you install globalops in a weird folder? If so, tell me the path to globalops.exe
+        set /p "globalopspath=What is the weird path?"
+    )
 )
 
 
-if exist "%globalopsdrive%:\PROGRA~2\Crave\Global~1\Globalops.exe" (
-set globalopspath=%globalopsdrive%:\PROGRA~2\Crave\Global~1
-)
-)
 
 
 REM echo %globalopspath%> globalopspath.txt
 echo.|set /p="%globalopspath%">%batchdir%\globalopspath.txt 
 REM this method only puts 1 line in the text file. This is needed for the registry check.
-
+pause
 
 :Get RTSS Directory
 set "rivapath="
 set "rivadrive="
-set "rivainstalled="
+set "rivainstalled=0"
 
 if exist "C:\Program Files\RivaTuner Statistics Server\RTSS.exe" (
     set "rivapath=C:\Program Files\RivaTuner Statistics Server"
 	echo Found a Riva install
+	set "rivainstalled=1"
 ) else if exist "C:\Program Files (x86)\RivaTuner Statistics Server\RTSS.exe" (
     set "rivapath=C:\Program Files (x86)\RivaTuner Statistics Server"
-	echo Found a Riva install							   
+	echo Found a Riva install
+	set "rivainstalled=1"	
 )
 
 if not defined rivapath (
@@ -88,18 +96,22 @@ if not defined rivapath (
 
 echo %rivapath% > %batchdir%\rivapath.txt
  
+pause
 :Download RTSS
+echo %rivainstalled%
+echo %riviapath%
 if "%rivainstalled%"=="0" (
-	echo Attemping to download RTSS
-    Powershell.exe -executionpolicy bypass -Command "$ProgressPreference = 'SilentlyContinue'; Invoke-WebRequest -Uri https://ftp.nluug.nl/pub/games/PC/guru3d/afterburner/[Guru3D.com]-RTSS.zip -OutFile %batchdir%\RTSS.zip"
-    Powershell.exe -executionpolicy bypass -Command Expand-Archive -Force -LiteralPath %batchdir%\RTSS.zip -DestinationPath %batchdir%\
-	echo This limits game FPS and is critical to smooth gameplay.
-	echo The run script will use it. please install it:
-	start "" "%batchdir%\[Guru3D.com]-RTSSSetup734.exe"
-        pause
-        mkdir %rivapath%\Profiles
-        GOTO Get RTSS Directory
+    echo Attempting to download RTSS
+    Powershell.exe -executionpolicy bypass -Command "$ProgressPreference = 'SilentlyContinue'; Invoke-WebRequest -Uri https://ftp.nluug.nl/pub/games/PC/guru3d/afterburner/[Guru3D.com]-RTSS.zip -OutFile %batchdir%\RTSS.zip" ^
+    && Powershell.exe -executionpolicy bypass -Command Expand-Archive -Force -LiteralPath %batchdir%\RTSS.zip -DestinationPath %batchdir%\
+    echo This limits game FPS and is critical to smooth gameplay.
+    echo The run script will use it. Please install it:
+    start "" "%batchdir%\[Guru3D.com]-RTSSSetup734.exe"
+    pause
+    mkdir "%rivapath%\Profiles"
+    GOTO Get RTSS Directory
 )
+
 
 pause
 
@@ -120,7 +132,7 @@ pause
 REM Check if 3.5 is already applied. If so, prompt asking if they want to override anyways.
 
 
-set "filename=?lobalops.exe"
+set "filename=Globalops.exe"
 set "hash=df07a775aeeefbdaf2b2109cf912b50742a13acc"
 
 for /f "tokens=*" %%a in ('CertUtil -hashfile "%globalopspath%\%filename%" SHA1 ^| find /v ":"') do set "filehash=%%a"
@@ -167,7 +179,7 @@ if not exist "%globalopspath%\Tools" (
 )
 
 if not exist "%globalopspath%\Tools\TimerTool.exe" (
-	echo file does not exist.
+	echo High Res Timer not detected in Global Operations\Tools\ Downloading.....
     Powershell.exe -executionpolicy bypass -Command $ProgressPreference = 'SilentlyContinue'; Invoke-WebRequest -Uri 'https://vvvv.org/sites/all/modules/general/pubdlcnt/pubdlcnt.php?file=https://vvvv.org/sites/default/files/uploads/TimerToolV3.zip' -OutFile %globalopspath%\Tools\TimerToolV3.zip
 	Powershell.exe -executionpolicy bypass -Command Expand-Archive -Force -LiteralPath %globalopspath%\Tools\TimerToolV3.zip -DestinationPath %globalopspath%\Tools\
 )
@@ -215,6 +227,8 @@ for /f "usebackq tokens=1,2,*" %%A in ("%hostsPath%") do (
         set "lineFound=yes"
         if "%%A %%B" == "%desiredIP% %desiredHostname%" (
             echo The script has already succeeded. The hosts file already contains the correct entry for %desiredHostname%.
+			pause
+			exit
         ) else (
             echo Found an existing entry for %desiredHostname% but with a different IP address. Replacing it with the correct IP address...
             type "%hostsPath%" | findstr /v /c:"%%A %%B">"%hostsPath%.tmp"
@@ -231,17 +245,16 @@ if not defined lineFound (
 )
 
 REM Verify that the entry was added or replaced correctly
-set "lineFound="
 for /f "usebackq tokens=1,2,*" %%A in ("%hostsPath%") do (
     if "%%B" == "%desiredHostname%" (
         set "lineFound=yes"
         if "%%A %%B" == "%desiredIP% %desiredHostname%" (
-            echo The entry for %desiredHostname% was successfully added to the hosts file or updated with the correct IP address.
+            echo The entry for %desiredHostname% has been detected!
+			echo It was successfully added or replaced in the hosts file.
         ) else (
             echo Failed to update the IP address for %desiredHostname% in the hosts file.
 			echo .
-			echo Did you right click the file and click "Run as administrator"?.
-			echo If so and this still doesn't work, its possible that Windows has ransomware protection enabled, limiting access to the file.
+			echo Its possible that Windows has ransomware protection enabled, limiting access to the file.
 			echo As an alternative to this script, you can open %hostsPath% in notepad with administrative rights, and add:
 			echo %desiredIP% %desiredHostname% 
 )
