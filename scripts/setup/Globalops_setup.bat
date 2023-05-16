@@ -1,6 +1,7 @@
 @echo off
 setlocal enabledelayedexpansion
 set debug=0
+set makelink=0
 echo Global Operations Extra Install/Optimize script
 echo Created by Boby with invauable support from MasTa
 
@@ -55,6 +56,13 @@ IF NOT DEFINED globalopspath (
     ) ELSE (
 		echo Could not find Globalops installation on !globalopsdrive! drive.
 		set /p "globalopspath=What is the weird path to Globalops.exe?"
+		IF EXIST "!globalopspath!\Globalops.exe" (
+		continue
+		) else (
+		echo There is no Globalops.exe file at the end of that path.
+		pause
+		exit
+		)
     )
 )
 
@@ -62,7 +70,14 @@ IF NOT DEFINED globalopspath (
 
 
 REM echo !globalopspath!> globalopspath.txt
-echo.|set /p="!globalopspath!">!batchdir!\globalopspath.txt 
+
+if not exist "!globalopspath!\Tools" (
+    echo I made a Tools folder in your Global Ops install to store things
+	mkdir "!globalopspath!\Tools"
+	mkdir "!globalopspath!\Tools\cross-script-variables"
+)
+
+echo.|set /p="!globalopspath!">!globalopspath!\Tools\cross-script-variables\globalopspath.txt 
 REM this method only puts 1 line in the text file. This is needed for the registry check.
 pause
 
@@ -94,7 +109,7 @@ if not defined rivapath (
     )
 )
 
-echo !rivapath! > !batchdir!\rivapath.txt
+echo !rivapath! > !globalopspath!\Tools\cross-script-variables\rivapath.txt
  
 pause
 :Download RTSS
@@ -176,10 +191,6 @@ echo CD key randomized!
 pause
 
 :High Res Timer Download
-if not exist "!globalopspath!\Tools" (
-    echo I made a Tools folder in your Global Ops install to store the High Res Timer
-	mkdir "!globalopspath!\Tools"
-)
 
 if not exist "!globalopspath!\Tools\TimerTool.exe" (
 	echo High Res Timer not detected in Global Operations\Tools\ Downloading.....
@@ -231,7 +242,8 @@ for /f "usebackq tokens=1,2,*" %%A in ("!hostsPath!") do (
         if "%%A %%B" == "!desiredIP! !desiredHostname!" (
             echo The script has already succeeded. The hosts file already contains the correct entry for !desiredHostname!.
 			pause
-			exit
+			GOTO last
+			REM exit
         ) else (
             echo Found an existing entry for !desiredHostname! but with a different IP address. Replacing it with the correct IP address...
             type "!hostsPath!" | findstr /v /c:"%%A %%B">"!hostsPath!.tmp"
@@ -269,5 +281,59 @@ REM Set the hosts file back to read-only if it was read-only to begin with
 if defined hostsReadOnly (
     attrib +r "!hostsPath!" >nul
 )
-
+:last
+Powershell.exe -executionpolicy bypass -Command "$ProgressPreference = 'SilentlyContinue'; Invoke-WebRequest -Uri 'https://github.com/Boby360/Globalops_resources/raw/main/scripts/run/Globalops_run.bat' -OutFile !globalopspath!\Globalops_run.bat"
+REM move !batchdir!\Globalops_run.bat !globalopspath!\Globalops_run.bat
+echo Assuming you did not see any errors, Great Success!
+echo There is now a file called Globalops_run.bat in your Global Operations directory.
+echo !globalopspath!
 pause
+if "!makelink!"=="0" (
+exit
+)
+
+REM make link?
+if "!makelink!"=="1" (
+    set "defaultUsers=Public;Default;All Users;Default User"
+    set "userFolder="
+    for /d %%a in ("!systemdrive!\Users\*") do (
+        set "folderName=%%~nxa"
+        echo Checking folder: !folderName!
+        echo Default users: !defaultUsers!
+        set "isDefaultUser=0"
+        for %%u in (!defaultUsers!) do (
+            if "!folderName!"=="%%u" (
+                set "isDefaultUser=1"
+                exit /b
+            )
+        )
+        if !isDefaultUser! equ 0 (
+            if defined userFolder (
+                echo Multiple non-default user folders found.
+                set "userFolder=!folderName!"
+                echo Current username: !folderName!
+                goto end
+            )
+            set "userFolder=!folderName!"
+        )
+    )
+    if not defined userFolder (
+        echo No non-default user folders found.
+        goto end
+    )
+
+    :end
+    echo User folder: !userFolder!
+    pause
+
+
+
+
+set "linkName=Global Operations.lnk"
+set "linktarget=!globalopspath!\Globalops_run.bat"
+set "linkLocation=C:\Users\!userFolder!\Desktop"
+
+mklink "!linkLocation!\!linkName!" "!linktarget!"
+pause
+exit
+)
