@@ -7,6 +7,7 @@ echo Created by Boby with invauable support from MasTa
 REM Todo:
 REM Install/Figure out mappack situation.
 REM Figure out shortcut code
+REM Detect other common antivirus and tell users how to exclude manually
 
 :check_Permissions
 REM checking if script ran as Administrator    
