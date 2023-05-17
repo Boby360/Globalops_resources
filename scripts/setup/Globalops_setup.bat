@@ -4,6 +4,9 @@ set debug=0
 echo Global Operations Extra Install/Optimize script
 echo Created by Boby with invauable support from MasTa
 
+REM Todo:
+REM Install/Figure out mappack situation.
+REM Figure out shortcut code
 
 :check_Permissions
 REM checking if script ran as Administrator    
