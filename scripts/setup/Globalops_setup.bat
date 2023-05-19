@@ -57,7 +57,7 @@ IF NOT DEFINED globalopspath (
 		echo Could not find Globalops installation on !globalopsdrive! drive.
 		set /p "globalopspath=What is the weird path to Globalops.exe?"
 		IF EXIST "!globalopspath!\Globalops.exe" (
-		continue
+		echo Confirmed install!
 		) else (
 		echo There is no Globalops.exe file at the end of that path.
 		pause
@@ -140,8 +140,8 @@ reg query "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Defender\Exclusions\Pat
 if !errorlevel! equ 0 (
    echo The folder is excluded from Windows Defender.
 ) else (
-	echo The folder is not excluded from Windows Defender.
-	Powershell.exe -executionpolicy bypass -Command "Add-MpPreference -ExclusionPath !globalopspath!"
+	echo The folder is not excluded from Windows Defender
+	Powershell.exe -executionpolicy bypass -Command Add-MpPreference -ExclusionPath '!globalopspath!'
 	echo It has now been added
 )
 pause
@@ -162,7 +162,7 @@ if "!filehash!"=="!hash!" (
 ) else (
     Powershell.exe -executionpolicy bypass -Command "Set-MpPreference -DisableRealtimeMonitoring $true"
     Powershell.exe -executionpolicy bypass -Command "$ProgressPreference = 'SilentlyContinue'; Invoke-WebRequest -Uri 'https://github.com/Boby360/Globalops_resources/raw/main/patches/3.5/globalops-35-manual-installer.zip' -OutFile !batchdir!\globalops-35-manual-installer.zip"
-    Powershell.exe -executionpolicy bypass -Command "Expand-Archive -Force -LiteralPath '!batchdir!\globalops-35-manual-installer.zip' -DestinationPath !globalopspath!"
+    Powershell.exe -executionpolicy bypass -Command Expand-Archive -Force -LiteralPath '!batchdir!\globalops-35-manual-installer.zip' -DestinationPath '!globalopspath!'
     Powershell.exe -executionpolicy bypass -Command "Set-MpPreference -DisableRealtimeMonitoring $false"
     echo Downloaded and installed Patch 3.5
 )
@@ -170,8 +170,8 @@ if "!filehash!"=="!hash!" (
 
 if "!installpatch!"=="1" (
     Powershell.exe -executionpolicy bypass -Command "Set-MpPreference -DisableRealtimeMonitoring $true"
-    Powershell.exe -executionpolicy bypass -Command "$ProgressPreference = 'SilentlyContinue'; Invoke-WebRequest -Uri 'https://github.com/Boby360/Globalops_resources/raw/main/patches/3.5/globalops-35-manual-installer.zip' -OutFile globalops-35-manual-installer.zip"
-    Powershell.exe -executionpolicy bypass -Command "Expand-Archive -Force -LiteralPath '.\globalops-35-manual-installer.zip' -DestinationPath !globalopspath!"
+    Powershell.exe -executionpolicy bypass -Command "$ProgressPreference = 'SilentlyContinue'; Invoke-WebRequest -Uri 'https://github.com/Boby360/Globalops_resources/raw/main/patches/3.5/globalops-35-manual-installer.zip' -OutFile !batchdir!\globalops-35-manual-installer.zip"
+    Powershell.exe -executionpolicy bypass -Command Expand-Archive -Force -LiteralPath '!batchdir!\globalops-35-manual-installer.zip' -DestinationPath '!globalopspath!'
     Powershell.exe -executionpolicy bypass -Command "Set-MpPreference -DisableRealtimeMonitoring $false"
 	echo Downloaded and installed Patch 3.5 over pre existing install
 )
@@ -194,8 +194,12 @@ pause
 
 if not exist "!globalopspath!\Tools\TimerTool.exe" (
 	echo High Res Timer not detected in Global Operations\Tools\ Downloading.....
-    Powershell.exe -executionpolicy bypass -Command $ProgressPreference = 'SilentlyContinue'; Invoke-WebRequest -Uri 'https://vvvv.org/sites/all/modules/general/pubdlcnt/pubdlcnt.php?file=https://vvvv.org/sites/default/files/uploads/TimerToolV3.zip' -OutFile !globalopspath!\Tools\TimerToolV3.zip
-	Powershell.exe -executionpolicy bypass -Command Expand-Archive -Force -LiteralPath !globalopspath!\Tools\TimerToolV3.zip -DestinationPath !globalopspath!\Tools\
+    Powershell.exe -executionpolicy bypass -Command $ProgressPreference = 'SilentlyContinue'; Invoke-WebRequest -Uri 'https://vvvv.org/sites/all/modules/general/pubdlcnt/pubdlcnt.php?file=https://vvvv.org/sites/default/files/uploads/TimerToolV3.zip' -OutFile '!globalopspath!\Tools\TimerToolV3.zip'
+	if "!debug!"=="1" (
+		echo downloaded
+		pause
+	)
+	Powershell.exe -executionpolicy bypass -Command Expand-Archive -Force -LiteralPath '!globalopspath!\Tools\TimerToolV3.zip' -DestinationPath '!globalopspath!\Tools\'
 )
 
 echo High Res Timer install complete
@@ -282,7 +286,7 @@ if defined hostsReadOnly (
     attrib +r "!hostsPath!" >nul
 )
 :last
-Powershell.exe -executionpolicy bypass -Command "$ProgressPreference = 'SilentlyContinue'; Invoke-WebRequest -Uri 'https://github.com/Boby360/Globalops_resources/raw/main/scripts/run/Globalops_run.bat' -OutFile !globalopspath!\Globalops_run.bat"
+Powershell.exe -executionpolicy bypass -Command $ProgressPreference = 'SilentlyContinue'; Invoke-WebRequest -Uri 'https://github.com/Boby360/Globalops_resources/raw/main/scripts/run/Globalops_run.bat' -OutFile '!globalopspath!\Globalops_run.bat'
 REM move !batchdir!\Globalops_run.bat !globalopspath!\Globalops_run.bat
 echo Assuming you did not see any errors, Great Success!
 echo There is now a file called Globalops_run.bat in your Global Operations directory.
