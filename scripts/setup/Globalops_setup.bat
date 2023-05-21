@@ -1,6 +1,6 @@
 @echo off
 setlocal enabledelayedexpansion
-set debug=1
+set debug=0
 set makelink=0
 echo Global Operations Extra Install/Optimize script
 echo Created by Boby with invauable support from MasTa
@@ -49,6 +49,10 @@ if exist "C:\PROGRA~1\Crave\Global~1\globalops.exe" (
 )
 if exist "C:\PROGRA~2\Crave\Global~1\globalops.exe" (
  set globalopspath=C:\PROGRA~2\Crave\Global~1
+)
+if "!debug!"=="1" (
+echo We found the path:
+echo !globalopspath!
 )
 IF NOT DEFINED globalopspath (
 	echo Globalops install was not found on C drive.
@@ -137,7 +141,6 @@ if "!rivainstalled!"=="0" (
     echo The run script will use it. Please install it:
     start "" "!batchdir!\[Guru3D.com]-RTSSSetup734.exe"
     pause
-    mkdir "!rivapath!\Profiles"
     GOTO Get RTSS Directory
 )
 
@@ -163,11 +166,15 @@ REM Check if 3.5 is already applied. If so, prompt asking if they want to overri
 
 
 set "filename=Globalops.exe"
-set "hash=03C6FEA302FB53A2C3265522D901C945D4DDD309"
+set "hash=03c6fea302fb53a2c3265522d901c945d4ddd309"
 
 for /f "tokens=*" %%a in ('CertUtil -hashfile "!globalopspath!\!filename!" SHA1 ^| find /v ":"') do set "filehash=%%a"
 set "filehash=!filehash: =!"
 echo Checking to see if patch 3.5.1 is installed. If not, install it.
+if "!debug!"=="1" (
+echo Actual file Hash: !filehash!
+echo Script stored Hash: !hash!
+)
 if "!filehash!"=="!hash!" (
     echo Patch 3.5 is already installed. Do you want to override what is currently installed?
     set /p "installpatch=Type 1 if you want to install the patch anyways: "
@@ -226,7 +233,11 @@ if not exist "!globalopspath!\Tools\TimerTool.exe" (
 echo High Res Timer install complete
 pause
 :Riva Profile for Global Ops
+if not exist "!rivapath!\Profiles" (
+	mkdir "!rivapath!\Profiles"
+)
 if not exist "!rivapath!\Profiles\Globalops.exe.cfg" (
+	
 	echo Downloading Globalops Riva Profile from Github repo
 	Powershell.exe -executionpolicy bypass -Command "$ProgressPreference = 'SilentlyContinue'; Invoke-WebRequest -Uri https://github.com/Boby360/Globalops_resources/raw/main/profiles/rivatuner-limit100-Globalops.exe.cfg -OutFile !batchdir!\Globalops.exe.cfg"
 	copy "!batchdir!\Globalops.exe.cfg" "!rivapath!\Profiles\"
