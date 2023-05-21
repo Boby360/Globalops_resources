@@ -1,6 +1,6 @@
 @echo off
 setlocal enabledelayedexpansion
-set debug=0
+set debug=1
 set makelink=0
 echo Global Operations Extra Install/Optimize script
 echo Created by Boby with invauable support from MasTa
@@ -31,6 +31,11 @@ REM Extract the directory from the batch file path
 set "batchdir=%~dp0"
 
 echo.|set /p ="!batchdir!">!batchdir!\batchpath.txt 
+
+if "!debug!"=="1" (
+echo Batch Directory:
+echo !batchdir!
+)
 
 echo got batch path
 pause
@@ -158,18 +163,18 @@ REM Check if 3.5 is already applied. If so, prompt asking if they want to overri
 
 
 set "filename=Globalops.exe"
-set "hash=df07a775aeeefbdaf2b2109cf912b50742a13acc"
+set "hash=03C6FEA302FB53A2C3265522D901C945D4DDD309"
 
 for /f "tokens=*" %%a in ('CertUtil -hashfile "!globalopspath!\!filename!" SHA1 ^| find /v ":"') do set "filehash=%%a"
 set "filehash=!filehash: =!"
-echo Checking to see if patch 3.5 is installed. If not, install it.
+echo Checking to see if patch 3.5.1 is installed. If not, install it.
 if "!filehash!"=="!hash!" (
     echo Patch 3.5 is already installed. Do you want to override what is currently installed?
     set /p "installpatch=Type 1 if you want to install the patch anyways: "
 ) else (
     Powershell.exe -executionpolicy bypass -Command "Set-MpPreference -DisableRealtimeMonitoring $true"
-    Powershell.exe -executionpolicy bypass -Command "$ProgressPreference = 'SilentlyContinue'; Invoke-WebRequest -Uri 'https://github.com/Boby360/Globalops_resources/raw/main/patches/3.5/3.5.1-manual_update.zip' -OutFile !batchdir!\globalops-35-manual-installer.zip"
-    Powershell.exe -executionpolicy bypass -Command Expand-Archive -Force -LiteralPath '!batchdir!\globalops-35-manual-installer.zip' -DestinationPath '!globalopspath!'
+    Powershell.exe -executionpolicy bypass -Command "$ProgressPreference = 'SilentlyContinue'; Invoke-WebRequest -Uri 'https://github.com/Boby360/Globalops_resources/raw/main/patches/3.5/3.5.1-manual_update.zip' -OutFile !batchdir!\globalops-351-manual-installer.zip"
+    Powershell.exe -executionpolicy bypass -Command Expand-Archive -Force -LiteralPath '!batchdir!\globalops-351-manual-installer.zip' -DestinationPath '!globalopspath!'
     Powershell.exe -executionpolicy bypass -Command "Set-MpPreference -DisableRealtimeMonitoring $false"
     echo Downloaded and installed Patch 3.5
 )
@@ -177,8 +182,8 @@ if "!filehash!"=="!hash!" (
 
 if "!installpatch!"=="1" (
     Powershell.exe -executionpolicy bypass -Command "Set-MpPreference -DisableRealtimeMonitoring $true"
-    Powershell.exe -executionpolicy bypass -Command "$ProgressPreference = 'SilentlyContinue'; Invoke-WebRequest -Uri 'https://github.com/Boby360/Globalops_resources/raw/main/patches/3.5/3.5.1-manual_update.zip' -OutFile !batchdir!\globalops-35-manual-installer.zip"
-    Powershell.exe -executionpolicy bypass -Command Expand-Archive -Force -LiteralPath '!batchdir!\globalops-35-manual-installer.zip' -DestinationPath '!globalopspath!'
+    Powershell.exe -executionpolicy bypass -Command "$ProgressPreference = 'SilentlyContinue'; Invoke-WebRequest -Uri 'https://github.com/Boby360/Globalops_resources/raw/main/patches/3.5/3.5.1-manual_update.zip' -OutFile !batchdir!\globalops-351-manual-installer.zip"
+    Powershell.exe -executionpolicy bypass -Command Expand-Archive -Force -LiteralPath '!batchdir!\globalops-351-manual-installer.zip' -DestinationPath '!globalopspath!'
     Powershell.exe -executionpolicy bypass -Command "Set-MpPreference -DisableRealtimeMonitoring $false"
 	echo Downloaded and installed Patch 3.5 over pre existing install
 )
@@ -190,8 +195,17 @@ pause
 set "key=HKLM:SOFTWARE\WOW6432Node\Electronic Arts\EA Games\Global Operations\ergc"
 set "value=(default)"
 
-powershell -Command "$NewValue = Get-Random -Minimum 5000000000000000000000 -Maximum 6000000000000000000000; Set-ItemProperty -Path '!key!' -Name '!value!' -Value $NewValue"
+set /a "minValue=1000"
+set /a "maxValue=9999"
+set /a "start=5000"
+set /a "rangeSize=maxValue - minValue + 1"
+set /a "randomNumber1=(%RANDOM% %% rangeSize) + minValue"
+set /a "randomNumber2=(%RANDOM% %% rangeSize) + minValue"
+set /a "randomNumber3=(%RANDOM% %% rangeSize) + minValue"
+set /a "randomNumber4=(%RANDOM% %% rangeSize) + minValue"
+echo Random number: !start!!randomNumber1!!randomNumber2!2!randomNumber3!!randomNumber4!
 
+powershell -Command "$cdkey = !start!!randomNumber1!!randomNumber2!2!randomNumber3!!randomNumber4!; Set-ItemProperty -Path '!key!' -Name '!value!' -Value $cdkey"
 
 
 echo CD key randomized!
