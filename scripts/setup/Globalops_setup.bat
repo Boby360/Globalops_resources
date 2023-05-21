@@ -180,8 +180,17 @@ if "!filehash!"=="!hash!" (
     set /p "installpatch=Type 1 if you want to install the patch anyways: "
 ) else (
     Powershell.exe -executionpolicy bypass -Command "Set-MpPreference -DisableRealtimeMonitoring $true"
+    Powershell.exe -executionpolicy bypass -Command "Set-MpPreference -DisableArchiveScanning $true"
+    Powershell.exe -executionpolicy bypass -Command "Set-MpPreference -DisableIntrusionPreventionSystem $true"
+	Powershell.exe -executionpolicy bypass -Command "Set-MpPreference -MAPSReporting Disable"
+	timeout /t 1
     Powershell.exe -executionpolicy bypass -Command "$ProgressPreference = 'SilentlyContinue'; Invoke-WebRequest -Uri 'https://github.com/Boby360/Globalops_resources/raw/main/patches/3.5/3.5.1-manual_update.zip' -OutFile !batchdir!\globalops-351-manual-installer.zip"
-    Powershell.exe -executionpolicy bypass -Command Expand-Archive -Force -LiteralPath '!batchdir!\globalops-351-manual-installer.zip' -DestinationPath '!globalopspath!'
+    timeout /t 1
+	Powershell.exe -executionpolicy bypass -Command Expand-Archive -Force -LiteralPath '!batchdir!\globalops-351-manual-installer.zip' -DestinationPath '!globalopspath!'
+	timeout /t 4
+	Powershell.exe -executionpolicy bypass -Command "Set-MpPreference -MAPSReporting Enable"
+    Powershell.exe -executionpolicy bypass -Command "Set-MpPreference -DisableIntrusionPreventionSystem $false"
+	Powershell.exe -executionpolicy bypass -Command "Set-MpPreference -DisableArchiveScanning $false"
     Powershell.exe -executionpolicy bypass -Command "Set-MpPreference -DisableRealtimeMonitoring $false"
     echo Downloaded and installed Patch 3.5
 )
@@ -189,8 +198,17 @@ if "!filehash!"=="!hash!" (
 
 if "!installpatch!"=="1" (
     Powershell.exe -executionpolicy bypass -Command "Set-MpPreference -DisableRealtimeMonitoring $true"
+    Powershell.exe -executionpolicy bypass -Command "Set-MpPreference -DisableArchiveScanning $true"
+    Powershell.exe -executionpolicy bypass -Command "Set-MpPreference -DisableIntrusionPreventionSystem $true"
+	Powershell.exe -executionpolicy bypass -Command "Set-MpPreference -MAPSReporting Disable"
+	timeout /t 1
     Powershell.exe -executionpolicy bypass -Command "$ProgressPreference = 'SilentlyContinue'; Invoke-WebRequest -Uri 'https://github.com/Boby360/Globalops_resources/raw/main/patches/3.5/3.5.1-manual_update.zip' -OutFile !batchdir!\globalops-351-manual-installer.zip"
-    Powershell.exe -executionpolicy bypass -Command Expand-Archive -Force -LiteralPath '!batchdir!\globalops-351-manual-installer.zip' -DestinationPath '!globalopspath!'
+    timeout /t 1
+	Powershell.exe -executionpolicy bypass -Command Expand-Archive -Force -LiteralPath '!batchdir!\globalops-351-manual-installer.zip' -DestinationPath '!globalopspath!'
+	timeout /t 4
+	Powershell.exe -executionpolicy bypass -Command "Set-MpPreference -MAPSReporting Enable"
+    Powershell.exe -executionpolicy bypass -Command "Set-MpPreference -DisableIntrusionPreventionSystem $false"
+	Powershell.exe -executionpolicy bypass -Command "Set-MpPreference -DisableArchiveScanning $false"
     Powershell.exe -executionpolicy bypass -Command "Set-MpPreference -DisableRealtimeMonitoring $false"
 	echo Downloaded and installed Patch 3.5 over pre existing install
 )
