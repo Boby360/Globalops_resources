@@ -22,7 +22,8 @@ REM checking if script ran as Administrator
 		pause
 		exit
     )
-
+echo verified permissions
+pause
 REM Get the full path of the batch file
 set "batchfile=%~f0"
 
@@ -31,7 +32,8 @@ set "batchdir=%~dp0"
 
 echo.|set /p ="!batchdir!">!batchdir!\batchpath.txt 
 
-
+echo got batch path
+pause
 :Get Global Ops Directory
 set "globalopspath="
 set "globalopsdrive="
@@ -70,7 +72,8 @@ IF NOT DEFINED globalopspath (
     )
 )
 
-
+echo got globalops path
+pause
 
 
 REM echo !globalopspath!> globalopspath.txt
@@ -165,7 +168,7 @@ if "!filehash!"=="!hash!" (
     set /p "installpatch=Type 1 if you want to install the patch anyways: "
 ) else (
     Powershell.exe -executionpolicy bypass -Command "Set-MpPreference -DisableRealtimeMonitoring $true"
-    Powershell.exe -executionpolicy bypass -Command "$ProgressPreference = 'SilentlyContinue'; Invoke-WebRequest -Uri 'https://github.com/Boby360/Globalops_resources/raw/main/patches/3.5/globalops-35-manual-installer.zip' -OutFile !batchdir!\globalops-35-manual-installer.zip"
+    Powershell.exe -executionpolicy bypass -Command "$ProgressPreference = 'SilentlyContinue'; Invoke-WebRequest -Uri 'https://github.com/Boby360/Globalops_resources/raw/main/patches/3.5/3.5.1-manual_update.zip' -OutFile !batchdir!\globalops-35-manual-installer.zip"
     Powershell.exe -executionpolicy bypass -Command Expand-Archive -Force -LiteralPath '!batchdir!\globalops-35-manual-installer.zip' -DestinationPath '!globalopspath!'
     Powershell.exe -executionpolicy bypass -Command "Set-MpPreference -DisableRealtimeMonitoring $false"
     echo Downloaded and installed Patch 3.5
@@ -174,7 +177,7 @@ if "!filehash!"=="!hash!" (
 
 if "!installpatch!"=="1" (
     Powershell.exe -executionpolicy bypass -Command "Set-MpPreference -DisableRealtimeMonitoring $true"
-    Powershell.exe -executionpolicy bypass -Command "$ProgressPreference = 'SilentlyContinue'; Invoke-WebRequest -Uri 'https://github.com/Boby360/Globalops_resources/raw/main/patches/3.5/globalops-35-manual-installer.zip' -OutFile !batchdir!\globalops-35-manual-installer.zip"
+    Powershell.exe -executionpolicy bypass -Command "$ProgressPreference = 'SilentlyContinue'; Invoke-WebRequest -Uri 'https://github.com/Boby360/Globalops_resources/raw/main/patches/3.5/3.5.1-manual_update.zip' -OutFile !batchdir!\globalops-35-manual-installer.zip"
     Powershell.exe -executionpolicy bypass -Command Expand-Archive -Force -LiteralPath '!batchdir!\globalops-35-manual-installer.zip' -DestinationPath '!globalopspath!'
     Powershell.exe -executionpolicy bypass -Command "Set-MpPreference -DisableRealtimeMonitoring $false"
 	echo Downloaded and installed Patch 3.5 over pre existing install
