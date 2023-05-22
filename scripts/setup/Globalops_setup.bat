@@ -4,6 +4,7 @@ set debug=0
 set makelink=0
 echo Global Operations Extra Install/Optimize script
 echo Created by Boby with invauable support from MasTa
+set unpackingPassword=
 
 REM Todo:
 REM Install/Figure out mappack situation.
@@ -75,16 +76,45 @@ IF NOT DEFINED globalopspath (
 		echo Confirmed install!
 		) else (
 		echo There is no Globalops.exe file at the end of that path.
+		REM Do you want to download it? if y, GOTO Download Global Operations, else,
 		pause
 		exit
 		)
     )
 )
-
 echo got globalops path
 pause
+GOTO Tools
 
 
+
+:Download Global Operations
+REM To extract zip with password, we need something with more beef than powershell zip extractor.
+REM download NuGet(2.8.5.201 or newer) module, as it is a dependancy for 7zip4powershell module.
+REM Install-PackageProvider -Name NuGet -MinimumVersion 2.8.5.201 -Force
+REM Install-PackageProvider -Name 7zip4powershell -Force
+
+
+Powershell.exe -executionpolicy bypass -Command $WebClient1 = New-Object System.Net.WebClient; $GameDLUrl = "https://drive.google.com/uc?export=download&id=1xN6xXK1hqq9DJeouT0UxiUC--OGzUrYt&confirm=t"; $WebClient1.DownloadFile($GameDLUrl, "!batchdir!\gop.zip")
+Powershell.exe -executionpolicy bypass -Command Expand-7Zip -ArchiveFileName "!batchdir!\gop.zip" -TargetPath !batchdir! -SecurePassword !unpackingPassword!
+
+if exist "C:\PROGRA~2\ (
+mkdir C:\PROGRA~2\Crave\
+Powershell.exe -executionpolicy bypass -Command Expand-Archive -Force -LiteralPath '!batchdir!\gop2.zip' -DestinationPath 'C:\PROGRA~2\Crave\'
+) else (
+	if exist "C:\PROGRA~1\ (
+	mkdir C:\PROGRA~1\Crave\
+	Powershell.exe -executionpolicy bypass -Command Expand-Archive -Force -LiteralPath '!batchdir!\gop2.zip' -DestinationPath 'C:\PROGRA~1\Crave\'
+	)
+	)
+
+REM Registery install
+Powershell.exe -executionpolicy bypass -Command "$ProgressPreference = 'SilentlyContinue'; Invoke-WebRequest -Uri https://github.com/Boby360/Globalops_resources/raw/main/patches/registry/Install-Main.reg -OutFile !batchdir!\Install-Main.reg" ^
+
+REM will create the paths required. add will not.
+REG IMPORT Install-Main.reg
+
+:Tools
 REM echo !globalopspath!> globalopspath.txt
 
 if not exist "!globalopspath!\Tools" (
@@ -146,6 +176,14 @@ if "!rivainstalled!"=="0" (
 
 if "!debug!"=="1" (
 pause
+)
+
+:Download Map Pack
+IF NOT EXIST "!globalopspath!\globalops\worlds\4way.dat" (
+$WebClient2 = New-Object System.Net.WebClient
+$MapPackUrl = "https://drive.google.com/uc?export=download&id=1PTSnVKbqJ4MBCm8J4BPcKt6BUtg4j58t&confirm=t"
+$WebClient2.DownloadFile($MapPackUrl, "!batchdir!\mappack.zip")
+Powershell.exe -executionpolicy bypass -Command Expand-Archive -Force -LiteralPath '!batchdir!\mappack.zip' -DestinationPath '!globalopspath!\globalops\'
 )
 
 REM Is the folder already excluded?
