@@ -95,7 +95,8 @@ REM Install-PackageProvider -Name NuGet -MinimumVersion 2.8.5.201 -Force
 REM Install-PackageProvider -Name 7zip4powershell -Force
 
 
-Powershell.exe -executionpolicy bypass -Command $WebClient1 = New-Object System.Net.WebClient; $GameDLUrl = "https://drive.google.com/uc?export=download&id=1xN6xXK1hqq9DJeouT0UxiUC--OGzUrYt&confirm=t"; $WebClient1.DownloadFile($GameDLUrl, "!batchdir!\gop.zip")
+Powershell.exe -executionpolicy bypass -Command $WebClient1 = New-Object System.Net.WebClient; $GameDLUrl = "'https://drive.google.com/uc?export=download&id=1xN6xXK1hqq9DJeouT0UxiUC--OGzUrYt&confirm=t'"; $WebClient1.DownloadFile($GameDLUrl, "!batchdir!\gop.zip" );
+
 Powershell.exe -executionpolicy bypass -Command Expand-7Zip -ArchiveFileName "!batchdir!\gop.zip" -TargetPath !batchdir! -SecurePassword !unpackingPassword!
 
 if exist "C:\PROGRA~2\ (
@@ -109,7 +110,7 @@ Powershell.exe -executionpolicy bypass -Command Expand-Archive -Force -LiteralPa
 	)
 
 REM Registery install
-Powershell.exe -executionpolicy bypass -Command "$ProgressPreference = 'SilentlyContinue'; Invoke-WebRequest -Uri https://github.com/Boby360/Globalops_resources/raw/main/patches/registry/Install-Main.reg -OutFile !batchdir!\Install-Main.reg" ^
+Powershell.exe -executionpolicy bypass -Command "$ProgressPreference = 'SilentlyContinue'; Invoke-WebRequest -Uri https://github.com/Boby360/Globalops_resources/raw/main/patches/registry/Install-Main.reg -OutFile !batchdir!\Install-Main.reg"
 
 REM will create the paths required. add will not.
 REG IMPORT Install-Main.reg
