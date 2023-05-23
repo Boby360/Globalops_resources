@@ -57,32 +57,47 @@ echo !globalopspath!
 )
 IF NOT DEFINED globalopspath (
 	echo Globalops install was not found on C drive.
+	REM Is it installed?
+	set /p globalopsinstalled='Is it installed? If so, type y to select a non default drive.'
+	if "!globalopsinstalled!"=="y" (
 	set /p globalopsdrive=What drive letter is globalops installed on: 
-	if "!debug!"=="1" (
-	echo !globalopsdrive!
-	echo !globalopspath!
-	)
+		if "!debug!"=="1" (
+		echo !globalopsdrive!
+		echo !globalopspath!
+		)
 
-    IF EXIST "!globalopsdrive!:\PROGRA~1\Crave\Global~1\Globalops.exe" (
-		set "globalopspath=!globalopsdrive!:\PROGRA~1\Crave\Global~1"
-		echo Globalops install path confirmed: !globalopspath!
-    ) ELSE IF EXIST "!globalopsdrive!:\PROGRA~2\Crave\Global~1\Globalops.exe" (
-		set globalopspath="!globalopsdrive!:\PROGRA~2\Crave\Global~1"
-		echo Globalops install path confirmed: !globalopspath!
-    ) ELSE (
-		echo Could not find Globalops installation on !globalopsdrive! drive.
-		set /p "globalopspath=What is the weird path to Globalops.exe?"
-		IF EXIST "!globalopspath!\Globalops.exe" (
-		echo Confirmed install!
+		IF EXIST "!globalopsdrive!:\PROGRA~1\Crave\Global~1\Globalops.exe" (
+			set "globalopspath=!globalopsdrive!:\PROGRA~1\Crave\Global~1"
+			echo Globalops install path confirmed: !globalopspath!
+		) ELSE IF EXIST "!globalopsdrive!:\PROGRA~2\Crave\Global~1\Globalops.exe" (
+			set globalopspath="!globalopsdrive!:\PROGRA~2\Crave\Global~1"
+			echo Globalops install path confirmed: !globalopspath!
+		) ELSE (
+			echo Could not find Globalops installation on !globalopsdrive! drive.
+			set /p "globalopspath=What is the weird path to Globalops.exe?"
+			IF EXIST "!globalopspath!\Globalops.exe" (
+			echo Confirmed install!
+			) else (
+			echo There is no Globalops.exe file at the end of that path.
+			pause
+			GOTO Get Global Ops Directory
+			)
+		)
+	) else (
+		set /p globalopsinstall='Do you want the script to download the game? Type y if so.'
+		if "!globalopsinstall!"=="y" (
+		GOTO Download Global Operations
 		) else (
-		echo There is no Globalops.exe file at the end of that path.
-		REM Do you want to download it? if y, GOTO Download Global Operations, else,
+		echo Installation required to continue.
 		pause
 		exit
 		)
-    )
+	)
 )
-echo got globalops path
+
+if "!debug!"=="1" (
+echo Finished globalops directory code
+)
 pause
 GOTO Tools
 
@@ -94,27 +109,38 @@ REM download NuGet(2.8.5.201 or newer) module, as it is a dependancy for 7zip4po
 REM Install-PackageProvider -Name NuGet -MinimumVersion 2.8.5.201 -Force
 REM Install-PackageProvider -Name 7zip4powershell -Force
 
-
+echo starting game download
 Powershell.exe -executionpolicy bypass -Command $WebClient1 = New-Object System.Net.WebClient; $GameDLUrl = "'https://drive.google.com/uc?export=download&id=1xN6xXK1hqq9DJeouT0UxiUC--OGzUrYt&confirm=t'"; $WebClient1.DownloadFile($GameDLUrl, "!batchdir!\gop.zip" );
-
+echo Downloaded game
+pause
+echo unpacking zip1
 Powershell.exe -executionpolicy bypass -Command Expand-7Zip -ArchiveFileName "!batchdir!\gop.zip" -TargetPath !batchdir! -SecurePassword !unpackingPassword!
-
+echo unpackaged zip 1
+pause
 if exist "C:\PROGRA~2\ (
+echo make x86 crave folder
 mkdir C:\PROGRA~2\Crave\
+echo extract gop2 into crave folder
 Powershell.exe -executionpolicy bypass -Command Expand-Archive -Force -LiteralPath '!batchdir!\gop2.zip' -DestinationPath 'C:\PROGRA~2\Crave\'
+echo extracted
 ) else (
 	if exist "C:\PROGRA~1\ (
+	echo make x64 crave folder
 	mkdir C:\PROGRA~1\Crave\
+	echo extract gop2 into crave folder
 	Powershell.exe -executionpolicy bypass -Command Expand-Archive -Force -LiteralPath '!batchdir!\gop2.zip' -DestinationPath 'C:\PROGRA~1\Crave\'
+	echo extracted
 	)
 	)
-
-REM Registery install
+pause
+echo Registery install
 Powershell.exe -executionpolicy bypass -Command "$ProgressPreference = 'SilentlyContinue'; Invoke-WebRequest -Uri https://github.com/Boby360/Globalops_resources/raw/main/patches/registry/Install-Main.reg -OutFile !batchdir!\Install-Main.reg"
-
+echo registry downloaded
+pause
 REM will create the paths required. add will not.
+echo registry import attempt:
 REG IMPORT Install-Main.reg
-
+pause
 :Tools
 REM echo !globalopspath!> globalopspath.txt
 
@@ -181,9 +207,9 @@ pause
 
 :Download Map Pack
 IF NOT EXIST "!globalopspath!\globalops\worlds\4way.dat" (
-$WebClient2 = New-Object System.Net.WebClient
-$MapPackUrl = "https://drive.google.com/uc?export=download&id=1PTSnVKbqJ4MBCm8J4BPcKt6BUtg4j58t&confirm=t"
-$WebClient2.DownloadFile($MapPackUrl, "!batchdir!\mappack.zip")
+REM Powershell.exe -executionpolicy bypass -Command "$WebClient2 = New-Object System.Net.WebClient; $MapPackUrl = "'https://drive.google.com/uc?export=download&id=1PTSnVKbqJ4MBCm8J4BPcKt6BUtg4j58t&confirm=t'"; $WebClient2.DownloadFile($MapPackUrl, !batchdir!\mappack.zip" );
+Powershell.exe -ExecutionPolicy Bypass -Command "$WebClient2 = New-Object System.Net.WebClient; $MapPackUrl = 'https://drive.google.com/uc?export=download&id=10WTOThhz0rj2eQLdOu5XU62wjiQEGfA1&confirm=t'; $WebClient2.DownloadFile($MapPackUrl, '!batchdir!\mappack.zip');"
+
 Powershell.exe -executionpolicy bypass -Command Expand-Archive -Force -LiteralPath '!batchdir!\mappack.zip' -DestinationPath '!globalopspath!\globalops\'
 )
 
@@ -289,6 +315,14 @@ if not exist "!globalopspath!\Tools\TimerTool.exe" (
 
 echo High Res Timer install complete
 pause
+
+:High tick rate requirement
+if not exist "!globalopspath!\Tools\gdb.exe" (
+	echo High tickrate tool not detected in Global Operations\Tools\ Downloading.....
+    Powershell.exe -executionpolicy bypass -Command "$ProgressPreference = 'SilentlyContinue'; Invoke-WebRequest -Uri http://www.equation.com/ftpdir/gdb/64/gdb.exe -OutFile !batchdir!\gdb.exe"
+	copy "!batchdir!\gdb.exe" "!globalopspath!\Tools\gdb.exe"
+)
+
 :Riva Profile for Global Ops
 if not exist "!rivapath!\Profiles" (
 	mkdir "!rivapath!\Profiles"

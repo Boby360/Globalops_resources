@@ -120,4 +120,27 @@ echo !globalopspath!
 cd !globalopspath!
 start /affinity 1 Globalops.exe
 
+
+REM Adjust tickrate to... 70?
+REM We need to find PID, add it to tickrate.gdb. `pidof Globalops.exe`
+REM Loop this to ensure it is applied?
+REM gdb -batch -x !globalopspath!\Tools\tickrate.gdb
+
+
+set "search='<pid>'"
+set "replace=`pidof Globalops.exe`"
+set "inputFile=!globalopspath!\Tools\tickrate.gdb" REM Make a template file?
+set "outputFile=!globalopspath!\Tools\tickrate.gdb"
+
+(for /F "usebackq delims=" %%L in ("%inputFile%") do (
+    set "line=%%L"
+    setlocal enabledelayedexpansion
+    set "line=!line:%search%=%replace%!"
+    echo !line!
+    endlocal
+)) > "%outputFile%"
+
+
+
+
 pause
