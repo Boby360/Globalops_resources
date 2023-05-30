@@ -3,7 +3,7 @@ setlocal enabledelayedexpansion
 set debug=0
 set makelink=0
 echo Global Operations Extra Install/Optimize script
-echo Created by Boby with invauable support from MasTa
+echo Created by Boby with invalable support from MasTa
 set unpackingPassword=
 
 REM Todo:
