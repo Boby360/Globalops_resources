@@ -1,6 +1,6 @@
 @echo off
 setlocal enabledelayedexpansion
-set debug=1
+set debug=0
 set makelink=0
 echo Global Operations Extra Install/Optimize script
 echo Created by Boby with invalable support from MasTa
@@ -250,6 +250,10 @@ echo Checking to see if patch 3.5.1 is installed. If not, install it.
 if "!debug!"=="1" (
 echo Actual file Hash: !filehash!
 echo Script stored Hash: !hash!
+echo What antivirus/protection software is installed.
+REM We need to split each results into a line, record known results and make the user open up a link explaining how to temp disable.
+Powershell.exe -executionpolicy bypass -Command "Get-CimInstance -Namespace root/SecurityCenter2 -Classname AntiVirusProduct | Select-Object -ExpandProperty displayName"
+
 )
 if "!filehash!"=="!hash!" (
     echo Patch 3.5 is already installed. Do you want to override what is currently installed?
