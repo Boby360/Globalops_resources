@@ -1,6 +1,6 @@
 @echo off
 setlocal enabledelayedexpansion
-set debug=0
+set debug=1
 set makelink=0
 echo Global Operations Extra Install/Optimize script
 echo Created by Boby with invalable support from MasTa
@@ -31,7 +31,7 @@ set "batchfile=%~f0"
 REM Extract the directory from the batch file path
 set "batchdir=%~dp0"
 
-echo.|set /p ="!batchdir!">!batchdir!\batchpath.txt 
+echo |set /p ="!batchdir!">!batchdir!\batchpath.txt 
 
 if "!debug!"=="1" (
 echo Batch Directory:
@@ -99,6 +99,10 @@ if "!debug!"=="1" (
 echo Finished globalops directory code
 )
 pause
+if "!debug!"=="1" (
+echo Go to Tools
+)
+
 GOTO Tools
 
 
@@ -141,16 +145,24 @@ REM will create the paths required. add will not.
 echo registry import attempt:
 REG IMPORT Install-Main.reg
 pause
+
 :Tools
 REM echo !globalopspath!> globalopspath.txt
-
+if "!debug!"=="1" (
+echo Starting Tools check
+)
 if not exist "!globalopspath!\Tools" (
     echo I made a Tools folder in your Global Ops install to store things
 	mkdir "!globalopspath!\Tools"
-	mkdir "!globalopspath!\Tools\cross-script-variables"
+)
+if not exist "!globalopspath!\cross-script-variables" (
+	if "!debug!"=="1" (
+	  echo I made a folder inside of Tools folder in the global ops install for various script stuff
+	)
+  	mkdir "!globalopspath!\Tools\cross-script-variables"
 )
 
-echo.|set /p="!globalopspath!">!globalopspath!\Tools\cross-script-variables\globalopspath.txt 
+echo |set /p="!globalopspath!">!globalopspath!\Tools\cross-script-variables\globalopspath.txt 
 REM this method only puts 1 line in the text file. This is needed for the registry check.
 pause
 
@@ -181,9 +193,7 @@ if not defined rivapath (
         pause
     )
 )
-
-echo !rivapath! > !globalopspath!\Tools\cross-script-variables\rivapath.txt
- 
+echo |set /p ="!rivapath!">!globalopspath!\Tools\cross-script-variables\rivapath.txt
 pause
 :Download RTSS
 if "!debug!"=="1" (
@@ -207,6 +217,7 @@ pause
 
 :Download Map Pack
 IF NOT EXIST "!globalopspath!\globalops\worlds\4way.dat" (
+echo Downloading/Installing Mappack
 REM Powershell.exe -executionpolicy bypass -Command "$WebClient2 = New-Object System.Net.WebClient; $MapPackUrl = "'https://drive.google.com/uc?export=download&id=1PTSnVKbqJ4MBCm8J4BPcKt6BUtg4j58t&confirm=t'"; $WebClient2.DownloadFile($MapPackUrl, !batchdir!\mappack.zip" );
 Powershell.exe -ExecutionPolicy Bypass -Command "$WebClient2 = New-Object System.Net.WebClient; $MapPackUrl = 'https://drive.google.com/uc?export=download&id=10WTOThhz0rj2eQLdOu5XU62wjiQEGfA1&confirm=t'; $WebClient2.DownloadFile($MapPackUrl, '!batchdir!\mappack.zip');"
 
@@ -265,13 +276,13 @@ if "!installpatch!"=="1" (
     Powershell.exe -executionpolicy bypass -Command "Set-MpPreference -DisableRealtimeMonitoring $true"
     Powershell.exe -executionpolicy bypass -Command "Set-MpPreference -DisableArchiveScanning $true"
     Powershell.exe -executionpolicy bypass -Command "Set-MpPreference -DisableIntrusionPreventionSystem $true"
-	Powershell.exe -executionpolicy bypass -Command "Set-MpPreference -MAPSReporting Disable"
+REM Powershell.exe -executionpolicy bypass -Command "Set-MpPreference -MAPSReporting Disable"
 	timeout /t 1
     Powershell.exe -executionpolicy bypass -Command "$ProgressPreference = 'SilentlyContinue'; Invoke-WebRequest -Uri 'https://github.com/Boby360/Globalops_resources/raw/main/patches/3.5/3.5.1-manual_update.zip' -OutFile !batchdir!\globalops-351-manual-installer.zip"
     timeout /t 1
 	Powershell.exe -executionpolicy bypass -Command Expand-Archive -Force -LiteralPath '!batchdir!\globalops-351-manual-installer.zip' -DestinationPath '!globalopspath!'
 	timeout /t 4
-	Powershell.exe -executionpolicy bypass -Command "Set-MpPreference -MAPSReporting Enable"
+REM Powershell.exe -executionpolicy bypass -Command "Set-MpPreference -MAPSReporting Enable"
     Powershell.exe -executionpolicy bypass -Command "Set-MpPreference -DisableIntrusionPreventionSystem $false"
 	Powershell.exe -executionpolicy bypass -Command "Set-MpPreference -DisableArchiveScanning $false"
     Powershell.exe -executionpolicy bypass -Command "Set-MpPreference -DisableRealtimeMonitoring $false"
