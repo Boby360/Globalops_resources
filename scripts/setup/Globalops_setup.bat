@@ -4,7 +4,7 @@ set debug=0
 set makelink=0
 echo Global Operations Extra Install/Optimize script
 echo Created by Boby with invalable support from MasTa
-set unpackingPassword=
+REM set unpackingPassword=
 
 REM Todo:
 REM Install/Figure out mappack situation.
@@ -110,25 +110,40 @@ GOTO Tools
 :Download Global Operations
 REM To extract zip with password, we need something with more beef than powershell zip extractor.
 REM download NuGet(2.8.5.201 or newer) module, as it is a dependancy for 7zip4powershell module.
-REM Install-PackageProvider -Name NuGet -MinimumVersion 2.8.5.201 -Force
-REM Install-PackageProvider -Name 7zip4powershell -Force
+
 
 echo starting game download
-Powershell.exe -executionpolicy bypass -Command $WebClient1 = New-Object System.Net.WebClient; $GameDLUrl = "'https://drive.google.com/uc?export=download&id=1xN6xXK1hqq9DJeouT0UxiUC--OGzUrYt&confirm=t'"; $WebClient1.DownloadFile($GameDLUrl, "!batchdir!\gop.zip" );
+set /p "unpackingPassword=Password please"
+REM We should do a SHA-1 check to see if the file already exists, and is proper.
+REM Powershell.exe -executionpolicy bypass -Command $WebClient1 = New-Object System.Net.WebClient; $GameDLUrl = "'https://drive.google.com/uc?export=download&id=1xN6xXK1hqq9DJeouT0UxiUC--OGzUrYt&confirm=t'"; $WebClient1.DownloadFile($GameDLUrl, '!batchdir!\gop.zip' );
 echo Downloaded game
 pause
+echo installing unpacking script dependencies
+REM Add check to see if package/modules exist.
+Powershell.exe -executionpolicy bypass -Command Install-PackageProvider -Name NuGet -MinimumVersion 2.8.5.201 -Scope AllUsers -Force
+Powershell.exe -executionpolicy bypass -Command Install-Module 7Zip4PowerShell -Scope AllUsers -Force
+
+REM Check to see if packages are already there
+for /f "tokens=*" %%a in ('CertUtil -hashfile "!batchdir!\gop.zip" SHA1 ^| find /v ":"') do set "filehash=%%a"
+set "gopfilehash=!filehash: =!"
+echo gop !gopfilehash!
+
+for /f "tokens=*" %%a in ('CertUtil -hashfile "!batchdir!\gop2.zip" SHA1 ^| find /v ":"') do set "filehash=%%a"
+set "gop2filehash=!filehash: =!"
+echo gop2 !gop2filehash!
+
 echo unpacking zip1
-Powershell.exe -executionpolicy bypass -Command Expand-7Zip -ArchiveFileName "!batchdir!\gop.zip" -TargetPath !batchdir! -SecurePassword !unpackingPassword!
+Powershell.exe -executionpolicy bypass -Command Expand-7Zip -ArchiveFileName "!batchdir!\gop.zip" -TargetPath !batchdir! -Password !unpackingPassword!
 echo unpackaged zip 1
 pause
-if exist "C:\PROGRA~2\ (
-echo make x86 crave folder
-mkdir C:\PROGRA~2\Crave\
-echo extract gop2 into crave folder
-Powershell.exe -executionpolicy bypass -Command Expand-Archive -Force -LiteralPath '!batchdir!\gop2.zip' -DestinationPath 'C:\PROGRA~2\Crave\'
-echo extracted
+if exist "C:\PROGRA~2\" (
+	echo make x86 crave folder
+	mkdir C:\PROGRA~2\Crave\
+	echo extract gop2 into crave folder
+	Powershell.exe -executionpolicy bypass -Command Expand-Archive -Force -LiteralPath '!batchdir!\gop2.zip' -DestinationPath 'C:\PROGRA~2\Crave\'
+	echo extracted
 ) else (
-	if exist "C:\PROGRA~1\ (
+	if exist "C:\PROGRA~1\" (
 	echo make x64 crave folder
 	mkdir C:\PROGRA~1\Crave\
 	echo extract gop2 into crave folder
@@ -217,10 +232,18 @@ pause
 
 :Download Map Pack
 IF NOT EXIST "!globalopspath!\globalops\worlds\4way.dat" (
+
 echo Downloading/Installing Mappack
 REM Powershell.exe -executionpolicy bypass -Command "$WebClient2 = New-Object System.Net.WebClient; $MapPackUrl = "'https://drive.google.com/uc?export=download&id=1PTSnVKbqJ4MBCm8J4BPcKt6BUtg4j58t&confirm=t'"; $WebClient2.DownloadFile($MapPackUrl, !batchdir!\mappack.zip" );
-Powershell.exe -ExecutionPolicy Bypass -Command "$WebClient2 = New-Object System.Net.WebClient; $MapPackUrl = 'https://drive.google.com/uc?export=download&id=10WTOThhz0rj2eQLdOu5XU62wjiQEGfA1&confirm=t'; $WebClient2.DownloadFile($MapPackUrl, '!batchdir!\mappack.zip');"
+for /f "tokens=*" %%a in ('CertUtil -hashfile "!batchdir!\mappack.zip" SHA1 ^| find /v ":"') do set "filehash=%%a"
+set "calcmappackfilehash=!filehash: =!"
+set "realmappackfilehash=decd1cd02ebcfcd9f1e02b420c45f02b49181e50"
+REM decd1cd02ebcfcd9f1e02b420c45f02b49181e50
+echo Map Pack File Hash: !calcmappackfilehash!
 
+	if NOT "!calcmappackfilehash!"=="!realmappackfilehash!" (
+	Powershell.exe -ExecutionPolicy Bypass -Command "$WebClient2 = New-Object System.Net.WebClient; $MapPackUrl = 'https://drive.google.com/uc?export=download&id=10WTOThhz0rj2eQLdOu5XU62wjiQEGfA1&confirm=t'; $WebClient2.DownloadFile($MapPackUrl, '!batchdir!\mappack.zip');"
+	)
 Powershell.exe -executionpolicy bypass -Command Expand-Archive -Force -LiteralPath '!batchdir!\mappack.zip' -DestinationPath '!globalopspath!\globalops\'
 )
 
