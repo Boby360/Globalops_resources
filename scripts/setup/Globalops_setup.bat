@@ -115,7 +115,7 @@ REM download NuGet(2.8.5.201 or newer) module, as it is a dependancy for 7zip4po
 echo starting game download
 set /p "unpackingPassword=Password please"
 REM We should do a SHA-1 check to see if the file already exists, and is proper.
-REM Powershell.exe -executionpolicy bypass -Command $WebClient1 = New-Object System.Net.WebClient; $GameDLUrl = "'https://drive.google.com/uc?export=download&id=1xN6xXK1hqq9DJeouT0UxiUC--OGzUrYt&confirm=t'"; $WebClient1.DownloadFile($GameDLUrl, '!batchdir!\gop.zip' );
+Powershell.exe -executionpolicy bypass -Command $WebClient1 = New-Object System.Net.WebClient; $GameDLUrl = "'https://drive.google.com/uc?export=download&id=1xN6xXK1hqq9DJeouT0UxiUC--OGzUrYt&confirm=t'"; $WebClient1.DownloadFile($GameDLUrl, '!batchdir!\gop.zip' );
 echo Downloaded game
 pause
 echo installing unpacking script dependencies
