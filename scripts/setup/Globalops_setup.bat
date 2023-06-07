@@ -153,12 +153,12 @@ if exist "C:\PROGRA~2\" (
 	)
 pause
 echo Registery install
-Powershell.exe -executionpolicy bypass -Command "$ProgressPreference = 'SilentlyContinue'; Invoke-WebRequest -Uri https://github.com/Boby360/Globalops_resources/raw/main/patches/registry/Install-Main.reg -OutFile !batchdir!\Install-Main.reg"
+Powershell.exe -executionpolicy bypass -Command "$ProgressPreference = 'SilentlyContinue'; Invoke-WebRequest -Uri https://github.com/Boby360/Globalops_resources/raw/main/patches/registry/Install-Key.reg -OutFile !batchdir!\Install-Key.reg"
 echo registry downloaded
 pause
 REM will create the paths required. add will not.
 echo registry import attempt:
-REG IMPORT Install-Main.reg
+REG IMPORT Install-Key.reg
 pause
 
 :Tools
