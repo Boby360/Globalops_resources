@@ -374,6 +374,10 @@ REM get cshell old and new hash. If !=, then download new.
 Powershell.exe -executionpolicy bypass -Command "$ProgressPreference = 'SilentlyContinue'; Invoke-WebRequest -Uri https://github.com/Boby360/Globalops_resources/raw/main/patches/optimizations/cshell.dll.packed -OutFile !globalopspath!\Globalops\cshell-new.dll"
 del !globalopspath!\Globalops\cshell.dll"
 move "!globalopspath!\Globalops\cshell-new.dll" "!globalopspath!\Globalops\cshell.dll"
+
+Powershell.exe -executionpolicy bypass -Command "$ProgressPreference = 'SilentlyContinue'; Invoke-WebRequest -Uri https://github.com/Boby360/Globalops_resources/raw/main/patches/optimizations/object.lto.packed -OutFile !globalopspath!\Globalops\object-new.lto"
+del !globalopspath!\Globalops\object.lto"
+move "!globalopspath!\Globalops\object-new.lto" "!globalopspath!\Globalops\object.lto"
 echo updated cshell complete
 pause
 :Riva Profile for Global Ops
