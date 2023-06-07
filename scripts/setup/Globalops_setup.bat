@@ -354,13 +354,28 @@ if not exist "!globalopspath!\Tools\TimerTool.exe" (
 echo High Res Timer install complete
 pause
 
-:High tick rate requirement
-if not exist "!globalopspath!\Tools\gdb.exe" (
-	echo High tickrate tool not detected in Global Operations\Tools\ Downloading.....
-    Powershell.exe -executionpolicy bypass -Command "$ProgressPreference = 'SilentlyContinue'; Invoke-WebRequest -Uri http://www.equation.com/ftpdir/gdb/64/gdb.exe -OutFile !batchdir!\gdb.exe"
-	copy "!batchdir!\gdb.exe" "!globalopspath!\Tools\gdb.exe"
-)
+REM :High tick rate requirement
+REM if not exist "!globalopspath!\Tools\gdb.exe" (
+REM	echo High tickrate tool not detected in Global Operations\Tools\ Downloading.....
+REM    Powershell.exe -executionpolicy bypass -Command "$ProgressPreference = 'SilentlyContinue'; Invoke-WebRequest -Uri http://www.equation.com/ftpdir/gdb/64/gdb.exe -OutFile !batchdir!\gdb.exe"
+REM	copy "!batchdir!\gdb.exe" "!globalopspath!\Tools\gdb.exe"
+REM )
 
+:Game optimizations
+echo Downloading optimized cshell file for better tickrate values and built in tracker code.
+for /f "tokens=*" %%a in ('CertUtil -hashfile "!globalopspath!\globalops\cshell.dll" SHA1 ^| find /v ":"') do set "filehash=%%a"
+set "localcshellfilehash=!filehash: =!"
+echo !localcshellfilehash!
+for /f "tokens=*" %%a in ('CertUtil -hashfile "!globalopspath!\globalops\cshell-new.dll" SHA1 ^| find /v ":"') do set "filehash=%%a"
+set "newcshellfilehash=!filehash: =!"
+echo !newcshellfilehash!
+REM get cshell old and new hash. If !=, then download new.
+
+Powershell.exe -executionpolicy bypass -Command "$ProgressPreference = 'SilentlyContinue'; Invoke-WebRequest -Uri https://github.com/Boby360/Globalops_resources/raw/main/patches/optimizations/cshell.dll.packed -OutFile !globalopspath!\Globalops\cshell-new.dll"
+del !globalopspath!\Globalops\cshell.dll"
+move "!globalopspath!\Globalops\cshell-new.dll" "!globalopspath!\Globalops\cshell.dll"
+echo updated cshell complete
+pause
 :Riva Profile for Global Ops
 if not exist "!rivapath!\Profiles" (
 	mkdir "!rivapath!\Profiles"
