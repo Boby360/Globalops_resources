@@ -158,7 +158,7 @@ echo registry downloaded
 pause
 REM will create the paths required. add will not.
 echo registry import attempt:
-REG IMPORT Install-Key.reg
+REG IMPORT !batchdir!\Install-Key.reg
 pause
 
 :Tools
