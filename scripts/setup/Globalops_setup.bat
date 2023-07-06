@@ -266,7 +266,6 @@ REM Check if 3.5 is already applied. If so, prompt asking if they want to overri
 set "patchfile=Globalops-4.0-beta6.zip"
 set "filename=Globalops.exe"
 set "3.5globalopshash=03c6fea302fb53a2c3265522d901c945d4ddd309"
-set "4.0ziphash=2e6a709bebeee0da9e739d8b9eca6d2430f3879f"
 set "hash=c3608c61e59df65844a670c1c398e591cc8f5b10"
 for /f "tokens=*" %%a in ('CertUtil -hashfile "!globalopspath!\!filename!" SHA1 ^| find /v ":"') do set "filehash=%%a"
 set "filehash=!filehash: =!"
