@@ -163,72 +163,72 @@ pause
 
 :Tools
 REM echo !globalopspath!> globalopspath.txt
-if "!debug!"=="1" (
-echo Starting Tools check
-)
-if not exist "!globalopspath!\Tools" (
-    echo I made a Tools folder in your Global Ops install to store things
-	mkdir "!globalopspath!\Tools"
-)
-if not exist "!globalopspath!\cross-script-variables" (
-	if "!debug!"=="1" (
-	  echo I made a folder inside of Tools folder in the global ops install for various script stuff
-	)
-  	mkdir "!globalopspath!\Tools\cross-script-variables"
-)
+REM if "!debug!"=="1" (
+REM echo Starting Tools check
+REM )
+REM if not exist "!globalopspath!\Tools" (
+    REM echo I made a Tools folder in your Global Ops install to store things
+	REM mkdir "!globalopspath!\Tools"
+REM )
+REM if not exist "!globalopspath!\cross-script-variables" (
+	REM if "!debug!"=="1" (
+	  REM echo I made a folder inside of Tools folder in the global ops install for various script stuff
+	REM )
+  	REM mkdir "!globalopspath!\Tools\cross-script-variables"
+REM )
 
-echo |set /p="!globalopspath!">!globalopspath!\Tools\cross-script-variables\globalopspath.txt 
+REM echo |set /p="!globalopspath!">!globalopspath!\Tools\cross-script-variables\globalopspath.txt 
 REM this method only puts 1 line in the text file. This is needed for the registry check.
-pause
+REM pause
 
 :Get RTSS Directory
-set "rivapath="
-set "rivadrive="
-set "rivainstalled=0"
+REM set "rivapath="
+REM set "rivadrive="
+REM set "rivainstalled=0"
 
-if exist "C:\Program Files\RivaTuner Statistics Server\RTSS.exe" (
-    set "rivapath=C:\Program Files\RivaTuner Statistics Server"
-	echo Found a Riva install
-	set "rivainstalled=1"
-) else if exist "C:\Program Files (x86)\RivaTuner Statistics Server\RTSS.exe" (
-    set "rivapath=C:\Program Files (x86)\RivaTuner Statistics Server"
-	echo Found a Riva install
-	set "rivainstalled=1"	
-)
+REM if exist "C:\Program Files\RivaTuner Statistics Server\RTSS.exe" (
+    REM set "rivapath=C:\Program Files\RivaTuner Statistics Server"
+	REM echo Found a Riva install
+	REM set "rivainstalled=1"
+REM ) else if exist "C:\Program Files (x86)\RivaTuner Statistics Server\RTSS.exe" (
+    REM set "rivapath=C:\Program Files (x86)\RivaTuner Statistics Server"
+	REM echo Found a Riva install
+	REM set "rivainstalled=1"	
+REM )
 
-if not defined rivapath (
-    echo Is RivaTuner Statistics Server installed?
-    echo This limits game FPS and is critical to smooth gameplay.
-    echo.
-    set /p "rivainstalled=If yes, type 1. If not, type 0: "
-    if "!rivainstalled!"=="1" (
-        echo What drive is it installed on?
-        set /p "rivadrive=Type in drive letter WITHOUT ':' in front: "
-        set "rivapath=!rivadrive!:\Program Files\RivaTuner Statistics Server"
-        pause
-    )
-)
-echo |set /p ="!rivapath!">!globalopspath!\Tools\cross-script-variables\rivapath.txt
-pause
+REM if not defined rivapath (
+    REM echo Is RivaTuner Statistics Server installed?
+    REM echo This limits game FPS and is critical to smooth gameplay.
+    REM echo.
+    REM set /p "rivainstalled=If yes, type 1. If not, type 0: "
+    REM if "!rivainstalled!"=="1" (
+        REM echo What drive is it installed on?
+        REM set /p "rivadrive=Type in drive letter WITHOUT ':' in front: "
+        REM set "rivapath=!rivadrive!:\Program Files\RivaTuner Statistics Server"
+        REM pause
+    REM )
+REM )
+REM echo |set /p ="!rivapath!">!globalopspath!\Tools\cross-script-variables\rivapath.txt
+REM pause
 :Download RTSS
-if "!debug!"=="1" (
-echo !rivainstalled!
-echo !rivapath!
-)
-if "!rivainstalled!"=="0" (
-    echo Attempting to download RTSS
-    Powershell.exe -executionpolicy bypass -Command "$ProgressPreference = 'SilentlyContinue'; Invoke-WebRequest -Uri https://ftp.nluug.nl/pub/games/PC/guru3d/afterburner/[Guru3D.com]-RTSS.zip -OutFile !batchdir!\RTSS.zip" ^
-    && Powershell.exe -executionpolicy bypass -Command Expand-Archive -Force -LiteralPath !batchdir!\RTSS.zip -DestinationPath !batchdir!\
-    echo This limits game FPS and is critical to smooth gameplay.
-    echo The run script will use it. Please install it:
-    start "" "!batchdir!\[Guru3D.com]-RTSSSetup734.exe"
-    pause
-    GOTO Get RTSS Directory
-)
+REM if "!debug!"=="1" (
+REM echo !rivainstalled!
+REM echo !rivapath!
+REM )
+REM if "!rivainstalled!"=="0" (
+    REM echo Attempting to download RTSS
+    REM Powershell.exe -executionpolicy bypass -Command "$ProgressPreference = 'SilentlyContinue'; Invoke-WebRequest -Uri https://ftp.nluug.nl/pub/games/PC/guru3d/afterburner/[Guru3D.com]-RTSS.zip -OutFile !batchdir!\RTSS.zip" ^
+    REM && Powershell.exe -executionpolicy bypass -Command Expand-Archive -Force -LiteralPath !batchdir!\RTSS.zip -DestinationPath !batchdir!\
+    REM echo This limits game FPS and is critical to smooth gameplay.
+    REM echo The run script will use it. Please install it:
+    REM start "" "!batchdir!\[Guru3D.com]-RTSSSetup734.exe"
+    REM pause
+    REM GOTO Get RTSS Directory
+REM )
 
-if "!debug!"=="1" (
-pause
-)
+REM if "!debug!"=="1" (
+REM pause
+REM )
 
 :Download Map Pack
 IF NOT EXIST "!globalopspath!\globalops\worlds\4way.dat" (
@@ -263,13 +263,14 @@ pause
 :Download and install patch 3.5
 REM Check if 3.5 is already applied. If so, prompt asking if they want to override anyways.
 
-
+set "patchfile=Globalops-4.0-beta6.zip"
 set "filename=Globalops.exe"
-set "hash=03c6fea302fb53a2c3265522d901c945d4ddd309"
-
+set "3.5globalopshash=03c6fea302fb53a2c3265522d901c945d4ddd309"
+set "4.0ziphash=2e6a709bebeee0da9e739d8b9eca6d2430f3879f"
+set "hash=c3608c61e59df65844a670c1c398e591cc8f5b10"
 for /f "tokens=*" %%a in ('CertUtil -hashfile "!globalopspath!\!filename!" SHA1 ^| find /v ":"') do set "filehash=%%a"
 set "filehash=!filehash: =!"
-echo Checking to see if patch 3.5.1 is installed. If not, install it.
+echo Checking to see if patch 4.0 is installed. If not, install it.
 if "!debug!"=="1" (
 echo Actual file Hash: !filehash!
 echo Script stored Hash: !hash!
@@ -279,23 +280,24 @@ Powershell.exe -executionpolicy bypass -Command "Get-CimInstance -Namespace root
 
 )
 if "!filehash!"=="!hash!" (
-    echo Patch 3.5 is already installed. Do you want to override what is currently installed?
+    echo Patch 4.0 is already installed. Do you want to override what is currently installed?
     set /p "installpatch=Type 1 if you want to install the patch anyways: "
 ) else (
+REM Does one of these below disable cloud scanning and not re enable it?
     Powershell.exe -executionpolicy bypass -Command "Set-MpPreference -DisableRealtimeMonitoring $true"
     Powershell.exe -executionpolicy bypass -Command "Set-MpPreference -DisableArchiveScanning $true"
     Powershell.exe -executionpolicy bypass -Command "Set-MpPreference -DisableIntrusionPreventionSystem $true"
 REM	Powershell.exe -executionpolicy bypass -Command "Set-MpPreference -MAPSReporting Disable"
 	timeout /t 1
-    Powershell.exe -executionpolicy bypass -Command "$ProgressPreference = 'SilentlyContinue'; Invoke-WebRequest -Uri 'https://github.com/Boby360/Globalops_resources/raw/main/patches/3.5/3.5.1-manual_update.zip' -OutFile !batchdir!\globalops-351-manual-installer.zip"
+    Powershell.exe -executionpolicy bypass -Command "$ProgressPreference = 'SilentlyContinue'; Invoke-WebRequest -Uri 'https://github.com/Boby360/Globalops_resources/raw/main/patches/4.0/Globalops-4.0-beta6.zip' -OutFile !batchdir!\Globalops-4.0-beta6.zip"
     timeout /t 1
-	Powershell.exe -executionpolicy bypass -Command Expand-Archive -Force -LiteralPath '!batchdir!\globalops-351-manual-installer.zip' -DestinationPath '!globalopspath!'
+	Powershell.exe -executionpolicy bypass -Command Expand-Archive -Force -LiteralPath '!batchdir!\Globalops-4.0-beta6.zip' -DestinationPath '!globalopspath!'
 	timeout /t 4
 REM	Powershell.exe -executionpolicy bypass -Command "Set-MpPreference -MAPSReporting Enable"
     Powershell.exe -executionpolicy bypass -Command "Set-MpPreference -DisableIntrusionPreventionSystem $false"
 	Powershell.exe -executionpolicy bypass -Command "Set-MpPreference -DisableArchiveScanning $false"
-    Powershell.exe -executionpolicy bypass -Command "Set-MpPreference -DisableRealtimeMonitoring $false"
-    echo Downloaded and installed Patch 3.5
+	Powershell.exe -executionpolicy bypass -Command "Set-MpPreference -DisableRealtimeMonitoring $false"
+    echo Downloaded and installed Patch 4.0
 )
 
 
@@ -305,15 +307,15 @@ if "!installpatch!"=="1" (
     Powershell.exe -executionpolicy bypass -Command "Set-MpPreference -DisableIntrusionPreventionSystem $true"
 REM Powershell.exe -executionpolicy bypass -Command "Set-MpPreference -MAPSReporting Disable"
 	timeout /t 1
-    Powershell.exe -executionpolicy bypass -Command "$ProgressPreference = 'SilentlyContinue'; Invoke-WebRequest -Uri 'https://github.com/Boby360/Globalops_resources/raw/main/patches/3.5/3.5.1-manual_update.zip' -OutFile !batchdir!\globalops-351-manual-installer.zip"
+    Powershell.exe -executionpolicy bypass -Command "$ProgressPreference = 'SilentlyContinue'; Invoke-WebRequest -Uri 'https://github.com/Boby360/Globalops_resources/raw/main/patches/4.0/Globalops-4.0-beta6.zip'' -OutFile !batchdir!\Globalops-4.0-beta6.zip"
     timeout /t 1
-	Powershell.exe -executionpolicy bypass -Command Expand-Archive -Force -LiteralPath '!batchdir!\globalops-351-manual-installer.zip' -DestinationPath '!globalopspath!'
+	Powershell.exe -executionpolicy bypass -Command Expand-Archive -Force -LiteralPath '!batchdir!\Globalops-4.0-beta6.zip' -DestinationPath '!globalopspath!'
 	timeout /t 4
 REM Powershell.exe -executionpolicy bypass -Command "Set-MpPreference -MAPSReporting Enable"
     Powershell.exe -executionpolicy bypass -Command "Set-MpPreference -DisableIntrusionPreventionSystem $false"
 	Powershell.exe -executionpolicy bypass -Command "Set-MpPreference -DisableArchiveScanning $false"
     Powershell.exe -executionpolicy bypass -Command "Set-MpPreference -DisableRealtimeMonitoring $false"
-	echo Downloaded and installed Patch 3.5 over pre existing install
+	echo Downloaded and installed Patch 4.0 over pre existing install
 )
 
 pause
@@ -341,18 +343,18 @@ pause
 
 :High Res Timer Download
 
-if not exist "!globalopspath!\Tools\TimerTool.exe" (
-	echo High Res Timer not detected in Global Operations\Tools\ Downloading.....
-    Powershell.exe -executionpolicy bypass -Command $ProgressPreference = 'SilentlyContinue'; Invoke-WebRequest -Uri 'https://vvvv.org/sites/all/modules/general/pubdlcnt/pubdlcnt.php?file=https://vvvv.org/sites/default/files/uploads/TimerToolV3.zip' -OutFile '!globalopspath!\Tools\TimerToolV3.zip'
-	if "!debug!"=="1" (
-		echo downloaded
-		pause
-	)
-	Powershell.exe -executionpolicy bypass -Command Expand-Archive -Force -LiteralPath '!globalopspath!\Tools\TimerToolV3.zip' -DestinationPath '!globalopspath!\Tools\'
-)
+REM if not exist "!globalopspath!\Tools\TimerTool.exe" (
+	REM echo High Res Timer not detected in Global Operations\Tools\ Downloading.....
+    REM Powershell.exe -executionpolicy bypass -Command $ProgressPreference = 'SilentlyContinue'; Invoke-WebRequest -Uri 'https://vvvv.org/sites/all/modules/general/pubdlcnt/pubdlcnt.php?file=https://vvvv.org/sites/default/files/uploads/TimerToolV3.zip' -OutFile '!globalopspath!\Tools\TimerToolV3.zip'
+	REM if "!debug!"=="1" (
+		REM echo downloaded
+		REM pause
+	REM )
+	REM Powershell.exe -executionpolicy bypass -Command Expand-Archive -Force -LiteralPath '!globalopspath!\Tools\TimerToolV3.zip' -DestinationPath '!globalopspath!\Tools\'
+REM )
 
-echo High Res Timer install complete
-pause
+REM echo High Res Timer install complete
+REM pause
 
 REM :High tick rate requirement
 REM if not exist "!globalopspath!\Tools\gdb.exe" (
@@ -362,37 +364,37 @@ REM	copy "!batchdir!\gdb.exe" "!globalopspath!\Tools\gdb.exe"
 REM )
 
 :Game optimizations
-echo Downloading optimized cshell file for better tickrate values and built in tracker code.
-for /f "tokens=*" %%a in ('CertUtil -hashfile "!globalopspath!\globalops\cshell.dll" SHA1 ^| find /v ":"') do set "filehash=%%a"
-set "localcshellfilehash=!filehash: =!"
-echo !localcshellfilehash!
-for /f "tokens=*" %%a in ('CertUtil -hashfile "!globalopspath!\globalops\cshell-new.dll" SHA1 ^| find /v ":"') do set "filehash=%%a"
-set "newcshellfilehash=!filehash: =!"
-echo !newcshellfilehash!
+REM echo Downloading optimized cshell file for better tickrate values and built in tracker code.
+REM for /f "tokens=*" %%a in ('CertUtil -hashfile "!globalopspath!\globalops\cshell.dll" SHA1 ^| find /v ":"') do set "filehash=%%a"
+REM set "localcshellfilehash=!filehash: =!"
+REM echo !localcshellfilehash!
+REM for /f "tokens=*" %%a in ('CertUtil -hashfile "!globalopspath!\globalops\cshell-new.dll" SHA1 ^| find /v ":"') do set "filehash=%%a"
+REM set "newcshellfilehash=!filehash: =!"
+REM echo !newcshellfilehash!
 REM get cshell old and new hash. If !=, then download new.
 
-Powershell.exe -executionpolicy bypass -Command "$ProgressPreference = 'SilentlyContinue'; Invoke-WebRequest -Uri https://github.com/Boby360/Globalops_resources/raw/main/patches/optimizations/cshell.dll.packed -OutFile !globalopspath!\Globalops\cshell-new.dll"
-del !globalopspath!\Globalops\cshell.dll"
-move "!globalopspath!\Globalops\cshell-new.dll" "!globalopspath!\Globalops\cshell.dll"
+REM Powershell.exe -executionpolicy bypass -Command "$ProgressPreference = 'SilentlyContinue'; Invoke-WebRequest -Uri https://github.com/Boby360/Globalops_resources/raw/main/patches/optimizations/cshell.dll.packed -OutFile !globalopspath!\Globalops\cshell-new.dll"
+REM del !globalopspath!\Globalops\cshell.dll"
+REM move "!globalopspath!\Globalops\cshell-new.dll" "!globalopspath!\Globalops\cshell.dll"
 
-Powershell.exe -executionpolicy bypass -Command "$ProgressPreference = 'SilentlyContinue'; Invoke-WebRequest -Uri https://github.com/Boby360/Globalops_resources/raw/main/patches/optimizations/object.lto.packed -OutFile !globalopspath!\Globalops\object-new.lto"
-del !globalopspath!\Globalops\object.lto"
-move "!globalopspath!\Globalops\object-new.lto" "!globalopspath!\Globalops\object.lto"
-echo updated cshell complete
-pause
+REM Powershell.exe -executionpolicy bypass -Command "$ProgressPreference = 'SilentlyContinue'; Invoke-WebRequest -Uri https://github.com/Boby360/Globalops_resources/raw/main/patches/optimizations/object.lto.packed -OutFile !globalopspath!\Globalops\object-new.lto"
+REM del !globalopspath!\Globalops\object.lto"
+REM move "!globalopspath!\Globalops\object-new.lto" "!globalopspath!\Globalops\object.lto"
+REM echo updated cshell complete
+REM pause
 :Riva Profile for Global Ops
-if not exist "!rivapath!\Profiles" (
-	mkdir "!rivapath!\Profiles"
-)
-if not exist "!rivapath!\Profiles\Globalops.exe.cfg" (
+REM if not exist "!rivapath!\Profiles" (
+	REM mkdir "!rivapath!\Profiles"
+REM )
+REM if not exist "!rivapath!\Profiles\Globalops.exe.cfg" (
 	
-	echo Downloading Globalops Riva Profile from Github repo
-	Powershell.exe -executionpolicy bypass -Command "$ProgressPreference = 'SilentlyContinue'; Invoke-WebRequest -Uri https://github.com/Boby360/Globalops_resources/raw/main/profiles/rivatuner-limit100-Globalops.exe.cfg -OutFile !batchdir!\Globalops.exe.cfg"
-	copy "!batchdir!\Globalops.exe.cfg" "!rivapath!\Profiles\"
-)
+	REM echo Downloading Globalops Riva Profile from Github repo
+	REM Powershell.exe -executionpolicy bypass -Command "$ProgressPreference = 'SilentlyContinue'; Invoke-WebRequest -Uri https://github.com/Boby360/Globalops_resources/raw/main/profiles/rivatuner-limit100-Globalops.exe.cfg -OutFile !batchdir!\Globalops.exe.cfg"
+	REM copy "!batchdir!\Globalops.exe.cfg" "!rivapath!\Profiles\"
+REM )
 
-echo Globalops Riva Profile install complete
-pause
+REM echo Globalops Riva Profile install complete
+REM pause
 
 
 
@@ -466,58 +468,58 @@ if defined hostsReadOnly (
     attrib +r "!hostsPath!" >nul
 )
 :last
-Powershell.exe -executionpolicy bypass -Command $ProgressPreference = 'SilentlyContinue'; Invoke-WebRequest -Uri 'https://github.com/Boby360/Globalops_resources/raw/main/scripts/run/Globalops_run.bat' -OutFile '!globalopspath!\Globalops_run.bat'
+REM Powershell.exe -executionpolicy bypass -Command $ProgressPreference = 'SilentlyContinue'; Invoke-WebRequest -Uri 'https://github.com/Boby360/Globalops_resources/raw/main/scripts/run/Globalops_run.bat' -OutFile '!globalopspath!\Globalops_run.bat'
 REM move !batchdir!\Globalops_run.bat !globalopspath!\Globalops_run.bat
-echo Assuming you did not see any errors, Great Success!
-echo There is now a file called Globalops_run.bat in your Global Operations directory.
-echo !globalopspath!
-pause
-if "!makelink!"=="0" (
-exit
-)
+REM echo Assuming you did not see any errors, Great Success!
+REM echo There is now a file called Globalops_run.bat in your Global Operations directory.
+REM echo !globalopspath!
+REM pause
+REM if "!makelink!"=="0" (
+REM exit
+REM )
 
 REM make link?
-if "!makelink!"=="1" (
-    set "defaultUsers=Public;Default;All Users;Default User"
-    set "userFolder="
-    for /d %%a in ("!systemdrive!\Users\*") do (
-        set "folderName=%%~nxa"
-        echo Checking folder: !folderName!
-        echo Default users: !defaultUsers!
-        set "isDefaultUser=0"
-        for %%u in (!defaultUsers!) do (
-            if "!folderName!"=="%%u" (
-                set "isDefaultUser=1"
-                exit /b
-            )
-        )
-        if !isDefaultUser! equ 0 (
-            if defined userFolder (
-                echo Multiple non-default user folders found.
-                set "userFolder=!folderName!"
-                echo Current username: !folderName!
-                goto end
-            )
-            set "userFolder=!folderName!"
-        )
-    )
-    if not defined userFolder (
-        echo No non-default user folders found.
-        goto end
-    )
+REM if "!makelink!"=="1" (
+    REM set "defaultUsers=Public;Default;All Users;Default User"
+    REM set "userFolder="
+    REM for /d %%a in ("!systemdrive!\Users\*") do (
+        REM set "folderName=%%~nxa"
+        REM echo Checking folder: !folderName!
+        REM echo Default users: !defaultUsers!
+        REM set "isDefaultUser=0"
+        REM for %%u in (!defaultUsers!) do (
+            REM if "!folderName!"=="%%u" (
+                REM set "isDefaultUser=1"
+                REM exit /b
+            REM )
+        REM )
+        REM if !isDefaultUser! equ 0 (
+            REM if defined userFolder (
+                REM echo Multiple non-default user folders found.
+                REM set "userFolder=!folderName!"
+                REM echo Current username: !folderName!
+                REM goto end
+            REM )
+            REM set "userFolder=!folderName!"
+        REM )
+    REM )
+    REM if not defined userFolder (
+        REM echo No non-default user folders found.
+        REM goto end
+    REM )
 
-    :end
-    echo User folder: !userFolder!
-    pause
-
-
+    REM :end
+    REM echo User folder: !userFolder!
+    REM pause
 
 
-set "linkName=Global Operations.lnk"
-set "linktarget=!globalopspath!\Globalops_run.bat"
-set "linkLocation=C:\Users\!userFolder!\Desktop"
 
-mklink "!linkLocation!\!linkName!" "!linktarget!"
-pause
-exit
-)
+
+REM set "linkName=Global Operations.lnk"
+REM set "linktarget=!globalopspath!\Globalops_run.bat"
+REM set "linkLocation=C:\Users\!userFolder!\Desktop"
+
+REM mklink "!linkLocation!\!linkName!" "!linktarget!"
+REM pause
+REM exit
+REM )
