@@ -194,22 +194,24 @@ REM Check if 4.0 is already applied. If so, prompt asking if they want to overri
 set "patchfile=Globalops-4.0-beta6.zip"
 set "filename=Globalops.exe"
 set "3.5globalopshash=03c6fea302fb53a2c3265522d901c945d4ddd309"
-set "hash=c3608c61e59df65844a670c1c398e591cc8f5b10"
+set "4.0hash=c3608c61e59df65844a670c1c398e591cc8f5b10"
+set "4.0ahash=591950eafdfb98c0999782829c4424c0e29ba251"
 for /f "tokens=*" %%a in ('CertUtil -hashfile "!globalopspath!\!filename!" SHA1 ^| find /v ":"') do set "filehash=%%a"
 set "filehash=!filehash: =!"
 echo Checking to see if patch 4.0 is installed. If not, install it.
 if "!debug!"=="1" (
 echo Actual file Hash: !filehash!
-echo Script stored Hash: !hash!
+echo Script stored Hash: !4.0ahash!
 echo What antivirus/protection software is installed.
 REM We need to split each results into a line, record known results and make the user open up a link explaining how to temp disable.
 Powershell.exe -executionpolicy bypass -Command "Get-CimInstance -Namespace root/SecurityCenter2 -Classname AntiVirusProduct | Select-Object -ExpandProperty displayName"
 
 )
-if "!filehash!"=="!hash!" (
-    echo Patch 4.0 is already installed. Do you want to override what is currently installed?
-    set /p "installpatch=Type 1 if you want to install the patch anyways: "
-) else (
+
+if NOT "!filehash!"=="!4.0ahash!"(
+echo Patch 4.0a is not installed
+if NOT "!filehash!"=="!4.0hash!" (
+echo Installing 4.0 patch
 REM Does one of these below disable cloud scanning and not re enable it?
     Powershell.exe -executionpolicy bypass -Command "Set-MpPreference -DisableRealtimeMonitoring $true"
     Powershell.exe -executionpolicy bypass -Command "Set-MpPreference -DisableArchiveScanning $true"
@@ -228,23 +230,23 @@ REM	Powershell.exe -executionpolicy bypass -Command "Set-MpPreference -MAPSRepor
 )
 
 
-if "!installpatch!"=="1" (
+if "!filehash!"=="!4.0hash!" (
     Powershell.exe -executionpolicy bypass -Command "Set-MpPreference -DisableRealtimeMonitoring $true"
     Powershell.exe -executionpolicy bypass -Command "Set-MpPreference -DisableArchiveScanning $true"
     Powershell.exe -executionpolicy bypass -Command "Set-MpPreference -DisableIntrusionPreventionSystem $true"
 REM Powershell.exe -executionpolicy bypass -Command "Set-MpPreference -MAPSReporting Disable"
 	timeout /t 1
-    Powershell.exe -executionpolicy bypass -Command "$ProgressPreference = 'SilentlyContinue'; Invoke-WebRequest -Uri 'https://github.com/Boby360/Globalops_resources/raw/main/patches/4.0/Globalops-4.0-beta6.zip'' -OutFile !batchdir!\Globalops-4.0-beta6.zip"
+    Powershell.exe -executionpolicy bypass -Command "$ProgressPreference = 'SilentlyContinue'; Invoke-WebRequest -Uri 'https://github.com/Boby360/Globalops_resources/raw/main/patches/4.0/globalops4.0a-beta.zip' -OutFile !batchdir!\Globalops-4.0a-beta.zip"
     timeout /t 1
-	Powershell.exe -executionpolicy bypass -Command Expand-Archive -Force -LiteralPath '!batchdir!\Globalops-4.0-beta6.zip' -DestinationPath '!globalopspath!'
+	Powershell.exe -executionpolicy bypass -Command Expand-Archive -Force -LiteralPath '!batchdir!\Globalops-4.0a-beta.zip' -DestinationPath '!globalopspath!'
 	timeout /t 4
 REM Powershell.exe -executionpolicy bypass -Command "Set-MpPreference -MAPSReporting Enable"
     Powershell.exe -executionpolicy bypass -Command "Set-MpPreference -DisableIntrusionPreventionSystem $false"
 	Powershell.exe -executionpolicy bypass -Command "Set-MpPreference -DisableArchiveScanning $false"
     Powershell.exe -executionpolicy bypass -Command "Set-MpPreference -DisableRealtimeMonitoring $false"
-	echo Downloaded and installed Patch 4.0 over pre existing install
+	echo Downloaded and installed Patch 4.0a
 )
-
+)
 pause
 
 :Global ops Game Cd key randomizer
