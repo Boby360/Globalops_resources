@@ -153,6 +153,8 @@ Powershell.exe -executionpolicy bypass -Command "$ProgressPreference = 'Silently
 echo registry downloaded
 pause
 REM will create the paths required. add will not.
+REM Can check for pre existing Get-ItemPropertyValue -Path 'HKLM:SOFTWARE\WOW6432Node\Electronic Arts\EA Games\Global Operations\ergc' -Name '(default)'
+REM Test-Path 'HKLM:SOFTWARE\WOW6432Node\Electronic Arts\EA Games\Global Operations\ergc'
 echo registry import attempt:
 REG IMPORT !batchdir!\Install-Key.reg
 pause
@@ -251,6 +253,15 @@ pause
 
 :Global ops Game Cd key randomizer
 
+set installed="Powershell.exe -executionpolicy bypass -Command Test-Path 'HKLM:SOFTWARE\WOW6432Node\Electronic Arts\EA Games\Global Operations\ergc'"
+if NOT !installed!=="True" (
+echo Registery install
+Powershell.exe -executionpolicy bypass -Command "$ProgressPreference = 'SilentlyContinue'; Invoke-WebRequest -Uri https://github.com/Boby360/Globalops_resources/raw/main/patches/registry/Install-Key.reg -OutFile !batchdir!\Install-Key.reg"
+echo registry downloaded
+pause
+echo registry import attempt:
+REG IMPORT !batchdir!\Install-Key.reg
+)
 set "key=HKLM:SOFTWARE\WOW6432Node\Electronic Arts\EA Games\Global Operations\ergc"
 set "value=(default)"
 
