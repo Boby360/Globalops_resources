@@ -17,6 +17,13 @@ REM checking if script ran as Administrator
 echo verified permissions
 pause
 
+echo Registery install
+Powershell.exe -executionpolicy bypass -Command "$ProgressPreference = 'SilentlyContinue'; Invoke-WebRequest -Uri https://github.com/Boby360/Globalops_resources/raw/main/patches/registry/Install-Key.reg -OutFile .\Install-Key.reg"
+echo registry downloaded
+pause
+REM will create the paths required. add will not.
+echo registry import attempt:
+REG IMPORT ./Install-Key.reg
 
 
 set "key=HKLM:SOFTWARE\WOW6432Node\Electronic Arts\EA Games\Global Operations\ergc"
